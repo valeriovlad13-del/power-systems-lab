@@ -78,13 +78,70 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate conductor radius",
+        "explanation": "Convert the diameter to metres and divide by two.",
+        "equations": [
+          "r=\\\\frac{d}{2}=\\\\frac{0.012}{2}=0.006\\\\;\\\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate the equivalent radius",
+        "explanation": "For a solid round conductor, the equivalent radius for inductance is 0.7788 times the physical radius.",
+        "equations": [
+          "r'=0.7788r=0.7788(0.006)=0.0046728\\\\;\\\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Apply the single-phase loop-inductance formula",
+        "explanation": "For a two-conductor single-phase line, the total loop inductance per kilometre is 0.4 ln(D/r′) mH/km.",
+        "equations": [
+          "L_{\\\\text{loop}}=0.4\\\\ln\\\\left(\\\\frac{D}{r'}\\\\right)\\\\;\\\\text{mH/km}",
+          "L_{\\\\text{loop}}=0.4\\\\ln\\\\left(\\\\frac{2}{0.0046728}\\\\right)=2.424\\\\;\\\\text{mH/km}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "Rounded to the precision of the answer choices, the calculated value matches option B."
+      }
+    ],
+    "assumptions": [
+      "Use the standard equivalent radius (GMR) for a solid round conductor: r′ = 0.7788r.",
+      "The requested loop inductance includes both conductors.",
+      "Use natural logarithm and SI units."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated using the standard solid-conductor GMR formula. Display rounding to three decimals; source option B is 2.423 mH/km, consistent within rounding."
+    ],
+    "given": [
+      {
+        "label": "Conductor spacing, D",
+        "value": "2",
+        "unit": "m"
+      },
+      {
+        "label": "Conductor diameter, d",
+        "value": "1.2",
+        "unit": "cm"
+      },
+      {
+        "label": "Conductor radius, r",
+        "value": "0.006",
+        "unit": "m"
+      }
+    ],
+    "find": "Loop inductance per kilometre of the single-phase line.",
+    "finalAnswer": {
+      "value": "2.424",
+      "unit": "mH/km (loop)"
+    }
   },
   {
     "id": "ps1-main-03",
