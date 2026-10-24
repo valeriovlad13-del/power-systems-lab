@@ -5151,7 +5151,7 @@
         "title": "Write the negative-sequence transformation",
         "explanation": "For a=1∠120°, the negative-sequence current of phase A is I₂a=(Ia+a²Ib+aIc)/3.",
         "equations": [
-          "I_{2a}=\\\\frac{I_a+a^2I_b+aI_c}{3}"
+          "I_{2a}=\\frac{I_a+a^2I_b+aI_c}{3}"
         ]
       },
       {
@@ -5159,10 +5159,10 @@
         "title": "Convert the phase currents and apply the operator",
         "explanation": "Substitute the given phasors and the standard symmetrical-component operator a=−0.5+j0.866.",
         "equations": [
-          "I_a=5\\\\angle45^\\\\circ=3.536+j3.536",
-          "I_b=3\\\\angle(-90^\\\\circ)=-j3",
-          "I_c=3\\\\angle150^\\\\circ=-2.598+j1.5",
-          "a^2I_b=-2.598+j1.5,\\\\quad aI_c=-j3"
+          "I_a=5\\angle45^\\circ=3.536+j3.536",
+          "I_b=3\\angle(-90^\\circ)=-j3",
+          "I_c=3\\angle150^\\circ=-2.598+j1.5",
+          "a^2I_b=-2.598+j1.5,\\quad aI_c=-j3"
         ]
       },
       {
@@ -5170,8 +5170,8 @@
         "title": "Calculate the negative-sequence component",
         "explanation": "Add the three terms and divide by three.",
         "equations": [
-          "I_{2a}=\\\\frac{(3.536+j3.536)+(-2.598+j1.5)-j3}{3}",
-          "I_{2a}=0.313+j0.679\\\\;pu"
+          "I_{2a}=\\frac{(3.536+j3.536)+(-2.598+j1.5)-j3}{3}",
+          "I_{2a}=0.313+j0.679\\;pu"
         ]
       }
     ],
