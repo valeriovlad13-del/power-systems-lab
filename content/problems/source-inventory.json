@@ -141,7 +141,8 @@
     "finalAnswer": {
       "value": "2.424",
       "unit": "mH/km (loop)"
-    }
+    },
+    "verifiedChoiceId": "b"
   },
   {
     "id": "ps1-main-03",
