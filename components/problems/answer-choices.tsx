@@ -107,9 +107,9 @@ export default function AnswerChoices({
           className={`mt-4 rounded-xl border p-3 text-sm leading-6 ${isCorrect ? "border-emerald-300 bg-emerald-50 text-emerald-950" : isIncorrect ? "border-red-300 bg-red-50 text-red-950" : "border-[var(--border)] bg-slate-50 text-[var(--foreground)]"}`}
         >
           {isCorrect ? (
-            <p><strong>Correct!</strong> Your choice matches the independently verified answer. Review the worked solution below to understand the calculation.</p>
+            <p><strong>Correct!</strong> Your choice matches the independently verified answer. You can reveal the worked solution below to understand the calculation.</p>
           ) : (
-            <p><strong>Not quite.</strong> The correct answer is {choices.find((choice) => choice.id === verifiedChoiceId)?.label}. Review the worked solution below, then try again.</p>
+            <p><strong>Not quite.</strong> The correct answer is {choices.find((choice) => choice.id === verifiedChoiceId)?.label}. Try again or reveal the worked solution below.</p>
           )}
         </div>
       )}
