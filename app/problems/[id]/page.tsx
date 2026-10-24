@@ -15,6 +15,7 @@ export default async function ProblemDetailPage({ params }: { params: Promise<{ 
   const courseLabel = problem.courseId === "power-systems-1" ? "Power Systems 1" : "Power Systems 2";
   const markedChoice = problem.choices.find((choice) => choice.id === problem.sourceMarkedChoiceId);
   const isVerified = problem.verificationStatus === "verified";
+  const verifiedChoice = problem.choices.find((choice) => choice.id === problem.verifiedChoiceId);
 
   return (
     <main className="mx-auto max-w-4xl px-5 py-10 sm:px-8">
@@ -33,7 +34,7 @@ export default async function ProblemDetailPage({ params }: { params: Promise<{ 
         <div className="mt-4 space-y-3">
           {problem.choices.map((choice) => {
             const isSourceMarked = choice.id === problem.sourceMarkedChoiceId;
-            const isVerifiedAnswer = isVerified && choice.id === problem.sourceMarkedChoiceId;
+            const isVerifiedAnswer = isVerified && choice.id === problem.verifiedChoiceId;
             return <div key={choice.id} className={`flex gap-3 rounded-xl border p-4 ${isVerifiedAnswer ? "border-emerald-300 bg-emerald-50" : isSourceMarked ? "border-amber-300 bg-amber-50" : "border-[var(--border)]"}`}>
               <span className="font-semibold">{choice.label}.</span><span className="flex-1 leading-6">{choice.text}</span>
               {isVerifiedAnswer && <span className="shrink-0 text-right text-xs font-semibold text-emerald-900">Verified answer</span>}
@@ -41,7 +42,7 @@ export default async function ProblemDetailPage({ params }: { params: Promise<{ 
             </div>;
           })}
         </div>
-        {markedChoice && !isVerified && <p className="mt-4 text-sm leading-6 text-[var(--muted)]">The source PDF marks option {markedChoice.label} with an asterisk. This source marking has not yet been independently verified.</p>}
+        {markedChoice && <p className="mt-4 text-sm leading-6 text-[var(--muted)]">The source PDF marks option {markedChoice.label} with an asterisk. {isVerified && verifiedChoice ? `The independently checked solution selects option ${verifiedChoice.label}.` : "This source marking has not yet been independently verified."}</p>}
       </section>
 
       {isVerified ? (
