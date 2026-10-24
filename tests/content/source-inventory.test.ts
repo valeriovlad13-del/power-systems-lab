@@ -20,9 +20,9 @@ describe("source problem inventory", () => {
   it("does not confuse source-marked choices with verified solutions", () => {
     const pending = problems.filter((problem) => problem.verificationStatus === "pending");
     const verified = problems.filter((problem) => problem.verificationStatus === "verified");
-    expect(pending).toHaveLength(136);
-    expect(verified).toHaveLength(4);
-    expect(verified.map((problem) => problem.id).sort()).toEqual(["ps1-main-01", "ps1-main-02", "ps1-main-04", "ps1-main-05"]);
+    expect(pending).toHaveLength(132);
+    expect(verified).toHaveLength(8);
+    expect(verified.map((problem) => problem.id).sort()).toEqual(["ps1-main-01", "ps1-main-02", "ps1-main-04", "ps1-main-05", "ps1-main-06", "ps1-main-08", "ps1-main-09", "ps1-main-10"]);
     expect(verified.every((problem) => problem.verifiedChoiceId && problem.solution.length > 0 && problem.finalAnswer)).toBe(true);
     for (const problem of verified) {
       for (const step of problem.solution) {
