@@ -18,27 +18,27 @@ export default async function ProblemDetailPage({ params }: { params: Promise<{ 
   const verifiedChoice = problem.choices.find((choice) => choice.id === problem.verifiedChoiceId);
 
   return (
-    <main className="mx-auto max-w-4xl px-5 py-10 sm:px-8">
+    <main className="mx-auto w-full max-w-4xl px-3 py-6 sm:px-8 sm:py-10">
       <Link href="/problems" className="text-sm font-semibold text-[var(--accent)]">← Back to question bank</Link>
-      <div className="mt-8 flex flex-wrap items-center gap-2 text-xs">
+      <div className="mt-6 flex flex-wrap items-center gap-x-2 gap-y-2 text-xs sm:mt-8">
         <span className="font-semibold text-[var(--accent)]">{courseLabel}</span><span className="text-[var(--muted)]">·</span>
-        <span className="text-[var(--muted)]">{problem.source.originalSection}</span>
-        <span className={`ml-auto rounded-full px-3 py-1 font-semibold ${isVerified ? "bg-emerald-100 text-emerald-900" : "border border-amber-200 bg-amber-50 text-amber-900"}`}>{isVerified ? "Verified solution" : "Pending review"}</span>
+        <span className="min-w-0 break-words text-[var(--muted)]">{problem.source.originalSection}</span>
+        <span className={`rounded-full px-3 py-1 font-semibold sm:ml-auto ${isVerified ? "bg-emerald-100 text-emerald-900" : "border border-amber-200 bg-amber-50 text-amber-900"}`}>{isVerified ? "Verified solution" : "Pending review"}</span>
       </div>
       <h1 className="mt-4 text-2xl font-bold leading-tight tracking-tight sm:text-3xl">Problem {problem.source.originalQuestionNumber}</h1>
-      <p className="mt-4 whitespace-pre-wrap text-base leading-8">{problem.statement}</p>
+      <p className="mt-3 whitespace-pre-wrap break-words text-sm leading-7 sm:mt-4 sm:text-base sm:leading-8">{problem.statement}</p>
       <p className="mt-4 text-xs text-[var(--muted)]">Source ID: {problem.id}</p>
 
-      <section className="mt-8 rounded-2xl border border-[var(--border)] bg-white p-5 sm:p-7">
+      <section className="mt-6 rounded-2xl border border-[var(--border)] bg-white p-4 sm:mt-8 sm:p-7">
         <h2 className="text-lg font-bold">Answer choices</h2>
         <div className="mt-4 space-y-3">
           {problem.choices.map((choice) => {
             const isSourceMarked = choice.id === problem.sourceMarkedChoiceId;
             const isVerifiedAnswer = isVerified && choice.id === problem.verifiedChoiceId;
-            return <div key={choice.id} className={`flex gap-3 rounded-xl border p-4 ${isVerifiedAnswer ? "border-emerald-300 bg-emerald-50" : isSourceMarked ? "border-amber-300 bg-amber-50" : "border-[var(--border)]"}`}>
-              <span className="font-semibold">{choice.label}.</span><span className="flex-1 leading-6">{choice.text}</span>
-              {isVerifiedAnswer && <span className="shrink-0 text-right text-xs font-semibold text-emerald-900">Verified answer</span>}
-              {!isVerified && isSourceMarked && <span className="shrink-0 text-right text-xs font-semibold text-amber-900">Marked in source</span>}
+            return <div key={choice.id} className={`flex min-w-0 flex-wrap items-start gap-x-3 gap-y-1 rounded-xl border p-3 text-sm sm:p-4 ${isVerifiedAnswer ? "border-emerald-300 bg-emerald-50" : isSourceMarked ? "border-amber-300 bg-amber-50" : "border-[var(--border)]"}`}>
+              <span className="font-semibold">{choice.label}.</span><span className="min-w-0 flex-1 break-words leading-6">{choice.text}</span>
+              {isVerifiedAnswer && <span className="shrink-0 text-left text-xs font-semibold text-emerald-900 sm:text-right">Verified answer</span>}
+              {!isVerified && isSourceMarked && <span className="shrink-0 text-left text-xs font-semibold text-amber-900 sm:text-right">Marked in source</span>}
             </div>;
           })}
         </div>
@@ -46,14 +46,14 @@ export default async function ProblemDetailPage({ params }: { params: Promise<{ 
       </section>
 
       {isVerified ? (
-        <section className="mt-6 rounded-2xl border border-[var(--border)] bg-white p-5 sm:p-7">
+        <section className="mt-5 rounded-2xl border border-[var(--border)] bg-white p-4 sm:mt-6 sm:p-7">
           <h2 className="text-lg font-bold">Step-by-step solution</h2>
           {problem.given && <div className="mt-5"><h3 className="text-sm font-bold uppercase tracking-wide text-[var(--muted)]">1. Given</h3><dl className="mt-3 divide-y divide-[var(--border)] rounded-xl border border-[var(--border)]">{problem.given.map((item) => <div key={item.label} className="flex flex-wrap justify-between gap-2 px-4 py-3 text-sm"><dt className="text-[var(--muted)]">{item.label}</dt><dd className="font-mono font-semibold">{item.value}{item.unit ? ` ${item.unit}` : ""}</dd></div>)}</dl></div>}
           {problem.find && <div className="mt-5"><h3 className="text-sm font-bold uppercase tracking-wide text-[var(--muted)]">2. Find</h3><p className="mt-2 leading-7">{problem.find}</p></div>}
           <div className="mt-6"><h3 className="text-sm font-bold uppercase tracking-wide text-[var(--muted)]">3. Solution and calculations</h3>
-            <ol className="mt-4 space-y-5">{problem.solution.map((step) => <li key={step.stepNumber} className="rounded-xl border border-[var(--border)] p-4 sm:p-5">
-              <div className="flex gap-3"><span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-slate-100 text-sm font-bold">{step.stepNumber}</span><div className="min-w-0 flex-1"><h4 className="font-semibold">{step.title}</h4><p className="mt-2 text-sm leading-6 text-[var(--muted)]">{step.explanation}</p>
-                {step.equations?.map((equation, index) => <div key={index} className="mt-3 overflow-x-auto rounded-lg bg-slate-50 px-3 py-4 text-center" dangerouslySetInnerHTML={{ __html: katex.renderToString(equation, { displayMode: true, throwOnError: false }) }} />)}
+            <ol className="mt-4 space-y-5">{problem.solution.map((step) => <li key={step.stepNumber} className="min-w-0 rounded-xl border border-[var(--border)] p-3 sm:p-5">
+              <div className="flex min-w-0 items-start gap-2.5 sm:gap-3"><span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xs font-bold sm:h-8 sm:w-8 sm:text-sm">{step.stepNumber}</span><div className="min-w-0 flex-1"><h4 className="font-semibold">{step.title}</h4><p className="mt-2 text-sm leading-6 text-[var(--muted)]">{step.explanation}</p>
+                {step.equations?.map((equation, index) => <div key={index} className="mt-3 max-w-full overflow-x-auto overscroll-x-contain rounded-lg bg-slate-50 px-2 py-3 text-left sm:px-4 sm:py-4" role="region" aria-label={`Equation ${index + 1} for step ${step.stepNumber}`} tabIndex={0}><div className="w-max min-w-full"><div dangerouslySetInnerHTML={{ __html: katex.renderToString(equation, { displayMode: true, throwOnError: false, strict: "ignore" }) }} /></div></div>)}
               </div></div>
             </li>)}</ol>
           </div>
