@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import katex from "katex";
 import { getProblemById, problems } from "@/content/problems";
+import AnswerChoices from "@/components/problems/answer-choices";
 
 export function generateStaticParams() {
   return problems.map((problem) => ({ id: problem.id }));
@@ -31,23 +32,21 @@ export default async function ProblemDetailPage({ params }: { params: Promise<{ 
 
       <section className="mt-6 rounded-2xl border border-[var(--border)] bg-white p-4 sm:mt-8 sm:p-7">
         <h2 className="text-lg font-bold">Answer choices</h2>
-        <div className="mt-4 space-y-3">
-          {problem.choices.map((choice) => {
-            const isSourceMarked = choice.id === problem.sourceMarkedChoiceId;
-            const isVerifiedAnswer = isVerified && choice.id === problem.verifiedChoiceId;
-            return <div key={choice.id} className={`flex min-w-0 flex-wrap items-start gap-x-3 gap-y-1 rounded-xl border p-3 text-sm sm:p-4 ${isVerifiedAnswer ? "border-emerald-300 bg-emerald-50" : isSourceMarked ? "border-amber-300 bg-amber-50" : "border-[var(--border)]"}`}>
-              <span className="font-semibold">{choice.label}.</span><span className="min-w-0 flex-1 break-words leading-6">{choice.text}</span>
-              {isVerifiedAnswer && <span className="shrink-0 text-left text-xs font-semibold text-emerald-900 sm:text-right">Verified answer</span>}
-              {!isVerified && isSourceMarked && <span className="shrink-0 text-left text-xs font-semibold text-amber-900 sm:text-right">Marked in source</span>}
-            </div>;
-          })}
-        </div>
+        <p className="mt-1 text-sm leading-6 text-[var(--muted)]">Select one answer, then choose Check answer to see the result.</p>
+        <AnswerChoices
+          problemId={problem.id}
+          choices={problem.choices}
+          isVerified={isVerified}
+          verifiedChoiceId={problem.verifiedChoiceId ?? null}
+          sourceMarkedChoiceId={problem.sourceMarkedChoiceId}
+        />
         {markedChoice && <p className="mt-4 text-sm leading-6 text-[var(--muted)]">The source PDF marks option {markedChoice.label} with an asterisk. {isVerified && verifiedChoice ? `The independently checked solution selects option ${verifiedChoice.label}.` : "This source marking has not yet been independently verified."}</p>}
       </section>
 
       {isVerified ? (
         <section className="mt-5 rounded-2xl border border-[var(--border)] bg-white p-4 sm:mt-6 sm:p-7">
           <h2 className="text-lg font-bold">Step-by-step solution</h2>
+          <p className="mt-1 text-sm leading-6 text-[var(--muted)]">Use the steps below to understand how the verified result is obtained.</p>
           {problem.given && <div className="mt-5"><h3 className="text-sm font-bold uppercase tracking-wide text-[var(--muted)]">1. Given</h3><dl className="mt-3 divide-y divide-[var(--border)] rounded-xl border border-[var(--border)]">{problem.given.map((item) => <div key={item.label} className="flex flex-wrap justify-between gap-2 px-4 py-3 text-sm"><dt className="text-[var(--muted)]">{item.label}</dt><dd className="font-mono font-semibold">{item.value}{item.unit ? ` ${item.unit}` : ""}</dd></div>)}</dl></div>}
           {problem.find && <div className="mt-5"><h3 className="text-sm font-bold uppercase tracking-wide text-[var(--muted)]">2. Find</h3><p className="mt-2 leading-7">{problem.find}</p></div>}
           <div className="mt-6"><h3 className="text-sm font-bold uppercase tracking-wide text-[var(--muted)]">3. Solution and calculations</h3>
