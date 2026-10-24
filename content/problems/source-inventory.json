@@ -5195,9 +5195,9 @@
         "title": "Convert the given symmetrical components to rectangular form",
         "explanation": "Use the standard symmetrical-component operator a=1∠120° and the phase-current transformation I_b=I_{a0}+a²I_{a1}+aI_{a2}.",
         "equations": [
-          "I_{a0}=1\\\\angle75^\\circ=0.259+j0.966",
-          "I_{a1}=1\\\\angle15^\\circ=0.966+j0.259",
-          "I_{a2}=1\\\\angle(-45^\\circ)=0.707-j0.707"
+          "I_{a0}=1\\angle75^\\circ=0.259+j0.966",
+          "I_{a1}=1\\angle15^\\circ=0.966+j0.259",
+          "I_{a2}=1\\angle(-45^\\circ)=0.707-j0.707"
         ]
       },
       {
@@ -5320,9 +5320,9 @@
         "title": "Choose a common 5 MVA, 10 kV base",
         "explanation": "Convert the line impedance and alternator reactance to per unit on the transformer base.",
         "equations": [
-          "Z_{base}=\\\\frac{V_{LL}^2}{S_{base}}=\\\\frac{10^2}{5}=20\\\\;\\\\Omega",
-          "Z_{line,pu}=\\\\frac{1+j4}{20}=0.05+j0.20\\\\;pu",
-          "X_{alt,pu}=0.10\\\\frac{5}{10}=0.05\\\\;pu"
+          "Z_{base}=\\frac{V_{LL}^2}{S_{base}}=\\frac{10^2}{5}=20\\;\\Omega",
+          "Z_{line,pu}=\\frac{1+j4}{20}=0.05+j0.20\\;pu",
+          "X_{alt,pu}=0.10\\frac{5}{10}=0.05\\;pu"
         ]
       },
       {
@@ -5330,8 +5330,8 @@
         "title": "Add the series impedances",
         "explanation": "The transformer reactance is 0.05 pu on the selected 5 MVA base.",
         "equations": [
-          "Z_{eq}=0.05+j(0.20+0.05+0.05)=0.05+j0.30\\\\;pu",
-          "|Z_{eq}|=\\\\sqrt{0.05^2+0.30^2}=0.30414\\\\;pu"
+          "Z_{eq}=0.05+j(0.20+0.05+0.05)=0.05+j0.30\\;pu",
+          "|Z_{eq}|=\\sqrt{0.05^2+0.30^2}=0.30414\\;pu"
         ]
       },
       {
@@ -5339,7 +5339,7 @@
         "title": "Calculate the short-circuit level",
         "explanation": "The three-phase fault level is the base MVA divided by the magnitude of equivalent per-unit impedance.",
         "equations": [
-          "S_{sc}=\\\\frac{5}{0.30414}=16.44\\\\;MVA\\\\approx16{,}440\\\\;kVA"
+          "S_{sc}=\\frac{5}{0.30414}=16.44\\;MVA\\approx16{,}440\\;kVA"
         ]
       }
     ],
