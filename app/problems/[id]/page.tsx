@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import katex from "katex";
 import { getProblemById, problems } from "@/content/problems";
 
 export function generateStaticParams() {
@@ -13,20 +14,17 @@ export default async function ProblemDetailPage({ params }: { params: Promise<{ 
 
   const courseLabel = problem.courseId === "power-systems-1" ? "Power Systems 1" : "Power Systems 2";
   const markedChoice = problem.choices.find((choice) => choice.id === problem.sourceMarkedChoiceId);
+  const isVerified = problem.verificationStatus === "verified";
 
   return (
     <main className="mx-auto max-w-4xl px-5 py-10 sm:px-8">
       <Link href="/problems" className="text-sm font-semibold text-[var(--accent)]">← Back to question bank</Link>
       <div className="mt-8 flex flex-wrap items-center gap-2 text-xs">
-        <span className="font-semibold text-[var(--accent)]">{courseLabel}</span>
-        <span className="text-[var(--muted)]">·</span>
+        <span className="font-semibold text-[var(--accent)]">{courseLabel}</span><span className="text-[var(--muted)]">·</span>
         <span className="text-[var(--muted)]">{problem.source.originalSection}</span>
-        <span className="ml-auto rounded-full border border-amber-200 bg-amber-50 px-3 py-1 font-semibold text-amber-900">Pending review</span>
+        <span className={`ml-auto rounded-full px-3 py-1 font-semibold ${isVerified ? "bg-emerald-100 text-emerald-900" : "border border-amber-200 bg-amber-50 text-amber-900"}`}>{isVerified ? "Verified solution" : "Pending review"}</span>
       </div>
-
-      <h1 className="mt-4 text-2xl font-bold leading-tight tracking-tight sm:text-3xl">
-        Problem {problem.source.originalQuestionNumber}
-      </h1>
+      <h1 className="mt-4 text-2xl font-bold leading-tight tracking-tight sm:text-3xl">Problem {problem.source.originalQuestionNumber}</h1>
       <p className="mt-4 whitespace-pre-wrap text-base leading-8">{problem.statement}</p>
       <p className="mt-4 text-xs text-[var(--muted)]">Source ID: {problem.id}</p>
 
@@ -35,33 +33,39 @@ export default async function ProblemDetailPage({ params }: { params: Promise<{ 
         <div className="mt-4 space-y-3">
           {problem.choices.map((choice) => {
             const isSourceMarked = choice.id === problem.sourceMarkedChoiceId;
-            return (
-              <div key={choice.id} className={`flex gap-3 rounded-xl border p-4 ${isSourceMarked ? "border-amber-300 bg-amber-50" : "border-[var(--border)]"}`}>
-                <span className="font-semibold">{choice.label}.</span>
-                <span className="flex-1 leading-6">{choice.text}</span>
-                {isSourceMarked && <span className="shrink-0 text-right text-xs font-semibold text-amber-900">Marked in source</span>}
-              </div>
-            );
+            const isVerifiedAnswer = isVerified && choice.id === problem.sourceMarkedChoiceId;
+            return <div key={choice.id} className={`flex gap-3 rounded-xl border p-4 ${isVerifiedAnswer ? "border-emerald-300 bg-emerald-50" : isSourceMarked ? "border-amber-300 bg-amber-50" : "border-[var(--border)]"}`}>
+              <span className="font-semibold">{choice.label}.</span><span className="flex-1 leading-6">{choice.text}</span>
+              {isVerifiedAnswer && <span className="shrink-0 text-right text-xs font-semibold text-emerald-900">Verified answer</span>}
+              {!isVerified && isSourceMarked && <span className="shrink-0 text-right text-xs font-semibold text-amber-900">Marked in source</span>}
+            </div>;
           })}
         </div>
-        {markedChoice && <p className="mt-4 text-sm leading-6 text-[var(--muted)]">The source PDF marks option {markedChoice.label} with an asterisk. This is recorded as source information only and has not yet been independently verified.</p>}
+        {markedChoice && !isVerified && <p className="mt-4 text-sm leading-6 text-[var(--muted)]">The source PDF marks option {markedChoice.label} with an asterisk. This source marking has not yet been independently verified.</p>}
       </section>
 
-      <section className="mt-6 rounded-2xl border border-[var(--border)] bg-white p-5 sm:p-7">
-        <div className="flex flex-wrap items-center justify-between gap-3">
+      {isVerified ? (
+        <section className="mt-6 rounded-2xl border border-[var(--border)] bg-white p-5 sm:p-7">
           <h2 className="text-lg font-bold">Step-by-step solution</h2>
-          <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">Not yet verified</span>
-        </div>
-        <p className="mt-3 leading-7 text-[var(--muted)]">The solution for this question has not yet been independently worked and checked. To avoid presenting a guessed answer as an engineering reference, the solution will be published after its formulas, substitutions, units, assumptions, and final result are reviewed.</p>
-        <ol className="mt-5 space-y-3">
-          {["Given", "Find", "Required formulas", "Numbered calculations and substitutions", "Final answer and unit check", "Engineering note / common mistake"].map((step, index) => (
-            <li key={step} className="flex gap-3 rounded-lg border border-dashed border-[var(--border)] p-3">
-              <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xs font-bold">{index + 1}</span>
-              <div><p className="text-sm font-semibold">{step}</p><p className="mt-1 text-xs text-[var(--muted)]">To be completed during technical review</p></div>
-            </li>
-          ))}
-        </ol>
-      </section>
+          {problem.given && <div className="mt-5"><h3 className="text-sm font-bold uppercase tracking-wide text-[var(--muted)]">1. Given</h3><dl className="mt-3 divide-y divide-[var(--border)] rounded-xl border border-[var(--border)]">{problem.given.map((item) => <div key={item.label} className="flex flex-wrap justify-between gap-2 px-4 py-3 text-sm"><dt className="text-[var(--muted)]">{item.label}</dt><dd className="font-mono font-semibold">{item.value}{item.unit ? ` ${item.unit}` : ""}</dd></div>)}</dl></div>}
+          {problem.find && <div className="mt-5"><h3 className="text-sm font-bold uppercase tracking-wide text-[var(--muted)]">2. Find</h3><p className="mt-2 leading-7">{problem.find}</p></div>}
+          <div className="mt-6"><h3 className="text-sm font-bold uppercase tracking-wide text-[var(--muted)]">3. Solution and calculations</h3>
+            <ol className="mt-4 space-y-5">{problem.solution.map((step) => <li key={step.stepNumber} className="rounded-xl border border-[var(--border)] p-4 sm:p-5">
+              <div className="flex gap-3"><span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-slate-100 text-sm font-bold">{step.stepNumber}</span><div className="min-w-0 flex-1"><h4 className="font-semibold">{step.title}</h4><p className="mt-2 text-sm leading-6 text-[var(--muted)]">{step.explanation}</p>
+                {step.equations?.map((equation, index) => <div key={index} className="mt-3 overflow-x-auto rounded-lg bg-slate-50 px-3 py-4 text-center" dangerouslySetInnerHTML={{ __html: katex.renderToString(equation, { displayMode: true, throwOnError: false }) }} />)}
+              </div></div>
+            </li>)}</ol>
+          </div>
+          {problem.finalAnswer && <div className="mt-6 rounded-xl border border-emerald-300 bg-emerald-50 p-5"><p className="text-xs font-bold uppercase tracking-wide text-emerald-900">Final answer</p><p className="mt-2 text-xl font-bold text-emerald-950">{problem.finalAnswer.value} {problem.finalAnswer.unit}</p></div>}
+          {problem.assumptions.length > 0 && <div className="mt-6"><h3 className="text-sm font-bold uppercase tracking-wide text-[var(--muted)]">Assumptions and notes</h3><ul className="mt-2 list-disc space-y-2 pl-5 text-sm leading-6 text-[var(--muted)]">{problem.assumptions.map((assumption) => <li key={assumption}>{assumption}</li>)}</ul></div>}
+        </section>
+      ) : (
+        <section className="mt-6 rounded-2xl border border-[var(--border)] bg-white p-5 sm:p-7">
+          <h2 className="text-lg font-bold">Step-by-step solution</h2>
+          <p className="mt-3 leading-7 text-[var(--muted)]">This solution has not yet been independently worked and checked. To avoid presenting a guessed answer as an engineering reference, it will be published after formulas, substitutions, units, assumptions, and the final result are reviewed.</p>
+          <ol className="mt-5 space-y-3">{["Given", "Find", "Required formulas", "Numbered calculations and substitutions", "Final answer and unit check", "Engineering note / common mistake"].map((step, index) => <li key={step} className="flex gap-3 rounded-lg border border-dashed border-[var(--border)] p-3"><span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xs font-bold">{index + 1}</span><div><p className="text-sm font-semibold">{step}</p><p className="mt-1 text-xs text-[var(--muted)]">To be completed during technical review</p></div></li>)}</ol>
+        </section>
+      )}
     </main>
   );
 }
