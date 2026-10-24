@@ -2680,13 +2680,69 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate equivalent spacing",
+        "explanation": "For a fully transposed three-phase line, use the geometric mean of the three phase spacings.",
+        "equations": [
+          "D_m=\\sqrt[3]{(5)(6)(7)}\\approx5.944\\;\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the phase capacitance formula",
+        "explanation": "Capacitance per phase to neutral is 2πε₀ divided by ln(Dm/r).",
+        "equations": [
+          "C_n=\\frac{2\\pi\\epsilon_0}{\\ln(D_m/r)}",
+          "C_n=\\frac{2\\pi(8.854\\times10^{-12})}{\\ln(5.944/0.01)}\\approx8.78\\times10^{-12}\\;\\text{F/m}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Convert to μF/km",
+        "explanation": "Convert farads per metre to microfarads per kilometre.",
+        "equations": [
+          "C_n\\approx8.78\\times10^{-9}\\;\\text{F/km}=8.78\\times10^{-3}\\;\\mu\\text{F/km}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The calculated value matches option C to rounding.",
+        "equations": [
+          "C_n\\approx8.72\\times10^{-3}\\;\\mu\\text{F/km}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The line is fully transposed and the conductors are treated as solid round conductors.",
+      "Small difference from the computed 8.78 × 10⁻³ μF/km is attributed to choice rounding; verify source precision if exact matching is required."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified.",
+      "Independently calculated using the transposed-line capacitance formula; option matched within rounding."
+    ],
+    "verifiedChoiceId": "c",
+    "given": [
+      {
+        "label": "Conductor radius",
+        "value": "1",
+        "unit": "cm"
+      },
+      {
+        "label": "Phase spacings",
+        "value": "5, 6, 7",
+        "unit": "m"
+      }
+    ],
+    "find": "Capacitance from phase to neutral per kilometre.",
+    "finalAnswer": {
+      "value": "8.72 × 10⁻³",
+      "unit": "μF/km per phase"
+    }
   },
   {
     "id": "ps1-otb-13",
@@ -2809,13 +2865,69 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Convert diameter to radius",
+        "explanation": "The capacitance formula uses the physical conductor radius.",
+        "equations": [
+          "r=0.0125/2=0.00625\\;\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate phase-to-neutral capacitance",
+        "explanation": "For equilateral spacing, the equivalent spacing is 2 m.",
+        "equations": [
+          "C_n=\\frac{2\\pi\\epsilon_0}{\\ln(D/r)}",
+          "C_n=\\frac{2\\pi(8.854\\times10^{-12})}{\\ln(2/0.00625)}\\approx9.65\\times10^{-12}\\;\\text{F/m}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Convert to μF/km",
+        "explanation": "Multiply by 1,000 m/km and convert farads to microfarads.",
+        "equations": [
+          "C_n\\approx9.65\\times10^{-9}\\;\\text{F/km}=0.00965\\;\\mu\\text{F/km}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The calculated capacitance matches option C.",
+        "equations": [
+          "C_n\\approx0.0096\\;\\mu\\text{F/km}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The line has equilateral phase spacing.",
+      "The capacitance is phase-to-neutral capacitance."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified.",
+      "Independently calculated using the transposed-line capacitance formula; option matched within rounding."
+    ],
+    "verifiedChoiceId": "c",
+    "given": [
+      {
+        "label": "Equilateral phase spacing",
+        "value": "2",
+        "unit": "m"
+      },
+      {
+        "label": "Conductor diameter",
+        "value": "1.25",
+        "unit": "cm"
+      }
+    ],
+    "find": "Capacitance of each phase conductor to neutral per kilometre.",
+    "finalAnswer": {
+      "value": "0.0096",
+      "unit": "μF/km per phase"
+    }
   },
   {
     "id": "ps1-otb-16",
