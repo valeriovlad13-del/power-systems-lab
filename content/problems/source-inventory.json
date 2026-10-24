@@ -5778,13 +5778,32 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate the impedance base",
+        "explanation": "For a three-phase system, use the line-to-line voltage and three-phase apparent-power base.",
+        "equations": [
+          "Z_{base}=\\\\frac{V_{LL}^2}{S_{base}}=\\\\frac{(10\\\\;kV)^2}{10{,}000\\\\;kVA}=10\\\\;\\\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Convert resistance to percent",
+        "explanation": "The given line resistance is 1 Ω; divide by the impedance base and multiply by 100.",
+        "equations": [
+          "R\\\\%=\\\\frac{1}{10}\\\\times100=10\\\\%"
+        ]
+      }
+    ],
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently checked from the stated values and standard power-system relationships; rounded result matches choice B."
+    ],
+    "verifiedChoiceId": "b",
+    "finalAnswer": "10%"
   },
   {
     "id": "ps2-otb-08",
@@ -7036,13 +7055,32 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate the base current",
+        "explanation": "Use the three-phase 100 MVA base and 115 kV line-to-line voltage.",
+        "equations": [
+          "I_{base}=\\\\frac{100\\\\times10^6}{\\\\sqrt{3}(115\\\\times10^3)}=502.0\\\\;A"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate the three-phase fault current",
+        "explanation": "For a bolted three-phase fault, only positive-sequence impedance is used. With Z₁=0.25 pu, the fault current is 1/0.25=4 pu.",
+        "equations": [
+          "I_f=\\\\frac{1}{0.25}I_{base}=4(502.0)=2008\\\\;A\\\\approx2{,}000\\\\;A"
+        ]
+      }
+    ],
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently checked from the stated values and standard power-system relationships; rounded result matches choice B."
+    ],
+    "verifiedChoiceId": "b",
+    "finalAnswer": "Approximately 2,000 A"
   },
   {
     "id": "ps2-otb-33",
