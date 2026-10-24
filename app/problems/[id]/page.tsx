@@ -15,9 +15,7 @@ export default async function ProblemDetailPage({ params }: { params: Promise<{ 
   if (!problem) notFound();
 
   const courseLabel = problem.courseId === "power-systems-1" ? "Power Systems 1" : "Power Systems 2";
-  const markedChoice = problem.choices.find((choice) => choice.id === problem.sourceMarkedChoiceId);
   const isVerified = problem.verificationStatus === "verified";
-  const verifiedChoice = problem.choices.find((choice) => choice.id === problem.verifiedChoiceId);
   const sameSectionProblems = problems
     .filter((item) => item.courseId === problem.courseId && item.source.originalSection === problem.source.originalSection)
     .sort((a, b) => a.source.originalQuestionNumber - b.source.originalQuestionNumber);
@@ -35,7 +33,7 @@ export default async function ProblemDetailPage({ params }: { params: Promise<{ 
       </div>
       <h1 className="mt-4 text-2xl font-bold leading-tight tracking-tight sm:text-3xl">Problem {problem.source.originalQuestionNumber}</h1>
       <p className="mt-3 whitespace-pre-wrap break-words text-sm leading-7 sm:mt-4 sm:text-base sm:leading-8">{problem.statement}</p>
-      <p className="mt-4 text-xs text-[var(--muted)]">Source ID: {problem.id}</p>
+      <p className="mt-4 text-xs text-[var(--muted)]">Question ID: {problem.id}</p>
 
       <section className="mt-6 rounded-2xl border border-[var(--border)] bg-white p-4 sm:mt-8 sm:p-7">
         <h2 className="text-lg font-bold">Answer choices</h2>
@@ -45,7 +43,6 @@ export default async function ProblemDetailPage({ params }: { params: Promise<{ 
           choices={problem.choices}
           isVerified={isVerified}
           verifiedChoiceId={problem.verifiedChoiceId ?? null}
-          sourceMarkedChoiceId={problem.sourceMarkedChoiceId}
         />
         {markedChoice && <p className="mt-4 text-xs leading-5 text-[var(--muted)]">The original PDF contains an answer marking; it is not treated as verified unless the solution has been independently checked.</p>}
       </section>
@@ -74,7 +71,6 @@ export default async function ProblemDetailPage({ params }: { params: Promise<{ 
           <ol className="mt-5 space-y-3">{["Given", "Find", "Required formulas", "Numbered calculations and substitutions", "Final answer and unit check", "Engineering note / common mistake"].map((step, index) => <li key={step} className="flex gap-3 rounded-lg border border-dashed border-[var(--border)] p-3"><span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xs font-bold">{index + 1}</span><div><p className="text-sm font-semibold">{step}</p><p className="mt-1 text-xs text-[var(--muted)]">To be completed during technical review</p></div></li>)}</ol>
         </section>
       )}
-      {markedChoice && <p className="mt-4 text-sm leading-6 text-[var(--muted)]">Source note: the original PDF marks option {markedChoice.label}. {isVerified && verifiedChoice ? `The independently checked solution selects option ${verifiedChoice.label}.` : "The source marking has not yet been independently verified."}</p>}
       </SolutionDisclosure>
       <nav aria-label="Question navigation" className="mt-6 grid grid-cols-2 gap-3">
         {previousProblem ? (
