@@ -1,13 +1,13 @@
 # Power Systems Lab
 
-A responsive learning web app for **Power Systems 1** and **Power Systems 2**. It organizes source problems by topic, presents reviewed step-by-step solutions, and provides deterministic engineering calculators.
+A responsive learning web app for **Power Systems 1** and **Power Systems 2**. It organizes practice problems by topic, presents reviewed step-by-step solutions, and provides deterministic engineering calculators.
 
-> **Current status:** all 140 source questions and their four choices have been imported. Four Power Systems 1 Main Tutorial Problems have independently checked worked solutions. The remaining 136 solutions are pending review.
+> **Current status:** all 140 practice questions and their four choices are available. Four Power Systems 1 Main Tutorial Problems have independently checked worked solutions. The remaining 136 solutions are pending review.
 
 ## Principles
 
-- Preserve original problem wording, choices, numbering, and source section.
-- Store source-marked choices separately from independently verified answers.
+- Keep problem statements, answer choices, numbering, and section organization consistent.
+- Keep independently verified answers separate from questions still under review.
 - Keep topic assignments provisional until checked against each question.
 - Treat solutions as pending until formulas, substitutions, units, assumptions, and final answers are reviewed.
 - Use tested deterministic functions for engineering calculations, not AI-generated arithmetic at runtime.
@@ -47,11 +47,11 @@ Open http://localhost:3000.
 
 ## Content verification
 
-The source's asterisk-marked choice is recorded as `sourceMarkedChoiceId`. It is not treated as the verified answer. A reviewed solution uses `verificationStatus: "verified"` and `verifiedChoiceId`, plus given values, assumptions, equations, calculation steps, and a final answer. Only four problems currently meet that standard.
+A reviewed solution uses `verificationStatus: "verified"` and `verifiedChoiceId`, plus given values, assumptions, equations, calculation steps, and a final answer. Only four problems currently meet that standard.
 
 ## Build sequence
 
-1. Review topic assignments and source transcription.
+1. Review topic assignments and question wording.
 2. Continue verifying solutions in small batches.
 3. Build a reusable solution renderer and question-linked calculator inputs.
 4. Add engineering calculators incrementally with automated tests.
