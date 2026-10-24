@@ -9,6 +9,13 @@ export interface ProblemChoice {
   text: string;
 }
 
+export interface SolutionStep {
+  stepNumber: number;
+  title: string;
+  explanation: string;
+  equations?: string[];
+}
+
 export interface SourceProblem {
   id: string;
   courseId: "power-systems-1" | "power-systems-2";
@@ -23,8 +30,11 @@ export interface SourceProblem {
   choices: ProblemChoice[];
   sourceMarkedChoiceId: string | null;
   verificationStatus: VerificationStatus;
-  solution: { stepNumber: number; title: string; explanation: string; equations?: string[] }[];
+  given?: { label: string; value: string; unit?: string }[];
+  find?: string;
   assumptions: string[];
+  solution: SolutionStep[];
+  finalAnswer?: { value: string; unit?: string };
   calculatorIds: string[];
   reviewerNotes: string[];
 }
