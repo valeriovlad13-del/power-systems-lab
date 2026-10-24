@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, type ReactNode } from "react";
-import { Icon } from "@/components/ui/icon";
-
 type Props = {
   children: ReactNode;
   isVerified: boolean;
