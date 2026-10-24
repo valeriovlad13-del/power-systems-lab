@@ -493,13 +493,94 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Find the equivalent spacing",
+        "explanation": "For a transposed flat configuration, use the geometric mean of the three phase-to-phase distances.",
+        "equations": [
+          "D_m=\\sqrt[3]{D_{ab}D_{bc}D_{ca}}=\\sqrt[3]{4\\times4\\times8}=5.040\\;\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate capacitance per kilometre",
+        "explanation": "For a solid round conductor, use its physical radius in the capacitance formula.",
+        "equations": [
+          "C=\\frac{2\\pi\\epsilon_0}{\\ln(D_m/r)}",
+          "C=\\frac{2\\pi(8.854\\times10^{-12})}{\\ln(5.040/0.01)}=8.94\\times10^{-12}\\;\\text{F/m}",
+          "C_{km}=8.94\\times10^{-9}\\;\\text{F/km}=0.00894\\;\\mu\\text{F/km}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate phase charging current",
+        "explanation": "Use phase voltage, total per-phase capacitance, and angular frequency.",
+        "equations": [
+          "V_{ph}=\\frac{132\\;\\text{kV}}{\\sqrt{3}}=76.21\\;\\text{kV}",
+          "C_{total}=0.00894\\times100=0.894\\;\\mu\\text{F}",
+          "I_c=2\\pi f C_{total}V_{ph}",
+          "I_c=2\\pi(50)(0.894\\times10^{-6})(76.21\\times10^3)=21.4\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The calculated charging current matches option C.",
+        "equations": [
+          "I_c\\approx21.4\\;\\text{A per phase}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The three conductors are positioned at 4 m, 4 m, and 8 m spacing.",
+      "Capacitance is calculated using the physical conductor radius; line charging current uses phase-to-neutral voltage.",
+      "The line is fully transposed and leakage conductance is neglected."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently calculated from the stated geometry and charging-current formula; matches option C.",
+      "Independently reviewed calculation added; solution and selected option checked against the stated engineering model."
+    ],
+    "verifiedChoiceId": "c",
+    "given": [
+      {
+        "label": "Line voltage",
+        "value": "132",
+        "unit": "kV"
+      },
+      {
+        "label": "Frequency",
+        "value": "50",
+        "unit": "Hz"
+      },
+      {
+        "label": "Adjacent conductor spacing",
+        "value": "4",
+        "unit": "m"
+      },
+      {
+        "label": "Outer conductor spacing",
+        "value": "8",
+        "unit": "m"
+      },
+      {
+        "label": "Conductor radius",
+        "value": "0.01",
+        "unit": "m"
+      },
+      {
+        "label": "Line length",
+        "value": "100",
+        "unit": "km"
+      }
+    ],
+    "find": "Charging current per phase for the 100 km transposed three-phase line.",
+    "finalAnswer": {
+      "value": "21.4",
+      "unit": "A per phase"
+    }
   },
   {
     "id": "ps1-main-07",
@@ -580,13 +661,97 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate the line current",
+        "explanation": "Use the balanced three-phase real-power equation.",
+        "equations": [
+          "I=\\frac{P}{\\sqrt{3}V_{LL}\\cos\\phi}",
+          "I=\\frac{5\\times10^6}{\\sqrt{3}(22\\times10^3)(0.8)}=164.0\\;\\text{A}",
+          "\\phi=\\cos^{-1}(0.8)=36.87^\\circ"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Convert receiving voltage to phase voltage",
+        "explanation": "For a wye-referenced per-phase equivalent, divide the line-to-line voltage by √3.",
+        "equations": [
+          "V_R=\\frac{22}{\\sqrt{3}}=12.702\\;\\text{kV}\\angle0^\\circ"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate the per-phase voltage drop",
+        "explanation": "Represent lagging current as I∠−φ and multiply by the series impedance R+jX.",
+        "equations": [
+          "Z=4+j6\\;\\Omega",
+          "I=164.0(0.8-j0.6)=131.2-j98.4\\;\\text{A}",
+          "IZ=(131.2-j98.4)(4+j6)=1.114+j0.393\\;\\text{kV}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Find sending-end phase voltage",
+        "explanation": "Add the phasor voltage drop to the receiving-end phase voltage.",
+        "equations": [
+          "V_S=V_R+IZ=(12.702+1.114)+j0.393\\;\\text{kV}",
+          "|V_S|=\\sqrt{13.816^2+0.393^2}\\approx13.82\\;\\text{kV}"
+        ]
+      },
+      {
+        "stepNumber": 5,
+        "title": "Select the matching choice",
+        "explanation": "The result matches option D.",
+        "equations": [
+          "V_S\\approx13.82\\;\\text{kV per phase}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Use the short-line model and neglect shunt capacitance.",
+      "The 22 kV is the receiving-end line-to-line voltage; per-phase voltage is used for the voltage-drop phasor.",
+      "Resistance and reactance are per phase."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified.",
+      "Independently reviewed calculation added; solution and selected option checked against the stated engineering model."
+    ],
+    "verifiedChoiceId": "d",
+    "given": [
+      {
+        "label": "Real power",
+        "value": "5,000",
+        "unit": "kW"
+      },
+      {
+        "label": "Receiving-end line voltage",
+        "value": "22",
+        "unit": "kV"
+      },
+      {
+        "label": "Power factor",
+        "value": "0.8",
+        "unit": "lagging"
+      },
+      {
+        "label": "Per-phase resistance",
+        "value": "4",
+        "unit": "Ω"
+      },
+      {
+        "label": "Per-phase reactance",
+        "value": "6",
+        "unit": "Ω"
+      }
+    ],
+    "find": "Sending-end phase voltage for a short three-phase line.",
+    "finalAnswer": {
+      "value": "13.82",
+      "unit": "kV per phase"
+    }
   },
   {
     "id": "ps1-main-09",
@@ -624,13 +789,96 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Convert sending voltage to phase voltage",
+        "explanation": "The sending-end phase voltage is the line voltage divided by √3.",
+        "equations": [
+          "V_{S,ph}=\\frac{33}{\\sqrt{3}}=19.053\\;\\text{kV}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Express current using receiving voltage",
+        "explanation": "Let V_R be the receiving-end phase-voltage magnitude. From three-phase power, I=P/(3V_R cosφ), with current lagging by φ.",
+        "equations": [
+          "\\phi=\\cos^{-1}(0.8)=36.87^\\circ",
+          "I=\\frac{3.6\\times10^6}{3V_R(0.8)}\\angle(-36.87^\\circ)"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Apply the short-line phasor equation",
+        "explanation": "With V_R as the reference, V_S=V_R+IZ. Resolve the drop into in-phase and quadrature components.",
+        "equations": [
+          "R\\cos\\phi+X\\sin\\phi=5.31(0.8)+5.54(0.6)=7.572\\;\\Omega",
+          "X\\cos\\phi-R\\sin\\phi=5.54(0.8)-5.31(0.6)=1.246\\;\\Omega",
+          "|V_S|^2=\\left(V_R+I(7.572)\\right)^2+\\left(I(1.246)\\right)^2"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Solve for receiving-end voltage",
+        "explanation": "Substitute I=1.5×10⁶/V_R (with V_R in volts) into the magnitude equation and solve for the positive voltage solution.",
+        "equations": [
+          "V_R\\approx18.46\\;\\text{kV per phase}",
+          "V_{R,LL}=\\sqrt{3}V_R\\approx31.97\\;\\text{kV}"
+        ]
+      },
+      {
+        "stepNumber": 5,
+        "title": "Select the matching choice",
+        "explanation": "The receiving-end line voltage matches option B.",
+        "equations": [
+          "V_{R,LL}\\approx31.97\\;\\text{kV}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Use the short-line model and neglect shunt capacitance.",
+      "The load is balanced and the stated resistance and reactance are per phase.",
+      "The positive physical solution of the phasor-magnitude equation is used."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified.",
+      "Independently reviewed calculation added; solution and selected option checked against the stated engineering model."
+    ],
+    "verifiedChoiceId": "b",
+    "given": [
+      {
+        "label": "Real power",
+        "value": "3,600",
+        "unit": "kW"
+      },
+      {
+        "label": "Sending-end line voltage",
+        "value": "33",
+        "unit": "kV"
+      },
+      {
+        "label": "Power factor",
+        "value": "0.8",
+        "unit": "lagging"
+      },
+      {
+        "label": "Per-phase resistance",
+        "value": "5.31",
+        "unit": "Ω"
+      },
+      {
+        "label": "Per-phase reactance",
+        "value": "5.54",
+        "unit": "Ω"
+      }
+    ],
+    "find": "Receiving-end line-to-line voltage for the short transmission line.",
+    "finalAnswer": {
+      "value": "31.97",
+      "unit": "kV line-to-line"
+    }
   },
   {
     "id": "ps1-main-10",
@@ -667,13 +915,96 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate load current",
+        "explanation": "Use the balanced three-phase apparent-power equation.",
+        "equations": [
+          "I=\\frac{S}{\\sqrt{3}V_{LL}}=\\frac{5\\times10^6}{\\sqrt{3}(11\\times10^3)}=262.43\\;\\text{A}",
+          "\\phi=\\cos^{-1}(0.8)=36.87^\\circ"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Find receiving-end phase voltage",
+        "explanation": "Use the receiving voltage as the phasor reference.",
+        "equations": [
+          "V_R=\\frac{11}{\\sqrt{3}}=6.351\\;\\text{kV}\\angle0^\\circ"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate the voltage drop and sending voltage",
+        "explanation": "For lagging current, the in-phase and quadrature components of IZ are I(R cosφ+X sinφ) and I(X cosφ−R sinφ).",
+        "equations": [
+          "\\Delta V_{in}=262.43[1.5(0.8)+4(0.6)]=0.945\\;\\text{kV}",
+          "\\Delta V_{quad}=262.43[4(0.8)-1.5(0.6)]=0.604\\;\\text{kV}",
+          "|V_S|=\\sqrt{(6.351+0.945)^2+(0.604)^2}=7.321\\;\\text{kV}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Calculate percentage regulation",
+        "explanation": "Use the sending-end magnitude and receiving-end phase voltage, consistent with the short-line phasor definition.",
+        "equations": [
+          "\\%VR=\\frac{|V_S|-V_R}{V_R}\\times100",
+          "\\%VR=\\frac{7.321-6.351}{6.351}\\times100\\approx15.27\\%"
+        ]
+      },
+      {
+        "stepNumber": 5,
+        "title": "Select the matching choice",
+        "explanation": "The calculated regulation matches option C to rounding.",
+        "equations": [
+          "\\%VR\\approx15.26\\%"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Use the short-line model and neglect shunt capacitance.",
+      "The load is balanced; the 11 kV is the receiving-end line voltage.",
+      "Voltage regulation is calculated using the magnitude of the sending-end phase voltage relative to the receiving-end phase voltage."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified.",
+      "Independently reviewed calculation added; solution and selected option checked against the stated engineering model."
+    ],
+    "verifiedChoiceId": "c",
+    "given": [
+      {
+        "label": "Receiving-end line voltage",
+        "value": "11",
+        "unit": "kV"
+      },
+      {
+        "label": "Apparent power",
+        "value": "5,000",
+        "unit": "kVA"
+      },
+      {
+        "label": "Power factor",
+        "value": "0.8",
+        "unit": "lagging"
+      },
+      {
+        "label": "Per-phase resistance",
+        "value": "1.5",
+        "unit": "Ω"
+      },
+      {
+        "label": "Per-phase reactance",
+        "value": "4",
+        "unit": "Ω"
+      }
+    ],
+    "find": "Percentage voltage regulation of the short transmission line.",
+    "finalAnswer": {
+      "value": "15.26",
+      "unit": "%"
+    }
   },
   {
     "id": "ps1-main-11",
