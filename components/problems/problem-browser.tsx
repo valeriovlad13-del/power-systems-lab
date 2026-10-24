@@ -21,14 +21,25 @@ export default function ProblemBrowser({ initialCourse = "all", initialTopic = "
 
   const availableTopics = topics.filter((item) => course === "all" || item.courseId === course);
   const filtered = useMemo(() => {
-    const term = search.trim().toLowerCase();
+    const term = search.trim().toLocaleLowerCase();
     return problems.filter((problem) => {
       const matchesCourse = course === "all" || problem.courseId === course;
       const matchesTopic = topic === "all" || problem.topicIds.includes(topic);
       const matchesSection = section === "all" || problem.source.originalSection === section;
-      const matchesText = !term || problem.statement.toLowerCase().includes(term)
-        || problem.id.toLowerCase().includes(term)
-        || problem.source.originalQuestionNumber.toString() === term;
+      const topicText = problem.topicIds
+        .map((id) => topics.find((item) => item.id === id)?.title ?? "")
+        .join(" ");
+      const searchableText = [
+        problem.statement,
+        ...problem.choices.map((choice) => choice.text),
+        problem.id,
+        problem.source.originalSection,
+        problem.courseId,
+        topicText,
+      ].join(" ").toLocaleLowerCase();
+      const matchesText = !term
+        || searchableText.includes(term)
+        || String(problem.source.originalQuestionNumber) === term;
       return matchesCourse && matchesTopic && matchesSection && matchesText;
     });
   }, [course, topic, section, search]);
@@ -42,7 +53,7 @@ export default function ProblemBrowser({ initialCourse = "all", initialTopic = "
     <div className="mt-7">
       <div className="grid gap-3 rounded-2xl border border-[var(--border)] bg-white p-4 sm:grid-cols-2 lg:grid-cols-4">
         <label className="text-xs font-semibold text-[var(--muted)]">Search questions
-          <input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Keyword or source ID" className="mt-2 w-full rounded-lg border border-[var(--border)] px-3 py-2.5 text-sm font-normal text-[var(--foreground)] outline-none focus:border-[var(--accent)]" />
+          <input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Keyword, choice, or source ID" aria-label="Search questions by keyword, answer choice, or source ID" className="mt-2 w-full rounded-lg border border-[var(--border)] px-3 py-2.5 text-sm font-normal text-[var(--foreground)] outline-none focus:border-[var(--accent)]" />
         </label>
         <label className="text-xs font-semibold text-[var(--muted)]">Course
           <select value={course} onChange={(event) => changeCourse(event.target.value as CourseFilter)} className="mt-2 w-full rounded-lg border border-[var(--border)] bg-white px-3 py-2.5 text-sm font-normal text-[var(--foreground)]">
@@ -62,7 +73,7 @@ export default function ProblemBrowser({ initialCourse = "all", initialTopic = "
         </label>
       </div>
       <div className="mt-5 flex items-center justify-between gap-3">
-        <p className="text-sm text-[var(--muted)]"><strong className="text-[var(--foreground)]">{filtered.length}</strong> of {problems.length} questions</p>
+        <p className="text-sm text-[var(--muted)]" aria-live="polite"><strong className="text-[var(--foreground)]">{filtered.length}</strong> of {problems.length} questions</p>
         <button type="button" onClick={() => { setSearch(""); setCourse("all"); setTopic("all"); setSection("all"); }} className="text-sm font-semibold text-[var(--accent)] hover:underline">Reset filters</button>
       </div>
       <div className="mt-3 space-y-3">

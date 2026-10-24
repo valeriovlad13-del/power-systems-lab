@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { problems } from "@/content/problems";
+import { topics } from "@/content/topics";
 
 describe("source problem inventory", () => {
   it("contains all 140 source questions", () => {
@@ -23,7 +24,26 @@ describe("source problem inventory", () => {
     expect(verified).toHaveLength(4);
     expect(verified.map((problem) => problem.id).sort()).toEqual(["ps1-main-01", "ps1-main-02", "ps1-main-04", "ps1-main-05"]);
     expect(verified.every((problem) => problem.verifiedChoiceId && problem.solution.length > 0 && problem.finalAnswer)).toBe(true);
+    for (const problem of verified) {
+      for (const step of problem.solution) {
+        for (const equation of step.equations ?? []) {
+          expect(equation, `${problem.id} contains malformed doubled LaTeX slashes`).not.toMatch(/\\\\(?:frac|text|times|eta|ell|left|right|ln|approx|Omega|mu|cdot)/);
+        }
+      }
+    }
     expect(pending.every((problem) => problem.solution.length === 0)).toBe(true);
+  });
+
+  it("assigns existing topics from the same course to every question", () => {
+    const topicById = new Map(topics.map((topic) => [topic.id, topic]));
+    for (const problem of problems) {
+      expect(problem.topicIds.length, problem.id).toBeGreaterThan(0);
+      for (const topicId of problem.topicIds) {
+        const topic = topicById.get(topicId);
+        expect(topic, `${problem.id} references unknown topic ${topicId}`).toBeDefined();
+        expect(topic?.courseId, `${problem.id} has a topic from another course`).toBe(problem.courseId);
+      }
+    }
   });
 
   it("preserves the expected source-section counts", () => {
