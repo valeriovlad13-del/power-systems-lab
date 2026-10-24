@@ -1042,13 +1042,94 @@
       }
     ],
     "sourceMarkedChoiceId": "a",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate load current",
+        "explanation": "Use the three-phase apparent-power relation at the receiving end.",
+        "equations": [
+          "I=\\frac{S}{\\sqrt{3}V_{LL}}=\\frac{70\\times10^6}{\\sqrt{3}(64\\times10^3)}=631.5\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate total resistance per phase",
+        "explanation": "Multiply the per-kilometre resistance by the line length.",
+        "equations": [
+          "R_{phase}=0.125(16)=2.00\\;\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate copper loss",
+        "explanation": "For a balanced three-phase line, total real loss is three times the per-phase I²R loss.",
+        "equations": [
+          "P_{loss}=3I^2R_{phase}=3(631.5)^2(2.00)\\approx2.394\\;\\text{MW}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Calculate transmission efficiency",
+        "explanation": "The load real power is apparent power multiplied by power factor. Add line loss to output power to obtain input power.",
+        "equations": [
+          "P_{out}=70(0.8)=56\\;\\text{MW}",
+          "\\eta=\\frac{P_{out}}{P_{out}+P_{loss}}\\times100",
+          "\\eta=\\frac{56}{56+2.394}\\times100\\approx95.9\\%"
+        ]
+      },
+      {
+        "stepNumber": 5,
+        "title": "Select the matching choice",
+        "explanation": "The calculated efficiency matches option A.",
+        "equations": [
+          "\\eta\\approx95.9\\%"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The line is represented by its series impedance; shunt charging is neglected.",
+      "The stated resistance is per phase per kilometre.",
+      "Transmission efficiency is real load power divided by real sending-end input power."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified.",
+      "Independently reviewed calculation added; selected option checked against the stated engineering model."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [
+      {
+        "label": "Line voltage",
+        "value": "64",
+        "unit": "kV"
+      },
+      {
+        "label": "Apparent load",
+        "value": "70",
+        "unit": "MVA"
+      },
+      {
+        "label": "Power factor",
+        "value": "0.8",
+        "unit": "lagging"
+      },
+      {
+        "label": "Line length",
+        "value": "16",
+        "unit": "km"
+      },
+      {
+        "label": "Resistance",
+        "value": "0.125",
+        "unit": "Ω/km/phase"
+      }
+    ],
+    "find": "Transmission efficiency of the short line.",
+    "finalAnswer": {
+      "value": "95.9",
+      "unit": "%"
+    }
   },
   {
     "id": "ps1-main-12",
@@ -1130,13 +1211,85 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate total series impedance and shunt admittance",
+        "explanation": "Multiply the per-kilometre parameters by the total line length.",
+        "equations": [
+          "Z=(0.05+j0.45)(80)=4+j36\\;\\Omega",
+          "Y=j(3.4\\times10^{-6})(80)=j272\\times10^{-6}\\;\\text{S}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Use the nominal-π ABCD relation",
+        "explanation": "For a nominal-π line, A=D=1+YZ/2 and C=Y(1+YZ/4).",
+        "equations": [
+          "C=Y\\left(1+\\frac{YZ}{4}\\right)"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Evaluate the correction factor",
+        "explanation": "Multiply the total shunt admittance by the total series impedance.",
+        "equations": [
+          "YZ=(j272\\times10^{-6})(4+j36)=-0.009792+j0.001088",
+          "1+\\frac{YZ}{4}=0.997552+j0.000272"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Calculate C",
+        "explanation": "Multiply the correction factor by Y. The very small real part is negligible at the precision of the listed choices.",
+        "equations": [
+          "C=(j272\\times10^{-6})(0.997552+j0.000272)",
+          "C\\approx-7.40\\times10^{-8}+j2.713\\times10^{-4}\\;\\text{S}",
+          "C\\approx j0.0002713\\;\\text{S}"
+        ]
+      },
+      {
+        "stepNumber": 5,
+        "title": "Select the matching choice",
+        "explanation": "At the precision of the choices, the result matches option D.",
+        "equations": [
+          "C\\approx j0.0002713\\;\\text{S}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Use the nominal-π model with total line parameters obtained from the stated per-kilometre values.",
+      "The answer is rounded to the precision of the available choices."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified.",
+      "Independently reviewed calculation added; selected option checked against the stated engineering model."
+    ],
+    "verifiedChoiceId": "d",
+    "given": [
+      {
+        "label": "Line length",
+        "value": "80",
+        "unit": "km"
+      },
+      {
+        "label": "Series impedance per km",
+        "value": "0.05 + j0.45",
+        "unit": "Ω/km"
+      },
+      {
+        "label": "Shunt admittance per km",
+        "value": "j3.4 × 10⁻⁶",
+        "unit": "S/km"
+      }
+    ],
+    "find": "The C constant of the nominal-π transmission-line model.",
+    "finalAnswer": {
+      "value": "j0.0002713",
+      "unit": "S"
+    }
   },
   {
     "id": "ps1-main-14",
