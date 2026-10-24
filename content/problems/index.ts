@@ -29,6 +29,7 @@ export interface SourceProblem {
   statement: string;
   choices: ProblemChoice[];
   sourceMarkedChoiceId: string | null;
+  verifiedChoiceId?: string;
   verificationStatus: VerificationStatus;
   given?: { label: string; value: string; unit?: string }[];
   find?: string;
