@@ -8006,7 +8006,7 @@
         "title": "Include the neutral grounding reactance",
         "explanation": "For a single-line-to-ground fault, the zero-sequence path includes three times the neutral reactance.",
         "equations": [
-          "X_{eq}=X_1+X_2+X_0+3X_n=0.2+0.1+0.1+3(0.033)=0.499\\\\;pu"
+          "X_{eq}=X_1+X_2+X_0+3X_n=0.2+0.1+0.1+3(0.033)=0.499\\;pu"
         ]
       },
       {
@@ -8014,8 +8014,8 @@
         "title": "Calculate the fault MVA",
         "explanation": "The fault current is 3/Xeq pu, so fault MVA is the current in pu multiplied by the generator MVA base.",
         "equations": [
-          "I_f=\\\\frac{3}{0.499}=6.012\\\\;pu",
-          "S_f=6.012(25)=150.3\\\\;MVA\\\\approx150\\\\;MVA"
+          "I_f=\\frac{3}{0.499}=6.012\\;pu",
+          "S_f=6.012(25)=150.3\\;MVA\\approx150\\;MVA"
         ]
       }
     ],
@@ -8073,8 +8073,8 @@
         "title": "Calculate the single-line-to-ground fault current",
         "explanation": "The unloaded generator is at rated voltage and its neutral is solidly grounded, so the three sequence reactances are in series.",
         "equations": [
-          "I_f=\\\\frac{3}{j(X_1+X_2+X_0)}=\\\\frac{3}{j(0.15+0.15+0.05)}",
-          "|I_f|=\\\\frac{3}{0.35}=8.571\\\\;pu"
+          "I_f=\\frac{3}{j(X_1+X_2+X_0)}=\\frac{3}{j(0.15+0.15+0.05)}",
+          "|I_f|=\\frac{3}{0.35}=8.571\\;pu"
         ]
       }
     ],
@@ -8130,7 +8130,7 @@
         "title": "Calculate the subtransient current in per unit",
         "explanation": "The generator is unloaded at 1.05 pu voltage. The initial symmetrical current is prefault voltage divided by subtransient reactance.",
         "equations": [
-          "I''_{pu}=\\\\frac{1.05}{0.15}=7.0\\\\;pu"
+          "I''_{pu}=\\frac{1.05}{0.15}=7.0\\;pu"
         ]
       },
       {
@@ -8138,8 +8138,8 @@
         "title": "Convert to kiloamperes",
         "explanation": "Use the rated 500 MVA, 20 kV three-phase base current.",
         "equations": [
-          "I_{base}=\\\\frac{500\\\\times10^6}{\\\\sqrt{3}(20\\\\times10^3)}=14.434\\\\;kA",
-          "I''=7(14.434)=101.0\\\\;kA"
+          "I_{base}=\\frac{500\\times10^6}{\\sqrt{3}(20\\times10^3)}=14.434\\;kA",
+          "I''=7(14.434)=101.0\\;kA"
         ]
       }
     ],
@@ -8195,8 +8195,8 @@
         "title": "Convert the neutral reactor to per unit",
         "explanation": "Use the generator's 100 MVA, 20 kV three-phase base.",
         "equations": [
-          "Z_{base}=\\\\frac{20^2}{100}=4\\\\;\\\\Omega",
-          "X_{n,pu}=\\\\frac{0.32}{4}=0.08\\\\;pu"
+          "Z_{base}=\\frac{20^2}{100}=4\\;\\Omega",
+          "X_{n,pu}=\\frac{0.32}{4}=0.08\\;pu"
         ]
       },
       {
@@ -8204,8 +8204,8 @@
         "title": "Calculate the single-line-to-ground fault current",
         "explanation": "The positive-, negative-, and zero-sequence reactances are in series with three times the neutral reactance.",
         "equations": [
-          "I_f=\\\\frac{3}{j(0.2+0.2+0.05+3(0.08))}",
-          "|I_f|=\\\\frac{3}{0.69}=4.348\\\\;pu"
+          "I_f=\\frac{3}{j(0.2+0.2+0.05+3(0.08))}",
+          "|I_f|=\\frac{3}{0.69}=4.348\\;pu"
         ]
       },
       {
@@ -8213,8 +8213,8 @@
         "title": "Convert to amperes",
         "explanation": "Use the generator rated current base.",
         "equations": [
-          "I_{base}=\\\\frac{100\\\\times10^6}{\\\\sqrt{3}(20\\\\times10^3)}=2886.8\\\\;A",
-          "I_f=4.348(2886.8)=12{,}550\\\\;A"
+          "I_{base}=\\frac{100\\times10^6}{\\sqrt{3}(20\\times10^3)}=2886.8\\;A",
+          "I_f=4.348(2886.8)=12{,}550\\;A"
         ]
       }
     ],
