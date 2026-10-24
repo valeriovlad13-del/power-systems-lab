@@ -27,7 +27,7 @@ describe("source problem inventory", () => {
     for (const problem of verified) {
       for (const step of problem.solution) {
         for (const equation of step.equations ?? []) {
-          expect(equation, `${problem.id} contains malformed doubled LaTeX slashes`).not.toMatch(/\\\\\\\\(?:frac|text|times|eta|ell|left|right|ln|approx|Omega|mu|cdot)/);
+          expect(equation, `${problem.id} contains malformed doubled LaTeX slashes`).not.toMatch(/\\\\(?:frac|text|times|eta|ell|left|right|ln|approx|Omega|mu|cdot)/);
         }
       }
     }
