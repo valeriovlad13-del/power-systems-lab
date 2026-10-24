@@ -7050,8 +7050,8 @@
         "title": "Apply the double-line-to-ground fault network",
         "explanation": "For a bolted double-line-to-ground fault, calculate the positive-sequence current using the positive-sequence impedance in series with the parallel combination of negative and zero sequence impedances.",
         "equations": [
-          "Z_{20}=\\\\frac{j0.07(j0.05)}{j0.07+j0.05}=j0.02917\\\\;pu",
-          "|I_1|=\\\\frac{1}{|j0.08+j0.02917|}=9.16\\\\;pu"
+          "Z_{20}=\\frac{j0.07(j0.05)}{j0.07+j0.05}=j0.02917\\;pu",
+          "|I_1|=\\frac{1}{|j0.08+j0.02917|}=9.16\\;pu"
         ]
       },
       {
@@ -7059,8 +7059,8 @@
         "title": "Calculate the zero-sequence and fault current",
         "explanation": "Current division gives the zero-sequence component; the total ground current is three times its magnitude.",
         "equations": [
-          "|I_0|=|I_1|\\\\frac{X_2}{X_2+X_0}=9.16\\\\frac{0.07}{0.12}=5.34\\\\;pu",
-          "|I_f|=3|I_0|=16.03\\\\;pu\\\\approx j16\\\\;pu"
+          "|I_0|=|I_1|\\frac{X_2}{X_2+X_0}=9.16\\frac{0.07}{0.12}=5.34\\;pu",
+          "|I_f|=3|I_0|=16.03\\;pu\\approx j16\\;pu"
         ]
       }
     ],
@@ -7117,7 +7117,7 @@
         "title": "Calculate the single-line-to-ground fault current",
         "explanation": "For a bolted fault with prefault voltage 1 pu, the three sequence impedances are in series.",
         "equations": [
-          "I_f=\\\\frac{3}{j0.2577+j0.2085+j0.14}=\\\\frac{3}{j0.6062}=-j4.95\\\\;pu"
+          "I_f=\\frac{3}{j0.2577+j0.2085+j0.14}=\\frac{3}{j0.6062}=-j4.95\\;pu"
         ]
       }
     ],
@@ -7241,7 +7241,7 @@
         "title": "Calculate the single-line-to-ground fault current in per unit",
         "explanation": "With a solidly grounded neutral and a bolted fault, the sequence reactances are in series.",
         "equations": [
-          "I_f=\\\\frac{3}{j(2+0.16+0.08)}=1.339\\\\;pu"
+          "I_f=\\frac{3}{j(2+0.16+0.08)}=1.339\\;pu"
         ]
       },
       {
@@ -7249,8 +7249,8 @@
         "title": "Convert to amperes",
         "explanation": "Use the generator rated MVA and line-to-line voltage to calculate base current.",
         "equations": [
-          "I_{base}=\\\\frac{75\\\\times10^6}{\\\\sqrt{3}(11.8\\\\times10^3)}=3670\\\\;A",
-          "I_f=1.339(3670)=4914\\\\;A\\\\approx4{,}920\\\\;A"
+          "I_{base}=\\frac{75\\times10^6}{\\sqrt{3}(11.8\\times10^3)}=3670\\;A",
+          "I_f=1.339(3670)=4914\\;A\\approx4{,}920\\;A"
         ]
       }
     ],
@@ -7309,7 +7309,7 @@
         "title": "Calculate the single-line-to-ground fault current in per unit",
         "explanation": "For a solidly grounded generator and a bolted fault, add the three sequence reactances.",
         "equations": [
-          "I_f=\\\\frac{3}{j(0.3+0.2+0.1)}=-j5\\\\;pu"
+          "I_f=\\frac{3}{j(0.3+0.2+0.1)}=-j5\\;pu"
         ]
       },
       {
@@ -7317,8 +7317,8 @@
         "title": "Convert to amperes",
         "explanation": "Use the generator 20 MVA, 13.2 kV base.",
         "equations": [
-          "I_{base}=\\\\frac{20\\\\times10^6}{\\\\sqrt{3}(13.2\\\\times10^3)}=874.8\\\\;A",
-          "|I_f|=5(874.8)=4374\\\\;A"
+          "I_{base}=\\frac{20\\times10^6}{\\sqrt{3}(13.2\\times10^3)}=874.8\\;A",
+          "|I_f|=5(874.8)=4374\\;A"
         ]
       }
     ],
