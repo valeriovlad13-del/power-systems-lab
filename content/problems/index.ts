@@ -1,15 +1,36 @@
-import type { Problem } from "@/lib/problems/types";
+import sourceInventory from "@/content/problems/source-inventory.json";
 
-/**
- * Source problems are intentionally not populated until they are transcribed
- * and checked against the uploaded source document.
- *
- * Add a problem only when its original statement and options can be preserved.
- * Keep verificationStatus="pending" until the complete worked solution has
- * been independently checked.
- */
-export const problems: Problem[] = [];
+export type SourceSection = "Main Tutorial Problems" | "Out of the Box Questions";
+export type VerificationStatus = "pending" | "in-review" | "verified" | "needs-correction";
 
-export function getProblemById(problemId: string): Problem | undefined {
-  return problems.find((problem) => problem.id === problemId);
+export interface ProblemChoice {
+  id: string;
+  label: string;
+  text: string;
+}
+
+export interface SourceProblem {
+  id: string;
+  courseId: "power-systems-1" | "power-systems-2";
+  topicIds: string[];
+  source: {
+    document: string;
+    originalSection: SourceSection;
+    originalQuestionNumber: number;
+    pdfPage?: number;
+  };
+  statement: string;
+  choices: ProblemChoice[];
+  sourceMarkedChoiceId: string | null;
+  verificationStatus: VerificationStatus;
+  solution: { stepNumber: number; title: string; explanation: string; equations?: string[] }[];
+  assumptions: string[];
+  calculatorIds: string[];
+  reviewerNotes: string[];
+}
+
+export const problems = sourceInventory as SourceProblem[];
+
+export function getProblemById(id: string): SourceProblem | undefined {
+  return problems.find((problem) => problem.id === id);
 }
