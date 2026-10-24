@@ -35,13 +35,93 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate the transmission loss",
+        "explanation": "Efficiency is delivered power divided by input power. Calculate input power, then subtract the delivered power.",
+        "equations": [
+          "P_{in}=\\\\frac{P_r}{\\\\eta}=\\\\frac{200}{0.90}=222.222\\\\;\\\\text{kW}",
+          "P_{loss}=P_{in}-P_r=222.222-200=22.222\\\\;\\\\text{kW}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate the line current",
+        "explanation": "For a single-phase load at unity power factor, current is delivered power divided by receiving-end voltage.",
+        "equations": [
+          "I=\\\\frac{P_r}{V_r}=\\\\frac{200\\\\,000}{3\\\\,300}=60.606\\\\;\\\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Determine total loop resistance",
+        "explanation": "Use copper loss in the two-conductor loop, P_loss = I²R_loop.",
+        "equations": [
+          "R_{loop}=\\\\frac{P_{loss}}{I^2}=\\\\frac{22\\\\,222.2}{(60.606)^2}\\\\approx6.05\\\\;\\\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Solve for the one-way line length",
+        "explanation": "The loop has two conductors, so R_loop = 2ρℓ/A. Convert 0.775 cm² to 7.75 × 10⁻⁵ m².",
+        "equations": [
+          "\\\\ell=\\\\frac{R_{loop}A}{2\\\\rho}",
+          "\\\\ell=\\\\frac{(6.05)(7.75\\\\times10^{-5})}{2(1.725\\\\times10^{-8})}\\\\approx13.59\\\\times10^3\\\\;\\\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 5,
+        "title": "Select the matching choice",
+        "explanation": "Convert metres to kilometres and round to the nearest listed choice.",
+        "equations": [
+          "\\\\ell\\\\approx13.6\\\\;\\\\text{km}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Treat 3,300 V as the receiving-end voltage.",
+      "Use the delivered-load current to calculate line copper loss, consistent with the conventional approximation for this problem.",
+      "The total loop resistance is twice the resistance of one conductor."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated from efficiency, delivered power, copper loss, and two-conductor loop resistance. The result matches source-marked option D under the stated conventional approximation."
+    ],
+    "verifiedChoiceId": "d",
+    "given": [
+      {
+        "label": "Delivered power, Pᵣ",
+        "value": "200",
+        "unit": "kW"
+      },
+      {
+        "label": "Receiving-end voltage, Vᵣ",
+        "value": "3,300",
+        "unit": "V"
+      },
+      {
+        "label": "Transmission efficiency, η",
+        "value": "90",
+        "unit": "%"
+      },
+      {
+        "label": "Conductor cross-sectional area, A",
+        "value": "0.775",
+        "unit": "cm²"
+      },
+      {
+        "label": "Copper resistivity, ρ",
+        "value": "1.725 × 10⁻⁸",
+        "unit": "Ω·m"
+      }
+    ],
+    "find": "Maximum one-way line length for a single-phase two-conductor line.",
+    "finalAnswer": {
+      "value": "13.6",
+      "unit": "km"
+    }
   },
   {
     "id": "ps1-main-02",
@@ -222,13 +302,69 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate the geometric mean distance",
+        "explanation": "For a transposed three-phase line with unequal spacing, D_m is the cube root of the product of the three pairwise distances.",
+        "equations": [
+          "D_m=(D_{12}D_{23}D_{31})^{1/3}=(4\\\\times4\\\\times8)^{1/3}\\\\approx5.040\\\\;\\\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate conductor GMR",
+        "explanation": "Convert the 2 cm diameter to a radius of 0.01 m, then apply the solid-conductor GMR factor.",
+        "equations": [
+          "r'=0.7788r=0.7788(0.01)=0.007788\\\\;\\\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate inductance per phase",
+        "explanation": "For a transposed three-phase line, L = 0.2 ln(D_m/r′) mH/km per phase.",
+        "equations": [
+          "L=0.2\\\\ln\\\\left(\\\\frac{5.040}{0.007788}\\\\right)\\\\approx1.294\\\\;\\\\text{mH/km per phase}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The computed result rounds to the listed value in option B."
+      }
+    ],
+    "assumptions": [
+      "Assume the outer conductors are 8 m apart and adjacent conductors are each 4 m apart, as stated.",
+      "Use the standard GMR for a solid round conductor, r′ = 0.7788r."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently calculated using geometric mean distance and solid-conductor GMR. The result matches source-marked option B."
+    ],
+    "verifiedChoiceId": "b",
+    "given": [
+      {
+        "label": "Conductor spacing",
+        "value": "4, 4, and 8",
+        "unit": "m"
+      },
+      {
+        "label": "Conductor diameter",
+        "value": "2",
+        "unit": "cm"
+      },
+      {
+        "label": "Conductor radius",
+        "value": "0.01",
+        "unit": "m"
+      }
+    ],
+    "find": "Inductance per kilometre per phase for a transposed three-phase line in a flat horizontal arrangement.",
+    "finalAnswer": {
+      "value": "1.29",
+      "unit": "mH/km per phase"
+    }
   },
   {
     "id": "ps1-main-05",
@@ -265,13 +401,62 @@
       }
     ],
     "sourceMarkedChoiceId": "a",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate conductor GMR",
+        "explanation": "Convert the diameter to a radius and apply the solid-conductor GMR factor.",
+        "equations": [
+          "r=\\\\frac{0.05}{2}=0.025\\\\;\\\\text{m}",
+          "r'=0.7788(0.025)=0.01947\\\\;\\\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the three-phase inductance formula",
+        "explanation": "For equilateral spacing, L = 0.2 ln(D/r′) mH/km per phase.",
+        "equations": [
+          "L=0.2\\\\ln\\\\left(\\\\frac{8}{0.01947}\\\\right)\\\\approx1.204\\\\;\\\\text{mH/km per phase}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Select the matching choice",
+        "explanation": "The calculated result matches option A to the precision given in the source."
+      }
+    ],
+    "assumptions": [
+      "The conductor spacing is equilateral, so the geometric mean distance equals 8 m.",
+      "Use the standard GMR for a solid round conductor, r′ = 0.7788r."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently calculated using the standard equilateral-spacing inductance formula and solid-conductor GMR. The result matches source-marked option A."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [
+      {
+        "label": "Equilateral conductor spacing, D",
+        "value": "8",
+        "unit": "m"
+      },
+      {
+        "label": "Conductor diameter",
+        "value": "5",
+        "unit": "cm"
+      },
+      {
+        "label": "Conductor radius, r",
+        "value": "0.025",
+        "unit": "m"
+      }
+    ],
+    "find": "Inductance per kilometre per phase of a transposed three-phase line with equilateral spacing.",
+    "finalAnswer": {
+      "value": "1.204",
+      "unit": "mH/km per phase"
+    }
   },
   {
     "id": "ps1-main-06",
