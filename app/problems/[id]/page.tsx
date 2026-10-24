@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import katex from "katex";
 import { getProblemById, problems } from "@/content/problems";
 import AnswerChoices from "@/components/problems/answer-choices";
+import SolutionDisclosure from "@/components/problems/solution-disclosure";
 
 export function generateStaticParams() {
   return problems.map((problem) => ({ id: problem.id }));
@@ -43,6 +44,7 @@ export default async function ProblemDetailPage({ params }: { params: Promise<{ 
         {markedChoice && <p className="mt-4 text-sm leading-6 text-[var(--muted)]">The source PDF marks option {markedChoice.label} with an asterisk. {isVerified && verifiedChoice ? `The independently checked solution selects option ${verifiedChoice.label}.` : "This source marking has not yet been independently verified."}</p>}
       </section>
 
+      <SolutionDisclosure isVerified={isVerified}>
       {isVerified ? (
         <section className="mt-5 rounded-2xl border border-[var(--border)] bg-white p-4 sm:mt-6 sm:p-7">
           <h2 className="text-lg font-bold">Step-by-step solution</h2>
@@ -66,6 +68,7 @@ export default async function ProblemDetailPage({ params }: { params: Promise<{ 
           <ol className="mt-5 space-y-3">{["Given", "Find", "Required formulas", "Numbered calculations and substitutions", "Final answer and unit check", "Engineering note / common mistake"].map((step, index) => <li key={step} className="flex gap-3 rounded-lg border border-dashed border-[var(--border)] p-3"><span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xs font-bold">{index + 1}</span><div><p className="text-sm font-semibold">{step}</p><p className="mt-1 text-xs text-[var(--muted)]">To be completed during technical review</p></div></li>)}</ol>
         </section>
       )}
+      </SolutionDisclosure>
     </main>
   );
 }
