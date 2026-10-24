@@ -40,7 +40,7 @@ export interface SourceProblem {
   reviewerNotes: string[];
 }
 
-export const problems = sourceInventory as SourceProblem[];
+export const problems = sourceInventory as unknown as SourceProblem[];
 
 export function getProblemById(id: string): SourceProblem | undefined {
   return problems.find((problem) => problem.id === id);
