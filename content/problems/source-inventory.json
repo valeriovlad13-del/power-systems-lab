@@ -2154,13 +2154,75 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Convert total inductance to per-kilometre value",
+        "explanation": "The stated total inductance covers the full 10 km single-phase line.",
+        "equations": [
+          "L_{loop}=\\frac{16.65}{10}=1.665\\;\\text{mH/km}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Rearrange the loop-inductance equation",
+        "explanation": "For a two-wire line, L_loop = 0.4 ln(D/r′) mH/km, where r′ = 0.7788r.",
+        "equations": [
+          "1.665=0.4\\ln\\left(\\frac{1}{r'}\\right)",
+          "\\ln\\left(\\frac{1}{r'}\\right)=4.1625",
+          "r'=e^{-4.1625}\\approx0.01556\\;\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Convert GMR to physical diameter",
+        "explanation": "Divide the effective radius by 0.7788 to obtain the physical radius, then double it.",
+        "equations": [
+          "r=\\frac{0.01556}{0.7788}\\approx0.01998\\;\\text{m}",
+          "d=2r\\approx0.03996\\;\\text{m}=4.00\\;\\text{cm}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The calculated diameter matches option D.",
+        "equations": [
+          "d\\approx4.0\\;\\text{cm}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The stated total inductance is the loop inductance for the complete line."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified.",
+      "Independently calculated from the given geometry and standard inductance formulas; answer matches choice within rounding."
+    ],
+    "verifiedChoiceId": "d",
+    "given": [
+      {
+        "label": "Line length",
+        "value": "10",
+        "unit": "km"
+      },
+      {
+        "label": "Total loop inductance",
+        "value": "16.65",
+        "unit": "mH"
+      },
+      {
+        "label": "Conductor spacing",
+        "value": "1.0",
+        "unit": "m"
+      }
+    ],
+    "find": "Conductor diameter.",
+    "finalAnswer": {
+      "value": "4.0",
+      "unit": "cm"
+    }
   },
   {
     "id": "ps1-otb-06",
@@ -2197,13 +2259,62 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate conductor GMR",
+        "explanation": "Use r′ = 0.7788r for a solid round conductor.",
+        "equations": [
+          "r=0.0124/2=0.0062\\;\\text{m}",
+          "r'=0.7788(0.0062)=0.004829\\;\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the three-phase inductance formula",
+        "explanation": "For an equilateral configuration, the equivalent spacing is 2 m.",
+        "equations": [
+          "L=2\\times10^{-4}\\ln\\left(\\frac{D}{r'}\\right)\\;\\text{H/km}",
+          "L=0.2\\ln\\left(\\frac{2}{0.004829}\\right)\\;\\text{mH/km}",
+          "L\\approx1.207\\;\\text{mH/km}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Select the matching choice",
+        "explanation": "The result matches option C to rounding.",
+        "equations": [
+          "L\\approx1.2\\;\\text{mH/km}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The conductors are solid round conductors and the line is treated as transposed/equivalent with equilateral spacing."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified.",
+      "Independently calculated from the given geometry and standard inductance formulas; answer matches choice within rounding."
+    ],
+    "verifiedChoiceId": "c",
+    "given": [
+      {
+        "label": "Conductor diameter",
+        "value": "1.24",
+        "unit": "cm"
+      },
+      {
+        "label": "Equilateral spacing",
+        "value": "2",
+        "unit": "m"
+      }
+    ],
+    "find": "Inductance per kilometre per phase.",
+    "finalAnswer": {
+      "value": "1.2",
+      "unit": "mH/km per phase"
+    }
   },
   {
     "id": "ps1-otb-07",
@@ -2240,13 +2351,70 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate equivalent spacing",
+        "explanation": "For a regularly transposed line, use the geometric mean of the three pairwise distances.",
+        "equations": [
+          "D_m=\\sqrt[3]{2(2.5)(4.5)}\\approx2.823\\;\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate conductor GMR",
+        "explanation": "Convert diameter to radius and apply the solid-conductor GMR correction.",
+        "equations": [
+          "r=0.0124/2=0.0062\\;\\text{m}",
+          "r'=0.7788(0.0062)=0.004829\\;\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate inductance per kilometre",
+        "explanation": "Use the geometric-mean spacing and conductor GMR in the standard phase-inductance formula.",
+        "equations": [
+          "L=0.2\\ln\\left(\\frac{D_m}{r'}\\right)\\;\\text{mH/km}",
+          "L=0.2\\ln\\left(\\frac{2.823}{0.004829}\\right)\\approx1.274\\;\\text{mH/km}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The result matches option D.",
+        "equations": [
+          "L\\approx1.274\\;\\text{mH/km}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The line is regularly transposed.",
+      "The conductor is treated as solid and round."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified.",
+      "Independently calculated from the given geometry and standard inductance formulas; answer matches choice within rounding."
+    ],
+    "verifiedChoiceId": "d",
+    "given": [
+      {
+        "label": "Phase spacings",
+        "value": "2, 2.5, 4.5",
+        "unit": "m"
+      },
+      {
+        "label": "Conductor diameter",
+        "value": "1.24",
+        "unit": "cm"
+      }
+    ],
+    "find": "Inductance per kilometre per phase for the transposed three-phase line.",
+    "finalAnswer": {
+      "value": "1.274",
+      "unit": "mH/km per phase"
+    }
   },
   {
     "id": "ps1-otb-08",
@@ -2283,13 +2451,70 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate equivalent spacing",
+        "explanation": "For a transposed line, take the geometric mean of the three distances.",
+        "equations": [
+          "D_m=\\sqrt[3]{(2)(2)(4)}\\approx2.520\\;\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate conductor GMR",
+        "explanation": "Use the physical radius and the solid-conductor GMR correction.",
+        "equations": [
+          "r=0.025/2=0.0125\\;\\text{m}",
+          "r'=0.7788(0.0125)=0.009735\\;\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate inductance per kilometre",
+        "explanation": "Substitute the equivalent spacing and GMR.",
+        "equations": [
+          "L=0.2\\ln\\left(\\frac{D_m}{r'}\\right)\\;\\text{mH/km}",
+          "L=0.2\\ln\\left(\\frac{2.520}{0.009735}\\right)\\approx1.11\\;\\text{mH/km}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The result matches option B.",
+        "equations": [
+          "L\\approx1.11\\;\\text{mH/km}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The line is regularly transposed.",
+      "The stated spacings are center-to-center distances."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified.",
+      "Independently calculated from the given geometry and standard inductance formulas; answer matches choice within rounding."
+    ],
+    "verifiedChoiceId": "b",
+    "given": [
+      {
+        "label": "Phase spacings",
+        "value": "D₁₂ = 2, D₂₃ = 2, D₃₁ = 4",
+        "unit": "m"
+      },
+      {
+        "label": "Conductor diameter",
+        "value": "2.5",
+        "unit": "cm"
+      }
+    ],
+    "find": "Inductance per kilometre per phase for the transposed three-phase line.",
+    "finalAnswer": {
+      "value": "1.11",
+      "unit": "mH/km per phase"
+    }
   },
   {
     "id": "ps1-otb-09",
