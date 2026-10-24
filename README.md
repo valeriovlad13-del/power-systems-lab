@@ -1,13 +1,14 @@
 # Power Systems Lab
 
-A responsive learning web app for **Power Systems 1** and **Power Systems 2**. It organizes problems by topic, presents reviewed step-by-step solutions, and provides deterministic engineering calculators.
+A responsive learning web app for **Power Systems 1** and **Power Systems 2**. It organizes source problems by topic, presents reviewed step-by-step solutions, and provides deterministic engineering calculators.
 
-> **Current status:** the app foundation and first calculator are committed. The complete inventory and worked solutions are not yet imported. The source PDF contains 140 questions; each item must be transcribed and checked before a solution is marked verified.
+> **Current status:** all 140 source questions and their four choices have been imported. Four Power Systems 1 Main Tutorial Problems have independently checked worked solutions. The remaining 136 solutions are pending review.
 
 ## Principles
 
-- Preserve original problem wording, options, numbering, and source section.
-- Keep source identity separate from the app's topic taxonomy.
+- Preserve original problem wording, choices, numbering, and source section.
+- Store source-marked choices separately from independently verified answers.
+- Keep topic assignments provisional until checked against each question.
 - Treat solutions as pending until formulas, substitutions, units, assumptions, and final answers are reviewed.
 - Use tested deterministic functions for engineering calculations, not AI-generated arithmetic at runtime.
 - Reuse components and calculation functions rather than duplicating logic.
@@ -19,7 +20,7 @@ A responsive learning web app for **Power Systems 1** and **Power Systems 2**. I
 - TypeScript
 - Tailwind CSS
 - KaTeX for mathematical rendering
-- Vitest for calculations/content tests
+- Vitest for calculation/content tests
 - Vercel deployment target
 
 ## Getting started
@@ -33,36 +34,37 @@ npm run dev
 
 Open http://localhost:3000.
 
-## Routes implemented
+## Routes
 
-- `/` — project landing page
+- `/` — landing page
 - `/courses/power-systems-1` — Power Systems 1 overview
 - `/courses/power-systems-2` — Power Systems 2 overview
-- `/topics` — provisional topic taxonomy
+- `/topics` — provisional topic directory
+- `/problems` — searchable/filterable 140-question bank
+- `/problems/[id]` — question detail and solution status
 - `/calculators` — calculator library
-- `/calculators/complex` — working complex-number calculator with pure calculation functions and tests
+- `/calculators/complex` — complex-number calculator
 
-## Initial build sequence
+## Content verification
 
-1. Audit and inventory all 140 source questions and preserve source identifiers.
-2. Verify topic assignment while retaining source section labels.
-3. Build the reusable question detail and solution renderer.
-4. Add calculators incrementally, each with validation and automated tests.
-5. Import content in batches and independently review solution steps.
-6. Perform responsive QA and deploy.
+The source's asterisk-marked choice is recorded as `sourceMarkedChoiceId`. It is not treated as the verified answer. A reviewed solution uses `verificationStatus: "verified"` and `verifiedChoiceId`, plus given values, assumptions, equations, calculation steps, and a final answer. Only four problems currently meet that standard.
 
-## Verification policy
+## Build sequence
 
-A problem may be present in the bank while its solution is pending. Only solutions marked `verified` after technical review should be presented as approved worked answers. A marked choice in the source is not automatically treated as correct.
+1. Review topic assignments and source transcription.
+2. Continue verifying solutions in small batches.
+3. Build a reusable solution renderer and question-linked calculator inputs.
+4. Add engineering calculators incrementally with automated tests.
+5. Run tests, production build, responsive QA, and deploy.
 
 ## Project structure
 
 ```text
 app/                  Next.js routes
 components/           Reusable interface and feature components
-content/              Course, topic, and problem data
+content/              Courses, topics, and 140 source questions
 lib/problems/         Shared problem data types
-lib/calculations/     Pure, tested numerical functions
+lib/calculations/     Pure numerical functions
 lib/validation/       Input and content validation
 lib/search/           Problem filtering and search
 tests/                Calculation and content tests
