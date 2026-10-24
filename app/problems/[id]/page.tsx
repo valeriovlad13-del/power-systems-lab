@@ -44,7 +44,6 @@ export default async function ProblemDetailPage({ params }: { params: Promise<{ 
           isVerified={isVerified}
           verifiedChoiceId={problem.verifiedChoiceId ?? null}
         />
-        {markedChoice && <p className="mt-4 text-xs leading-5 text-[var(--muted)]">The original PDF contains an answer marking; it is not treated as verified unless the solution has been independently checked.</p>}
       </section>
 
       <SolutionDisclosure isVerified={isVerified}>
