@@ -1,0 +1,6159 @@
+[
+  {
+    "id": "ps1-main-01",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "efficiency-power"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 1
+    },
+    "statement": "What is the maximum length in km for a 1-phase transmission line having a copper conductor of 0.775 sq. cm. cross-section over which 200 kW at unity power factor and at 3,300 V are to be delivered? The efficiency of transmission is 90%. Take specific resistance as 1.725 μΩ-cm. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "10.4 km"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "11.8 km"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "12.9 km"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "13.6 km"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-main-02",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 2
+    },
+    "statement": "A single-phase line has two parallel conductors 2 meters apart. The diameter of each conductor is 1.2 cm. Calculate the loop inductance per km of the line. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "1.324 mH/km"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "2.423 mH/km"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "1.015 mH/km"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "2.632 mH/km"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-main-03",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 3
+    },
+    "statement": "A single-circuit, two-bundle conductor line has a bundle spacing of 30 cm and diameter of each conductor is 5 cm. Calculate the capacitance (in μF/km per phase) if the distance between the center of the bundle is 5 m. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "1.26"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "0.126"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "0.0126"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "0.00126"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-main-04",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 4
+    },
+    "statement": "The three conductors of a three-phase line arranged in a horizontal plane and 4 meters apart. Diameter of each conductor is 2 cm. Determine the inductance per km of each line. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "0.72 mH/km"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "1.29 mH/km"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "2.07 mH/km"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "3.77 mH/km"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-main-05",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 5
+    },
+    "statement": "A three-phase transmission line has its conductors equilaterally spaced 8 m apart. The diameter of each conductor is 5 cm, calculate the inductance (in mH/km per phase). ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "1.204"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "1.420"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "2.350"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "2.053"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-main-06",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 6
+    },
+    "statement": "A 3-phase, 50 Hz, 132 kV overhead line has conductors placed in a horizontal plane 4 m apart. Conductor diameter is 2 cm. If the line length is 100 km, calculate the charging current per phase assuming complete transposition. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "11.6 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "18.7 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "21.4 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "24.8 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-main-07",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 7
+    },
+    "statement": "A three-phase 60 Hz transposed transmission line has a flat horizontal spacing configuration. The line reactance is 0.486 Ω/km. The conductor geometric mean radius is 2 cm. Determine the spacing D in meter. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "10 m"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "12 m"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "15 m"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "20 m"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-main-08",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "line-performance"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 8
+    },
+    "statement": "An overhead 3-phase transmission line delivers 5,000 kW at 22 kV at 0.8 power factor lagging. The resistance and reactance of each conductor is 4 ohms and 6 ohms respectively. Determine the sending-end voltage (per phase). ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "18.65 kV"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "15.42 kV"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "23.93 kV"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "13.82 kV"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-main-09",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "line-performance"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 9
+    },
+    "statement": "A 3-phase line delivers 3,600 kW at a pf of 0.8 lagging to a load. If the sending-end voltage is 33 kV, determine the receiving-end line voltage. The resistance and reactance of each conductor are 5.31 ohms and 5.54 ohms respectively. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "18.45 kV"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "31.97 kV"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "20.29 kV"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "35.14 kV"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-main-10",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 10
+    },
+    "statement": "An 11 kV, 3-phase transmission line has a resistance of 1.5 ohms and reactance of 4 ohms per phase. Calculate the percentage regulation of the line when the total load of 5,000 kVA at 0.8 lagging power factor is supplied at 11 kV at the distant end. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "12.63%"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "10.71%"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "15.26%"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "18.24%"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-main-11",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "efficiency-power",
+      "short-medium-lines"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 11
+    },
+    "statement": "A 69-kV, three-phase short transmission line is 16 km long. The line has a per-phase series impedance of 0.125 + j0.4375 ohms per km. Determine the transmission efficiency when the line delivers 70 MVA, 0.8 lagging power factor at 64 kV. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "95.9%"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "90.2%"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "91.4%"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "93.1%"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-main-12",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-performance",
+      "efficiency-power",
+      "short-medium-lines"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 12
+    },
+    "statement": "What is the maximum power that can be transmitted over a three-phase short transmission line having a per-phase impedance of (0.3 + j0.4) Ω if the receiving-end voltage is 6,351 volts per phase and the voltage regulation is not to exceed 5 percent? ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "545.1 MW"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "348.9 MW"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "108.9 MW"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "236.5 MW"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-main-13",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "short-medium-lines"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 13
+    },
+    "statement": "A 230-kV, three-phase transmission line has a per-phase series impedance of z = 0.05 + j0.45 Ω per km and per-phase shunt admittance of y = j3.4 × 10⁻⁶ siemens per km. The line is 80 km long. Using the nominal pi model, determine the constant C of the line. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "0.042 + j0.2713"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "0.0042 + j0.02713"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "j0.002713"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "j0.0002713"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-main-14",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-performance",
+      "short-medium-lines"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 14
+    },
+    "statement": "The ABCD constants of a three-phase, 345-kV transmission line are A = D = 0.98182 + j0.0012447, B = 4.035 + j58.947 and C = j0.00061137. The line delivers 400 MVA at 0.8 lagging power factor at 345 kV. Determine the sending-end line voltage. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "429 kV"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "387 kV"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "506 kV"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "365 kV"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-main-15",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-performance"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 15
+    },
+    "statement": "A 132-kV, 60 Hz, three-phase transmission line delivers a load of 50 MW at 0.8 lagging power factor at receiving end. The constants of the line are A = D = 0.95∠1.4°; B = 96∠78°; C = 0.0015∠90°. Find the line regulation. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "21.61%"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "18.13%"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "29.95%"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "14.78%"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-main-16",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "long-lines"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 16
+    },
+    "statement": "A long transmission line has a resistance of 25.3 ohms, 66.5 ohms reactance and admittance due to charging capacitance is 0.442 × 10⁻³ mho. Find the B constant of the line. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "24.96 + j65.72"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "65.72 + j24.96"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "48.75 + j88.17"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "88.17 + j48.75"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-main-17",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "surge-sil"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 17
+    },
+    "statement": "A three-phase, 500-kV transmission line is 300 km long. The line inductance is 0.97 mH/km per phase and its capacitance is 0.0115 μF/km per phase. Assume a lossless line. Determine the surge impedance of the line. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "290 ohms"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "390 ohms"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "490 ohms"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "590 ohms"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-main-18",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "surge-sil"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 18
+    },
+    "statement": "A cable has a capacitance of 200 pF/m and an inductance of 0.42 μH/m. Determine the velocity of propagation in the cable. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "2.09 × 10⁸ m/s"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "1.66 × 10⁸ m/s"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "1.10 × 10⁸ m/s"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "1.89 × 10⁸ m/s"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-main-19",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-performance",
+      "surge-sil"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 19
+    },
+    "statement": "An overhead transmission line has a receiving-end voltage of 1,000 kV. Find the total surge power in the line if its surge impedance is 400 ohms. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "1,500 MW"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "2,500 MW"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "150 MW"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "250 MW"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-main-20",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "line-performance",
+      "short-medium-lines"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 20
+    },
+    "statement": "A 3-phase, 60 Hz overhead transmission line 100 km long has the following constants: Resistance/km/phase = 0.1 Ω; Inductive reactance/km/phase = 0.2 Ω and Capacitive susceptance/km/phase = 0.04 × 10⁻⁴ Siemen. Determine the sending-end current when supplying a balanced load of 10,000 kW at 66 kV, 0.8 pf lagging. Use nominal-T method. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "130 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "120 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "110 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "100 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-01",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 1
+    },
+    "statement": "A transmission-line cable consists of 12 identical strands of aluminum, each 3 mm in diameter. The resistivity of aluminum strand at 20°C is 2.8 × 10⁻⁸ Ω-m. Find the 50°C AC resistance per km of the cable. Assume a skin-effect correction factor of 1.02 at 60 Hz. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "0.4782 Ω"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "0.4278 Ω"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "0.7374 Ω"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "0.3774 Ω"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-02",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 2
+    },
+    "statement": "A single-phase line has two parallel conductors 1 meter apart. The radius of each conductor is 0.5 cm. Calculate the loop inductance per km of the line. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "2.22 mH"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "3.22 mH"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "4.44 mH"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "5.55 mH"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-03",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 3
+    },
+    "statement": "A 20 km single-phase line has two parallel conductors separated by 1.5 meters. The diameter of each conductor is 0.823 cm. If the conductor has a resistance of 0.311 Ω/km, find the loop impedance of this line at 50 Hz. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "10.79 Ω"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "14.47 Ω"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "16.27 Ω"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "19.86 Ω"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-04",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 4
+    },
+    "statement": "The conductors of a three-phase transmission line are arranged in the form of an equilateral triangle with sides of 6 m each. If the conductors are 500 mils in diameter and the line is 25 km long, what is its inductance per phase? ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "35.5 mH"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "30.1 mH"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "23.7 mH"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "21.6 mH"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-05",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 5
+    },
+    "statement": "A single-phase, 10-km transmission line has 16.65 mH total inductance. If the distance between the conductors is 1.0 m, what is the conductor diameter? ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "1.0 cm"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "2.0 cm"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "3.0 cm"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "4.0 cm"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-06",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 6
+    },
+    "statement": "Find the inductance per km of a 3-phase transmission line using 1.24 cm diameter conductors when these are placed at the corners of an equilateral triangle of each side 2 m. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "0.9 mH/km"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "1.7 mH/km"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "1.2 mH/km"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "2.8 mH/km"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-07",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 7
+    },
+    "statement": "The three conductors of a 3-phase line are arranged at the corners of a triangle of sides 2 m, 2.5 m and 4.5 m. Calculate the inductance per km of the line when the conductors are regularly transposed. The diameter of each conductor is 1.24 cm. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "2.880 mH/km"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "2.084 mH/km"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "1.724 mH/km"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "1.274 mH/km"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-08",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 8
+    },
+    "statement": "Calculate the inductance per km of each conductor in a 3-phase, 3-wire system when the conductors are arranged in a horizontal plane with spacing such that D₃₁ = 4 m; D₁₂ = D₂₃ = 2 m. The conductors are transposed and have a diameter of 2.5 cm. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "0.78 mH"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "1.11 mH"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "3.67 mH"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "2.49 mH"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-09",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 9
+    },
+    "statement": "A single-circuit three-phase transposed transmission line is composed of 2 ACSR conductors per phase with horizontal configuration. It has a bundle spacing of 50 cm and the distance between its center is 6 m. Find the inductive reactance per km at 50 Hz. Radius of each subconductor in the bundle is 1.725 cm. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "0.476 Ω/km"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "0.674 Ω/km"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "0.284 Ω/km"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "0.824 Ω/km"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-10",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 10
+    },
+    "statement": "A single-circuit three-phase transmission line is composed of four ACSR conductors per phase with horizontal configuration. The bundle spacing is 0.5 m and a distance of 14 m between the center of the conductor bundle. Find the inductance per km length of the transmission line. Radius of each conductor in the bundle is 1.725 cm. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "0.876 mH/km"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "0.687 mH/km"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "0.364 mH/km"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "0.643 mH/km"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-11",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 11
+    },
+    "statement": "A bundled conductor line has four conductors per bundle. The four sub-conductors are placed at the corners of a square of side 25 cm. The diameter of each sub-conductor is 3.146 cm. Find GMR of this configuration. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "18.622 cm"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "12.826 cm"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "16.822 cm"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "12.268 cm"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-12",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 12
+    },
+    "statement": "Find the capacitance of phase to neutral per km of a three-phase line having conductors of 1 cm radius placed at the corners of a triangle with sides 5 m, 6 m and 7 m respectively. Assume that the line is fully transposed and carries a balanced load. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "2.31 × 10⁻³ μF/km"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "1.11 × 10⁻³ μF/km"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "8.72 × 10⁻³ μF/km"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "4.45 × 10⁻³ μF/km"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-13",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 13
+    },
+    "statement": "A three-phase transmission line has inductance 1.2 mH/km. The diameter of each conductor is 4 cm. The conductors are equilaterally spaced. Determine the capacitance of phase to neutral (in Farads per km / microfarads per km). ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "6.526 × 10⁻⁶"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "9.652 × 10⁻⁶"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "4.871 × 10⁻⁶"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "4.718 × 10⁻⁶"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-14",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 14
+    },
+    "statement": "A single-phase transmission line has two parallel conductors 3 meters apart, radius of each conductor being 1 cm. Calculate the capacitance of the line per km. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "0.5823 × 10⁻² μF/km"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "0.3582 × 10⁻² μF/km"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "0.4785 × 10⁻² μF/km"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "0.4875 × 10⁻² μF/km"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-15",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 15
+    },
+    "statement": "A 3-phase overhead transmission line has its conductors arranged at the corners of an equilateral triangle of 2 m side. Calculate the capacitance of each line conductor per km. Given that the diameter of each conductor is 1.25 cm. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "0.96 μF/km"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "0.096 μF/km"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "0.0096 μF/km"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "0.00096 μF/km"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-16",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 16
+    },
+    "statement": "A single-phase transmission line has two parallel conductors 1.5 meters apart, the diameter of each conductor being 0.5 cm. Calculate line to neutral capacitance for a line 80 km long. ○​ A",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "3.48 μF"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "4.87 μF"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "5.07 μF"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "6.49 μF"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-17",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 17
+    },
+    "statement": "A 3-phase, 50 Hz, 132 kV overhead line has conductors placed in a horizontal plane 4.56 m apart. Conductor diameter is 22.4 mm. If the line length is 100 km, calculate the charging current per phase assuming complete transposition. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "18.475 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "15.320 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "21.345 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "28.427 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-18",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-performance",
+      "short-medium-lines"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 18
+    },
+    "statement": "A 60 Hz short transmission line, having R = 0.62 ohms per phase and L = 93.24 millihenrys per phase, supplies a three-phase, wye-connected 100 MW load of 0.9 lagging power factor at 215 kV line-to-line voltage. Calculate the sending-end voltage per phase. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "121.04 kV"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "127.04 kV"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "129.04 kV"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "132.04 kV"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-19",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-performance",
+      "short-medium-lines"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 19
+    },
+    "statement": "A 138-kV, three-phase short transmission line has a per-phase impedance of (2 + j4) ohms. If the line supplies a 25-MW load at 0.8 power factor lagging, calculate the sending-end voltage. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "120.8 kV"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "136.2 kV"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "124.7 kV"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "139.5 kV"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-20",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-performance",
+      "short-medium-lines"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 20
+    },
+    "statement": "A 69-kV, three-phase short transmission line is 16 km long. The line has per-phase series impedance of 0.125 + j0.4375 ohms per km. Determine the sending-end line voltage when the line delivers 120 MW, unity power factor at 64 kV. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "40 kV"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "69 kV"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "53 kV"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "62 kV"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-21",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "line-performance"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 21
+    },
+    "statement": "A 3-phase line 3 km long delivers 3,000 kW at a pf 0.8 lagging to a load. The resistance and reactance per km of each conductor are 0.4 ohms and 0.3 ohms respectively. If the voltage at the supply end is maintained at 11 kV, calculate the receiving-end line voltage. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "12.19 kV"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "10.46 kV"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "16.42 kV"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "11.34 kV"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-22",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "efficiency-power"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 22
+    },
+    "statement": "A single-phase overhead transmission line delivers 4,000 kW at 11 kV at 0.8 pf lagging. If resistance and reactance per conductor are 0.15 Ω and 0.02 Ω respectively, calculate the line losses. ○​ A",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "320 kW"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "420 kW"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "520 kW"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "620 kW"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-23",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-performance"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 23
+    },
+    "statement": "A short 3-phase transmission line with an impedance of (5 + j20) Ω per phase has sending-end and receiving-end voltages of 46.85 kV and 33 kV respectively for some receiving-end load at a pf of 0.8 lagging. Determine the power output. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "17.47 MW"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "22.00 MW"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "25.01 MW"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "28.69 MW"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-24",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-performance",
+      "short-medium-lines"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 24
+    },
+    "statement": "A three-phase short transmission line having a per-phase impedance of (2 + j4) ohms has equal line-to-line receiving-end and sending-end voltages of 115 kV while supplying a load at 0.8 power factor leading. Calculate the power supplied by the line. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "672.5 MW"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "731.8 MW"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "839.2 MW"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "940.1 MW"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-25",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-performance",
+      "efficiency-power",
+      "short-medium-lines"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 25
+    },
+    "statement": "The sending-end and receiving-end voltages of a three-phase short transmission line are 33 kV and 31.2 kV, respectively. The per-phase line parameters are R = 10 Ω and X_L = 20 Ω. Calculate the maximum power that can be transmitted by the line. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "13.19 MW"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "16.21 MW"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "20.11 MW"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "26.57 MW"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-26",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "line-performance"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 26
+    },
+    "statement": "A single-phase transmission line is delivering 500 kVA load at 2 kV. Its resistance is 0.2 ohms and inductive reactance is 0.4 ohms. Determine the voltage regulation if the load power factor is 0.707 leading. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "-1.65%"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "1.65%"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "-5.30%"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "5.30%"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-27",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "line-performance"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 27
+    },
+    "statement": "A single-phase 11 kV line with a length of 15 km is to transmit 500 kVA. The inductive reactance of the line is 0.5 Ω/km and the resistance is 0.3 Ω/km. Calculate the voltage regulation of the line for 0.8 lagging power factor. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "1.69%"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "2.19%"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "3.34%"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "4.28%"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-28",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-performance",
+      "short-medium-lines"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 28
+    },
+    "statement": "A 10-km long, single-phase short transmission line has 0.5∠60° Ω/km impedance. The line supplies a 316.8 kW load at 0.8 power factor lagging. What is the voltage regulation if the receiving-end voltage is 3.3 kV? ○​ A",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "21.47%"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "15.09%"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "14.11%"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "16.94%"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-29",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "line-performance",
+      "efficiency-power"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 29
+    },
+    "statement": "A load of 1,000 kW at 0.8 pf lagging is received at the end of a 3-phase line 20 km long. The resistance and reactance of each conductor are 0.25 Ω and 0.28 Ω per km. If the receiving-end line voltage is maintained at 11 kV, calculate the transmission efficiency. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "94.32%"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "91.10%"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "88.75%"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "85.04%"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-30",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "efficiency-power"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 30
+    },
+    "statement": "A 3-phase, 50-Hz, 16 km long overhead line supplies 1,000 kW at 11 kV, 0.8 pf lagging. The line resistance is 0.03 ohms per phase per km and line inductance is 0.7 mH per phase per km. Calculate the efficiency of transmission. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "96.87%"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "99.38%"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "94.12%"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "90.57%"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-31",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "efficiency-power"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 31
+    },
+    "statement": "A single-phase overhead transmission line delivers 1,100 kW at 33 kV at 0.8 pf lagging. The total resistance and inductive reactance of the line are 10 Ω and 15 Ω respectively. Determine the transmission efficiency. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "98.44%"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "94.45%"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "88.16%"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "80.25%"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-32",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "line-performance",
+      "efficiency-power"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 32
+    },
+    "statement": "Estimate the distance over which a load of 15,000 kW at a pf 0.8 lagging can be delivered by a 3-phase transmission line having conductors each of resistance 1 Ω per kilometer. The voltage at the receiving-end is to be 132 kV and the loss in the transmission is to be 5 percent. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "46.92 km"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "33.69 km"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "40.10 km"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "37.18 km"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-33",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "line-performance",
+      "efficiency-power"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 33
+    },
+    "statement": "Estimate the distance over which a load of 15,000 kW at 0.85 pf can be delivered by a 3-phase transmission line having conductors of steel-cored aluminum each of resistance 0.905 Ω/phase/km. The voltage at the receiving end is to be 132 kV and the loss in transmission is to be 7.5% of the load. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "80 km"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "70 km"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "60 km"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "50 km"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-34",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "efficiency-power"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 34
+    },
+    "statement": "A three-phase, wye-connected, 20 MW load of power factor 0.866 lagging is to be supplied by a transmission line at 139 kV. It is desired that the line losses not exceed 5 percent of the load. If the per-phase resistance of the line is 0.7 ohms/km, what is the maximum length of the line? ○​ A",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "51 km"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "61 km"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "71 km"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "81 km"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-35",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-performance",
+      "long-lines"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 35
+    },
+    "statement": "The per-phase parameters for a 60-Hz, 200-km-long transmission line are R = 2.07 Ω, L = 310.8 mH, and C = 1.4774 μF. The line supplies a 100-MW, wye-connected load at 215 kV (line to line) and 0.9 power factor lagging. Calculate the sending-end voltage, using the nominal-pi circuit representation. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "116.1 kV"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "124.2 kV"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "142.7 kV"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "139.4 kV"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-36",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "line-performance",
+      "long-lines"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 36
+    },
+    "statement": "The per-phase constants of a 345-kV, three-phase, 150-km long transmission line are resistance = 0.1 Ω/km, inductance = 1.1 mH/km, and capacitance = 0.02 μF/km. The line supplies a 180 MW load at 0.9 power factor lagging. Using the nominal-pi circuit, determine the sending-end voltage. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "368.2 kV"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "212.6 kV"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "350.8 kV"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "202.5 kV"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-37",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "line-performance",
+      "short-medium-lines"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 37
+    },
+    "statement": "A 3-phase, 50 Hz transmission line 100 km long delivers 20 MW at 0.9 pf lagging and at 110 kV. The resistance and reactance of the line per phase per km are 0.2 ohms and 0.4 ohms respectively, while capacitance admittance is 2.5 × 10⁻⁶ siemens/km/phase. Calculate the line voltage at the sending-end. Use nominal-T method. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "67.38 kV"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "116.72 kV"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "73.84 kV"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "127.9 kV"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-38",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "line-performance",
+      "short-medium-lines"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 38
+    },
+    "statement": "A 3-phase, 60 Hz overhead transmission line delivers 10 MW at 0.8 pf lagging and at 66 kV. The resistance and inductive reactance of the line per phase is 10 ohms and 20 ohms respectively while capacitance admittance is 4 × 10⁻⁴ siemen. Calculate the sending-end line voltage. Use nominal-T method. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "96.8 kV"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "69.8 kV"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "87.9 kV"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "18.9 kV"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-39",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "line-performance"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 39
+    },
+    "statement": "A medium single-phase transmission line 100 km long has the following constants: Resistance/km/phase = 0.15 Ω; Inductive reactance/km/phase = 0.377 Ω; Capacitive reactance/km/phase = 31.87 Ω; Receiving-end line voltage = 132 kV. Assuming that the total capacitance of the line is localized at the receiving-end alone, determine the sending-end current. The line is delivering 72 MW at 0.8 pf lagging. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "177 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "277 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "377 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "477 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-40",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "line-performance"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 40
+    },
+    "statement": "A 3-phase, 50 Hz overhead transmission line has the following constants: Resistance/phase = 9.6 Ω; Inductance/phase = 0.097 H; Capacitance/phase = 0.765 μF. If the line is supplying a balanced load of 24,000 kVA, 0.8 pf lagging at 66 kV, calculate the sending-end current. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "204 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "249 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "317 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "368 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-41",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "line-performance"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 41
+    },
+    "statement": "A 3-phase, 150 km line has a resistance, inductive reactance and capacitive shunt admittance of 0.1 Ω, 0.5 Ω and 3 × 10⁻⁶ S per km per phase. If the line delivers 50 MW at 110 kV and 0.8 pf lagging, determine the sending-end current. Assume nominal-pi circuit for the line. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "279.4 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "297.4 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "315.4 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "306.4 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-42",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "line-performance"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 42
+    },
+    "statement": "A 3-phase, 60 Hz, 100 km transmission line has the following constants: Resistance/phase/km = 0.1 Ω; Reactance/phase/km = 0.5 Ω; Susceptance/phase/km = 10⁻⁵ siemen. If the line supplies a load of 20 MW at 0.9 pf lagging at 66 kV at the receiving-end, calculate the percentage regulation. Assume nominal-pi circuit. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "15.15%"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "13.27%"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "12.48%"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "11.09%"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-43",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 43
+    },
+    "statement": "A 3-phase overhead transmission line has the following constants: Resistance/phase = 10 Ω; Inductive reactance/phase = 35 Ω; Capacitive admittance/phase = 3 × 10⁻⁴ S. If the line supplied a balanced load of 40,000 kVA at 110 kV and 0.80 pf lagging, calculate the percentage regulation. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "16%"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "14%"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "12%"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "10%"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-44",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-performance"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 44
+    },
+    "statement": "A single-circuit transmission line delivering a load of 50 MVA at 110 kV and pf 0.8 lagging. Calculate the sending-end voltage given the constants A = D = 0.98∠3°; B = 110∠75° ohm; C = 0.005∠80° S. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "52,682 V"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "91,249 V"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "87,427 V"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "50,476 V"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-45",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-performance",
+      "efficiency-power"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 45
+    },
+    "statement": "A 100-km long, 3-phase, 60-Hz transmission line has the following line constants: R = 0.1 Ω/km/phase; X = 0.5 Ω/km/phase; Y = 10 × 10⁻⁶ S/km/phase. If the line supplies a load of 20 MW at 0.9 pf lagging at 66 kV at the receiving end, calculate the transmission efficiency. ○​ A",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "86%"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "88%"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "91%"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "94%"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-46",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "efficiency-power"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 46
+    },
+    "statement": "A 230-kV, three-phase transmission line has per-phase series impedance of z = 0.05 + j0.45 Ω per km and per-phase shunt admittance of y = j3.4 × 10⁻⁶ siemens per km. The line is 80 km. Using the nominal-pi model, determine the transmission efficiency when the line delivers 306 MW, unity power factor at 220 kV. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "97.53%"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "98.05%"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "93.11%"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "90.07%"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-47",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "efficiency-power"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 47
+    },
+    "statement": "A 3-phase load rated 20 MW, 69 kV, 0.75 power factor lagging is to be supplied at the end of a 20-mile, 3-phase transmission line. The series impedance of the line is (0.326 + j0.742) Ω per mile. Find the transmission efficiency. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "95.36%"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "91.48%"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "89.67%"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "85.29%"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-48",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "short-medium-lines"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 48
+    },
+    "statement": "Determine the constant B for the nominal-T circuit of a transmission line for which R = 10 Ω, X = 20 Ω and Y = 400 μS. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "4.328 + j11.404 Ω"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "9.945 + j19.904 Ω"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "1.492 + j16.178 Ω"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "5.621 + j18.367 Ω"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-49",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-performance"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 49
+    },
+    "statement": "The per-phase parameters of a 345-kV, 500-km, 60-Hz, three-phase transmission line are y = j4 × 10⁻⁶ S/km and z = (0.08 + j0.48) Ω/km. If the line supplies a 200-MW load at 0.866 power factor lagging, calculate the sending-end voltage. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "348 kV"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "429 kV"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "409 kV"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "372 kV"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-50",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-performance",
+      "long-lines"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 50
+    },
+    "statement": "For a three-phase long transmission line, Z_c = 406.4∠-5.48° Ω, E_R = 215∠0° kV and I_R = 335.3∠0° A, all per phase. Calculate the sending-end phase voltage. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "383.6 kV"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "238.8 kV"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "429.7 kV"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "249.4 kV"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-51",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "short-medium-lines"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 51
+    },
+    "statement": "A balanced 3-phase load of 30 MW is supplied at 132 kV, 50 Hz and 0.85 pf lagging by means of a transmission line. The series impedance of a single conductor is (20 + j52) ohms and the total phase-neutral admittance is 315 × 10⁻⁶ siemen. Using nominal-T method, determine the constant B of the line. ○​ A",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "84.19 + j31.67"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "31.67 + j84.19"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "19.89 + j51.81"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "51.81 + j19.89"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-52",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "line-performance"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 52
+    },
+    "statement": "A 150 km, 3-phase, 110 kV, 60 Hz transmission line transmits a load of 40,000 kW at 0.8 pf lagging at the receiving end. Resistance/km/phase = 0.15 Ω; reactance/km/phase = 0.6 Ω; susceptance/km/phase = 10⁻⁵ S. Determine the constant D of the line. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "0.421∠4°"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "0.968∠1°"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "0.648∠0.921°"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "1.006∠0.32°"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-53",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-performance"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 53
+    },
+    "statement": "The line constants of a transmission line are A = 0.9301∠0.98° and B = 141.24∠81.87° ohm. The load at the receiving-end is 60 MVA, 60 Hz, 0.8 pf lagging. The supply voltage is 220 kV. Calculate the load voltage. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "178.9 kV"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "187.9 kV"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "202.2 kV"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "220.2 kV"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-54",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-performance",
+      "efficiency-power"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 54
+    },
+    "statement": "A 3-phase, 50 Hz overhead transmission line, 100 km long, 110 kV between the lines at the receiving-end has the following constants: R = 0.153 Ω/km; L = 1.21 mH/km; C = 0.00958 μF/km all per phase. The line supplies a load of 20,000 kW at 0.9 power factor lagging. Calculate using nominal-pi representation, the efficiency of the line. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "99.68%"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "97.21%"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "93.42%"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "88.71%"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-55",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "efficiency-power",
+      "long-lines"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 55
+    },
+    "statement": "The per-phase parameters of a 215-kV, 400-km, 60-Hz, three-phase long transmission line are y = j3.2 × 10⁻⁶ S/km and z = (0.1 + j0.5) Ω/km. The line supplies a 150-MW load at unity power factor. Determine the efficiency of transmission. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "79.6%"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "83.1%"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "89.3%"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "92.4%"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-56",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "long-lines"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 56
+    },
+    "statement": "A cable has capacitance of 100 pF/m and an inductance of 0.25 μH/m. Assuming it is considered to be lossless, determine the characteristic impedance of the cable. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "50 ohms"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "70 ohms"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "90 ohms"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "100 ohms"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-57",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "long-lines",
+      "surge-sil"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 57
+    },
+    "statement": "A 400 kV, 100 km transmission line has a surge impedance of 400 ohms. What is the characteristic impedance of the line for a 200 km length of the same line? ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "100 ohms"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "200 ohms"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "400 ohms"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "600 ohms"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-58",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-parameters",
+      "surge-sil"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 58
+    },
+    "statement": "A 3-phase, 60-Hz, 550-kV transmission line is 320 km long. The line inductance is 1.0 mH/km/phase and its capacitance is 0.012 μF/km/phase. Find the SIL assuming the line is lossless. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "1,048 MW"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "1,480 MW"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "1,025 MW"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "1,520 MW"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-59",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "surge-sil"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 59
+    },
+    "statement": "Find the surge impedance loading of a lossless 300 kV, three-phase 60 Hz transmission line having a surge impedance of 500 Ω. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "120 MW"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "140 MW"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "160 MW"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "180 MW"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps1-otb-60",
+    "courseId": "power-systems-1",
+    "topicIds": [
+      "line-performance"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 60
+    },
+    "statement": "A cable has the following characteristics: L = 0.211 μH/m and C = 141.2 pF/m. Find the velocity of wave propagation through the cable. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "1.04 × 10⁸ m/s"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "1.21 × 10⁸ m/s"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "1.83 × 10⁸ m/s"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "1.66 × 10⁸ m/s PART 2: POWER SYSTEMS 2"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-main-01",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 1
+    },
+    "statement": "The base current and base voltage of a 345-kV system are chosen to be 3,000 A and 300 kV, respectively. Determine the per-unit voltage for the system. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "0.75 pu"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "0.93 pu"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "1.15 pu"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "1.28 pu"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-main-02",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "complex-phasors"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 2
+    },
+    "statement": "Calculate the expression a² + a + j in rectangular form. ○​ A",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "-1 + j"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "1 - j"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "-1 - j"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "1 + j"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-main-03",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "symmetrical-components"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 3
+    },
+    "statement": "For the following phase currents I_a = (34.64 + j0), I_b = (-10 - j17.32), I_c = (-10 + j17.32), what is the positive sequence for phase c? ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "-8.75 + j15.67"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "11.77 - j20.20"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "9.33 + j16.16"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "-12.44 + j21.55"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-main-04",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "symmetrical-components"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 4
+    },
+    "statement": "Given the following phase currents: I_a = (5∠45°) pu, I_b = (3∠-90°) pu, and I_c = (3∠150°) pu. Determine the negative symmetrical current for phase A. ○​ A",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "-0.329 - j0.119"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "-0.611 + j0.287"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "0.312 + j0.679"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "0.427 - j0.289"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-main-05",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "complex-phasors",
+      "symmetrical-components"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 5
+    },
+    "statement": "Given the following symmetrical components: I_a0 = 1 cis(75°), I_a1 = 1 cis(15°), and I_a2 = 1 cis(-45°). Determine the phase current for phase B. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "0.259 + j0.966"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "0.966 + j0.259"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "-0.482 - j0.387"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "-0.641 + j0.181"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-main-06",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "symmetrical-components",
+      "fault-analysis",
+      "neutral-grounding"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 6
+    },
+    "statement": "The zero-sequence current of a generator for line-to-ground fault is j2.4 pu. Then the current through the neutral during the fault is: ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "j2.40 pu"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "j0.80 pu"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "j7.20 pu"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "j0.24 pu"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-main-07",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "fault-levels",
+      "fault-analysis",
+      "generator-transients"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 7
+    },
+    "statement": "A 3-phase transmission line operating at 10 kV and having a resistance of 1 ohm and reactance of 4 ohms is connected to a generating station bus-bars through a 5 MVA step-up transformer having a reactance of 5%. The bus-bars are supplied by a 10 MVA alternator having 10% reactance. Calculate the short-circuit kVA fed to symmetrical fault between phases if it occurs at the load end of transmission line. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "11,280 kVA"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "16,440 kVA"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "14,320 kVA"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "17,120 kVA"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-main-08",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "fault-analysis",
+      "neutral-grounding"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 8
+    },
+    "statement": "A 3-phase, 11 kV, 25 MVA generator with X₀ = 0.05 pu, X₁ = 0.2 pu and X₂ = 0.2 pu is grounded through a reactance of 0.3 ohms. Calculate the fault current for a single line to ground fault. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "6,189 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "4,287 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "1,384 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "5,766 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-main-09",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "symmetrical-components",
+      "sequence-networks",
+      "fault-analysis"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 9
+    },
+    "statement": "At a certain point in a 69 kV transmission line, the positive, negative and zero sequence impedances are j0.15, j0.15 and j0.55 per unit, respectively. Find the fault current if a line-to-line fault occurs. The base is 50 MVA. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "5,334 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "4,101 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "3,872 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "2,415 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-main-10",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "symmetrical-components",
+      "sequence-networks",
+      "fault-analysis",
+      "generator-transients"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Main Tutorial Problems",
+      "originalQuestionNumber": 10
+    },
+    "statement": "A 3-phase, 20 MVA, 13.8 kV, 60 Hz alternator has per unit values of positive, negative and zero sequence reactances of 0.08, 0.07 and 0.05. Determine the fault current if the fault is double line to ground. ○​ A",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "12,203 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "11,678 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "10,389 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "13,387 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-01",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 1
+    },
+    "statement": "A 1,000 kVA transformer has a reactance of 5%. Its reactance at 2,000 kVA base is: ○​ A",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "5%"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "2.5%"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "20%"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "10%"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-02",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 2
+    },
+    "statement": "A three-phase, 13 kV transmission line delivers 8 MVA of load. The per-phase impedance of the line is (0.01 + j0.05) pu, referred to a 13 kV, 8 MVA base. What is the voltage drop across the line? ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "320.5 V"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "481.9 V"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "542.7 V"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "663.1 V"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-03",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "fault-levels",
+      "fault-analysis"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 3
+    },
+    "statement": "A symmetrical fault occurs on a power system. The percentage reactance of the system on 2,500 base kVA is 25%. If the full load current corresponding to base kVA is 20 A, then short circuit current is: ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "80 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "40 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "160 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "20 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-04",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "fault-levels",
+      "fault-analysis"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 4
+    },
+    "statement": "If the percentage reactance of the system up to the fault point is 20% and base kVA is 10,000, then short-circuit kVA is: ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "10,000 kVA"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "50,000 kVA"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "500 kVA"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "30,000 kVA"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-05",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "generator-transients"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 5
+    },
+    "statement": "A three-phase, wye-connected, 6.25 kVA, 220-V synchronous generator has a reactance of 8.4 ohms per phase. Using the rated kVA and voltage as base values, determine the per-unit reactance. Then refer this per-unit value to a 230-V, 7.5 kVA base. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "0.688 pu"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "0.627 pu"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "0.886 pu"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "0.348 pu"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-06",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "fault-levels"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 6
+    },
+    "statement": "In a 34.5-kV three-phase electric system, the available short-circuit MVA is 750 MVA. What is the Thevenin's equivalent reactance? ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "2.047 ohms"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "1.587 ohms"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "1.254 ohms"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "1.032 ohms"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-07",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 7
+    },
+    "statement": "A 3-phase transmission line operating at 10 kV has a resistance of 1 ohm. The percentage resistance of the line at 10,000 kVA base is: ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "20%"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "10%"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "5%"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "40%"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-08",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 8
+    },
+    "statement": "A three-phase transformer is rated 25 MVA, 69/13.2 kV. It has series impedance of 7%. What is the new per unit impedance if the system study requires 100 MVA base and 67 kV base? ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "10.6%"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "12.4%"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "30.1%"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "29.7%"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-09",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 9
+    },
+    "statement": "A three-phase transformer is rated 15 MVA, 69/13.2 kV has a series impedance of 5%. What is the new per unit impedance if the system study requires a 100 MVA base and 67 kV base? ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "0.354"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "0.671"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "0.842"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "0.297"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-10",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "fault-levels"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 10
+    },
+    "statement": "A 10 kVA, 400/200 V single-phase transformer with 10% impedance, draws a steady short-circuit current of: ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "50 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "150 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "250 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "350 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-11",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "generator-transients"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 11
+    },
+    "statement": "The per-unit impedance of an alternator corresponding to base values 13.2 kV and 30 MVA is 0.2 pu. The pu value of the impedance for base values of 13.8 kV and 50 MVA in pu will be: ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "0.131"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "0.226"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "0.305"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "0.364"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-12",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "fault-levels",
+      "fault-analysis"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 12
+    },
+    "statement": "A transformer rated for 500 kVA, 11/0.4 kV has an impedance of 10% and is connected to an infinite bus. The fault level of the transformer is: ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "500 kVA"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "5,000 kVA"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "500 MVA"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "5,000 MVA"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-13",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "fault-levels",
+      "fault-analysis",
+      "generator-transients"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 13
+    },
+    "statement": "An isolated synchronous generator with transient reactance equal to 0.1 pu on a 100 MVA base is connected to the high voltage bus through a step-up transformer of reactance 0.1 pu on a 100 MVA base. The fault level at the bus is: ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "1,000 MVA"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "500 MVA"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "50 MVA"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "10 MVA"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-14",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "fault-levels",
+      "generator-transients"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 14
+    },
+    "statement": "Four alternators, each rated at 5 MVA, 11 kV, with 20% reactance are working in parallel. The short-circuit level at bus-bars is: ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "6.25 MVA"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "20 MVA"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "25 MVA"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "100 MVA"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-15",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "complex-phasors"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 15
+    },
+    "statement": "Evaluate the expression (a - 1) in rectangular form. ○​ A",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "0.87 - j1.207"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "-0.87 + j1.207"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "1.5 - j0.866"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "-1.5 + j0.866"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-16",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "complex-phasors"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 16
+    },
+    "statement": "What is the equivalent of the expression (1 - a² + a) in rectangular form? ○​ A",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "-0.90 + j1.202"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "0.87 - j0.866"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "1.20 + j1.028"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "1 + j1.732"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-17",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "complex-phasors"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 17
+    },
+    "statement": "Evaluate aj + a² in rectangular form. ○​ A",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "-2.345 + j2.049"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "0.971 - j1.444"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "-1.366 - j1.366"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "1.212 + j1.871"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-18",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "symmetrical-components"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 18
+    },
+    "statement": "The line currents of a 3-phase power supply are: I_a = (3 + j5) A, I_b = (2 + j2) A, I_c = (-2 - j1) A. The zero-sequence current will be: ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "1 + j2 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "5 + j7 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "1 + j4 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "-2 - j1 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-19",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "complex-phasors",
+      "symmetrical-components"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 19
+    },
+    "statement": "The three-phase unbalanced currents are: I_a = 10 cis(-30°), I_b = 0 and I_c = 10 cis(150°). Find the negative sequence current of phase a. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "5.77 cis(60°)"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "5.77 cis(-60°)"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "3.28 cis(-130°)"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "3.28 cis(130°)"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-20",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "symmetrical-components"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 20
+    },
+    "statement": "The phase currents in a wye-connected, unbalanced load are I_a = (44 - j3), I_b = -(32 + j42), and I_c = (-40 + j25) A. Determine the positive sequence current of phase a. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "16.11 - j12.51 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "-9.33 - j10.67 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "40.81 - j8.77 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "12.52 - j13.48 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-21",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "symmetrical-components"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 21
+    },
+    "statement": "The phase voltages across a certain load are given as: V_a = (176 - j132) V, V_b = (-128 - j96) V, and V_c = (-160 + j100) V. Compute the negative sequence component of voltage. ○​ A",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "163.24 - j35.10 V"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "50.1 - j53.9 V"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "-37.34 - j42.67 V"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "182.1 - j60.7 V"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-22",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "symmetrical-components"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 22
+    },
+    "statement": "The line currents in a three-phase system are: I_a = 72.1∠33.7°, I_b = 82.46∠166° and I_c = 63.24∠-71.56°. Calculate the positive symmetrical component of current. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "6.9 - j8.87 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "28.2 + j68.1 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "53 + j48.8 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "0"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-23",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "symmetrical-components"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 23
+    },
+    "statement": "The voltages of a three-phase system are V_a = (4 + j2), V_b = (4 - j4) and V_c = (-2 + j8). Calculate the positive symmetrical component of phase a. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "4.46 + j1.74"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "-2.46 - j1.730"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "2 + j2"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "-6.75 + j2.90"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-24",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "symmetrical-components"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 24
+    },
+    "statement": "The line currents in a three-phase four-wire system are I_a = (300 + j400) A, I_b = (200 + j200) A, and I_c = (-400 - j200) A. Determine the zero-sequence component at phase a. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "249 - j119.4"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "33.3 + j133.3"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "148.8 - j119.4"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "66.6 - j66.6"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-25",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "symmetrical-components"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 25
+    },
+    "statement": "One conductor of a three-phase line is open. The current flowing to the delta-connected load through line A is 20 A. With the current in line A as reference and assuming that line C is open, what is the positive sequence current of phase C? ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "0.95 + j13.67"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "-1 - j10.25"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "1 + j11.56"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "j11.56"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-26",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "fault-analysis"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 26
+    },
+    "statement": "A balanced delta-connected load is connected to a three-phase system and supplied to it is a current of 15 A. If the fuse in one of the lines melts, compute the symmetrical positive component of the line current. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "7.5 + j4.33 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "7.5 - j4.33 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "4.8 + j6.45 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "4.8 - j6.45 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-27",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "symmetrical-components",
+      "neutral-grounding"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 27
+    },
+    "statement": "In a 3-phase system, phase a is on no-load and phases b and c are short-circuited to ground. The current in line b is (-86.6 + j30) A. If the current in the neutral wire is (0 + j60) A, find the positive symmetrical component current of phase a. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "2 - j45 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "2 - j60 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "-j60 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "-j45 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-28",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "symmetrical-components",
+      "neutral-grounding"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 28
+    },
+    "statement": "In a 3-phase, 4-wire unbalanced system, the current in the neutral wire is 18 A. The magnitude of zero sequence current is: ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "18 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "9 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "6 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "3 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-29",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "symmetrical-components",
+      "fault-analysis"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 29
+    },
+    "statement": "When a line-to-ground fault occurs, the current in the faulted phase is 100 A. The zero-sequence current in this case will be: ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "0"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "33.3 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "66.6 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "100 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-30",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "symmetrical-components",
+      "sequence-networks",
+      "fault-analysis"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 30
+    },
+    "statement": "The per unit values of positive, negative and zero sequence reactances of a network at fault are 0.08, 0.07 and 0.05 respectively. Determine the fault current if fault is double line-to-ground. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "j8 pu"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "j10 pu"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "j16 pu"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "j21 pu"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-31",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "symmetrical-components",
+      "sequence-networks",
+      "fault-analysis"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 31
+    },
+    "statement": "Consider a system with positive, negative and zero sequence impedances of j0.2577 pu, j0.2085 pu and j0.14 pu. Determine the fault current at phase A for single line to ground fault of phase A. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "-j13 pu"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "-j10 pu"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "-j8 pu"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "-j5 pu"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-32",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "symmetrical-components",
+      "sequence-networks",
+      "fault-levels",
+      "fault-analysis"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 32
+    },
+    "statement": "In a short circuit study, the positive, negative and zero sequence impedances are 0.25 pu, 0.25 pu and 0.30 pu, respectively. The base MVA is 100. Determine the fault current for a three-phase fault at the 115 kV level. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "1,553 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "2,000 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "2,415 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "3,047 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-33",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "sequence-networks",
+      "fault-analysis",
+      "generator-transients",
+      "neutral-grounding"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 33
+    },
+    "statement": "A 3-phase, 75 MVA, 11.8 kV star-connected alternator with a solidly earthed neutral point has the following per unit impedances based on rated phase voltage and rated phase current: positive phase sequence impedance = j2 pu; negative phase sequence impedance = j0.16 pu; zero phase sequence impedance = j0.08 pu. Determine the steady-state fault current in one line-to-earth fault. The generated emf per phase is equal to the rated voltage. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "1,840 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "4,920 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "3,580 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "5,120 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-34",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "symmetrical-components",
+      "sequence-networks",
+      "fault-analysis",
+      "generator-transients",
+      "neutral-grounding"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 34
+    },
+    "statement": "The positive, negative and zero-sequence reactances of a 20 MVA, 13.2 kV synchronous generator are 0.3, 0.2 and 0.1 pu, respectively. The generator is solidly grounded and is not loaded. A line to ground fault occurs on phase a. Neglecting all the resistances, determine the fault current. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "1,945 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "3,141 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "2,687 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "4,374 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-35",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "symmetrical-components",
+      "fault-analysis"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 35
+    },
+    "statement": "The positive-sequence current for a L-L fault of a 2 kV system is 1,400 A and corresponding current for a L-L-G fault is 2,220 A. The zero-sequence impedance of the system is: ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "62.75 ohms"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "4.5275 ohms"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "5.275 ohms"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "0.5275 ohms"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-36",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "generator-transients"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 36
+    },
+    "statement": "The per unit reactances of a synchronous generator are X_d = 1.0, X_d' = 0.35, and X_d'' = 0.25. The generator supplies a 1.0 per unit load at 0.8 power factor lagging. Calculate the voltage behind the transient reactance. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "2.12 pu"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "1.24 pu"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "2.89 pu"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "3.07 pu"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-37",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "fault-analysis",
+      "generator-transients",
+      "neutral-grounding"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 37
+    },
+    "statement": "The severity of line-to-ground and three-phase faults at the terminals of an unloaded synchronous generator is to be same. If the terminal voltage is 1.0 pu and Z₁ = Z₂ = j0.1 pu, Z₀ = j0.05 pu for the alternator, then the required inductive reactance for neutral grounding is: ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "0.0166 pu"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "0.05 pu"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "0.1 pu"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "0.15 pu"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-38",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "fault-analysis"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 38
+    },
+    "statement": "Two generators G1 and G2 are rated 15 MVA, impedance equals 10%, 11 kV and 10 MVA, impedance equals 10%, 11 kV, respectively. The generators are connected to a transformer of 15 MVA, 11/66 kV and 6% impedance. Calculate the fault current in per unit when three-phase fault occurs on the high voltage side of the transformer. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "10.12"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "8.33"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "12.29"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "6.81"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-39",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "sequence-networks",
+      "fault-analysis",
+      "generator-transients",
+      "neutral-grounding"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 39
+    },
+    "statement": "A 50 MVA, 11 kV three-phase alternator was subjected to different types of faults. The fault currents are as under: 3-phase fault = 2,000 A; Line-to-line fault = 2,600 A; Line-to-ground fault = 4,200 A. The generator neutral is solidly grounded. Find the values of the three sequence reactances of the alternator. Ignore resistances. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "2.024 Ω, 0.688 Ω and 1.652 Ω"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "1.823 Ω, 0.395 Ω and 0.466 Ω"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "3.175 Ω, 1.056 Ω and 0.305 Ω"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "2.911 Ω, 0.348 Ω and 1.269 Ω"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-40",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "fault-levels",
+      "fault-analysis"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 40
+    },
+    "statement": "The plant capacity of a 3-phase generating station consists of two 10,000 kVA generators of reactance 12% each and one 5,000 kVA generator of reactance 18%. The generators are connected to the station bus-bars from which load is taken through three 5,000 kVA step-up transformers each having a reactance of 5%. Determine the maximum fault MVA which the circuit breakers on high voltage side may have to deal with. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "194.5"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "66"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "384"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "269.7"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-41",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "fault-levels",
+      "generator-transients"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 41
+    },
+    "statement": "A 3-phase, 20 MVA, 10 kV alternator has internal reactance of 5% and negligible resistance. Find the external reactance per phase to be connected in series with the alternator so that steady current on short-circuit does not exceed 8 times the full load current. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "0.375 ohms"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "1.238 ohms"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "0.611 ohms"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "1.832 ohms"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-42",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "fault-levels"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 42
+    },
+    "statement": "The estimated short-circuit MVA at the bus-bars of a generating station A is 1,500 MVA and of another station B is 1,200 MVA. The generated voltage at each station is 33 kV. If these stations are interconnected through a line having a reactance of 1 ohm and negligible resistance, calculate the possible short-circuit MVA on station A. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "2,397"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "1,477"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "1,831"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "2,070"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-43",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "symmetrical-components",
+      "sequence-networks",
+      "fault-analysis",
+      "neutral-grounding"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 43
+    },
+    "statement": "Two 11 kV, 12 MVA, 3-phase star-connected generators operate in parallel. The positive, negative and zero sequence reactances of each being j0.09, j0.05 and j0.04 pu respectively. A single line to ground fault occurs at the terminals of one of the generators. Calculate the current in grounding resistor/solidly grounded neutral. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "5,966 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "4,821 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "3,732 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "2,935 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-44",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "fault-analysis",
+      "neutral-grounding"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 44
+    },
+    "statement": "A 30 kV, 50 MVA generator having a solidly grounded neutral and X₁ = 0.25 pu, X₂ = 0.15 pu and X₀ = 0.05 pu. What reactance must be placed in the generator neutral to limit the fault current for a bolted L-G fault to that for a bolted three-phase fault? ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "0.6 ohms"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "0.8 ohms"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "1.5 ohms"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "1.8 ohms"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-45",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "fault-levels",
+      "generator-transients"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 45
+    },
+    "statement": "A 3-phase alternator can supply a maximum load of 5,000 kVA at 6,000 V. The machine has internal reactance of 6%. Find the reactance per phase of the limiting reactor if the steady apparent power (kVA) on short-circuit is not to exceed 5 times the full-load value. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "1.02 ohms"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "0.88 ohms"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "2.11 ohms"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "1.22 ohms"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-46",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "fault-levels",
+      "fault-analysis",
+      "generator-transients"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 46
+    },
+    "statement": "A 10 MVA, 6.6 kV 3-phase star-connected alternator having a reactance of 20% is connected through a 5 MVA, 6.6 kV/33 kV transformer of 10% reactance to a transmission line having a resistance and reactance per conductor per kilometer of 0.2 ohms and 1 ohm respectively. Fifty kilometers along the line, a short-circuit occurs between the three conductors. Find the current fed to the fault by the alternator. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "2,636 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "1,542 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "1,012 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "1,210 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "c",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-47",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "symmetrical-components",
+      "sequence-networks",
+      "fault-levels",
+      "fault-analysis",
+      "generator-transients",
+      "neutral-grounding"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 47
+    },
+    "statement": "Star-connected 3-phase 11 kV, 25 MVA alternator with its neutral grounded through a 0.033 pu reactance (based on the alternator rating) has positive, negative and zero-sequence reactances of 0.2 pu, 0.1 pu and 0.1 pu respectively. A single line to ground fault on one of its terminals would result in a fault MVA of: ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "150 MVA"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "125 MVA"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "100 MVA"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "500 MVA"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-48",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "sequence-networks",
+      "fault-analysis",
+      "generator-transients",
+      "neutral-grounding"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 48
+    },
+    "statement": "A 500 MVA, 50-Hz, 3-phase turbo-generator produces power at 22 kV. Generator is Y-connected and its neutral is solidly grounded. Its sequence reactances are X₁ = X₂ = 0.15 and X₀ = 0.05 pu. It is operating at rated voltage and disconnected from the rest of the system (no load). The magnitude of the sub-transient line current for single-line-to-ground fault at the generator terminal in per unit will be: ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "2.851"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "3.333"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "6.667"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "8.553"
+      }
+    ],
+    "sourceMarkedChoiceId": "d",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-49",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "per-unit",
+      "fault-levels",
+      "generator-transients"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 49
+    },
+    "statement": "The per unit reactances of a synchronous generator are X_d = 1.1, X_d' = 0.24 and X_d'' = 0.15. The generator is operating without load at 5% above rated voltage when the three-phase short circuit occurs at its terminals. What is the subtransient current in kiloamperes (kA) if the generator is rated at 500 MVA and 20 kV? ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "101"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "88"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "175"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "144"
+      }
+    ],
+    "sourceMarkedChoiceId": "a",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  },
+  {
+    "id": "ps2-otb-50",
+    "courseId": "power-systems-2",
+    "topicIds": [
+      "fault-analysis",
+      "generator-transients",
+      "neutral-grounding"
+    ],
+    "source": {
+      "document": "Power Systems Analysis 1 & 2: Problems and Choices",
+      "originalSection": "Out of the Box Questions",
+      "originalQuestionNumber": 50
+    },
+    "statement": "A generator rated 100 MVA, 20 kV has X_d'' = X₁ = X₂ = 20% and X₀ = 5%. Its neutral is grounded through a reactor of 0.32 ohms. The generator is operating at rated voltage without load and is disconnected from the system when a single line-to-ground fault occurs at its terminals. Find the subtransient current in the faulted phase. ○​",
+    "choices": [
+      {
+        "id": "a",
+        "label": "A",
+        "text": "11,390 A"
+      },
+      {
+        "id": "b",
+        "label": "B",
+        "text": "12,550 A"
+      },
+      {
+        "id": "c",
+        "label": "C",
+        "text": "10,370 A"
+      },
+      {
+        "id": "d",
+        "label": "D",
+        "text": "13,290 A"
+      }
+    ],
+    "sourceMarkedChoiceId": "b",
+    "verificationStatus": "pending",
+    "solution": [],
+    "assumptions": [],
+    "calculatorIds": [],
+    "reviewerNotes": [
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+    ]
+  }
+]
