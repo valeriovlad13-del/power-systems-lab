@@ -16,7 +16,7 @@ export default function HomePage() {
         <div>
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.16em] text-[var(--accent)]">Learn · Solve · Verify</p>
           <h1 className="max-w-2xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl">Understand power systems one step at a time.</h1>
-          <p className="mt-5 max-w-2xl text-base leading-7 text-[var(--muted)] sm:text-lg">Browse a source-based question bank, follow reviewed worked solutions, and use engineering calculators alongside your practice.</p>
+          <p className="mt-5 max-w-2xl text-base leading-7 text-[var(--muted)] sm:text-lg">Browse a structured question bank, follow reviewed worked solutions, and use engineering calculators alongside your practice.</p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link href="/problems" className="rounded-xl bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-white hover:opacity-90">Browse all questions</Link>
             <Link href="/topics" className="rounded-xl border border-[var(--border)] bg-white px-5 py-3 text-sm font-semibold hover:bg-slate-50">Explore topics</Link>
@@ -24,15 +24,15 @@ export default function HomePage() {
           </div>
         </div>
         <aside className="rounded-2xl border border-[var(--border)] bg-white p-6 shadow-sm sm:p-8">
-          <p className="text-sm font-semibold text-[var(--muted)]">Source inventory imported</p>
+          <p className="text-sm font-semibold text-[var(--muted)]">Practice questions available</p>
           <p className="mt-3 text-3xl font-bold">140</p>
-          <p className="mt-1 text-sm text-[var(--muted)]">questions from the supplied Power Systems Analysis PDF</p>
+          <p className="mt-1 text-sm text-[var(--muted)]">practice questions across Power Systems 1 and Power Systems 2</p>
           <div className="my-5 h-px bg-[var(--border)]" />
-          <ul className="space-y-3 text-sm leading-6"><li>✓ Original section and question numbering retained</li><li>✓ Topic tags are provisional and searchable</li><li>✓ Source-marked choices distinguished from verified answers</li></ul>
+          <ul className="space-y-3 text-sm leading-6"><li>✓ Questions organized by course and section</li><li>✓ Topic tags are provisional and searchable</li><li>✓ Verified answers clearly distinguished from questions under review</li></ul>
         </aside>
       </section>
       <section id="courses" className="pb-12">
-        <div className="mb-5"><h2 className="text-2xl font-bold tracking-tight">Choose a course</h2><p className="mt-2 text-sm text-[var(--muted)]">Course counts reflect the source document. Worked solutions are being reviewed in batches.</p></div>
+        <div className="mb-5"><h2 className="text-2xl font-bold tracking-tight">Choose a course</h2><p className="mt-2 text-sm text-[var(--muted)]">Question counts reflect the current question bank. Worked solutions are being reviewed in batches.</p></div>
         <div className="grid gap-4 md:grid-cols-2">
           {courses.map((course) => <article key={course.id} className="rounded-2xl border border-[var(--border)] bg-white p-6 transition hover:-translate-y-0.5 hover:shadow-sm">
             <p className="text-xs font-semibold uppercase tracking-wider text-[var(--accent)]">{course.count}</p><h3 className="mt-3 text-xl font-bold">{course.title}</h3>
@@ -41,7 +41,7 @@ export default function HomePage() {
           </article>)}
         </div>
       </section>
-      <footer className="border-t border-[var(--border)] py-6 text-xs leading-5 text-[var(--muted)]">Educational reference only. Source answer markings are not treated as verified engineering solutions.</footer>
+      <footer className="border-t border-[var(--border)] py-6 text-xs leading-5 text-[var(--muted)]">For learning and practice. Verified solutions are reviewed for formulas, calculations, and units.</footer>
     </main>
   );
 }
