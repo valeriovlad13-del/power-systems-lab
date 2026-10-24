@@ -73,6 +73,20 @@ export default async function ProblemDetailPage({ params }: { params: Promise<{ 
           <ol className="mt-5 space-y-3">{["Given", "Find", "Required formulas", "Numbered calculations and substitutions", "Final answer and unit check", "Engineering note / common mistake"].map((step, index) => <li key={step} className="flex gap-3 rounded-lg border border-dashed border-[var(--border)] p-3"><span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-slate-100 text-xs font-bold">{index + 1}</span><div><p className="text-sm font-semibold">{step}</p><p className="mt-1 text-xs text-[var(--muted)]">To be completed during technical review</p></div></li>)}</ol>
         </section>
       )}
+      {markedChoice && <p className="mt-4 text-sm leading-6 text-[var(--muted)]">Source note: the original PDF marks option {markedChoice.label}. {isVerified && verifiedChoice ? `The independently checked solution selects option ${verifiedChoice.label}.` : "The source marking has not yet been independently verified."}</p>}
+      </SolutionDisclosure>
+      <nav aria-label="Question navigation" className="mt-6 grid grid-cols-2 gap-3">
+        {previousProblem ? (
+          <Link href={`/problems/${previousProblem.id}`} className="flex min-h-14 min-w-0 items-center gap-2 rounded-xl border border-[var(--border)] bg-white px-3 py-3 text-sm transition hover:border-[var(--accent)] sm:px-4">
+            <span aria-hidden="true" className="text-lg">←</span><span className="min-w-0"><span className="block text-xs text-[var(--muted)]">Previous question</span><span className="block truncate font-semibold">Problem {previousProblem.source.originalQuestionNumber}</span></span>
+          </Link>
+        ) : <div aria-hidden="true" />}
+        {nextProblem ? (
+          <Link href={`/problems/${nextProblem.id}`} className="flex min-h-14 min-w-0 items-center justify-end gap-2 rounded-xl border border-[var(--border)] bg-white px-3 py-3 text-right text-sm transition hover:border-[var(--accent)] sm:px-4">
+            <span className="min-w-0"><span className="block text-xs text-[var(--muted)]">Next question</span><span className="block truncate font-semibold">Problem {nextProblem.source.originalQuestionNumber}</span></span><span aria-hidden="true" className="text-lg">→</span>
+          </Link>
+        ) : <div aria-hidden="true" />}
+      </nav>
     </main>
   );
 }
