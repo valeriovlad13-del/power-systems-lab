@@ -1,31 +1,46 @@
 # Source content audit
 
-## Inventory summary
+## Source inventory
 
 Source file: `Power Systems Analysis 1 & 2 - Problems and Choices.pdf`
 
-- Power Systems 1: 80 questions
-  - Main Tutorial Problems: 1–20 (20 questions)
-  - Out of the Box Questions: 1–60 (60 questions)
-- Power Systems 2: 60 questions
-  - Main Tutorial Problems: 1–10 (10 questions)
-  - Out of the Box Questions: 1–50 (50 questions)
-- Total: 140 questions
+| Course | Original section | Source question numbers | Imported |
+|---|---|---:|---:|
+| Power Systems 1 | Main Tutorial Problems | 1–20 | 20 |
+| Power Systems 1 | Out of the Box Questions | 1–60 | 60 |
+| Power Systems 2 | Main Tutorial Problems | 1–10 | 10 |
+| Power Systems 2 | Out of the Box Questions | 1–50 | 50 |
+| **Total** | | | **140** |
+
+Every imported question currently has four answer choices and the source's asterisk-marked option stored separately from verified answer data.
+
+## Verification status
+
+- Independently worked and verified: 4
+  - Power Systems 1, Main Tutorial Problems 1
+  - Power Systems 1, Main Tutorial Problems 2
+  - Power Systems 1, Main Tutorial Problems 4
+  - Power Systems 1, Main Tutorial Problems 5
+- Pending solution review: 136
+- Topic assignment: provisional; inspect each classification against the problem statement before treating it as final.
 
 ## Audit rules
 
-1. Capture original wording, choices, numbering, and source section.
-2. Record PDF page when it can be confirmed.
+1. Preserve original wording, answer choices, numbering, and source section.
+2. Add PDF page references when confirmed.
 3. Flag unreadable symbols, ambiguous notation, missing data, or suspected source errors.
-4. Topic assignments are app metadata; they do not replace source section labels.
-5. Keep solutions `pending` until calculations, units, assumptions, and final answer are independently checked.
-6. Do not assume an answer marked in the source is correct without verification.
+4. Topic assignments must not replace source section labels.
+5. Keep solutions `pending` until formulas, substitutions, units, assumptions, and final answers are independently checked.
+6. Never assume an asterisk-marked source answer is correct without verification.
+7. Record `sourceMarkedChoiceId` and `verifiedChoiceId` separately.
 
-## Checklist
+## Remaining work
 
-- [ ] Transcribe all 140 question statements and options
-- [ ] Verify source IDs and page references
-- [ ] Assign one or more topics to each question
-- [ ] Flag unclear source content
-- [ ] Review the source answer key independently
-- [ ] Record verification status for each worked solution
+- [x] Import all 140 question statements and answer choices
+- [x] Check source-section counts and unique IDs
+- [x] Create searchable question bank and question detail pages
+- [x] Add first four independently checked solutions
+- [ ] Review all provisional topic assignments
+- [ ] Verify the remaining 136 worked solutions in batches
+- [ ] Add PDF page references to source records
+- [ ] Run automated tests and production build in the development environment
