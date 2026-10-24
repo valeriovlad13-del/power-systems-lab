@@ -7463,8 +7463,8 @@
         "title": "Set the two fault-current magnitudes equal",
         "explanation": "For the unloaded generator at 1 pu voltage, the three-phase fault current is 1/X₁. The single-line-to-ground fault current is 3/(X₁+X₂+X₀+3Xₙ).",
         "equations": [
-          "I_{3\\phi}=\\\\frac{1}{X_1}=\\\\frac{1}{0.1}=10\\\\;pu",
-          "I_{LG}=\\\\frac{3}{X_1+X_2+X_0+3X_n}"
+          "I_{3\\phi}=\\frac{1}{X_1}=\\frac{1}{0.1}=10\\;pu",
+          "I_{LG}=\\frac{3}{X_1+X_2+X_0+3X_n}"
         ]
       },
       {
@@ -7472,8 +7472,8 @@
         "title": "Solve for the neutral reactance",
         "explanation": "Set the magnitudes equal and substitute the given sequence reactances.",
         "equations": [
-          "10=\\\\frac{3}{0.1+0.1+0.05+3X_n}",
-          "0.30=0.25+3X_n\\\\quad\\\\Rightarrow\\\\quad X_n=0.01667\\\\;pu"
+          "10=\\frac{3}{0.1+0.1+0.05+3X_n}",
+          "0.30=0.25+3X_n\\quad\\Rightarrow\\quad X_n=0.01667\\;pu"
         ]
       }
     ],
@@ -7528,8 +7528,8 @@
         "title": "Convert generator reactances to a common base",
         "explanation": "Use 15 MVA as the common base; voltage bases are unchanged because both generators have the same rated voltage.",
         "equations": [
-          "X_{G1}=0.10\\\\;pu",
-          "X_{G2}=0.10\\\\frac{15}{10}=0.15\\\\;pu"
+          "X_{G1}=0.10\\;pu",
+          "X_{G2}=0.10\\frac{15}{10}=0.15\\;pu"
         ]
       },
       {
@@ -7537,8 +7537,8 @@
         "title": "Combine the generators in parallel and add the transformer",
         "explanation": "The equivalent generator reactance is the parallel combination of 0.10 and 0.15 pu; the transformer reactance is in series.",
         "equations": [
-          "X_G=\\\\frac{0.10(0.15)}{0.10+0.15}=0.06\\\\;pu",
-          "X_{eq}=0.06+0.06=0.12\\\\;pu"
+          "X_G=\\frac{0.10(0.15)}{0.10+0.15}=0.06\\;pu",
+          "X_{eq}=0.06+0.06=0.12\\;pu"
         ]
       },
       {
@@ -7546,7 +7546,7 @@
         "title": "Calculate the fault current",
         "explanation": "The three-phase fault current in per unit is the prefault voltage divided by equivalent reactance.",
         "equations": [
-          "I_f=\\\\frac{1}{0.12}=8.33\\\\;pu"
+          "I_f=\\frac{1}{0.12}=8.33\\;pu"
         ]
       }
     ],
@@ -7691,8 +7691,8 @@
         "title": "Find the required total reactance",
         "explanation": "Limiting short-circuit current to eight times rated current requires total per-unit reactance of at least 1/8 pu.",
         "equations": [
-          "X_{total,pu}=\\\\frac{1}{8}=0.125\\\\;pu",
-          "X_{external,pu}=0.125-0.05=0.075\\\\;pu"
+          "X_{total,pu}=\\frac{1}{8}=0.125\\;pu",
+          "X_{external,pu}=0.125-0.05=0.075\\;pu"
         ]
       },
       {
@@ -7700,8 +7700,8 @@
         "title": "Convert the external reactance to ohms",
         "explanation": "Use the 10 kV, 20 MVA three-phase base.",
         "equations": [
-          "Z_{base}=\\\\frac{V_{LL}^2}{S_{base}}=\\\\frac{10^2}{20}=5\\\\;\\\\Omega",
-          "X_{external}=0.075(5)=0.375\\\\;\\\\Omega"
+          "Z_{base}=\\frac{V_{LL}^2}{S_{base}}=\\frac{10^2}{20}=5\\;\\Omega",
+          "X_{external}=0.075(5)=0.375\\;\\Omega"
         ]
       }
     ],
@@ -7891,8 +7891,8 @@
         "title": "Find the required total reactance",
         "explanation": "Limiting short-circuit apparent power to five times full-load apparent power requires total reactance of at least 1/5 pu.",
         "equations": [
-          "X_{total,pu}=\\\\frac{1}{5}=0.20\\\\;pu",
-          "X_{reactor,pu}=0.20-0.06=0.14\\\\;pu"
+          "X_{total,pu}=\\frac{1}{5}=0.20\\;pu",
+          "X_{reactor,pu}=0.20-0.06=0.14\\;pu"
         ]
       },
       {
@@ -7900,8 +7900,8 @@
         "title": "Convert the reactor reactance to ohms",
         "explanation": "Use the three-phase 6 kV, 5 MVA base.",
         "equations": [
-          "Z_{base}=\\\\frac{V_{LL}^2}{S_{base}}=\\\\frac{6^2}{5}=7.2\\\\;\\\\Omega",
-          "X_{reactor}=0.14(7.2)=1.008\\\\;\\\\Omega\\\\approx1.02\\\\;\\\\Omega"
+          "Z_{base}=\\frac{V_{LL}^2}{S_{base}}=\\frac{6^2}{5}=7.2\\;\\Omega",
+          "X_{reactor}=0.14(7.2)=1.008\\;\\Omega\\approx1.02\\;\\Omega"
         ]
       }
     ],
