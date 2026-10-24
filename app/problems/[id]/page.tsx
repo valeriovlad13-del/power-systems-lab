@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import katex from "katex";
 import { getProblemById, problems } from "@/content/problems";
 import AnswerChoices from "@/components/problems/answer-choices";
+import SolutionDisclosure from "@/components/problems/solution-disclosure";
 
 export function generateStaticParams() {
   return problems.map((problem) => ({ id: problem.id }));
@@ -17,6 +18,12 @@ export default async function ProblemDetailPage({ params }: { params: Promise<{ 
   const markedChoice = problem.choices.find((choice) => choice.id === problem.sourceMarkedChoiceId);
   const isVerified = problem.verificationStatus === "verified";
   const verifiedChoice = problem.choices.find((choice) => choice.id === problem.verifiedChoiceId);
+  const sameSectionProblems = problems
+    .filter((item) => item.courseId === problem.courseId && item.source.originalSection === problem.source.originalSection)
+    .sort((a, b) => a.source.originalQuestionNumber - b.source.originalQuestionNumber);
+  const currentIndex = sameSectionProblems.findIndex((item) => item.id === problem.id);
+  const previousProblem = currentIndex > 0 ? sameSectionProblems[currentIndex - 1] : null;
+  const nextProblem = currentIndex >= 0 && currentIndex < sameSectionProblems.length - 1 ? sameSectionProblems[currentIndex + 1] : null;
 
   return (
     <main className="mx-auto w-full max-w-4xl px-3 py-6 sm:px-8 sm:py-10">
@@ -40,7 +47,7 @@ export default async function ProblemDetailPage({ params }: { params: Promise<{ 
           verifiedChoiceId={problem.verifiedChoiceId ?? null}
           sourceMarkedChoiceId={problem.sourceMarkedChoiceId}
         />
-        {markedChoice && <p className="mt-4 text-sm leading-6 text-[var(--muted)]">The source PDF marks option {markedChoice.label} with an asterisk. {isVerified && verifiedChoice ? `The independently checked solution selects option ${verifiedChoice.label}.` : "This source marking has not yet been independently verified."}</p>}
+        {markedChoice && <p className="mt-4 text-xs leading-5 text-[var(--muted)]">The original PDF contains an answer marking; it is not treated as verified unless the solution has been independently checked.</p>}
       </section>
 
       {isVerified ? (
