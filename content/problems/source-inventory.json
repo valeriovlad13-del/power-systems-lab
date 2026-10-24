@@ -4729,7 +4729,7 @@
         "title": "Apply the lossless-line characteristic impedance formula",
         "explanation": "Characteristic impedance is the square root of inductance per unit length divided by capacitance per unit length.",
         "equations": [
-          "Z_0=\\\\sqrt{\\\\frac{L}{C}}=\\\\sqrt{\\\\frac{0.25\\\\times10^{-6}}{100\\\\times10^{-12}}}=50\\\\;\\\\Omega"
+          "Z_0=\\sqrt{\\frac{L}{C}}=\\sqrt{\\frac{0.25\\times10^{-6}}{100\\times10^{-12}}}=50\\;\\Omega"
         ]
       }
     ],
@@ -4784,7 +4784,7 @@
         "title": "Identify the defining property",
         "explanation": "For a uniform line, characteristic (surge) impedance depends on the line's distributed inductance and capacitance, not its total length.",
         "equations": [
-          "Z_0=400\\\\;\\\\Omega\\\\quad\\\\text{for either length}"
+          "Z_0=400\\;\\Omega\\quad\\text{for either length}"
         ]
       }
     ],
@@ -4839,7 +4839,7 @@
         "title": "Calculate surge impedance",
         "explanation": "For a lossless line, surge impedance is the square root of inductance per unit length divided by capacitance per unit length.",
         "equations": [
-          "Z_0=\\\\sqrt{\\\\frac{1.0\\\\times10^{-3}}{0.012\\\\times10^{-6}}}=288.675\\\\;\\\\Omega"
+          "Z_0=\\sqrt{\\frac{1.0\\times10^{-3}}{0.012\\times10^{-6}}}=288.675\\;\\Omega"
         ]
       },
       {
@@ -4847,7 +4847,7 @@
         "title": "Calculate surge impedance loading",
         "explanation": "Using line-to-line voltage in kV and impedance in ohms gives three-phase SIL in MW.",
         "equations": [
-          "SIL=\\\\frac{V_{LL}^2}{Z_0}=\\\\frac{550^2}{288.675}=1048.2\\\\;MW"
+          "SIL=\\frac{V_{LL}^2}{Z_0}=\\frac{550^2}{288.675}=1048.2\\;MW"
         ]
       }
     ],
@@ -4901,7 +4901,7 @@
         "title": "Calculate surge impedance loading",
         "explanation": "For a lossless three-phase line, SIL in MW is line-to-line voltage squared in kV divided by surge impedance in ohms.",
         "equations": [
-          "SIL=\\\\frac{V_{LL}^2}{Z_0}=\\\\frac{300^2}{500}=180\\\\;MW"
+          "SIL=\\frac{V_{LL}^2}{Z_0}=\\frac{300^2}{500}=180\\;MW"
         ]
       }
     ],
@@ -4998,7 +4998,7 @@
         "title": "Convert voltage to per unit",
         "explanation": "Per-unit voltage is actual voltage divided by the selected base voltage.",
         "equations": [
-          "V_{pu}=\\\\frac{V_{actual}}{V_{base}}=\\\\frac{345\\\\;\\\\text{kV}}{300\\\\;\\\\text{kV}}=1.15\\\\;pu"
+          "V_{pu}=\\frac{V_{actual}}{V_{base}}=\\frac{345\\;\\text{kV}}{300\\;\\text{kV}}=1.15\\;pu"
         ]
       }
     ],
@@ -5241,7 +5241,7 @@
         "title": "Relate neutral and zero-sequence current",
         "explanation": "For a grounded generator, neutral current equals three times the zero-sequence current.",
         "equations": [
-          "I_n=3I_0=3(j2.4)=j7.2\\\\;pu"
+          "I_n=3I_0=3(j2.4)=j7.2\\;pu"
         ]
       }
     ],
@@ -5478,7 +5478,7 @@
         "title": "Convert the per-unit reactance to the new base",
         "explanation": "Assuming the voltage base is unchanged, per-unit impedance scales with the MVA (or kVA) base.",
         "equations": [
-          "X_{pu,new}=X_{pu,old}\\\\frac{S_{base,new}}{S_{base,old}}=0.05\\\\frac{2000}{1000}=0.10"
+          "X_{pu,new}=X_{pu,old}\\frac{S_{base,new}}{S_{base,old}}=0.05\\frac{2000}{1000}=0.10"
         ]
       }
     ],
@@ -5577,7 +5577,7 @@
         "title": "Use the short-circuit current relation",
         "explanation": "For a bolted symmetrical fault, current in per unit is approximately 1 divided by the per-unit reactance.",
         "equations": [
-          "I_{sc}=\\\\frac{I_{base}}{X_{pu}}=\\\\frac{20}{0.25}=80\\\\;A"
+          "I_{sc}=\\frac{I_{base}}{X_{pu}}=\\frac{20}{0.25}=80\\;A"
         ]
       }
     ],
@@ -5633,7 +5633,7 @@
         "title": "Calculate short-circuit kVA",
         "explanation": "Short-circuit level equals base kVA divided by per-unit reactance.",
         "equations": [
-          "S_{sc}=\\\\frac{S_{base}}{X_{pu}}=\\\\frac{10{,}000}{0.20}=50{,}000\\\\;kVA"
+          "S_{sc}=\\frac{S_{base}}{X_{pu}}=\\frac{10{,}000}{0.20}=50{,}000\\;kVA"
         ]
       }
     ],
@@ -5731,7 +5731,7 @@
         "title": "Use the three-phase short-circuit relation",
         "explanation": "For a bolted three-phase fault, the Thevenin reactance magnitude is the square of line-to-line voltage divided by short-circuit MVA.",
         "equations": [
-          "X_{th}=\\\\frac{V_{LL}^2}{S_{sc}}=\\\\frac{34.5^2}{750}=1.587\\\\;\\\\Omega"
+          "X_{th}=\\frac{V_{LL}^2}{S_{sc}}=\\frac{34.5^2}{750}=1.587\\;\\Omega"
         ]
       }
     ],
@@ -5785,7 +5785,7 @@
         "title": "Calculate the impedance base",
         "explanation": "For a three-phase system, use the line-to-line voltage and three-phase apparent-power base.",
         "equations": [
-          "Z_{base}=\\\\frac{V_{LL}^2}{S_{base}}=\\\\frac{(10\\\\;kV)^2}{10{,}000\\\\;kVA}=10\\\\;\\\\Omega"
+          "Z_{base}=\\frac{V_{LL}^2}{S_{base}}=\\frac{(10\\;kV)^2}{10{,}000\\;kVA}=10\\;\\Omega"
         ]
       },
       {
@@ -5793,7 +5793,7 @@
         "title": "Convert resistance to percent",
         "explanation": "The given line resistance is 1 Ω; divide by the impedance base and multiply by 100.",
         "equations": [
-          "R\\\\%=\\\\frac{1}{10}\\\\times100=10\\\\%"
+          "R\\%=\\frac{1}{10}\\times100=10\\%"
         ]
       }
     ],
@@ -5847,8 +5847,8 @@
         "title": "Convert impedance to the new base",
         "explanation": "Assuming the 67 kV base is the high-voltage-side base, convert using the MVA-base ratio and squared voltage-base ratio.",
         "equations": [
-          "Z_{pu,new}=Z_{pu,old}\\\\frac{S_{new}}{S_{old}}\\\\left(\\\\frac{V_{old}}{V_{new}}\\\\right)^2",
-          "=0.07\\\\frac{100}{25}\\\\left(\\\\frac{69}{67}\\\\right)^2=0.297\\\\;pu"
+          "Z_{pu,new}=Z_{pu,old}\\frac{S_{new}}{S_{old}}\\left(\\frac{V_{old}}{V_{new}}\\right)^2",
+          "=0.07\\frac{100}{25}\\left(\\frac{69}{67}\\right)^2=0.297\\;pu"
         ]
       }
     ],
@@ -5902,7 +5902,7 @@
         "title": "Convert impedance to the new base",
         "explanation": "Use the transformer rated high-side voltage as the old voltage base and 67 kV as the new high-side base.",
         "equations": [
-          "Z_{pu,new}=0.05\\\\frac{100}{15}\\\\left(\\\\frac{69}{67}\\\\right)^2=0.3537\\\\;pu"
+          "Z_{pu,new}=0.05\\frac{100}{15}\\left(\\frac{69}{67}\\right)^2=0.3537\\;pu"
         ]
       }
     ],
@@ -5956,8 +5956,8 @@
         "title": "Calculate rated current on the 400 V side",
         "explanation": "The rated primary current is rated apparent power divided by primary voltage. Short-circuit current at 10% impedance is ten times rated current.",
         "equations": [
-          "I_{rated} = \\\\frac{10{,}000}{400}=25\\\\;A",
-          "I_{sc}=\\\\frac{25}{0.10}=250\\\\;A"
+          "I_{rated} = \\frac{10{,}000}{400}=25\\;A",
+          "I_{sc}=\\frac{25}{0.10}=250\\;A"
         ]
       }
     ],
@@ -6012,7 +6012,7 @@
         "title": "Convert per-unit impedance to the new base",
         "explanation": "Use the old and new MVA and voltage bases.",
         "equations": [
-          "Z_{pu,new}=0.2\\\\frac{50}{30}\\\\left(\\\\frac{13.2}{13.8}\\\\right)^2=0.305\\\\;pu"
+          "Z_{pu,new}=0.2\\frac{50}{30}\\left(\\frac{13.2}{13.8}\\right)^2=0.305\\;pu"
         ]
       }
     ],
@@ -6067,7 +6067,7 @@
         "title": "Calculate transformer fault level",
         "explanation": "For an infinite-bus supply, use the transformer rating divided by its per-unit impedance.",
         "equations": [
-          "S_{sc}=\\\\frac{500\\\\;kVA}{0.10}=5{,}000\\\\;kVA"
+          "S_{sc}=\\frac{500\\;kVA}{0.10}=5{,}000\\;kVA"
         ]
       }
     ],
@@ -6124,7 +6124,7 @@
         "title": "Add the series reactances",
         "explanation": "The generator and transformer reactances are both given on the same 100 MVA base, so they add.",
         "equations": [
-          "X_{eq}=0.1+0.1=0.2\\\\;pu"
+          "X_{eq}=0.1+0.1=0.2\\;pu"
         ]
       },
       {
@@ -6132,7 +6132,7 @@
         "title": "Calculate the fault level",
         "explanation": "The three-phase fault level is base MVA divided by equivalent per-unit reactance.",
         "equations": [
-          "S_{sc}=\\\\frac{100}{0.2}=500\\\\;MVA"
+          "S_{sc}=\\frac{100}{0.2}=500\\;MVA"
         ]
       }
     ],
@@ -6187,7 +6187,7 @@
         "title": "Calculate one generator's fault contribution",
         "explanation": "Each 5 MVA generator has 20% reactance, so its approximate fault contribution is rated MVA divided by per-unit reactance.",
         "equations": [
-          "S_{sc,one}=\\\\frac{5}{0.20}=25\\\\;MVA"
+          "S_{sc,one}=\\frac{5}{0.20}=25\\;MVA"
         ]
       },
       {
@@ -6195,7 +6195,7 @@
         "title": "Add the parallel contributions",
         "explanation": "Four identical generators connected in parallel contribute four times the individual short-circuit MVA.",
         "equations": [
-          "S_{sc,total}=4(25)=100\\\\;MVA"
+          "S_{sc,total}=4(25)=100\\;MVA"
         ]
       }
     ],
@@ -6412,8 +6412,8 @@
         "title": "Calculate the zero-sequence current",
         "explanation": "Zero-sequence current is one-third of the sum of the three phase currents.",
         "equations": [
-          "I_0=\\\\frac{I_a+I_b+I_c}{3}=\\\\frac{(3+j5)+(2+j2)+(-2-j1)}{3}",
-          "=\\\\frac{3+j6}{3}=1+j2\\\\;A"
+          "I_0=\\frac{I_a+I_b+I_c}{3}=\\frac{(3+j5)+(2+j2)+(-2-j1)}{3}",
+          "=\\frac{3+j6}{3}=1+j2\\;A"
         ]
       }
     ],
@@ -6857,7 +6857,7 @@
         "title": "Relate neutral current to zero-sequence current",
         "explanation": "In a three-phase, four-wire system, neutral current magnitude is three times the zero-sequence current magnitude.",
         "equations": [
-          "|I_0|=\\\\frac{|I_n|}{3}=\\\\frac{18}{3}=6\\\\;A"
+          "|I_0|=\\frac{|I_n|}{3}=\\frac{18}{3}=6\\;A"
         ]
       }
     ],
@@ -6912,7 +6912,7 @@
         "title": "Use the zero-sequence relation for a single-line-to-ground fault",
         "explanation": "The faulted-phase current is three times the zero-sequence current.",
         "equations": [
-          "|I_0|=\\\\frac{|I_f|}{3}=\\\\frac{100}{3}=33.3\\\\;A"
+          "|I_0|=\\frac{|I_f|}{3}=\\frac{100}{3}=33.3\\;A"
         ]
       }
     ],
@@ -7062,7 +7062,7 @@
         "title": "Calculate the base current",
         "explanation": "Use the three-phase 100 MVA base and 115 kV line-to-line voltage.",
         "equations": [
-          "I_{base}=\\\\frac{100\\\\times10^6}{\\\\sqrt{3}(115\\\\times10^3)}=502.0\\\\;A"
+          "I_{base}=\\frac{100\\times10^6}{\\sqrt{3}(115\\times10^3)}=502.0\\;A"
         ]
       },
       {
@@ -7070,7 +7070,7 @@
         "title": "Calculate the three-phase fault current",
         "explanation": "For a bolted three-phase fault, only positive-sequence impedance is used. With Z₁=0.25 pu, the fault current is 1/0.25=4 pu.",
         "equations": [
-          "I_f=\\\\frac{1}{0.25}I_{base}=4(502.0)=2008\\\\;A\\\\approx2{,}000\\\\;A"
+          "I_f=\\frac{1}{0.25}I_{base}=4(502.0)=2008\\;A\\approx2{,}000\\;A"
         ]
       }
     ],
