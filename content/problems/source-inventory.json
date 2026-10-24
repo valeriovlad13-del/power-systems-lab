@@ -5342,8 +5342,8 @@
         "title": "Convert the neutral reactance to per unit",
         "explanation": "Use the generator's 25 MVA, 11 kV three-phase base. The neutral reactance enters the single-line-to-ground sequence network as three times the neutral impedance.",
         "equations": [
-          "Z_{base}=\\\\frac{V_{LL}^2}{S_{base}}=\\\\frac{11^2}{25}=4.84\\\\;\\\\Omega",
-          "X_{n,pu}=\\\\frac{0.3}{4.84}=0.06198\\\\;pu"
+          "Z_{base}=\\frac{V_{LL}^2}{S_{base}}=\\frac{11^2}{25}=4.84\\;\\Omega",
+          "X_{n,pu}=\\frac{0.3}{4.84}=0.06198\\;pu"
         ]
       },
       {
@@ -5351,8 +5351,8 @@
         "title": "Calculate the single-line-to-ground fault current",
         "explanation": "For a bolted single-line-to-ground fault, the three sequence networks are in series.",
         "equations": [
-          "I_f=\\\\frac{3V_{pu}}{j(X_1+X_2+X_0+3X_n)}",
-          "|I_f|=\\\\frac{3}{0.2+0.2+0.05+3(0.06198)}=4.717\\\\;pu"
+          "I_f=\\frac{3V_{pu}}{j(X_1+X_2+X_0+3X_n)}",
+          "|I_f|=\\frac{3}{0.2+0.2+0.05+3(0.06198)}=4.717\\;pu"
         ]
       },
       {
@@ -5360,8 +5360,8 @@
         "title": "Convert to amperes",
         "explanation": "Calculate the base current from the three-phase MVA and line-to-line voltage.",
         "equations": [
-          "I_{base}=\\\\frac{25\\\\times10^6}{\\\\sqrt{3}(11\\\\times10^3)}=1312.2\\\\;A",
-          "I_f=4.717(1312.2)=6189\\\\;A"
+          "I_{base}=\\frac{25\\times10^6}{\\sqrt{3}(11\\times10^3)}=1312.2\\;A",
+          "I_f=4.717(1312.2)=6189\\;A"
         ]
       }
     ],
@@ -5418,8 +5418,8 @@
         "title": "Calculate the line-to-line fault sequence current",
         "explanation": "For a bolted line-to-line fault, zero-sequence current is zero and the positive and negative sequence networks are in series.",
         "equations": [
-          "|I_1|=\\\\frac{1}{|Z_1+Z_2|}=\\\\frac{1}{0.15+0.15}=3.333\\\\;pu",
-          "|I_{LL}|=\\\\sqrt{3}|I_1|=5.774\\\\;pu"
+          "|I_1|=\\frac{1}{|Z_1+Z_2|}=\\frac{1}{0.15+0.15}=3.333\\;pu",
+          "|I_{LL}|=\\sqrt{3}|I_1|=5.774\\;pu"
         ]
       },
       {
@@ -5427,8 +5427,8 @@
         "title": "Convert to amperes",
         "explanation": "Use the 50 MVA, 69 kV three-phase base.",
         "equations": [
-          "I_{base}=\\\\frac{50\\\\times10^6}{\\\\sqrt{3}(69\\\\times10^3)}=418.4\\\\;A",
-          "I_{LL}=5.774(418.4)=2416\\\\;A\\\\approx2{,}415\\\\;A"
+          "I_{base}=\\frac{50\\times10^6}{\\sqrt{3}(69\\times10^3)}=418.4\\;A",
+          "I_{LL}=5.774(418.4)=2416\\;A\\approx2{,}415\\;A"
         ]
       }
     ],
@@ -5486,8 +5486,8 @@
         "title": "Calculate the positive-sequence current",
         "explanation": "For a bolted double-line-to-ground fault, the positive sequence network is in series with the parallel combination of the negative and zero sequence networks.",
         "equations": [
-          "Z_{20}=\\\\frac{Z_2Z_0}{Z_2+Z_0}=j\\\\frac{0.07(0.05)}{0.07+0.05}=j0.029167\\\\;pu",
-          "|I_1|=\\\\frac{1}{|Z_1+Z_{20}|}=\\\\frac{1}{0.08+0.029167}=9.160\\\\;pu"
+          "Z_{20}=\\frac{Z_2Z_0}{Z_2+Z_0}=j\\frac{0.07(0.05)}{0.07+0.05}=j0.029167\\;pu",
+          "|I_1|=\\frac{1}{|Z_1+Z_{20}|}=\\frac{1}{0.08+0.029167}=9.160\\;pu"
         ]
       },
       {
@@ -5495,8 +5495,8 @@
         "title": "Calculate the zero-sequence current",
         "explanation": "The zero-sequence current is obtained from the current division relation in the parallel negative- and zero-sequence networks.",
         "equations": [
-          "|I_0|=|I_1|\\\\frac{X_2}{X_2+X_0}=9.160\\\\frac{0.07}{0.12}=5.343\\\\;pu",
-          "|I_f|=3|I_0|=16.03\\\\;pu"
+          "|I_0|=|I_1|\\frac{X_2}{X_2+X_0}=9.160\\frac{0.07}{0.12}=5.343\\;pu",
+          "|I_f|=3|I_0|=16.03\\;pu"
         ]
       },
       {
@@ -5504,8 +5504,8 @@
         "title": "Convert to amperes",
         "explanation": "Use the 20 MVA, 13.8 kV base current.",
         "equations": [
-          "I_{base}=\\\\frac{20\\\\times10^6}{\\\\sqrt{3}(13.8\\\\times10^3)}=836.7\\\\;A",
-          "|I_f|=16.03(836.7)=13{,}410\\\\;A\\\\approx13{,}387\\\\;A"
+          "I_{base}=\\frac{20\\times10^6}{\\sqrt{3}(13.8\\times10^3)}=836.7\\;A",
+          "|I_f|=16.03(836.7)=13{,}410\\;A\\approx13{,}387\\;A"
         ]
       }
     ],
