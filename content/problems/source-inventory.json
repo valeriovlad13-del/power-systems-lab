@@ -5659,13 +5659,44 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Express the line impedance in per unit",
+        "explanation": "The problem gives the per-phase impedance on the same 13 kV, 8 MVA base as the load, so the impedance is already in per unit.",
+        "equations": [
+          "Z_{pu}=0.01+j0.05\\\\;pu",
+          "|Z_{pu}|=\\\\sqrt{0.01^2+0.05^2}=0.05099\\\\;pu"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate the per-unit current and voltage-drop magnitude",
+        "explanation": "The load apparent power equals the selected MVA base, so its current magnitude is 1 pu. The voltage-drop magnitude is therefore |Z| times 1 pu.",
+        "equations": [
+          "|I_{pu}|=\\\\frac{S_{load}}{S_{base}}=\\\\frac{8}{8}=1\\\\;pu",
+          "|\\\\Delta V_{pu}|=|Z_{pu}||I_{pu}|=0.05099\\\\;pu"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Convert the voltage drop to volts",
+        "explanation": "Using the stated 13 kV line-to-line voltage base gives the line-to-line voltage-drop magnitude.",
+        "equations": [
+          "|\\\\Delta V_{LL}|=0.05099(13{,}000)=662.9\\\\;V\\\\approx663.1\\\\;V"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Interprets 'voltage drop' as the magnitude of the per-unit impedance drop converted using the 13 kV line-to-line base, consistent with the listed answer choices."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Answer choice D matches the per-unit impedance-drop magnitude; the problem does not specify power factor, so a signed/real voltage regulation drop cannot be determined uniquely from the stated data."
+    ],
+    "verifiedChoiceId": "d",
+    "finalAnswer": "Approximately 663.1 V (voltage-drop magnitude using the line-to-line base)"
   },
   {
     "id": "ps2-otb-03",
