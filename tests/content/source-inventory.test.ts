@@ -16,15 +16,19 @@ describe("source problem inventory", () => {
     }
   });
 
-  it("keeps all solutions pending until independently reviewed", () => {
-    expect(problems.every((problem) => problem.verificationStatus === "pending")).toBe(true);
-    expect(problems.every((problem) => problem.solution.length === 0)).toBe(true);
+  it("does not confuse source-marked choices with verified solutions", () => {
+    const pending = problems.filter((problem) => problem.verificationStatus === "pending");
+    const verified = problems.filter((problem) => problem.verificationStatus === "verified");
+    expect(pending).toHaveLength(139);
+    expect(verified).toHaveLength(1);
+    expect(verified[0].id).toBe("ps1-main-02");
+    expect(verified[0].solution.length).toBeGreaterThan(0);
+    expect(pending.every((problem) => problem.solution.length === 0)).toBe(true);
   });
 
   it("preserves the expected source-section counts", () => {
     const count = (courseId: string, section: string) =>
       problems.filter((problem) => problem.courseId === courseId && problem.source.originalSection === section).length;
-
     expect(count("power-systems-1", "Main Tutorial Problems")).toBe(20);
     expect(count("power-systems-1", "Out of the Box Questions")).toBe(60);
     expect(count("power-systems-2", "Main Tutorial Problems")).toBe(10);
