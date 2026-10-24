@@ -1,0 +1,33 @@
+import { describe, expect, it } from "vitest";
+import { problems } from "@/content/problems";
+
+describe("source problem inventory", () => {
+  it("contains all 140 source questions", () => {
+    expect(problems).toHaveLength(140);
+  });
+
+  it("preserves unique source IDs and four choices per question", () => {
+    expect(new Set(problems.map((problem) => problem.id)).size).toBe(140);
+    for (const problem of problems) {
+      expect(problem.statement.length).toBeGreaterThan(0);
+      expect(problem.choices).toHaveLength(4);
+      expect(problem.choices.map((choice) => choice.label)).toEqual(["A", "B", "C", "D"]);
+      expect(problem.source.originalQuestionNumber).toBeGreaterThan(0);
+    }
+  });
+
+  it("keeps all solutions pending until independently reviewed", () => {
+    expect(problems.every((problem) => problem.verificationStatus === "pending")).toBe(true);
+    expect(problems.every((problem) => problem.solution.length === 0)).toBe(true);
+  });
+
+  it("preserves the expected source-section counts", () => {
+    const count = (courseId: string, section: string) =>
+      problems.filter((problem) => problem.courseId === courseId && problem.source.originalSection === section).length;
+
+    expect(count("power-systems-1", "Main Tutorial Problems")).toBe(20);
+    expect(count("power-systems-1", "Out of the Box Questions")).toBe(60);
+    expect(count("power-systems-2", "Main Tutorial Problems")).toBe(10);
+    expect(count("power-systems-2", "Out of the Box Questions")).toBe(50);
+  });
+});
