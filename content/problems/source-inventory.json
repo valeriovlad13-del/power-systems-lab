@@ -42,8 +42,8 @@
         "title": "Calculate the transmission loss",
         "explanation": "Efficiency is delivered power divided by input power. Calculate input power, then subtract the delivered power.",
         "equations": [
-          "P_{in}=\\\\frac{P_r}{\\\\eta}=\\\\frac{200}{0.90}=222.222\\\\;\\\\text{kW}",
-          "P_{loss}=P_{in}-P_r=222.222-200=22.222\\\\;\\\\text{kW}"
+          "P_{in}=\\frac{P_r}{\\eta}=\\frac{200}{0.90}=222.222\\;\\text{kW}",
+          "P_{loss}=P_{in}-P_r=222.222-200=22.222\\;\\text{kW}"
         ]
       },
       {
@@ -51,7 +51,7 @@
         "title": "Calculate the line current",
         "explanation": "For a single-phase load at unity power factor, current is delivered power divided by receiving-end voltage.",
         "equations": [
-          "I=\\\\frac{P_r}{V_r}=\\\\frac{200\\\\,000}{3\\\\,300}=60.606\\\\;\\\\text{A}"
+          "I=\\frac{P_r}{V_r}=\\frac{200\\,000}{3\\,300}=60.606\\;\\text{A}"
         ]
       },
       {
@@ -59,7 +59,7 @@
         "title": "Determine total loop resistance",
         "explanation": "Use copper loss in the two-conductor loop, P_loss = I²R_loop.",
         "equations": [
-          "R_{loop}=\\\\frac{P_{loss}}{I^2}=\\\\frac{22\\\\,222.2}{(60.606)^2}\\\\approx6.05\\\\;\\\\Omega"
+          "R_{loop}=\\frac{P_{loss}}{I^2}=\\frac{22\\,222.2}{(60.606)^2}\\approx6.05\\;\\Omega"
         ]
       },
       {
@@ -67,8 +67,8 @@
         "title": "Solve for the one-way line length",
         "explanation": "The loop has two conductors, so R_loop = 2ρℓ/A. Convert 0.775 cm² to 7.75 × 10⁻⁵ m².",
         "equations": [
-          "\\\\ell=\\\\frac{R_{loop}A}{2\\\\rho}",
-          "\\\\ell=\\\\frac{(6.05)(7.75\\\\times10^{-5})}{2(1.725\\\\times10^{-8})}\\\\approx13.59\\\\times10^3\\\\;\\\\text{m}"
+          "\\ell=\\frac{R_{loop}A}{2\\rho}",
+          "\\ell=\\frac{(6.05)(7.75\\times10^{-5})}{2(1.725\\times10^{-8})}\\approx13.59\\times10^3\\;\\text{m}"
         ]
       },
       {
@@ -76,7 +76,7 @@
         "title": "Select the matching choice",
         "explanation": "Convert metres to kilometres and round to the nearest listed choice.",
         "equations": [
-          "\\\\ell\\\\approx13.6\\\\;\\\\text{km}"
+          "\\ell\\approx13.6\\;\\text{km}"
         ]
       }
     ],
@@ -165,7 +165,7 @@
         "title": "Calculate conductor radius",
         "explanation": "Convert the diameter to metres and divide by two.",
         "equations": [
-          "r=\\\\frac{d}{2}=\\\\frac{0.012}{2}=0.006\\\\;\\\\text{m}"
+          "r=\\frac{d}{2}=\\frac{0.012}{2}=0.006\\;\\text{m}"
         ]
       },
       {
@@ -173,7 +173,7 @@
         "title": "Calculate the equivalent radius",
         "explanation": "For a solid round conductor, the equivalent radius for inductance is 0.7788 times the physical radius.",
         "equations": [
-          "r'=0.7788r=0.7788(0.006)=0.0046728\\\\;\\\\text{m}"
+          "r'=0.7788r=0.7788(0.006)=0.0046728\\;\\text{m}"
         ]
       },
       {
@@ -181,8 +181,8 @@
         "title": "Apply the single-phase loop-inductance formula",
         "explanation": "For a two-conductor single-phase line, the total loop inductance per kilometre is 0.4 ln(D/r′) mH/km.",
         "equations": [
-          "L_{\\\\text{loop}}=0.4\\\\ln\\\\left(\\\\frac{D}{r'}\\\\right)\\\\;\\\\text{mH/km}",
-          "L_{\\\\text{loop}}=0.4\\\\ln\\\\left(\\\\frac{2}{0.0046728}\\\\right)=2.424\\\\;\\\\text{mH/km}"
+          "L_{\\text{loop}}=0.4\\ln\\left(\\frac{D}{r'}\\right)\\;\\text{mH/km}",
+          "L_{\\text{loop}}=0.4\\ln\\left(\\frac{2}{0.0046728}\\right)=2.424\\;\\text{mH/km}"
         ]
       },
       {
@@ -309,7 +309,7 @@
         "title": "Calculate the geometric mean distance",
         "explanation": "For a transposed three-phase line with unequal spacing, D_m is the cube root of the product of the three pairwise distances.",
         "equations": [
-          "D_m=(D_{12}D_{23}D_{31})^{1/3}=(4\\\\times4\\\\times8)^{1/3}\\\\approx5.040\\\\;\\\\text{m}"
+          "D_m=(D_{12}D_{23}D_{31})^{1/3}=(4\\times4\\times8)^{1/3}\\approx5.040\\;\\text{m}"
         ]
       },
       {
@@ -317,7 +317,7 @@
         "title": "Calculate conductor GMR",
         "explanation": "Convert the 2 cm diameter to a radius of 0.01 m, then apply the solid-conductor GMR factor.",
         "equations": [
-          "r'=0.7788r=0.7788(0.01)=0.007788\\\\;\\\\text{m}"
+          "r'=0.7788r=0.7788(0.01)=0.007788\\;\\text{m}"
         ]
       },
       {
@@ -325,7 +325,7 @@
         "title": "Calculate inductance per phase",
         "explanation": "For a transposed three-phase line, L = 0.2 ln(D_m/r′) mH/km per phase.",
         "equations": [
-          "L=0.2\\\\ln\\\\left(\\\\frac{5.040}{0.007788}\\\\right)\\\\approx1.294\\\\;\\\\text{mH/km per phase}"
+          "L=0.2\\ln\\left(\\frac{5.040}{0.007788}\\right)\\approx1.294\\;\\text{mH/km per phase}"
         ]
       },
       {
@@ -408,8 +408,8 @@
         "title": "Calculate conductor GMR",
         "explanation": "Convert the diameter to a radius and apply the solid-conductor GMR factor.",
         "equations": [
-          "r=\\\\frac{0.05}{2}=0.025\\\\;\\\\text{m}",
-          "r'=0.7788(0.025)=0.01947\\\\;\\\\text{m}"
+          "r=\\frac{0.05}{2}=0.025\\;\\text{m}",
+          "r'=0.7788(0.025)=0.01947\\;\\text{m}"
         ]
       },
       {
@@ -417,7 +417,7 @@
         "title": "Apply the three-phase inductance formula",
         "explanation": "For equilateral spacing, L = 0.2 ln(D/r′) mH/km per phase.",
         "equations": [
-          "L=0.2\\\\ln\\\\left(\\\\frac{8}{0.01947}\\\\right)\\\\approx1.204\\\\;\\\\text{mH/km per phase}"
+          "L=0.2\\ln\\left(\\frac{8}{0.01947}\\right)\\approx1.204\\;\\text{mH/km per phase}"
         ]
       },
       {
