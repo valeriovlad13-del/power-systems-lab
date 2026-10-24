@@ -1458,13 +1458,62 @@
       }
     ],
     "sourceMarkedChoiceId": "a",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Convert line parameters to SI units",
+        "explanation": "Convert millihenries and microfarads to henries and farads. The per-kilometre basis cancels in the ratio.",
+        "equations": [
+          "L=0.97\\times10^{-3}\\;\\text{H/km}",
+          "C=0.0115\\times10^{-6}\\;\\text{F/km}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the surge-impedance formula",
+        "explanation": "For a lossless line, surge impedance is the square root of inductance per unit length divided by capacitance per unit length.",
+        "equations": [
+          "Z_c=\\sqrt{\\frac{L}{C}}",
+          "Z_c=\\sqrt{\\frac{0.97\\times10^{-3}}{0.0115\\times10^{-6}}}=290.4\\;\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Select the matching choice",
+        "explanation": "Rounded to the nearest listed value, the result matches option A.",
+        "equations": [
+          "Z_c\\approx290\\;\\Omega"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The line is treated as lossless, as stated.",
+      "Inductance and capacitance are per phase and use the same length basis."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified.",
+      "Independently calculated and reviewed; selected answer matches the stated line model."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [
+      {
+        "label": "Inductance per phase",
+        "value": "0.97",
+        "unit": "mH/km"
+      },
+      {
+        "label": "Capacitance per phase",
+        "value": "0.0115",
+        "unit": "μF/km"
+      }
+    ],
+    "find": "Surge impedance of the lossless transmission line.",
+    "finalAnswer": {
+      "value": "290",
+      "unit": "Ω"
+    }
   },
   {
     "id": "ps1-main-18",
@@ -1502,13 +1551,62 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Convert parameters to SI units",
+        "explanation": "Express capacitance in farads per metre and inductance in henries per metre.",
+        "equations": [
+          "C=200\\times10^{-12}\\;\\text{F/m}",
+          "L=0.42\\times10^{-6}\\;\\text{H/m}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the propagation-velocity formula",
+        "explanation": "For a lossless cable, propagation velocity is the reciprocal of the square root of LC.",
+        "equations": [
+          "v=\\frac{1}{\\sqrt{LC}}",
+          "v=\\frac{1}{\\sqrt{(0.42\\times10^{-6})(200\\times10^{-12})}}",
+          "v\\approx1.091\\times10^8\\;\\text{m/s}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Select the matching choice",
+        "explanation": "The calculated velocity rounds to option C.",
+        "equations": [
+          "v\\approx1.10\\times10^8\\;\\text{m/s}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The cable is treated as lossless; conductor and dielectric losses are neglected."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified.",
+      "Independently calculated and reviewed; selected answer matches the stated line model."
+    ],
+    "verifiedChoiceId": "c",
+    "given": [
+      {
+        "label": "Capacitance per metre",
+        "value": "200",
+        "unit": "pF/m"
+      },
+      {
+        "label": "Inductance per metre",
+        "value": "0.42",
+        "unit": "μH/m"
+      }
+    ],
+    "find": "Wave-propagation velocity in the cable.",
+    "finalAnswer": {
+      "value": "1.10 × 10⁸",
+      "unit": "m/s"
+    }
   },
   {
     "id": "ps1-main-19",
@@ -1546,13 +1644,60 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Use the surge-power relation",
+        "explanation": "For a three-phase line using line-to-line voltage, surge power is the square of the line voltage divided by surge impedance.",
+        "equations": [
+          "P_s=\\frac{V_{LL}^2}{Z_c}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Substitute the values",
+        "explanation": "Use kilovolts and ohms; kV²/Ω gives MW.",
+        "equations": [
+          "P_s=\\frac{(1{,}000\\;\\text{kV})^2}{400\\;\\Omega}=2{,}500\\;\\text{MW}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Select the matching choice",
+        "explanation": "The calculated surge power matches option B.",
+        "equations": [
+          "P_s=2{,}500\\;\\text{MW}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The stated 1,000 kV is interpreted as line-to-line voltage for the three-phase line.",
+      "Use the conventional surge-impedance loading relation for a lossless three-phase line."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified.",
+      "Independently calculated and reviewed; selected answer matches the stated line model."
+    ],
+    "verifiedChoiceId": "b",
+    "given": [
+      {
+        "label": "Receiving-end line voltage",
+        "value": "1,000",
+        "unit": "kV"
+      },
+      {
+        "label": "Surge impedance",
+        "value": "400",
+        "unit": "Ω"
+      }
+    ],
+    "find": "Three-phase surge power at the stated voltage.",
+    "finalAnswer": {
+      "value": "2,500",
+      "unit": "MW"
+    }
   },
   {
     "id": "ps1-main-20",
