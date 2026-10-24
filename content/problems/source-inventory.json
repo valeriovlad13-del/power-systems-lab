@@ -7463,13 +7463,33 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate the load current phasor",
+        "explanation": "Assume terminal voltage is 1 pu as the reference. A 1 pu load at 0.8 lagging power factor draws current at −36.87°.",
+        "equations": [
+          "I=1\\\\angle(-36.87^\\\\circ)=0.8-j0.6\\\\;pu"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate voltage behind transient reactance",
+        "explanation": "The internal transient voltage is E′=V+jX′dI.",
+        "equations": [
+          "E'=1+j(0.35)(0.8-j0.6)=1.21+j0.28\\\\;pu",
+          "|E'|=\\\\sqrt{1.21^2+0.28^2}=1.242\\\\;pu"
+        ]
+      }
+    ],
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently calculated from the stated values and standard synchronous-machine/fault-analysis relationships; result matches choice B within rounding."
+    ],
+    "verifiedChoiceId": "b",
+    "finalAnswer": "1.24 pu"
   },
   {
     "id": "ps2-otb-37",
@@ -7801,13 +7821,41 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Convert each station's short-circuit level to Thevenin reactance",
+        "explanation": "At 33 kV, use X=VLL²/Ssc for each station.",
+        "equations": [
+          "X_A=\\\\frac{33^2}{1500}=0.726\\\\;\\\\Omega",
+          "X_B=\\\\frac{33^2}{1200}=0.9075\\\\;\\\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate the contribution from station B through the interconnecting line",
+        "explanation": "Station B's reactance is in series with the 1 Ω line reactance when viewed from station A's bus.",
+        "equations": [
+          "S_{sc,B\\\\to A}=\\\\frac{33^2}{X_B+X_{line}}=\\\\frac{1089}{0.9075+1}=570.8\\\\;MVA"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Add the contributions at station A",
+        "explanation": "The local station contribution is 1,500 MVA.",
+        "equations": [
+          "S_{sc,total}=1500+570.8=2070.8\\\\;MVA\\\\approx2070\\\\;MVA"
+        ]
+      }
+    ],
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently calculated from the stated values and standard synchronous-machine/fault-analysis relationships; result matches choice D within rounding."
+    ],
+    "verifiedChoiceId": "d",
+    "finalAnswer": "Approximately 2,070 MVA"
   },
   {
     "id": "ps2-otb-43",
@@ -7893,13 +7941,43 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Set the line-to-ground and three-phase fault currents equal",
+        "explanation": "For a bolted three-phase fault, I₃φ=1/X₁. For a bolted line-to-ground fault, I_LG=3/(X₁+X₂+X₀+3Xₙ).",
+        "equations": [
+          "I_{3\\\\phi}=\\\\frac{1}{0.25}=4\\\\;pu",
+          "4=\\\\frac{3}{0.25+0.15+0.05+3X_n}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Solve for the neutral reactance in per unit",
+        "explanation": "Equate the denominators after substituting the target current.",
+        "equations": [
+          "0.45+3X_n=\\\\frac{3}{4}=0.75",
+          "X_n=0.10\\\\;pu"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Convert to ohms",
+        "explanation": "Use the 30 kV, 50 MVA three-phase base.",
+        "equations": [
+          "Z_{base}=\\\\frac{30^2}{50}=18\\\\;\\\\Omega",
+          "X_n=0.10(18)=1.8\\\\;\\\\Omega"
+        ]
+      }
+    ],
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently calculated from the stated values and standard synchronous-machine/fault-analysis relationships; result matches choice D within rounding."
+    ],
+    "verifiedChoiceId": "d",
+    "finalAnswer": "1.8 Ω"
   },
   {
     "id": "ps2-otb-45",
