@@ -8150,8 +8150,8 @@
         "title": "Choose the 5 MVA base and convert the generator reactance",
         "explanation": "Refer all impedances to the transformer's 5 MVA base. The generator and transformer voltage ratings match the chosen voltage bases.",
         "equations": [
-          "X_{G,pu}=0.20\\\\frac{5}{10}=0.10\\\\;pu",
-          "X_{T,pu}=0.10\\\\;pu"
+          "X_{G,pu}=0.20\\frac{5}{10}=0.10\\;pu",
+          "X_{T,pu}=0.10\\;pu"
         ]
       },
       {
@@ -8159,9 +8159,9 @@
         "title": "Convert the transmission-line impedance to per unit",
         "explanation": "The line is on the 33 kV side. Its total resistance and reactance are the per-kilometre values multiplied by 50 km.",
         "equations": [
-          "Z_{line}=50(0.2+j1)=10+j50\\\\;\\\\Omega",
-          "Z_{base} = \\\\frac{33^2}{5}=217.8\\\\;\\\\Omega",
-          "Z_{line,pu}=\\\\frac{10+j50}{217.8}=0.0459+j0.2296\\\\;pu"
+          "Z_{line}=50(0.2+j1)=10+j50\\;\\Omega",
+          "Z_{base} = \\frac{33^2}{5}=217.8\\;\\Omega",
+          "Z_{line,pu}=\\frac{10+j50}{217.8}=0.0459+j0.2296\\;pu"
         ]
       },
       {
@@ -8169,10 +8169,10 @@
         "title": "Calculate the fault current",
         "explanation": "Add the series impedances and use the three-phase base current on the 33 kV side.",
         "equations": [
-          "Z_{eq}=0.0459+j(0.10+0.10+0.2296)=0.0459+j0.4296\\\\;pu",
-          "|Z_{eq}|=0.4320\\\\;pu",
-          "I_{base,33}=\\\\frac{5\\\\times10^6}{\\\\sqrt{3}(33\\\\times10^3)}=87.48\\\\;A",
-          "I_f=\\\\frac{87.48}{0.4320}=202.5\\\\;A\\\\;\\\\text{on 33 kV side}"
+          "Z_{eq}=0.0459+j(0.10+0.10+0.2296)=0.0459+j0.4296\\;pu",
+          "|Z_{eq}|=0.4320\\;pu",
+          "I_{base,33}=\\frac{5\\times10^6}{\\sqrt{3}(33\\times10^3)}=87.48\\;A",
+          "I_f=\\frac{87.48}{0.4320}=202.5\\;A\\;\\text{on 33 kV side}"
         ]
       },
       {
@@ -8180,7 +8180,7 @@
         "title": "Refer current to the generator side",
         "explanation": "For an ideal transformer, current scales inversely with voltage ratio. The low-side current is the high-side current multiplied by 33/6.6.",
         "equations": [
-          "I_{f,6.6}=202.5\\\\frac{33}{6.6}=1012.5\\\\;A\\\\approx1012\\\\;A"
+          "I_{f,6.6}=202.5\\frac{33}{6.6}=1012.5\\;A\\approx1012\\;A"
         ]
       }
     ],
