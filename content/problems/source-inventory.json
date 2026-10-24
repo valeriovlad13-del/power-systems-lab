@@ -1822,13 +1822,69 @@
       }
     ],
     "sourceMarkedChoiceId": "a",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate conductor GMR",
+        "explanation": "For a solid round conductor, the effective radius used for inductance is 0.7788 times the physical radius.",
+        "equations": [
+          "r'=0.7788r=0.7788(0.005)=0.003894\\;\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the loop-inductance formula",
+        "explanation": "For two parallel conductors, the loop inductance is twice the per-conductor inductance.",
+        "equations": [
+          "L_{loop}=4\\times10^{-7}\\ln\\left(\\frac{D}{r'}\\right)\\;\\text{H/m}",
+          "L_{loop}=4\\times10^{-7}\\ln\\left(\\frac{1}{0.003894}\\right)\\;\\text{H/m}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Convert to mH/km",
+        "explanation": "Multiply H/m by 1,000 m/km and convert henries to millihenries.",
+        "equations": [
+          "L_{loop}=2.218\\;\\text{mH/km}\\approx2.22\\;\\text{mH/km}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The result matches option A.",
+        "equations": [
+          "L_{loop}\\approx2.22\\;\\text{mH/km}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The conductors are treated as solid round conductors.",
+      "The question asks for loop inductance per kilometre, including both conductors."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified.",
+      "Independently calculated using standard transmission-line equations; final choice matches the calculated result within rounding."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [
+      {
+        "label": "Conductor spacing",
+        "value": "1",
+        "unit": "m"
+      },
+      {
+        "label": "Conductor radius",
+        "value": "0.5",
+        "unit": "cm"
+      }
+    ],
+    "find": "Loop inductance per kilometre of the single-phase two-wire line.",
+    "finalAnswer": {
+      "value": "2.22",
+      "unit": "mH/km"
+    }
   },
   {
     "id": "ps1-otb-03",
@@ -1865,13 +1921,96 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate total loop resistance",
+        "explanation": "The loop includes the outgoing and return conductors.",
+        "equations": [
+          "R_{loop}=2(0.311)(20)=12.44\\;\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate loop inductance",
+        "explanation": "Use r′ = 0.7788r and the two-wire loop-inductance formula.",
+        "equations": [
+          "r=0.00823/2=0.004115\\;\\text{m}",
+          "r'=0.7788(0.004115)=0.003204\\;\\text{m}",
+          "L_{loop}=4\\times10^{-7}\\ln\\left(\\frac{1.5}{0.003204}\\right)\\;\\text{H/m}",
+          "L_{loop}\\approx2.459\\;\\text{mH/km}\\times20=0.04918\\;\\text{H}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate inductive reactance",
+        "explanation": "Use the total loop inductance and the stated frequency.",
+        "equations": [
+          "X_L=2\\pi fL=2\\pi(50)(0.04918)\\approx15.45\\;\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Calculate loop impedance magnitude",
+        "explanation": "Combine resistance and inductive reactance as perpendicular impedance components.",
+        "equations": [
+          "|Z_{loop}|=\\sqrt{R_{loop}^2+X_L^2}",
+          "|Z_{loop}|=\\sqrt{12.44^2+15.45^2}\\approx19.83\\;\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 5,
+        "title": "Select the matching choice",
+        "explanation": "The calculated magnitude matches option D to rounding.",
+        "equations": [
+          "|Z_{loop}|\\approx19.86\\;\\Omega"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The stated resistance is per conductor per kilometre.",
+      "The requested impedance is the loop impedance, so both conductor resistances and inductances are included.",
+      "Skin effect and other frequency-dependent resistance corrections are neglected."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified.",
+      "Independently calculated using standard transmission-line equations; final choice matches the calculated result within rounding."
+    ],
+    "verifiedChoiceId": "d",
+    "given": [
+      {
+        "label": "Line length",
+        "value": "20",
+        "unit": "km"
+      },
+      {
+        "label": "Conductor spacing",
+        "value": "1.5",
+        "unit": "m"
+      },
+      {
+        "label": "Conductor diameter",
+        "value": "0.823",
+        "unit": "cm"
+      },
+      {
+        "label": "Resistance per conductor",
+        "value": "0.311",
+        "unit": "Ω/km"
+      },
+      {
+        "label": "Frequency",
+        "value": "50",
+        "unit": "Hz"
+      }
+    ],
+    "find": "Magnitude of the loop impedance of the single-phase line.",
+    "finalAnswer": {
+      "value": "19.86",
+      "unit": "Ω"
+    }
   },
   {
     "id": "ps1-otb-04",
@@ -1908,13 +2047,77 @@
       }
     ],
     "sourceMarkedChoiceId": "a",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Convert conductor size and find GMR",
+        "explanation": "One mil is 0.001 inch. For a solid round conductor, use r′ = 0.7788r.",
+        "equations": [
+          "d=500\\times0.001\\times0.0254=0.0127\\;\\text{m}",
+          "r=0.00635\\;\\text{m}",
+          "r'=0.7788(0.00635)=0.004945\\;\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate inductance per kilometre",
+        "explanation": "For an equilateral three-phase arrangement, the equivalent phase spacing is the side length, 6 m.",
+        "equations": [
+          "L_{phase}=2\\times10^{-4}\\ln\\left(\\frac{D}{r'}\\right)\\;\\text{H/km}",
+          "L_{phase}=0.2\\ln\\left(\\frac{6}{0.004945}\\right)\\;\\text{mH/km}",
+          "L_{phase}\\approx1.417\\;\\text{mH/km}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate total phase inductance",
+        "explanation": "Multiply the per-kilometre value by the 25 km line length.",
+        "equations": [
+          "L_{total}=1.417(25)\\approx35.4\\;\\text{mH per phase}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The result matches option A.",
+        "equations": [
+          "L_{total}\\approx35.5\\;\\text{mH per phase}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The conductors are solid round conductors and use the standard GMR correction.",
+      "The equilateral arrangement has the same spacing between every pair of phase conductors."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified.",
+      "Independently calculated using standard transmission-line equations; final choice matches the calculated result within rounding."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [
+      {
+        "label": "Equilateral conductor spacing",
+        "value": "6",
+        "unit": "m"
+      },
+      {
+        "label": "Conductor diameter",
+        "value": "500",
+        "unit": "mil"
+      },
+      {
+        "label": "Line length",
+        "value": "25",
+        "unit": "km"
+      }
+    ],
+    "find": "Total inductance per phase for the three-phase line.",
+    "finalAnswer": {
+      "value": "35.5",
+      "unit": "mH per phase"
+    }
   },
   {
     "id": "ps1-otb-05",
