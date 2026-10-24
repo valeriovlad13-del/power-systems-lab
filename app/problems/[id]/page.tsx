@@ -50,6 +50,7 @@ export default async function ProblemDetailPage({ params }: { params: Promise<{ 
         {markedChoice && <p className="mt-4 text-xs leading-5 text-[var(--muted)]">The original PDF contains an answer marking; it is not treated as verified unless the solution has been independently checked.</p>}
       </section>
 
+      <SolutionDisclosure isVerified={isVerified}>
       {isVerified ? (
         <section className="mt-5 rounded-2xl border border-[var(--border)] bg-white p-4 sm:mt-6 sm:p-7">
           <h2 className="text-lg font-bold">Step-by-step solution</h2>
