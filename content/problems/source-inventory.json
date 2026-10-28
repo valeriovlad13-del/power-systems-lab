@@ -3140,10 +3140,9 @@
     "sourceMarkedChoiceId": "b",
     "verificationStatus": "pending",
     "solution": [],
-    "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "Independently recalculated: inferred spacing is approximately 6.28 m and capacitance is approximately 0.00967 μF/km (9.67 nF/km). The choices are labelled 10⁻⁶ without an unambiguous unit, so no answer is marked verified until the intended unit/scale is confirmed."
     ]
   },
   {
