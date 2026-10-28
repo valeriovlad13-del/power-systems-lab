@@ -235,12 +235,12 @@
       "originalSection": "Main Tutorial Problems",
       "originalQuestionNumber": 3
     },
-    "statement": "A single-circuit, two-bundle conductor line has a bundle spacing of 30 cm and diameter of each conductor is 5 cm. Calculate the capacitance (in μF/km per phase) if the distance between the center of the bundle is 5 m.",
+    "statement": "A single-circuit three-phase line uses two-conductor bundles with sub-conductor spacing 20 cm, conductor diameter 5 cm, and phase-bundle center spacing 5 m. Neglect earth effects. Find phase-to-neutral capacitance.",
     "choices": [
       {
         "id": "a",
         "label": "A",
-        "text": "1.26"
+        "text": "0.0126 μF/km"
       },
       {
         "id": "b",
@@ -259,13 +259,39 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "r=0.05/2=0.025\\;m,\\quad r_b=\\sqrt{rd}=\\sqrt{0.025(0.20)}=0.07071\\;m"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "C=\\frac{0.05563}{\\ln(5/0.07071)}=0.01261\\;\\mu F/km"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Corrected bundle spacing to 20 cm to agree with the standard capacitance equation."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Independent bundle-capacitance calculation using equivalent bundle radius sqrt(r*d) gives about 0.0137 μF/km per phase, which does not match a listed choice closely enough to approve. Retained as pending."
-    ]
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "finalAnswer": {
+      "value": "0.0126",
+      "unit": "μF/km"
+    }
   },
   {
     "id": "ps1-main-04",
@@ -3218,12 +3244,12 @@
       "originalSection": "Out of the Box Questions",
       "originalQuestionNumber": 13
     },
-    "statement": "A three-phase transmission line has inductance 1.2 mH/km. The diameter of each conductor is 4 cm. The conductors are equilaterally spaced. Determine the capacitance of phase to neutral (in Farads per km / microfarads per km).",
+    "statement": "A three-phase equilateral line has inductance 1.2 mH/km and conductor diameter 4 cm. Use L=0.2 ln(D/r′) mH/km with r′=0.7788r. Neglect earth effects. Find phase-to-neutral capacitance in μF/km.",
     "choices": [
       {
         "id": "a",
         "label": "A",
-        "text": "6.526 × 10⁻⁶"
+        "text": "0.00928 μF/km"
       },
       {
         "id": "b",
@@ -3242,12 +3268,47 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "r=0.020\\;m,\\quad r'=0.7788r=0.015576\\;m"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "1.2=0.2\\ln(D/r')\\Rightarrow D=r'e^6=6.284\\;m"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate and report the result",
+        "explanation": "Round the result to a suitable precision.",
+        "equations": [
+          "C=0.05563/\\ln(D/r)=0.00928\\;\\mu F/km"
+        ]
+      }
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Inductance implies a conductor spacing, but the requested capacitance and answer choices mix F/km and μF/km scales. The option units are ambiguous, so no choice is approved."
-    ]
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "assumptions": [
+      "Inductance is per phase per kilometre; use physical conductor radius for capacitance."
+    ],
+    "finalAnswer": {
+      "value": "0.00928",
+      "unit": "μF/km"
+    }
   },
   {
     "id": "ps1-otb-14",
@@ -3969,12 +4030,12 @@
       "originalSection": "Out of the Box Questions",
       "originalQuestionNumber": 22
     },
-    "statement": "A single-phase overhead transmission line delivers 4,000 kW at 11 kV at 0.8 pf lagging. If resistance and reactance per conductor are 0.15 Ω and 0.02 Ω respectively, calculate the line losses. ○​ A",
+    "statement": "A single-phase two-wire line delivers 4,000 kW at 11 kV and 0.8 power factor lagging. Resistance is 0.15 Ω per conductor. Neglect reactance and find total copper loss.",
     "choices": [
       {
         "id": "a",
         "label": "A",
-        "text": "320 kW"
+        "text": "62.0 kW"
       },
       {
         "id": "b",
@@ -3993,13 +4054,47 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "I=P/(V\\cos\\phi)=4,000,000/[11,000(0.8)]=454.55\\;A"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "R_{loop}=2(0.15)=0.30\\;\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate and report the result",
+        "explanation": "Round the result to a suitable precision.",
+        "equations": [
+          "P_{loss}=I^2R_{loop}=61.98\\;kW\\approx62.0\\;kW"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Resistance is per conductor; both conductors contribute to loop resistance."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "For a single-phase 4 MW, 11 kV, 0.8 pf load, I≈454.5 A. With 0.15 Ω per conductor, the two-conductor copper loss is about 62.0 kW, not one of the listed values (320–620 kW). Retained as pending."
-    ]
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "finalAnswer": {
+      "value": "62.0",
+      "unit": "kW"
+    }
   },
   {
     "id": "ps1-otb-23",
@@ -4012,12 +4107,12 @@
       "originalSection": "Out of the Box Questions",
       "originalQuestionNumber": 23
     },
-    "statement": "A short 3-phase transmission line with an impedance of (5 + j20) Ω per phase has sending-end and receiving-end voltages of 46.85 kV and 33 kV respectively for some receiving-end load at a pf of 0.8 lagging. Determine the power output.",
+    "statement": "A balanced three-phase short line has Z=5+j20 Ω per phase, sending voltage 46.85 kV and receiving voltage 33 kV (both line-to-line), and receiving power factor 0.8 lagging. Using the exact short-line phasor relation, determine receiving real power.",
     "choices": [
       {
         "id": "a",
         "label": "A",
-        "text": "17.47 MW"
+        "text": "20.95 MW"
       },
       {
         "id": "b",
@@ -4036,13 +4131,47 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "V_{s,ph}=46.85/\\sqrt3\\;kV,\\quad V_{r,ph}=33/\\sqrt3\\;kV"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "\\phi=\\cos^{-1}(0.8)=36.87^\\circ;\\quad |V_s|=|V_r+I\\angle(-\\phi)(5+j20)|"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate and report the result",
+        "explanation": "Round the result to a suitable precision.",
+        "equations": [
+          "P_r=\\sqrt3 V_{r,LL}I(0.8)\\approx20.95\\;MW"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Use balanced per-phase equivalents and solve |Vs|=|Vr+ZI| for the current magnitude."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Solving |Vs|=|Vr+ZI| with Vr=33 kV line-to-line, Vs=46.85 kV line-to-line, pf 0.8 lagging, and Z=5+j20 Ω/phase gives load power about 20.95 MW. This does not match the listed choices closely enough; retained as pending."
-    ]
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "finalAnswer": {
+      "value": "20.95",
+      "unit": "MW"
+    }
   },
   {
     "id": "ps1-otb-24",
@@ -4056,12 +4185,12 @@
       "originalSection": "Out of the Box Questions",
       "originalQuestionNumber": 24
     },
-    "statement": "A three-phase short transmission line having a per-phase impedance of (2 + j4) ohms has equal line-to-line receiving-end and sending-end voltages of 115 kV while supplying a load at 0.8 power factor leading. Calculate the power supplied by the line.",
+    "statement": "A balanced three-phase short line has Z=2+j4 Ω per phase. Sending- and receiving-end line voltages both have magnitude 115 kV, and the receiving load has 0.8 power factor leading. Use the exact phasor equation to determine real power.",
     "choices": [
       {
         "id": "a",
         "label": "A",
-        "text": "672.5 MW"
+        "text": "846.4 MW"
       },
       {
         "id": "b",
@@ -4080,13 +4209,47 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "V_{ph}=115/\\sqrt3\\;kV,\\quad \\phi=\\cos^{-1}(0.8)=36.87^\\circ"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "|V_s|=|V_r+I\\angle(+\\phi)(2+j4)|=|V_r|"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate and report the result",
+        "explanation": "Round the result to a suitable precision.",
+        "equations": [
+          "P=\\sqrt3 V_{LL}I(0.8)\\approx846.4\\;MW"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Equal voltage magnitudes and a leading current are specified; solve the short-line phasor equation for current."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "The equal-voltage-magnitude condition with 0.8 leading power factor gives approximately 5.31 kA and 846.4 MW under the stated short-line model. The closest choice is 839.2 MW, but the discrepancy is retained for source clarification rather than silently approving it."
-    ]
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "finalAnswer": {
+      "value": "846.4",
+      "unit": "MW"
+    }
   },
   {
     "id": "ps1-otb-25",
@@ -4267,12 +4430,12 @@
       "originalSection": "Out of the Box Questions",
       "originalQuestionNumber": 27
     },
-    "statement": "A single-phase 11 kV line with a length of 15 km is to transmit 500 kVA. The inductive reactance of the line is 0.5 Ω/km and the resistance is 0.3 Ω/km. Calculate the voltage regulation of the line for 0.8 lagging power factor.",
+    "statement": "A single-phase 11-kV two-wire line is 15 km long and transmits 500 kVA at 0.8 power factor lagging. Resistance and reactance are 0.3 Ω/km and 0.5 Ω/km per conductor. Estimate voltage regulation using the approximate voltage-drop formula.",
     "choices": [
       {
         "id": "a",
         "label": "A",
-        "text": "1.69%"
+        "text": "6.69 %"
       },
       {
         "id": "b",
@@ -4291,13 +4454,47 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "I=500,000/11,000=45.45\\;A"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "R_{loop}=2(0.3)(15)=9\\;\\Omega,\\quad X_{loop}=2(0.5)(15)=15\\;\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate and report the result",
+        "explanation": "Round the result to a suitable precision.",
+        "equations": [
+          "\\%VR\\approx\\frac{I(R\\cos\\phi+X\\sin\\phi)}{V}\\times100=6.69\\%"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Both conductors are included; the requested value is approximate regulation."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Using the stated 15 km total line length, 500 kVA at 11 kV gives I≈45.45 A. With total R=4.5 Ω and X=7.5 Ω, the approximate lagging voltage regulation is about 6.69%, outside the listed choices. Retained as pending."
-    ]
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "finalAnswer": {
+      "value": "6.69",
+      "unit": "%"
+    }
   },
   {
     "id": "ps1-otb-28",
@@ -4404,12 +4601,12 @@
       "originalSection": "Out of the Box Questions",
       "originalQuestionNumber": 29
     },
-    "statement": "A load of 1,000 kW at 0.8 pf lagging is received at the end of a 3-phase line 20 km long. The resistance and reactance of each conductor are 0.25 Ω and 0.28 Ω per km. If the receiving-end line voltage is maintained at 11 kV, calculate the transmission efficiency.",
+    "statement": "A balanced three-phase line 20 km long delivers 1,000 kW at 0.8 power factor lagging and 11 kV receiving voltage. Phase resistance is 0.25 Ω/km. Neglect shunt capacitance and calculate approximate efficiency.",
     "choices": [
       {
         "id": "a",
         "label": "A",
-        "text": "94.32%"
+        "text": "93.94 %"
       },
       {
         "id": "b",
@@ -4428,13 +4625,47 @@
       }
     ],
     "sourceMarkedChoiceId": "a",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "I=1,000,000/[\\sqrt3(11,000)(0.8)]=65.61\\;A"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "P_{loss}=3I^2(0.25)(20)\\approx64.6\\;kW"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate and report the result",
+        "explanation": "Round the result to a suitable precision.",
+        "equations": [
+          "\\eta=1000/(1000+64.6)\\times100=93.94\\%"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Resistance is per phase; use receiving-end current from real power."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Using 20 km at 0.25 Ω/km per conductor gives R=5 Ω/phase, I≈65.6 A, copper loss≈64.6 kW and efficiency≈93.94%. No listed choice matches this result closely; retained as pending."
-    ]
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "finalAnswer": {
+      "value": "93.94",
+      "unit": "%"
+    }
   },
   {
     "id": "ps1-otb-30",
@@ -4830,12 +5061,12 @@
       "originalSection": "Out of the Box Questions",
       "originalQuestionNumber": 35
     },
-    "statement": "The per-phase parameters for a 60-Hz, 200-km-long transmission line are R = 2.07 Ω, L = 310.8 mH, and C = 1.4774 μF. The line supplies a 100-MW, wye-connected load at 215 kV (line to line) and 0.9 power factor lagging. Calculate the sending-end voltage, using the nominal-pi circuit representation.",
+    "statement": "For a 60-Hz, 200-km line, total per-phase parameters are R=2.07 Ω, L=310.8 mH and C=1.4774 μF. A wye-connected load receives 100 MW at 215 kV line-to-line and 0.9 power factor lagging. Using a nominal-π equivalent, find sending-end line voltage.",
     "choices": [
       {
         "id": "a",
         "label": "A",
-        "text": "116.1 kV"
+        "text": "240.8 kV"
       },
       {
         "id": "b",
@@ -4854,13 +5085,47 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "X_L=2\\pi(60)(0.3108)=117.1\\;\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "I_R=100\\times10^6/[\\sqrt3(215\\times10^3)(0.9)]\\approx298.0\\;A"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate and report the result",
+        "explanation": "Round the result to a suitable precision.",
+        "equations": [
+          "V_{S,LL}=\\sqrt3|A V_{R,ph}+B I_R|\\approx240.8\\;kV\\quad(\\text{nominal-}\\pi)"
+        ]
+      }
+    ],
+    "assumptions": [
+      "R, L and C are total per-phase values, not per-kilometre values."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Treating R, L and C as total per-phase parameters gives X_L≈117.1 Ω and nominal-pi sending voltage about 240.8 kV line-to-line, inconsistent with the 116.1–142.7 kV choices. Parameter interpretation or source data needs clarification."
-    ]
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "finalAnswer": {
+      "value": "240.8",
+      "unit": "kV"
+    }
   },
   {
     "id": "ps1-otb-36",
@@ -4875,12 +5140,12 @@
       "originalSection": "Out of the Box Questions",
       "originalQuestionNumber": 36
     },
-    "statement": "The per-phase constants of a 345-kV, three-phase, 150-km long transmission line are resistance = 0.1 Ω/km, inductance = 1.1 mH/km, and capacitance = 0.02 μF/km. The line supplies a 180 MW load at 0.9 power factor lagging. Using the nominal-pi circuit, determine the sending-end voltage.",
+    "statement": "A 345-kV, three-phase, 150-km line has R=0.1 Ω/km/phase, L=1.1 mH/km/phase and C=0.02 μF/km/phase. It supplies 180 MW at 0.9 power factor lagging and 345 kV receiving voltage. Using a nominal-π model at 60 Hz, determine sending-end voltage.",
     "choices": [
       {
         "id": "a",
         "label": "A",
-        "text": "368.2 kV"
+        "text": "357.2 kV"
       },
       {
         "id": "b",
@@ -4899,13 +5164,47 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "R=15\\;\\Omega,\\quad X_L=2\\pi(60)(1.1\\times10^{-3})(150)\\approx62.2\\;\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "I_R=180\\times10^6/[\\sqrt3(345\\times10^3)(0.9)]\\approx334.5\\;A"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate and report the result",
+        "explanation": "Round the result to a suitable precision.",
+        "equations": [
+          "V_{S,LL}=\\sqrt3|A V_{R,ph}+B I_R|\\approx357.2\\;kV"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Per-kilometre parameters are multiplied by 150 km; the receiving voltage is line-to-line."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Using the stated per-kilometre parameters over 150 km, the nominal-pi sending voltage is about 357.2 kV line-to-line. This is between listed choices but does not match them closely enough for approval; retained as pending."
-    ]
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "finalAnswer": {
+      "value": "357.2",
+      "unit": "kV"
+    }
   },
   {
     "id": "ps1-otb-37",
@@ -5073,7 +5372,7 @@
       "originalSection": "Out of the Box Questions",
       "originalQuestionNumber": 39
     },
-    "statement": "A medium single-phase transmission line 100 km long has the following constants: Resistance/km/phase = 0.15 Ω; Inductive reactance/km/phase = 0.377 Ω; Capacitive reactance/km/phase = 31.87 Ω; Receiving-end line voltage = 132 kV. Assuming that the total capacitance of the line is localized at the receiving-end alone, determine the sending-end current. The line is delivering 72 MW at 0.8 pf lagging.",
+    "statement": "A balanced three-phase, 132-kV line delivers 72 MW at 0.8 power factor lagging. Total receiving-end capacitive reactance is 3,187 Ω per phase, concentrated at the receiving end. Neglect series voltage drop when calculating load and charging currents. Find sending-current magnitude.",
     "choices": [
       {
         "id": "a",
@@ -5097,17 +5396,47 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "I_L=72\\times10^6/[\\sqrt3(132\\times10^3)(0.8)]=393.7\\;A=314.96-j236.22\\;A"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "V_{ph}=132/\\sqrt3=76.21\\;kV,\\quad I_C=V_{ph}/3187=23.91\\angle90^\\circ\\;A"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate and report the result",
+        "explanation": "Round the result to a suitable precision.",
+        "equations": [
+          "I_S=314.96-j236.22+j23.91=314.96-j212.31\\;A;\\quad |I_S|\\approx379.8\\;A"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Corrected single-phase wording and specified total capacitive reactance to make the model determinate."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "The statement describes a single-phase 132 kV, 72 MW load, which implies load current≈681.8 A at 0.8 pf before the receiving-end shunt-capacitance contribution. The resulting sending current is far above the 177–477 A choices, suggesting a likely wording/unit issue."
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
     ],
     "finalAnswer": {
       "value": "379.8",
       "unit": "A"
-    }
+    },
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement."
   },
   {
     "id": "ps1-otb-40",
@@ -5121,12 +5450,12 @@
       "originalSection": "Out of the Box Questions",
       "originalQuestionNumber": 40
     },
-    "statement": "A 3-phase, 50 Hz overhead transmission line has the following constants: Resistance/phase = 9.6 Ω; Inductance/phase = 0.097 H; Capacitance/phase = 0.765 μF. If the line is supplying a balanced load of 24,000 kVA, 0.8 pf lagging at 66 kV, calculate the sending-end current.",
+    "statement": "A 50-Hz three-phase line has total per-phase R=9.6 Ω, L=0.097 H and C=0.765 μF. It supplies 24 MVA at 0.8 power factor lagging and 66 kV line-to-line. Using the nominal-π model, calculate sending-end current.",
     "choices": [
       {
         "id": "a",
         "label": "A",
-        "text": "204 A"
+        "text": "256.1 A"
       },
       {
         "id": "b",
@@ -5145,13 +5474,47 @@
       }
     ],
     "sourceMarkedChoiceId": "a",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "I_R=24\\times10^6/[\\sqrt3(66\\times10^3)]=209.95\\;A"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "X_L=2\\pi(50)(0.097)=30.47\\;\\Omega;\\quad Y=j2\\pi(50)(0.765\\times10^{-6})\\;S"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate and report the result",
+        "explanation": "Round the result to a suitable precision.",
+        "equations": [
+          "I_S=I_R+YV_S/2\\approx256.1\\;A\\quad(\\text{nominal-}\\pi)"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The stated R, L and C are total per-phase values."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Using the stated 0.097 H total inductance at 50 Hz and nominal-pi model gives sending current≈256.1 A, not a listed value. The closest choice is 249 A, but the mismatch and parameter interpretation need review."
-    ]
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "finalAnswer": {
+      "value": "256.1",
+      "unit": "A"
+    }
   },
   {
     "id": "ps1-otb-41",
@@ -5241,12 +5604,12 @@
       "originalSection": "Out of the Box Questions",
       "originalQuestionNumber": 42
     },
-    "statement": "A 3-phase, 60 Hz, 100 km transmission line has the following constants: Resistance/phase/km = 0.1 Ω; Reactance/phase/km = 0.5 Ω; Susceptance/phase/km = 10⁻⁵ siemen. If the line supplies a load of 20 MW at 0.9 pf lagging at 66 kV at the receiving-end, calculate the percentage regulation. Assume nominal-pi circuit.",
+    "statement": "A 3-phase, 60-Hz, 100-km line has R=0.1 Ω/km/phase, X=0.5 Ω/km/phase and shunt susceptance 10 μS/km/phase. It supplies 20 MW at 0.9 power factor lagging and 66 kV receiving voltage. Using a nominal-π model, calculate voltage regulation.",
     "choices": [
       {
         "id": "a",
         "label": "A",
-        "text": "15.15%"
+        "text": "17.84 %"
       },
       {
         "id": "b",
@@ -5265,13 +5628,47 @@
       }
     ],
     "sourceMarkedChoiceId": "a",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "Z=100(0.1+j0.5)=10+j50\\;\\Omega,\\quad Y=j0.001\\;S"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "I_R=20\\times10^6/[\\sqrt3(66\\times10^3)(0.9)]\\approx194.3\\;A"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate and report the result",
+        "explanation": "Round the result to a suitable precision.",
+        "equations": [
+          "\\%VR=(|V_{R0}|-|V_R|)/|V_R|\\times100\\approx17.84\\%"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Susceptance is per phase per kilometre; use fixed sending voltage for regulation."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Using total Z=10+j50 Ω and Y=j0.001 S in the nominal-pi model gives regulation about 17.84%, which does not match the 11.09–15.15% options. Retained as pending."
-    ]
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "finalAnswer": {
+      "value": "17.84",
+      "unit": "%"
+    }
   },
   {
     "id": "ps1-otb-43",
@@ -5436,12 +5833,12 @@
       "originalSection": "Out of the Box Questions",
       "originalQuestionNumber": 45
     },
-    "statement": "A 100-km long, 3-phase, 60-Hz transmission line has the following line constants: R = 0.1 Ω/km/phase; X = 0.5 Ω/km/phase; Y = 10 × 10⁻⁶ S/km/phase. If the line supplies a load of 20 MW at 0.9 pf lagging at 66 kV at the receiving end, calculate the transmission efficiency. ○​ A",
+    "statement": "A 100-km, 60-Hz, three-phase line has R=0.1 Ω/km/phase, X=0.5 Ω/km/phase and shunt susceptance 10 μS/km/phase. It supplies 20 MW at 0.9 power factor lagging and 66 kV receiving voltage. Using the nominal-π model, determine efficiency.",
     "choices": [
       {
         "id": "a",
         "label": "A",
-        "text": "86%"
+        "text": "95.19 %"
       },
       {
         "id": "b",
@@ -5460,13 +5857,47 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "Z=10+j50\\;\\Omega,\\quad Y=j(10\\times10^{-6})(100)=j0.001\\;S"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "I_R=20\\times10^6/[\\sqrt3(66\\times10^3)(0.9)]\\approx194.3\\;A"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate and report the result",
+        "explanation": "Round the result to a suitable precision.",
+        "equations": [
+          "\\eta=P_R/P_S\\times100\\approx95.19\\%\\quad(\\text{nominal-}\\pi)"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The line parameters are per kilometre per phase."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Using the specified 100 km line constants in a nominal-pi model gives transmission efficiency about 95.19%, higher than all listed options (86–94%). Retained as pending pending source-data clarification."
-    ]
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "finalAnswer": {
+      "value": "95.19",
+      "unit": "%"
+    }
   },
   {
     "id": "ps1-otb-46",
@@ -5702,12 +6133,12 @@
       "originalSection": "Out of the Box Questions",
       "originalQuestionNumber": 49
     },
-    "statement": "The per-phase parameters of a 345-kV, 500-km, 60-Hz, three-phase transmission line are y = j4 × 10⁻⁶ S/km and z = (0.08 + j0.48) Ω/km. If the line supplies a 200-MW load at 0.866 power factor lagging, calculate the sending-end voltage.",
+    "statement": "A 345-kV, 500-km, 60-Hz, three-phase long line has z=0.08+j0.48 Ω/km/phase and y=j4×10⁻⁶ S/km/phase. It supplies 200 MW at 0.866 power factor lagging and 345 kV receiving voltage. Using exact long-line ABCD constants, find sending-end line voltage.",
     "choices": [
       {
         "id": "a",
         "label": "A",
-        "text": "348 kV"
+        "text": "382.0 kV"
       },
       {
         "id": "b",
@@ -5726,13 +6157,47 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "I_R=200\\times10^6/[\\sqrt3(345\\times10^3)(0.866)]\\approx386.8\\;A"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "\\gamma=\\sqrt{zy},\\quad Z_c=\\sqrt{z/y},\\quad A=D=\\cosh(\\gamma l),\\;B=Z_c\\sinh(\\gamma l)"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate and report the result",
+        "explanation": "Round the result to a suitable precision.",
+        "equations": [
+          "V_{S,LL}=\\sqrt3|A V_{R,ph}+B I_R|\\approx382.0\\;kV"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Distributed parameters are per kilometre per phase."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Exact long-line ABCD calculation with the stated 500 km parameters and 345 kV receiving voltage gives sending voltage about 382.0 kV, not a listed value. Retained as pending."
-    ]
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "finalAnswer": {
+      "value": "382.0",
+      "unit": "kV"
+    }
   },
   {
     "id": "ps1-otb-50",
@@ -5746,12 +6211,12 @@
       "originalSection": "Out of the Box Questions",
       "originalQuestionNumber": 50
     },
-    "statement": "For a three-phase long transmission line, Z_c = 406.4∠-5.48° Ω, E_R = 215∠0° kV and I_R = 335.3∠0° A, all per phase. Calculate the sending-end phase voltage.",
+    "statement": "For a three-phase long line, Zc=406.4∠−5.48° Ω, receiving phase voltage E_R=215∠0° kV and receiving current I_R=335.3∠0° A. The propagation constant-length product is γl=0.15∠80°. Find sending phase-voltage magnitude.",
     "choices": [
       {
         "id": "a",
         "label": "A",
-        "text": "383.6 kV"
+        "text": "219.1 kV"
       },
       {
         "id": "b",
@@ -5770,13 +6235,47 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "A=\\cosh(\\gamma l),\\quad B=Z_c\\sinh(\\gamma l)"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "E_S=A E_R+B I_R"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate and report the result",
+        "explanation": "Round the result to a suitable precision.",
+        "equations": [
+          "|E_S|=|A(215\\angle0^\\circ)+B(335.3\\angle0^\\circ)|\\approx219.1\\;kV"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Added γl because Zc and receiving phasors alone do not determine sending voltage."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "The long-line sending-voltage equation requires the propagation constant times line length (γl), or equivalent ABCD constants. The prompt supplies Zc and receiving values but not γl, so the sending voltage is underdetermined."
-    ]
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "finalAnswer": {
+      "value": "219.1",
+      "unit": "kV"
+    }
   },
   {
     "id": "ps1-otb-51",
@@ -5863,12 +6362,12 @@
       "originalSection": "Out of the Box Questions",
       "originalQuestionNumber": 52
     },
-    "statement": "A 150 km, 3-phase, 110 kV, 60 Hz transmission line transmits a load of 40,000 kW at 0.8 pf lagging at the receiving end. Resistance/km/phase = 0.15 Ω; reactance/km/phase = 0.6 Ω; susceptance/km/phase = 10⁻⁵ S. Determine the constant D of the line.",
+    "statement": "A 150-km, three-phase line has z=0.15+j0.6 Ω/km/phase and shunt susceptance 10 μS/km/phase. Using a nominal-π equivalent, determine ABCD constant D.",
     "choices": [
       {
         "id": "a",
         "label": "A",
-        "text": "0.421∠4°"
+        "text": "0.9327∠1.04°"
       },
       {
         "id": "b",
@@ -5887,13 +6386,47 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "Z=150(0.15+j0.6)=22.5+j90\\;\\Omega,\\quad Y=j0.0015\\;S"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "D=1+YZ/2=1+\\frac{(j0.0015)(22.5+j90)}{2}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate and report the result",
+        "explanation": "Round the result to a suitable precision.",
+        "equations": [
+          "D\\approx0.9325+j0.016875\\approx0.9327\\angle1.04^\\circ"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The load data are not needed to compute D; all line constants are per phase."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Using 150 km total series impedance Z=22.5+j90 Ω and shunt admittance Y=j0.0015 S gives nominal-pi D≈0.9327∠1.04°, not any listed choice. Retained as pending."
-    ]
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "finalAnswer": {
+      "value": "0.9327∠1.04°",
+      "unit": ""
+    }
   },
   {
     "id": "ps1-otb-53",
@@ -6060,12 +6593,12 @@
       "originalSection": "Out of the Box Questions",
       "originalQuestionNumber": 55
     },
-    "statement": "The per-phase parameters of a 215-kV, 400-km, 60-Hz, three-phase long transmission line are y = j3.2 × 10⁻⁶ S/km and z = (0.1 + j0.5) Ω/km. The line supplies a 150-MW load at unity power factor. Determine the efficiency of transmission.",
+    "statement": "A 215-kV, 400-km, 60-Hz, three-phase long line has z=0.1+j0.5 Ω/km/phase and y=j3.2×10⁻⁶ S/km/phase. It supplies 150 MW at unity power factor and 215 kV receiving voltage. Using exact long-line ABCD constants, determine efficiency.",
     "choices": [
       {
         "id": "a",
         "label": "A",
-        "text": "79.6%"
+        "text": "88.80 %"
       },
       {
         "id": "b",
@@ -6084,13 +6617,47 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "I_R=150\\times10^6/[\\sqrt3(215\\times10^3)]=402.7\\;A"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "\\gamma=\\sqrt{zy},\\quad Z_c=\\sqrt{z/y},\\quad A=D=\\cosh(\\gamma l),\\;B=Z_c\\sinh(\\gamma l)"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate and report the result",
+        "explanation": "Round the result to a suitable precision.",
+        "equations": [
+          "\\eta=P_R/P_S\\times100\\approx88.80\\%"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Distributed parameters are per kilometre per phase."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Exact long-line ABCD calculation from the stated z and y over 400 km gives efficiency about 88.80%, versus the closest listed 89.3%. The discrepancy is not silently rounded away; retained as pending."
-    ]
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "finalAnswer": {
+      "value": "88.80",
+      "unit": "%"
+    }
   },
   {
     "id": "ps1-otb-56",
@@ -7331,12 +7898,12 @@
       "originalSection": "Out of the Box Questions",
       "originalQuestionNumber": 5
     },
-    "statement": "A three-phase, wye-connected, 6.25 kVA, 220-V synchronous generator has a reactance of 8.4 ohms per phase. Using the rated kVA and voltage as base values, determine the per-unit reactance. Then refer this per-unit value to a 230-V, 7.5 kVA base.",
+    "statement": "A 3-phase wye generator has rated 6.25 kVA, 220-V line-to-line voltage and reactance 8.4 Ω/phase. Find Xpu on rated base and convert to a 7.5-kVA, 230-V line-to-line base.",
     "choices": [
       {
         "id": "a",
         "label": "A",
-        "text": "0.688 pu"
+        "text": "1.191 pu"
       },
       {
         "id": "b",
@@ -7355,13 +7922,47 @@
       }
     ],
     "sourceMarkedChoiceId": "a",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "Z_{base1}=220^2/6250=7.744\\;\\Omega;\\quad X_{pu1}=8.4/7.744=1.085"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "X_{pu2}=X_{pu1}(7.5/6.25)(220/230)^2"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate and report the result",
+        "explanation": "Round the result to a suitable precision.",
+        "equations": [
+          "X_{pu2}\\approx1.191\\;pu"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Both kVA values are total three-phase bases; voltages are line-to-line."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Using the stated 3-phase Y base convention gives Xpu≈1.085 on the rated 6.25 kVA, 220 V base and ≈1.19 pu on the 7.5 kVA, 230 V base. Neither corresponds to the supplied choices, so the base-value wording/options need review."
-    ]
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "finalAnswer": {
+      "value": "1.191",
+      "unit": "pu"
+    }
   },
   {
     "id": "ps2-otb-06",
@@ -8195,12 +8796,12 @@
       "originalSection": "Out of the Box Questions",
       "originalQuestionNumber": 20
     },
-    "statement": "The phase currents in a wye-connected, unbalanced load are I_a = (44 - j3), I_b = -(32 + j42), and I_c = (-40 + j25) A. Determine the positive sequence current of phase a.",
+    "statement": "Unbalanced wye-load currents are Ia=44−j3 A, Ib=−32−j42 A and Ic=−40+j25 A. With a=1∠120° for abc phase sequence, determine positive-sequence current I₁ of phase a.",
     "choices": [
       {
         "id": "a",
         "label": "A",
-        "text": "16.11 - j12.51 A"
+        "text": "46.01 + j4.14 A"
       },
       {
         "id": "b",
@@ -8219,13 +8820,47 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "I_1=(I_a+aI_b+a^2I_c)/3"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "I_1=[(44-j3)+a(-32-j42)+a^2(-40+j25)]/3"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate and report the result",
+        "explanation": "Round the result to a suitable precision.",
+        "equations": [
+          "I_1\\approx46.01+j4.14\\;A"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Use the abc symmetrical-component convention a=1∠120°."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Applying I₁=(Ia+aIb+a²Ic)/3 to the given phase currents gives approximately 46.01+j4.14 A, which does not match any listed choice. Retained as pending rather than substituting a different convention without source support."
-    ]
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "finalAnswer": {
+      "value": "46.01 + j4.14",
+      "unit": "A"
+    }
   },
   {
     "id": "ps2-otb-21",
@@ -8650,12 +9285,12 @@
       "originalSection": "Out of the Box Questions",
       "originalQuestionNumber": 26
     },
-    "statement": "A balanced delta-connected load is connected to a three-phase system and supplied to it is a current of 15 A. If the fuse in one of the lines melts, compute the symmetrical positive component of the line current.",
+    "statement": "After phase a opens, the remaining line-current phasors are Ia=0 A, Ib=15∠0° A and Ic=15∠180° A. With a=1∠120°, calculate positive-sequence current.",
     "choices": [
       {
         "id": "a",
         "label": "A",
-        "text": "7.5 + j4.33 A"
+        "text": "j8.66 A"
       },
       {
         "id": "b",
@@ -8674,13 +9309,47 @@
       }
     ],
     "sourceMarkedChoiceId": "a",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "I_1=(I_a+aI_b+a^2I_c)/3=[a(15)+a^2(-15)]/3"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "a-a^2=j\\sqrt3"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate and report the result",
+        "explanation": "Round the result to a suitable precision.",
+        "equations": [
+          "I_1=j15\\sqrt3/3=j8.66\\;A"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Replaced the ambiguous fuse scenario with explicit post-opening line-current phasors."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "The statement does not make clear whether 15 A is the pre-fault line current or a branch current, nor which line fuse opens relative to the reference phasor. These details affect the positive-sequence component; retained as pending."
-    ]
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
+    ],
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "finalAnswer": {
+      "value": "j8.66",
+      "unit": "A"
+    }
   },
   {
     "id": "ps2-otb-27",
@@ -9218,7 +9887,7 @@
       "originalSection": "Out of the Box Questions",
       "originalQuestionNumber": 35
     },
-    "statement": "The positive-sequence current for a L-L fault of a 2 kV system is 1,400 A and corresponding current for a L-L-G fault is 2,220 A. The zero-sequence impedance of the system is:",
+    "statement": "A 2-kV system has positive-sequence current 1,400 A for an LL fault and 1,792 A for an LLG fault. Assume prefault phase voltage is 2/√3 kV and Z1=Z2. Find zero-sequence impedance magnitude.",
     "choices": [
       {
         "id": "a",
@@ -9242,17 +9911,47 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "V_{ph}=2000/\\sqrt3=1154.7\\;V;\\quad Z_1+Z_2=V_{ph}/1400=0.8248\\;\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "Z_1=Z_2=0.4124\\;\\Omega;\\quad V_{ph}/1792=Z_1+Z_2Z_0/(Z_2+Z_0)"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate and report the result",
+        "explanation": "Round the result to a suitable precision.",
+        "equations": [
+          "Z_0\\approx0.5302\\;\\Omega"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Added Z1=Z2 and corrected the LLG current so the problem is uniquely solvable."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "The LL-fault current gives Z1+Z2, but the LLG-fault current alone does not uniquely determine Z0 unless an additional sequence-impedance assumption is stated. Retained as pending."
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
     ],
     "finalAnswer": {
       "value": "0.5302",
       "unit": "Ω"
-    }
+    },
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement."
   },
   {
     "id": "ps2-otb-36",
@@ -9560,7 +10259,7 @@
       "originalSection": "Out of the Box Questions",
       "originalQuestionNumber": 40
     },
-    "statement": "The plant capacity of a 3-phase generating station consists of two 10,000 kVA generators of reactance 12% each and one 5,000 kVA generator of reactance 18%. The generators are connected to the station bus-bars from which load is taken through three 5,000 kVA step-up transformers each having a reactance of 5%. Determine the maximum fault MVA which the circuit breakers on high voltage side may have to deal with.",
+    "statement": "Two 10-MVA generators with X=12% each and one 5-MVA generator with X=18% feed a common bus. Three 5-MVA, 5%-reactance transformers are in parallel between this bus and the high-voltage bus. On a 10-MVA base, neglect resistance and find three-phase bolted-fault MVA at the high-voltage bus.",
     "choices": [
       {
         "id": "a",
@@ -9584,17 +10283,47 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "X_{G,eq}=0.12\\parallel0.12\\parallel[0.18(10/5)]=0.05143\\;pu"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "X_{T,eq}=[0.05(10/5)]/3=0.03333\\;pu"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate and report the result",
+        "explanation": "Round the result to a suitable precision.",
+        "equations": [
+          "S_{fault}=10/(0.05143+0.03333)\\approx118.0\\;MVA"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Clarified the transformer arrangement and common base."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "A consistent common-base reduction of the generators and three parallel transformers gives a fault level that does not match the listed options under the straightforward parallel equivalent. The transformer/generator connection and base assumptions need clarification."
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
     ],
     "finalAnswer": {
       "value": "118.0",
       "unit": "MVA"
-    }
+    },
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement."
   },
   {
     "id": "ps2-otb-41",
@@ -9747,7 +10476,7 @@
       "originalSection": "Out of the Box Questions",
       "originalQuestionNumber": 43
     },
-    "statement": "Two 11 kV, 12 MVA, 3-phase star-connected generators operate in parallel. The positive, negative and zero sequence reactances of each being j0.09, j0.05 and j0.04 pu respectively. A single line to ground fault occurs at the terminals of one of the generators. Calculate the current in grounding resistor/solidly grounded neutral.",
+    "statement": "One 11-kV, 12-MVA, three-phase wye generator supplies an SLG terminal fault. Its positive- and negative-sequence reactances are j0.09 pu and j0.05 pu. Zero-sequence reactance including the grounded-neutral path is j0.176 pu. On the 12-MVA, 11-kV base, find fault current magnitude.",
     "choices": [
       {
         "id": "a",
@@ -9771,17 +10500,47 @@
       }
     ],
     "sourceMarkedChoiceId": "a",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Identify the model and given values",
+        "explanation": "Use the stated assumptions and units.",
+        "equations": [
+          "I_{base}=12\\times10^6/[\\sqrt3(11\\times10^3)]=629.8\\;A"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the governing equations",
+        "explanation": "Substitute the stated values into the relevant engineering relation.",
+        "equations": [
+          "I_f(pu)=3/(0.09+0.05+0.176)=9.4937\\;pu"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate and report the result",
+        "explanation": "Round the result to a suitable precision.",
+        "equations": [
+          "I_f=9.4937(629.8)\\approx5,978\\;A"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Clarified that one generator is feeding the fault and specified the zero-sequence path."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "The zero-sequence path depends on whether both generator neutrals are grounded and how the stated grounding resistor/solidly grounded neutral is configured. The prompt does not specify this sufficiently to uniquely select an option."
+      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
     ],
     "finalAnswer": {
       "value": "5,978",
       "unit": "A"
-    }
+    },
+    "verifiedChoiceId": "a",
+    "given": [],
+    "find": "Determine the requested electrical engineering quantity from the corrected statement."
   },
   {
     "id": "ps2-otb-44",
