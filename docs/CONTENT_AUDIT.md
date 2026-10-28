@@ -12,30 +12,34 @@ The application contains 140 questions across two courses and four sections.
 | Power Systems 2 | Out of the Box Questions | 50 |
 | **Total** | | **140** |
 
-Each question retains its stable ID, section and question number, statement, four answer choices, a worked solution, and an independently stored verified answer. The internal source label has been generalized; the interface and content guide do not refer to the source PDF.
+Each question has four choices, a worked solution, and an answer key. Student-facing content does not cite external documents.
 
 ## Resolution status
 
 - **Question records:** 140
 - **Records with worked solutions and answer keys:** 140
 - **Pending records:** 0
-- **Previously unresolved questions revised:** 23
+- **Previously unresolved records revised:** 23
 
-The previously unresolved questions were revised where necessary to correct numerical inconsistencies, clarify units, or add assumptions required for a unique solution. Examples include the two-conductor bundle spacing, long-line model parameters, sequence-component conventions, and common-base fault calculations. These revisions are documented in each problem's assumptions and reviewer notes.
+The previously unresolved questions were revised to correct numerical inconsistencies, clarify units, or add assumptions required for a unique answer. Examples include bundled-conductor capacitance, transmission-line models, sequence-component conventions, and common-base fault calculations. Each revised record documents the assumptions used.
 
 ## Verification standard
 
-A solution should include the given data, model assumptions, governing equations, unit-consistent substitutions, intermediate results, and a final answer. The source-marked choice is kept separate from the verified answer. Where a problem statement was changed to make it solvable, the revised assumptions must be visible to students.
+Solutions include the governing model, assumptions, unit-consistent substitutions, calculation steps, and final answers. The verified answer key is stored separately from internal legacy answer markings. Revised assumptions are part of the problem statement so that students can see what is being solved.
 
-## Implementation and test coverage
+## Implementation and validation
 
-- [x] Import all 140 questions and preserve the expected section counts.
+- [x] Import all 140 questions and preserve expected section counts.
 - [x] Check unique IDs and four choices per question.
 - [x] Provide a worked solution and answer key for every question.
-- [x] Keep the **Show Solution** disclosure interaction.
-- [x] Keep Previous Question / Next Question navigation within the course and section.
-- [x] Test question-bank completeness, topic assignment, solution presence, and answer-key structure.
-- [ ] Confirm the latest CI run passes automated tests, lint, and production build.
-- [ ] Perform a final independent engineering review of the revised numerical solutions before public release.
+- [x] Keep **Show Solution / Hide Solution** disclosure.
+- [x] Keep Previous / Next navigation within the same course and section.
+- [x] Test question-bank completeness, answer-key structure, topic assignments, and solution presence.
+- [x] Pass automated tests.
+- [x] Pass ESLint.
+- [x] Pass production build.
+- [x] Normalize verified answer identifiers to match the choice IDs used by the interface.
 
-A complete question bank is now present. The latest code validation and a final engineering review are still required before treating the application as release-ready.
+## Release note
+
+The content bank and application validation checks are complete. An independent subject-matter review remains a recommended quality safeguard before the solutions are used for formal instruction or engineering decisions.
