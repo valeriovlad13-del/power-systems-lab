@@ -264,7 +264,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "Independent bundle-capacitance calculation using equivalent bundle radius sqrt(r*d) gives about 0.0137 μF/km per phase, which does not match a listed choice closely enough to approve. Retained as pending."
     ]
   },
   {
@@ -1217,7 +1217,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "The stated data do not specify load power factor, which is needed to determine current and voltage regulation for the short line. A unique maximum real power cannot be established from the supplied information; retained as pending."
     ]
   },
   {
@@ -3180,7 +3180,7 @@
     "solution": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Independently recalculated: inferred spacing is approximately 6.28 m and capacitance is approximately 0.00967 μF/km (9.67 nF/km). The choices are labelled 10⁻⁶ without an unambiguous unit, so no answer is marked verified until the intended unit/scale is confirmed."
+      "Inductance implies a conductor spacing, but the requested capacitance and answer choices mix F/km and μF/km scales. The option units are ambiguous, so no choice is approved."
     ]
   },
   {
@@ -3932,7 +3932,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "For a single-phase 4 MW, 11 kV, 0.8 pf load, I≈454.5 A. With 0.15 Ω per conductor, the two-conductor copper loss is about 62.0 kW, not one of the listed values (320–620 kW). Retained as pending."
     ]
   },
   {
@@ -3975,7 +3975,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "Solving |Vs|=|Vr+ZI| with Vr=33 kV line-to-line, Vs=46.85 kV line-to-line, pf 0.8 lagging, and Z=5+j20 Ω/phase gives load power about 20.95 MW. This does not match the listed choices closely enough; retained as pending."
     ]
   },
   {
@@ -4019,7 +4019,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "The equal-voltage-magnitude condition with 0.8 leading power factor gives approximately 5.31 kA and 846.4 MW under the stated short-line model. The closest choice is 839.2 MW, but the discrepancy is retained for source clarification rather than silently approving it."
     ]
   },
   {
@@ -4230,7 +4230,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "Using the stated 15 km total line length, 500 kVA at 11 kV gives I≈45.45 A. With total R=4.5 Ω and X=7.5 Ω, the approximate lagging voltage regulation is about 6.69%, outside the listed choices. Retained as pending."
     ]
   },
   {
@@ -4367,7 +4367,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "Using 20 km at 0.25 Ω/km per conductor gives R=5 Ω/phase, I≈65.6 A, copper loss≈64.6 kW and efficiency≈93.94%. No listed choice matches this result closely; retained as pending."
     ]
   },
   {
@@ -4793,7 +4793,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "Treating R, L and C as total per-phase parameters gives X_L≈117.1 Ω and nominal-pi sending voltage about 240.8 kV line-to-line, inconsistent with the 116.1–142.7 kV choices. Parameter interpretation or source data needs clarification."
     ]
   },
   {
@@ -4838,7 +4838,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "Using the stated per-kilometre parameters over 150 km, the nominal-pi sending voltage is about 357.2 kV line-to-line. This is between listed choices but does not match them closely enough for approval; retained as pending."
     ]
   },
   {
@@ -5036,7 +5036,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "The statement describes a single-phase 132 kV, 72 MW load, which implies load current≈681.8 A at 0.8 pf before the receiving-end shunt-capacitance contribution. The resulting sending current is far above the 177–477 A choices, suggesting a likely wording/unit issue."
     ]
   },
   {
@@ -5080,7 +5080,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "Using the stated 0.097 H total inductance at 50 Hz and nominal-pi model gives sending current≈256.1 A, not a listed value. The closest choice is 249 A, but the mismatch and parameter interpretation need review."
     ]
   },
   {
@@ -5200,7 +5200,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "Using total Z=10+j50 Ω and Y=j0.001 S in the nominal-pi model gives regulation about 17.84%, which does not match the 11.09–15.15% options. Retained as pending."
     ]
   },
   {
@@ -5395,7 +5395,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "Using the specified 100 km line constants in a nominal-pi model gives transmission efficiency about 95.19%, higher than all listed options (86–94%). Retained as pending pending source-data clarification."
     ]
   },
   {
@@ -5661,7 +5661,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "Exact long-line ABCD calculation with the stated 500 km parameters and 345 kV receiving voltage gives sending voltage about 382.0 kV, not a listed value. Retained as pending."
     ]
   },
   {
@@ -5705,7 +5705,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "The long-line sending-voltage equation requires the propagation constant times line length (γl), or equivalent ABCD constants. The prompt supplies Zc and receiving values but not γl, so the sending voltage is underdetermined."
     ]
   },
   {
@@ -5822,7 +5822,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "Using 150 km total series impedance Z=22.5+j90 Ω and shunt admittance Y=j0.0015 S gives nominal-pi D≈0.9327∠1.04°, not any listed choice. Retained as pending."
     ]
   },
   {
@@ -6019,7 +6019,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "Exact long-line ABCD calculation from the stated z and y over 400 km gives efficiency about 88.80%, versus the closest listed 89.3%. The discrepancy is not silently rounded away; retained as pending."
     ]
   },
   {
@@ -7290,7 +7290,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "Using the stated 3-phase Y base convention gives Xpu≈1.085 on the rated 6.25 kVA, 220 V base and ≈1.19 pu on the 7.5 kVA, 230 V base. Neither corresponds to the supplied choices, so the base-value wording/options need review."
     ]
   },
   {
@@ -8154,7 +8154,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "Applying I₁=(Ia+aIb+a²Ic)/3 to the given phase currents gives approximately 46.01+j4.14 A, which does not match any listed choice. Retained as pending rather than substituting a different convention without source support."
     ]
   },
   {
@@ -8609,7 +8609,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "The statement does not make clear whether 15 A is the pre-fault line current or a branch current, nor which line fuse opens relative to the reference phasor. These details affect the positive-sequence component; retained as pending."
     ]
   },
   {
@@ -9177,7 +9177,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "The LL-fault current gives Z1+Z2, but the LLG-fault current alone does not uniquely determine Z0 unless an additional sequence-impedance assumption is stated. Retained as pending."
     ]
   },
   {
@@ -9515,7 +9515,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "A consistent common-base reduction of the generators and three parallel transformers gives a fault level that does not match the listed options under the straightforward parallel equivalent. The transformer/generator connection and base assumptions need clarification."
     ]
   },
   {
@@ -9698,7 +9698,7 @@
     "assumptions": [],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
+      "The zero-sequence path depends on whether both generator neutrals are grounded and how the stated grounding resistor/solidly grounded neutral is configured. The prompt does not specify this sufficiently to uniquely select an option."
     ]
   },
   {
