@@ -4201,13 +4201,61 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate line current",
+        "explanation": "For a single-phase load, real power is V I cosφ.",
+        "equations": [
+          "I_R=\\frac{316.8\\times10^3}{3300(0.8)}=120\\;\\text{A}",
+          "\\phi=\\cos^{-1}(0.8)=36.87^\\circ"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate total line impedance and voltage drop",
+        "explanation": "Multiply the impedance per kilometre by the 10 km length, then multiply by the lagging current phasor.",
+        "equations": [
+          "Z=10(0.5\\angle60^\\circ)=5\\angle60^\\circ=2.5+j4.330\\;\\Omega",
+          "I_RZ=120\\angle(-36.87^\\circ)(5\\angle60^\\circ)=600\\angle23.13^\\circ\\;\\text{V}",
+          "I_RZ\\approx552.0+j235.7\\;\\text{V}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate sending-end voltage",
+        "explanation": "Add the complex voltage drop to the receiving-end voltage reference.",
+        "equations": [
+          "V_S=3300+(552.0+j235.7)=3852.0+j235.7\\;\\text{V}",
+          "|V_S|\\approx3859.2\\;\\text{V}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Calculate voltage regulation",
+        "explanation": "Compare sending-end and receiving-end voltage magnitudes.",
+        "equations": [
+          "\\%VR=\\frac{|V_S|-|V_R|}{|V_R|}\\times100",
+          "\\%VR=\\frac{3859.2-3300}{3300}\\times100\\approx16.95\\%",
+          "\\text{Option D: }16.94\\%"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The 0.5∠60° Ω/km impedance applies to the complete single-phase line loop.",
+      "The receiving-end voltage is 3.3 kV and load power factor is 0.8 lagging."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated using the single-phase short-line phasor equation. Regulation is approximately 16.95%, matching option D within rounding."
+    ],
+    "verifiedChoiceId": "d",
+    "find": "Calculate voltage regulation for a single-phase short line from its impedance per kilometre, load power, power factor, and receiving-end voltage.",
+    "finalAnswer": {
+      "value": "16.94",
+      "unit": "%"
+    }
   },
   {
     "id": "ps1-otb-29",
