@@ -1779,13 +1779,57 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate total strand area",
+        "explanation": "Each strand has radius 1.5 mm. Multiply the area of one strand by 12.",
+        "equations": [
+          "A=12\\pi(0.0015)^2=8.4823\\times10^{-5}\\;\\text{m}^2"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate DC resistance at 20°C",
+        "explanation": "Use R=ρℓ/A for a one-kilometre conductor.",
+        "equations": [
+          "R_{20}=\\frac{(2.8\\times10^{-8})(1000)}{8.4823\\times10^{-5}}\\approx0.3301\\;\\Omega/\\text{km}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Correct resistance for temperature and AC effect",
+        "explanation": "Raise resistance from 20°C to 50°C, then multiply by the skin-effect factor.",
+        "equations": [
+          "R_{50}=R_{20}[1+0.00403(50-20)]\\approx0.3699\\;\\Omega/\\text{km}",
+          "R_{AC}=1.02R_{50}\\approx0.3773\\;\\Omega/\\text{km}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The calculated value rounds to option D.",
+        "equations": [
+          "R_{AC}\\approx0.3774\\;\\Omega/\\text{km}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Treat the 12 strands as parallel conductors with total metallic area equal to the sum of strand areas.",
+      "Use aluminum temperature coefficient 0.00403/°C referenced to 20°C.",
+      "Apply the stated AC skin-effect correction factor of 1.02."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated using standard transmission-line formulas. Selected option D; see assumptions for the interpretation used."
+    ],
+    "verifiedChoiceId": "d",
+    "find": "AC resistance per kilometre at 50°C for a stranded aluminum conductor.",
+    "finalAnswer": {
+      "value": "0.3774",
+      "unit": "Ω/km"
+    }
   },
   {
     "id": "ps1-otb-02",
@@ -2551,13 +2595,57 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate subconductor GMR and bundle GMR",
+        "explanation": "Convert radius to metres, calculate the single-conductor GMR, then combine the two subconductors.",
+        "equations": [
+          "r'=0.7788(0.01725)=0.01343\\;\\text{m}",
+          "D_{sb}=\\sqrt{r'd}=\\sqrt{(0.01343)(0.5)}\\approx0.08195\\;\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate the phase geometric mean distance",
+        "explanation": "For the horizontal transposed arrangement, the phase spacings are 6 m, 6 m, and 12 m.",
+        "equations": [
+          "D_m=(6\\times6\\times12)^{1/3}\\approx7.56\\;\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate inductive reactance",
+        "explanation": "At 50 Hz, use x=2πf(2×10⁻⁴)ln(Dm/Dsb) Ω/km.",
+        "equations": [
+          "x=2\\pi(50)(2\\times10^{-4})\\ln\\left(\\frac{7.56}{0.08195}\\right)\\approx0.284\\;\\Omega/\\text{km}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The calculated reactance matches option C.",
+        "equations": [
+          "x\\approx0.284\\;\\Omega/\\text{km}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Use r′ = 0.7788r for each round subconductor.",
+      "For a two-conductor bundle, use bundle GMR sqrt(r′d).",
+      "The three phase bundle centres are interpreted as equally spaced horizontally at 6 m, 6 m, and 12 m."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated using standard transmission-line formulas. Selected option C; see assumptions for the interpretation used."
+    ],
+    "verifiedChoiceId": "c",
+    "find": "Inductive reactance per kilometre of the transposed three-phase line with two subconductors per phase.",
+    "finalAnswer": {
+      "value": "0.284",
+      "unit": "Ω/km"
+    }
   },
   {
     "id": "ps1-otb-10",
@@ -2637,13 +2725,49 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate the physical and equivalent radius",
+        "explanation": "The stated diameter is 3.146 cm.",
+        "equations": [
+          "r=\\frac{0.03146}{2}=0.01573\\;\\text{m}",
+          "r'=0.7788r\\approx0.01225\\;\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the four-conductor square-bundle formula",
+        "explanation": "For square side d, the bundle GMR is (r′√2 d³)^(1/4).",
+        "equations": [
+          "D_{s}=\\left(r'\\sqrt{2}d^3\\right)^{1/4}",
+          "D_s=\\left(0.01225\\sqrt{2}(0.25)^3\\right)^{1/4}\\approx0.1283\\;\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Convert and select the choice",
+        "explanation": "Convert metres to centimetres; the result matches option B.",
+        "equations": [
+          "D_s\\approx12.83\\;\\text{cm}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Use r′ = 0.7788r for each solid round subconductor.",
+      "The four subconductors occupy the corners of a square with side 0.25 m."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated using standard transmission-line formulas. Selected option B; see assumptions for the interpretation used."
+    ],
+    "verifiedChoiceId": "b",
+    "find": "Equivalent GMR of a four-subconductor square bundle.",
+    "finalAnswer": {
+      "value": "12.826",
+      "unit": "cm"
+    }
   },
   {
     "id": "ps1-otb-12",
@@ -2822,13 +2946,48 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate conductor-to-neutral capacitance",
+        "explanation": "For a two-wire geometry, capacitance per conductor to neutral is 2πε₀/ln(D/r) per metre.",
+        "equations": [
+          "C_n=\\frac{2\\pi\\epsilon_0(1000)}{\\ln(D/r)}",
+          "C_n=\\frac{2\\pi(8.854\\times10^{-12})(1000)}{\\ln(3/0.01)}\\approx0.00974\\;\\mu\\text{F/km}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate the equivalent capacitance between conductors",
+        "explanation": "The equivalent series capacitance between the two identical conductor-to-neutral capacitances is half of Cn.",
+        "equations": [
+          "C_{line}=\\frac{C_n}{2}\\approx0.00487\\;\\mu\\text{F/km}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Select the matching choice",
+        "explanation": "This matches option D, subject to the stated interpretation of “capacitance of the line.”",
+        "equations": [
+          "C_{line}\\approx0.4875\\times10^{-2}\\;\\mu\\text{F/km}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Interpret “capacitance of the line” as the equivalent capacitance between the two conductors, which is half the capacitance of one conductor to neutral for a symmetrical two-wire line.",
+      "Assume air permittivity approximately equal to free-space permittivity."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated using standard transmission-line formulas. Selected option D; see assumptions for the interpretation used."
+    ],
+    "verifiedChoiceId": "d",
+    "find": "Equivalent line capacitance per kilometre between the two conductors of the single-phase line.",
+    "finalAnswer": {
+      "value": "0.4875 × 10⁻²",
+      "unit": "μF/km (between conductors)"
+    }
   },
   {
     "id": "ps1-otb-15",
