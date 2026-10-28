@@ -10,7 +10,6 @@ function positive(value: number, name: string, allowZero = false): void {
 }
 
 const add = (a: ComplexValue, b: ComplexValue): ComplexValue => ({ re: a.re + b.re, im: a.im + b.im });
-const sub = (a: ComplexValue, b: ComplexValue): ComplexValue => ({ re: a.re - b.re, im: a.im - b.im });
 const mul = (a: ComplexValue, b: ComplexValue): ComplexValue => ({ re: a.re * b.re - a.im * b.im, im: a.re * b.im + a.im * b.re });
 const scale = (a: ComplexValue, k: number): ComplexValue => ({ re: a.re * k, im: a.im * k });
 const div = (a: ComplexValue, b: ComplexValue): ComplexValue => {
