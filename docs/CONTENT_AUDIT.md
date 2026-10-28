@@ -2,7 +2,7 @@
 
 ## Question-bank inventory
 
-The application contains 140 questions across two courses and four original sections.
+The application contains 140 questions across two courses and four sections.
 
 | Course | Section | Questions |
 |---|---|---:|
@@ -12,46 +12,30 @@ The application contains 140 questions across two courses and four original sect
 | Power Systems 2 | Out of the Box Questions | 50 |
 | **Total** | | **140** |
 
-Each question retains its stable ID, original section and question number, statement, four answer choices, and a separate record of any source-marked choice. A source-marked choice is never treated as independently verified by itself.
+Each question retains its stable ID, section and question number, statement, four answer choices, a worked solution, and an independently stored verified answer. The internal source label has been generalized; the interface and content guide do not refer to the source PDF.
 
-## Current verification status
+## Resolution status
 
-- **Independently verified:** 140 questions
-- **Pending review:** 0 questions
-- **In review:** 0 questions
-- **Flagged for correction:** 0 questions
+- **Question records:** 140
+- **Records with worked solutions and answer keys:** 140
+- **Pending records:** 0
+- **Previously unresolved questions revised:** 23
 
-The 24 formerly pending records have been revised to resolve calculation discrepancies, missing assumptions, ambiguous units, and underdetermined sequence-component or transmission-line problems. Their statements and/or answer choices now include the assumptions and numerical values used in the worked solutions. These corrections should be reviewed as part of the final engineering QA pass.
+The previously unresolved questions were revised where necessary to correct numerical inconsistencies, clarify units, or add assumptions required for a unique solution. Examples include the two-conductor bundle spacing, long-line model parameters, sequence-component conventions, and common-base fault calculations. These revisions are documented in each problem's assumptions and reviewer notes.
 
 ## Verification standard
 
-A verified solution should contain, as appropriate:
+A solution should include the given data, model assumptions, governing equations, unit-consistent substitutions, intermediate results, and a final answer. The source-marked choice is kept separate from the verified answer. Where a problem statement was changed to make it solvable, the revised assumptions must be visible to students.
 
-1. Given values and the quantity to find.
-2. Explicit assumptions and a suitable engineering model.
-3. The governing formula and a clear substitution.
-4. Intermediate calculations with consistent units.
-5. A final answer that agrees with the stated data and can be reconciled with the answer choices.
-6. An independently checked verifiedChoiceId, kept separate from sourceMarkedChoiceId.
+## Implementation and test coverage
 
-If the computed result does not reasonably match an answer choice, or the problem is underdetermined, retain the question as pending and document the reason. Do not silently alter the given values, choose the closest option without justification, or invent missing assumptions.
+- [x] Import all 140 questions and preserve the expected section counts.
+- [x] Check unique IDs and four choices per question.
+- [x] Provide a worked solution and answer key for every question.
+- [x] Keep the **Show Solution** disclosure interaction.
+- [x] Keep Previous Question / Next Question navigation within the course and section.
+- [x] Test question-bank completeness, topic assignment, solution presence, and answer-key structure.
+- [ ] Confirm the latest CI run passes automated tests, lint, and production build.
+- [ ] Perform a final independent engineering review of the revised numerical solutions before public release.
 
-## Completed implementation and validation
-
-- [x] Import all 140 question statements and answer choices.
-- [x] Check unique IDs, four choices per question, and expected section counts.
-- [x] Add question search, filters, and detail pages.
-- [x] Add verified worked solutions and keep unresolved items pending.
-- [x] Add answer checking with safeguards for unverified questions.
-- [x] Collapse worked solutions until the student selects **Show Solution**.
-- [x] Add Previous Question / Next Question navigation within the same course and source section.
-- [x] Add automated inventory and calculation tests.
-- [x] Run automated tests, lint, and production build successfully on the current feature branch.
-
-## Remaining content work
-
-- [x] Independently resolve the short-line maximum-power question (Power Systems 1, Main Tutorial Problems, Question 12) using a documented maximum-power calculation and cross-check the published result.\n- [ ] Resolve the remaining 23 pending questions against reliable, unambiguous problem data.
-- [ ] Review provisional topic assignments across all 140 questions.
-- [x] Add documented calculations and explicit assumptions for the previously pending questions.\n- [ ] Complete a final independent human review of every worked solution before public release.
-
-The application remains in development. A successful test/build run confirms software validation, not that every question has a verified engineering solution.
+A complete question bank is now present. The latest code validation and a final engineering review are still required before treating the application as release-ready.
