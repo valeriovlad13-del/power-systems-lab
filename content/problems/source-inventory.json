@@ -2053,7 +2053,7 @@
     "reviewerNotes": [
       "Nominal-T phasor calculation gives approximately 100.5 A, closest to option D (100 A)."
     ],
-    "verifiedChoiceId": "D",
+    "verifiedChoiceId": "d",
     "finalAnswer": "Approximately 100.5 A"
   },
   {
@@ -4323,7 +4323,7 @@
     "reviewerNotes": [
       "Maximum real-power transfer calculation matches option D."
     ],
-    "verifiedChoiceId": "D",
+    "verifiedChoiceId": "d",
     "finalAnswer": "26.57 MW"
   },
   {
@@ -4740,7 +4740,7 @@
     "reviewerNotes": [
       "Recalculated line loss and efficiency; result matches option B."
     ],
-    "verifiedChoiceId": "B",
+    "verifiedChoiceId": "b",
     "finalAnswer": "99.38%"
   },
   {
@@ -4900,7 +4900,7 @@
     "reviewerNotes": [
       "Recalculated distance from three-phase copper losses; result matches option D."
     ],
-    "verifiedChoiceId": "D",
+    "verifiedChoiceId": "d",
     "finalAnswer": "37.18 km"
   },
   {
@@ -4972,7 +4972,7 @@
     "reviewerNotes": [
       "Recalculated using the specified power factor, voltage, resistance, and loss limit; result matches option B."
     ],
-    "verifiedChoiceId": "B",
+    "verifiedChoiceId": "b",
     "finalAnswer": "70 km"
   },
   {
@@ -5046,7 +5046,7 @@
     "reviewerNotes": [
       "The calculated continuous limit is 51.75 km; option A is the largest listed integer distance within the limit."
     ],
-    "verifiedChoiceId": "A",
+    "verifiedChoiceId": "a",
     "finalAnswer": "Calculated limit ≈ 51.75 km; greatest listed compliant length is 51 km"
   },
   {
@@ -5280,7 +5280,7 @@
     "reviewerNotes": [
       "Nominal-T phasor calculation gives 116.73 kV, matching option B."
     ],
-    "verifiedChoiceId": "B",
+    "verifiedChoiceId": "b",
     "finalAnswer": "116.72 kV line-to-line"
   },
   {
@@ -5357,7 +5357,7 @@
     "reviewerNotes": [
       "Nominal-T phasor calculation gives about 69.54 kV, matching option B within rounding."
     ],
-    "verifiedChoiceId": "B",
+    "verifiedChoiceId": "b",
     "finalAnswer": "Approximately 69.5 kV line-to-line"
   },
   {
@@ -5591,7 +5591,7 @@
     "reviewerNotes": [
       "Nominal-pi ABCD calculation gives 306.38 A, matching option D."
     ],
-    "verifiedChoiceId": "D",
+    "verifiedChoiceId": "d",
     "finalAnswer": "306.4 A"
   },
   {
@@ -5744,7 +5744,7 @@
     "reviewerNotes": [
       "Nominal-pi calculation gives approximately 9.86%, matching option D (10%) within rounding."
     ],
-    "verifiedChoiceId": "D",
+    "verifiedChoiceId": "d",
     "finalAnswer": "Approximately 9.86%"
   },
   {
@@ -5820,7 +5820,7 @@
     "reviewerNotes": [
       "ABCD phasor calculation matches option C when the answer is reported as sending-end phase voltage; the question's voltage convention is not explicit."
     ],
-    "verifiedChoiceId": "C",
+    "verifiedChoiceId": "c",
     "finalAnswer": "87.43 kV per phase"
   },
   {
@@ -5977,7 +5977,7 @@
     "reviewerNotes": [
       "Nominal-pi phasor calculation gives about 97.55%, matching option A within rounding."
     ],
-    "verifiedChoiceId": "A",
+    "verifiedChoiceId": "a",
     "finalAnswer": "Approximately 97.55%"
   },
   {
@@ -6051,7 +6051,7 @@
     "reviewerNotes": [
       "Recalculated line current, copper loss, and efficiency; result matches option A."
     ],
-    "verifiedChoiceId": "A",
+    "verifiedChoiceId": "a",
     "finalAnswer": "95.36%"
   },
   {
@@ -6123,7 +6123,7 @@
     "reviewerNotes": [
       "The nominal-T formula independently gives 9.96+j19.97 Ω, closest to option B; note slight rounding discrepancy."
     ],
-    "verifiedChoiceId": "B",
+    "verifiedChoiceId": "b",
     "finalAnswer": "Approximately 9.96 + j19.97 Ω"
   },
   {
@@ -6351,7 +6351,7 @@
     "reviewerNotes": [
       "Nominal-T formula independently gives 19.836+j51.819 Ω, matching option C."
     ],
-    "verifiedChoiceId": "C",
+    "verifiedChoiceId": "c",
     "finalAnswer": "Approximately 19.84 + j51.82 Ω"
   },
   {
@@ -6504,7 +6504,7 @@
     "reviewerNotes": [
       "Solving the ABCD phasor equation gives about 202.02 kV line-to-line, matching option C."
     ],
-    "verifiedChoiceId": "C",
+    "verifiedChoiceId": "c",
     "finalAnswer": "Approximately 202.0 kV line-to-line"
   },
   {
@@ -6582,7 +6582,7 @@
     "reviewerNotes": [
       "Nominal-pi calculation gives about 97.18%, matching option B within rounding."
     ],
-    "verifiedChoiceId": "B",
+    "verifiedChoiceId": "b",
     "finalAnswer": "Approximately 97.2%"
   },
   {
@@ -6958,7 +6958,7 @@
     "reviewerNotes": [
       "Independently recalculated using v = 1/sqrt(LC); the result matches option C."
     ],
-    "verifiedChoiceId": "C",
+    "verifiedChoiceId": "c",
     "finalAnswer": "1.83 × 10⁸ m/s"
   },
   {
@@ -9275,7 +9275,7 @@
     "reviewerNotes": [
       "Calculated from the open-line condition and symmetrical-components transformation; result matches option D."
     ],
-    "verifiedChoiceId": "D",
+    "verifiedChoiceId": "d",
     "finalAnswer": "j11.56 A"
   },
   {
