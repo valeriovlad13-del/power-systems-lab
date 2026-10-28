@@ -15,7 +15,7 @@ export default function ProblemBrowser({ initialTopic = "all" }: { initialTopic?
   const filtered = useMemo(() => {
     const term = search.trim().toLocaleLowerCase();
     return problems.filter((problem) => {
-      const matchesTopic = topic === "all" || problem.topicIds.includes(topic);
+      const matchesTopic = topic === "all" || problem.primaryTopicId === topic;
       const matchesSection = section === "all" || problem.source.originalSection === section;
       const topicText = problem.topicIds
         .map((id) => topics.find((item) => item.id === id)?.title ?? "")
@@ -58,11 +58,12 @@ export default function ProblemBrowser({ initialTopic = "all" }: { initialTopic?
       </div>
       <div className="mt-3 space-y-3">
         {filtered.map((problem) => {
-          const topicNames = problem.topicIds.map((id) => topics.find((item) => item.id === id)?.title).filter(Boolean);
+          const primaryTopic = topics.find((item) => item.id === problem.primaryTopicId)?.title ?? "Uncategorized lesson";
+          const relatedTopicNames = problem.topicIds.filter((id) => id !== problem.primaryTopicId).map((id) => topics.find((item) => item.id === id)?.title).filter(Boolean);
           return <Link key={problem.id} href={`/problems/${problem.id}`} className="block rounded-xl border border-[var(--border)] bg-white p-4 transition hover:border-[var(--accent)] hover:shadow-sm sm:p-5">
-            <div className="flex flex-wrap items-center gap-2 text-xs"><span className="font-semibold text-[var(--accent)]">{topicNames[0] ?? "Uncategorized lesson"}</span><span className="text-[var(--muted)]">·</span><span className="text-[var(--muted)]">{problem.source.originalSection}</span><span className={`ml-auto rounded-full px-2.5 py-1 font-medium ${problem.verificationStatus === "verified" ? "bg-emerald-100 text-emerald-900" : "border border-amber-200 bg-amber-50 text-amber-900"}`}>{problem.verificationStatus === "verified" ? "Verified solution" : "Solution pending review"}</span></div>
+            <div className="flex flex-wrap items-center gap-2 text-xs"><span className="font-semibold text-[var(--accent)]">{primaryTopic}</span><span className="text-[var(--muted)]">·</span><span className="text-[var(--muted)]">{problem.source.originalSection}</span><span className={`ml-auto rounded-full px-2.5 py-1 font-medium ${problem.verificationStatus === "verified" ? "bg-emerald-100 text-emerald-900" : "border border-amber-200 bg-amber-50 text-amber-900"}`}>{problem.verificationStatus === "verified" ? "Verified solution" : "Solution pending review"}</span></div>
             <h2 className="mt-3 font-semibold leading-6">{problem.source.originalQuestionNumber}. {problem.statement}</h2>
-            {topicNames.length > 1 && <p className="mt-3 text-xs leading-5 text-[var(--muted)]">Related topics: {topicNames.slice(1).join(" · ")}</p>}
+            {relatedTopicNames.length > 0 && <p className="mt-3 text-xs leading-5 text-[var(--muted)]">Related concepts: {relatedTopicNames.join(" · ")}</p>}
             <p className="mt-3 text-xs text-[var(--muted)]">Question ID: {problem.id}</p>
           </Link>;
         })}
