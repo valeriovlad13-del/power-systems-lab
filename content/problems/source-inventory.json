@@ -5582,13 +5582,42 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Represent the series impedance and shunt admittance",
+        "explanation": "Use the given per-phase series impedance and total shunt admittance.",
+        "equations": [
+          "Z=20+j52\\;\\Omega",
+          "Y=j315\\times10^{-6}\\;\\text{S}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate the nominal-T B constant",
+        "explanation": "For a nominal-T equivalent, B = Z(1 + YZ/4).",
+        "equations": [
+          "B=Z\\left(1+\\frac{YZ}{4}\\right)",
+          "B=(20+j52)\\left(1+\\frac{j315\\times10^{-6}(20+j52)}{4}\\right)",
+          "B\\approx19.836+j51.819\\;\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Match the listed answer",
+        "explanation": "Option C is the closest listed value to the calculated constant."
+      }
+    ],
+    "assumptions": [
+      "The stated phase-neutral admittance is treated as total shunt admittance, not per kilometre."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Nominal-T formula independently gives 19.836+j51.819 Ω, matching option C."
+    ],
+    "verifiedChoiceId": "C",
+    "finalAnswer": "Approximately 19.84 + j51.82 Ω"
   },
   {
     "id": "ps1-otb-52",
@@ -5669,13 +5698,45 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Convert the supply voltage and load to per-phase quantities",
+        "explanation": "The supply voltage is 220 kV line-to-line. The load is 60 MVA at 0.8 lagging power factor.",
+        "equations": [
+          "V_S=\\frac{220}{\\sqrt{3}}\\;\\text{kV per phase}",
+          "S_R=60(0.8+j0.6)=48+j36\\;\\text{MVA}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Use the ABCD receiving-end equation",
+        "explanation": "With V_S known and I_R = conjugate(S_R/(3V_R)), solve V_S = A V_R + B I_R for the receiving-end voltage phasor.",
+        "equations": [
+          "A=0.9301\\angle0.98^\\circ",
+          "B=141.24\\angle81.87^\\circ\\;\\Omega",
+          "V_S=AV_R+BI_R,\\quad I_R=\\left(\\frac{S_R}{3V_R}\\right)^*"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate the receiving-end line voltage",
+        "explanation": "Solving the phasor relation gives a receiving-end line voltage of approximately 202.02 kV, matching option C.",
+        "equations": [
+          "|V_{R,LL}|\\approx202.02\\;\\text{kV}\\approx202.2\\;\\text{kV}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The stated 220 kV supply is interpreted as sending-end line-to-line voltage; the load is balanced."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Solving the ABCD phasor equation gives about 202.02 kV line-to-line, matching option C."
+    ],
+    "verifiedChoiceId": "C",
+    "finalAnswer": "Approximately 202.0 kV line-to-line"
   },
   {
     "id": "ps1-otb-54",
@@ -5713,13 +5774,47 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate total line constants",
+        "explanation": "Multiply each per-kilometre parameter by 100 km and convert inductance and capacitance to reactance and susceptance.",
+        "equations": [
+          "R=0.153(100)=15.3\\;\\Omega",
+          "X_L=2\\pi(50)(1.21\\times10^{-3})(100)\\approx38.01\\;\\Omega",
+          "B=2\\pi(50)(0.00958\\times10^{-6})(100)\\approx3.009\\times10^{-4}\\;\\text{S}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the nominal-pi model",
+        "explanation": "Calculate the nominal-pi ABCD constants and use them to determine sending-end voltage and current.",
+        "equations": [
+          "A=D=1+\\frac{YZ}{2},\\quad B_{ABCD}=Z\\left(1+\\frac{YZ}{4}\\right),\\quad C=Y\\left(1+\\frac{YZ}{4}\\right)",
+          "V_S=AV_R+B_{ABCD}I_R,\\quad I_S=CV_R+DI_R"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate efficiency",
+        "explanation": "The real sending-end power is about 20.58 MW, giving efficiency close to 97.2%.",
+        "equations": [
+          "P_S=3\\operatorname{Re}(V_SI_S^*)\\approx20.58\\;\\text{MW}",
+          "\\eta=\\frac{20}{20.58}\\times100\\%\\approx97.18\\%",
+          "\\text{Choice B: }97.21\\%"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The stated R, L, and C are per kilometre per phase; the line is modeled with nominal-pi constants."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Nominal-pi calculation gives about 97.18%, matching option B within rounding."
+    ],
+    "verifiedChoiceId": "B",
+    "finalAnswer": "Approximately 97.2%"
   },
   {
     "id": "ps1-otb-55",
