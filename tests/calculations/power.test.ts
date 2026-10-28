@@ -45,7 +45,7 @@ describe("power-system calculation library", () => {
     expect(t.A).toEqual(t.D);
     expect(pi.A).toEqual(pi.D);
     expect(t.B.re).not.toBe(pi.B.re);
-    expect(pi.C.im).toBeGreaterThan(common.susceptanceSiemens);
+    expect(pi.C.im).toBeLessThan(common.susceptanceSiemens);
   });
 
   it("converts per-unit values between bases", () => {
