@@ -4059,13 +4059,43 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Convert line voltages to phase voltages",
+        "explanation": "Use the balanced three-phase phase-voltage values and the given per-phase impedance.",
+        "equations": [
+          "V_S=\\frac{33}{\\sqrt{3}}\\;\\text{kV},\\quad V_R=\\frac{31.2}{\\sqrt{3}}\\;\\text{kV}",
+          "Z=10+j20\\;\\Omega,\\quad |Z|=\\sqrt{10^2+20^2}=22.36\\;\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Use the maximum-power condition",
+        "explanation": "For fixed sending and receiving voltage magnitudes and series impedance R+jX, maximize the real receiving power over the power angle.",
+        "equations": [
+          "P_{max}=\\frac{3V_SV_R}{|Z|}-\\frac{3V_R^2R}{R^2+X^2}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate maximum power",
+        "explanation": "Substitution gives approximately 26.576 MW, matching option D.",
+        "equations": [
+          "P_{max}\\approx26.576\\;\\text{MW}\\approx26.57\\;\\text{MW}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Balanced three-phase short line; voltage magnitudes are line-to-line in the problem and converted to phase values for the formula."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Maximum real-power transfer calculation matches option D."
+    ],
+    "verifiedChoiceId": "D",
+    "finalAnswer": "26.57 MW"
   },
   {
     "id": "ps1-otb-26",
@@ -4684,13 +4714,43 @@
       }
     ],
     "sourceMarkedChoiceId": "a",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate load current",
+        "explanation": "Use the three-phase power equation with 20 MW, 139 kV line voltage, and 0.866 lagging power factor.",
+        "equations": [
+          "I=\\frac{20\\times10^6}{\\sqrt{3}(139\\times10^3)(0.866)}\\approx95.93\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate the maximum line length from copper loss",
+        "explanation": "The permitted loss is 5% of 20 MW, or 1 MW. Use P_loss = 3I²R per phase, with R = 0.7 Ω/km.",
+        "equations": [
+          "P_{loss,max}=0.05(20\\times10^6)=1\\times10^6\\;\\text{W}",
+          "d=\\frac{P_{loss,max}}{3I^2R_{km}}=\\frac{10^6}{3(95.93)^2(0.7)}\\approx51.75\\;\\text{km}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Apply the loss limit to the listed whole-kilometre choices",
+        "explanation": "The calculated limit is about 51.75 km. Of the listed choices, 51 km is the greatest distance that does not exceed the limit.",
+        "equations": [
+          "d_{listed,max}=51\\;\\text{km}\\;\\text{(Choice A)}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Treat 5% as a limit that must not be exceeded; choices are whole kilometres."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "The calculated continuous limit is 51.75 km; option A is the largest listed integer distance within the limit."
+    ],
+    "verifiedChoiceId": "A",
+    "finalAnswer": "Calculated limit ≈ 51.75 km; greatest listed compliant length is 51 km"
   },
   {
     "id": "ps1-otb-35",
@@ -5178,13 +5238,45 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate receiving-end current",
+        "explanation": "A 40 MVA three-phase load at 110 kV has a line current determined by apparent power.",
+        "equations": [
+          "I_R=\\frac{40\\times10^6}{\\sqrt{3}(110\\times10^3)}\\approx209.95\\;\\text{A}",
+          "V_R=\\frac{110}{\\sqrt{3}}\\;\\text{kV per phase}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply nominal-pi constants",
+        "explanation": "Use Z = 10+j35 Ω and total per-phase shunt admittance Y = j3×10⁻⁴ S to calculate the ABCD constants and sending-end voltage.",
+        "equations": [
+          "A=D=1+\\frac{YZ}{2},\\quad B=Z\\left(1+\\frac{YZ}{4}\\right),\\quad C=Y\\left(1+\\frac{YZ}{4}\\right)",
+          "V_S=AV_R+BI_R"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate regulation",
+        "explanation": "With the sending voltage held constant, calculate no-load receiving voltage |V_S/A| and compare it with the loaded receiving voltage.",
+        "equations": [
+          "\\%VR=\\frac{|V_S/A|-|V_R|}{|V_R|}\\times100\\%\\approx9.86\\%",
+          "\\text{Choice D: }10\\%"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The stated capacitive admittance is treated as total per-phase shunt admittance; regulation is based on nominal-pi constants."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Nominal-pi calculation gives approximately 9.86%, matching option D (10%) within rounding."
+    ],
+    "verifiedChoiceId": "D",
+    "finalAnswer": "Approximately 9.86%"
   },
   {
     "id": "ps1-otb-44",
