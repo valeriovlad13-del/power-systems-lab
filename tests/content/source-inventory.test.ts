@@ -47,6 +47,21 @@ describe("problem inventory and solution verification", () => {
     }
   });
 
+  it("assigns exactly one valid primary lesson to every question", () => {
+    const topicById = new Map(topics.map((topic) => [topic.id, topic]));
+    expect(problems.every((problem) => Boolean(problem.primaryTopicId))).toBe(true);
+    expect(new Set(problems.map((problem) => problem.id)).size).toBe(problems.length);
+    for (const problem of problems) {
+      expect(problem.topicIds[0], `${problem.id} should list its primary lesson first`).toBe(problem.primaryTopicId);
+      const primaryTopic = topicById.get(problem.primaryTopicId);
+      expect(primaryTopic, `${problem.id} references unknown primary lesson ${problem.primaryTopicId}`).toBeDefined();
+      expect(primaryTopic?.courseId, `${problem.id} has a primary lesson from another course`).toBe(problem.courseId);
+    }
+    const primaryCounts = topics.map((topic) => problems.filter((problem) => problem.primaryTopicId === topic.id).length);
+    expect(primaryCounts.reduce((sum, count) => sum + count, 0)).toBe(problems.length);
+    expect(primaryCounts.every((count) => count > 0)).toBe(true);
+  });
+
   it("preserves the expected section counts", () => {
     const count = (courseId: string, section: string) =>
       problems.filter((problem) => problem.courseId === courseId && problem.source.originalSection === section).length;
