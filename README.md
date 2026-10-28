@@ -7,6 +7,7 @@ A responsive power-systems learning web app organized around lesson topics. It p
 ## Features
 
 - Searchable 140-question bank organized by lesson topic, with one primary lesson per question and secondary concept tags. Topic-based review and question navigation use the primary lesson to avoid duplicate listings.
+- Guided practice mode with immediate answer feedback, progress tracking for the active session, worked-solution reveal, and question jumping.
 - Four answer choices per question with independently stored answer keys.
 - Collapsible **Show Solution / Hide Solution** sections.
 - Previous / Next question navigation within the same lesson topic.
@@ -47,6 +48,8 @@ Open http://localhost:3000.
 
 - `/` — landing page
 - `/topics` — lesson topic directory
+- `/practice` — choose a lesson for guided practice
+- `/practice?topic=<topic-id>` — guided practice for one lesson
 - `/problems` — searchable/filterable 140-question bank
 - `/problems/[id]` — question detail and worked solution
 - `/calculators` — calculator library
