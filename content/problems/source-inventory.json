@@ -1371,13 +1371,59 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Convert receiving-end voltage to phase voltage",
+        "explanation": "The ABCD relation uses phase quantities.",
+        "equations": [
+          "V_{R\\phi}=\\frac{345}{\\sqrt3}\\approx199.19\\;\\text{kV}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate receiving-end current",
+        "explanation": "Use the three-phase apparent power relation and lagging power-factor angle.",
+        "equations": [
+          "I_R=\\frac{400\\times10^6}{\\sqrt3(345\\times10^3)}\\angle(-\\cos^{-1}0.8)",
+          "I_R\\approx669.3\\angle(-36.87^\\circ)\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Apply the sending-end ABCD equation",
+        "explanation": "Calculate phase sending voltage from V_S = A V_R + B I_R.",
+        "equations": [
+          "V_{S\\phi}=AV_{R\\phi}+BI_R",
+          "A=0.98182+j0.0012447,\\quad B=4.035+j58.947\\;\\Omega",
+          "V_{S\\phi}\\approx221.40+j30.19\\;\\text{kV}",
+          "V_{S,LL}=\\sqrt3|V_{S\\phi}|\\approx387.0\\;\\text{kV}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The sending-end line voltage matches option B.",
+        "equations": [
+          "V_{S,LL}\\approx387\\;\\text{kV}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Treat all ABCD constants as per-phase transmission-line constants.",
+      "Receiving-end line voltage is 345 kV line-to-line and the 400 MVA load has 0.8 lagging power factor."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated using the given ABCD constants and phasor load current. Result matches option B."
+    ],
+    "verifiedChoiceId": "b",
+    "find": "Calculate the sending-end line voltage from ABCD constants and receiving-end load conditions.",
+    "finalAnswer": {
+      "value": "387",
+      "unit": "kV"
+    }
   },
   {
     "id": "ps1-main-15",
