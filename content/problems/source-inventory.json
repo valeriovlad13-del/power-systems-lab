@@ -3520,13 +3520,57 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate the total series impedance",
+        "explanation": "Multiply the per-kilometre impedance by the 16 km line length.",
+        "equations": [
+          "Z=(0.125+j0.4375)(16)=2+j7\\;\\Omega/\\text{phase}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate the line current",
+        "explanation": "Use the three-phase real-power equation at the receiving end.",
+        "equations": [
+          "I_R=\\frac{P_R}{\\sqrt3V_R\\cos\\phi}=\\frac{120\\times10^6}{\\sqrt3(64\\times10^3)(1)}\\approx1082.5\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate the sending-end phase voltage",
+        "explanation": "At unity power factor, take the receiving-end phase voltage and current as the real reference. Add the impedance voltage drop.",
+        "equations": [
+          "V_{R\\phi}=\\frac{64}{\\sqrt3}\\approx36.95\\;\\text{kV}",
+          "V_{S\\phi}=V_{R\\phi}+I_RZ\\approx(36.95+2.165)+j7.577\\;\\text{kV}",
+          "V_{S,LL}=\\sqrt3|V_{S\\phi}|\\approx69.0\\;\\text{kV}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The calculated sending-end line voltage matches option B.",
+        "equations": [
+          "V_{S,LL}\\approx69\\;\\text{kV}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The stated 0.125 + j0.4375 Ω/km is the per-phase series impedance.",
+      "The receiving-end voltage is 64 kV line-to-line and load power factor is unity."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated using the short-line phasor equation. Result is approximately 69.0 kV, matching option B."
+    ],
+    "verifiedChoiceId": "b",
+    "find": "Find the sending-end line voltage of a short three-phase line delivering 120 MW at unity power factor.",
+    "finalAnswer": {
+      "value": "69",
+      "unit": "kV"
+    }
   },
   {
     "id": "ps1-otb-21",
@@ -3564,13 +3608,59 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate total per-phase impedance",
+        "explanation": "Multiply the per-kilometre resistance and reactance by the 3 km line length.",
+        "equations": [
+          "R=0.4(3)=1.2\\;\\Omega,\\qquad X=0.3(3)=0.9\\;\\Omega",
+          "Z=1.2+j0.9\\;\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Relate current to receiving voltage",
+        "explanation": "For a balanced three-phase load, current is P/(√3 V_R pf). With receiving voltage as the reference, current lags by cos⁻¹(0.8).",
+        "equations": [
+          "I_R=\\frac{P}{\\sqrt3V_R(0.8)}\\angle(-36.87^\\circ)"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Apply the short-line voltage equation",
+        "explanation": "Use V_Sφ = V_Rφ + I_R Z and solve for the receiving-end voltage that gives a maintained 11 kV sending-end line voltage.",
+        "equations": [
+          "V_{S\\phi}=V_{R\\phi}+I_R(1.2+j0.9)",
+          "|V_{S\\phi}|=\\frac{11}{\\sqrt3}\\;\\text{kV}",
+          "V_{R,LL}\\approx10.462\\;\\text{kV}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The computed receiving-end line voltage rounds to option B.",
+        "equations": [
+          "V_{R,LL}\\approx10.46\\;\\text{kV}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The total per-phase line resistance is 0.4 × 3 = 1.2 Ω and reactance is 0.3 × 3 = 0.9 Ω.",
+      "The 3 MW load is balanced and operates at 0.8 lagging power factor.",
+      "Solve the short-line phasor relation using the receiving voltage as the reference; current magnitude depends on receiving voltage."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently solved the short-line phasor equation with current magnitude coupled to receiving-end voltage. Result matches option B."
+    ],
+    "verifiedChoiceId": "b",
+    "find": "Find receiving-end line voltage from sending-end voltage, load power and power factor, and total line impedance.",
+    "finalAnswer": {
+      "value": "10.46",
+      "unit": "kV"
+    }
   },
   {
     "id": "ps1-otb-22",
