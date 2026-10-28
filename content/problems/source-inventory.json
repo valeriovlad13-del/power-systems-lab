@@ -7076,13 +7076,55 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Write the negative-sequence formula",
+        "explanation": "The phase-a negative-sequence component is the weighted average of the phase voltages.",
+        "equations": [
+          "V_2=\\frac{1}{3}(V_a+a^2V_b+aV_c)"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Substitute the given values",
+        "explanation": "Use the rectangular voltage phasors supplied in the problem.",
+        "equations": [
+          "V_a=176-j132,\\quad V_b=-128-j96,\\quad V_c=-160+j100"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Apply the sequence operator",
+        "explanation": "Using a=−0.5+j0.866 and a²=−0.5−j0.866, evaluate the expression in rectangular form.",
+        "equations": [
+          "V_2=\\frac{(176-j132)+a^2(-128-j96)+a(-160+j100)}{3}",
+          "V_2\\approx50.1-j53.9\\;\\text{V}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The result matches option B.",
+        "equations": [
+          "V_2\\approx50.1-j53.9\\;\\text{V}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Use the conventional transformation V₂ = (Vₐ + a²Vᵦ + aV꜀)/3, where a = 1∠120°."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated using the conventional symmetrical-component transformation; result matches option B."
+    ],
+    "verifiedChoiceId": "b",
+    "find": "Negative-sequence voltage component from the given unbalanced phase voltages.",
+    "finalAnswer": {
+      "value": "50.1 − j53.9",
+      "unit": "V"
+    }
   },
   {
     "id": "ps2-otb-22",
@@ -7162,13 +7204,55 @@
       }
     ],
     "sourceMarkedChoiceId": "a",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Write the positive-sequence formula",
+        "explanation": "Use the standard symmetrical-component transformation for phase a.",
+        "equations": [
+          "V_1=\\frac{1}{3}(V_a+aV_b+a^2V_c)"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Substitute the phase voltages",
+        "explanation": "Use the supplied rectangular phasors.",
+        "equations": [
+          "V_a=4+j2,\\quad V_b=4-j4,\\quad V_c=-2+j8"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Evaluate the expression",
+        "explanation": "Apply a=−0.5+j0.866 and a²=−0.5−j0.866, then divide the sum by three.",
+        "equations": [
+          "V_1=\\frac{(4+j2)+a(4-j4)+a^2(-2+j8)}{3}",
+          "V_1\\approx4.46+j1.73"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The result matches option A to the precision shown.",
+        "equations": [
+          "V_1\\approx4.46+j1.73"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Use V₁ = (Vₐ + aVᵦ + a²V꜀)/3 with a = 1∠120°."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated using the conventional symmetrical-component transformation; result matches option A."
+    ],
+    "verifiedChoiceId": "a",
+    "find": "Positive-sequence phase-a voltage component.",
+    "finalAnswer": {
+      "value": "4.46 + j1.73",
+      "unit": "V"
+    }
   },
   {
     "id": "ps2-otb-24",
@@ -7205,13 +7289,55 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Write the zero-sequence formula",
+        "explanation": "The zero-sequence component is one-third of the phasor sum of all three phase currents.",
+        "equations": [
+          "I_0=\\frac{I_a+I_b+I_c}{3}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Substitute the currents",
+        "explanation": "Use the given rectangular phase currents.",
+        "equations": [
+          "I_a=300+j400,\\quad I_b=200+j200,\\quad I_c=-400-j200"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Add and divide by three",
+        "explanation": "The real components sum to 100 A and the imaginary components sum to 400 A.",
+        "equations": [
+          "I_0=\\frac{(300+200-400)+j(400+200-200)}{3}",
+          "I_0=33.3+j133.3\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The result matches option B.",
+        "equations": [
+          "I_0\\approx33.3+j133.3\\;\\text{A}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Use I₀ = (Iₐ + Iᵦ + I꜀)/3."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated using the conventional symmetrical-component transformation; result matches option B."
+    ],
+    "verifiedChoiceId": "b",
+    "find": "Zero-sequence component of phase-a current for a three-phase four-wire system.",
+    "finalAnswer": {
+      "value": "33.3 + j133.3",
+      "unit": "A"
+    }
   },
   {
     "id": "ps2-otb-25",
