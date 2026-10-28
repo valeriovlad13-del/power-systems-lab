@@ -617,13 +617,57 @@
       }
     ],
     "sourceMarkedChoiceId": "a",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Use the inductive reactance relation",
+        "explanation": "For a transposed three-phase line, the inductive reactance per kilometre can be written in terms of phase GMD and conductor GMR.",
+        "equations": [
+          "x=0.0754\\ln\\left(\\frac{D_m}{D_s}\\right)\\;\\Omega/\\text{km}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate the geometric mean distance",
+        "explanation": "Substitute x = 0.486 Ω/km and GMR Ds = 0.02 m, then solve for Dm.",
+        "equations": [
+          "\\ln\\left(\\frac{D_m}{0.02}\\right)=\\frac{0.486}{0.0754}\\approx6.446",
+          "D_m=0.02e^{6.446}\\approx12.60\\;\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Convert GMD to adjacent spacing",
+        "explanation": "For horizontal spacing D, the phase distances are D, D, and 2D.",
+        "equations": [
+          "D_m=(D\\cdot D\\cdot2D)^{1/3}=2^{1/3}D",
+          "D=\\frac{12.60}{2^{1/3}}\\approx10.0\\;\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The calculated adjacent spacing is 10 m, option A.",
+        "equations": [
+          "D\\approx10\\;\\text{m}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The stated 0.486 Ω/km is the inductive reactance per phase at 60 Hz.",
+      "For a flat configuration with adjacent spacing D and outer-conductor spacing 2D, the phase GMD is (D·D·2D)^(1/3)."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated from the standard transposed-line reactance equation. The result matches option A."
+    ],
+    "verifiedChoiceId": "a",
+    "find": "Determine the phase spacing of a transposed, flat three-phase line from its reactance and conductor GMR.",
+    "finalAnswer": {
+      "value": "10",
+      "unit": "m"
+    }
   },
   {
     "id": "ps1-main-08",
@@ -1414,13 +1458,58 @@
       }
     ],
     "sourceMarkedChoiceId": "a",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Write the long-line B-constant equation",
+        "explanation": "For a long transmission line, B = Zc sinh(γl), where Zc is the characteristic impedance and γl is the propagation constant multiplied by line length.",
+        "equations": [
+          "B=Z_c\\sinh(\\gamma l)",
+          "Z_c=\\sqrt{\\frac{Z}{Y}},\\qquad \\gamma l=\\sqrt{ZY}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Express the given parameters as complex quantities",
+        "explanation": "Combine resistance and reactance into the series impedance and represent capacitive charging admittance with a positive imaginary susceptance.",
+        "equations": [
+          "Z=25.3+j66.5\\;\\Omega",
+          "Y=j0.442\\times10^{-3}\\;\\text{S}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Evaluate the B constant",
+        "explanation": "Substitute Z and Y into the distributed-line expression and evaluate the complex hyperbolic sine.",
+        "equations": [
+          "B=\\sqrt{\\frac{25.3+j66.5}{j0.442\\times10^{-3}}}\\;\\sinh\\!\\left(\\sqrt{(25.3+j66.5)(j0.442\\times10^{-3})}\\right)",
+          "B\\approx25.05+j66.22\\;\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the closest listed value",
+        "explanation": "The computed result agrees with option A within the rounding used by the choices.",
+        "equations": [
+          "B\\approx24.96+j65.72\\;\\Omega\\quad(\\text{option A})"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Treat the given charging admittance as capacitive, Y = j0.442 × 10⁻³ S.",
+      "Use the long-line distributed-parameter model with total line Z and Y as supplied."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated using the long-line distributed-parameter model. Numerical evaluation gives approximately 25.05 + j66.22 Ω; option A is the matching choice within rounding."
+    ],
+    "verifiedChoiceId": "a",
+    "find": "Calculate the B transmission constant of a long line from its total series impedance and shunt charging admittance.",
+    "finalAnswer": {
+      "value": "24.96 + j65.72",
+      "unit": "Ω"
+    }
   },
   {
     "id": "ps1-main-17",
