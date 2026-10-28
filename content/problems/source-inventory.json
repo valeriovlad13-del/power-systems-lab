@@ -5271,13 +5271,47 @@
       }
     ],
     "sourceMarkedChoiceId": "a",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate total line constants and load current",
+        "explanation": "Multiply per-kilometre parameters by 80 km and calculate the unity-power-factor receiving current.",
+        "equations": [
+          "Z=(0.05+j0.45)(80)=4+j36\\;\\Omega",
+          "Y=j(3.4\\times10^{-6})(80)=j272\\times10^{-6}\\;\\text{S}",
+          "I_R=\\frac{306\\times10^6}{\\sqrt{3}(220\\times10^3)}\\approx802.9\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the nominal-pi model",
+        "explanation": "Calculate A, B, C, and D for the nominal-pi equivalent, then determine sending-end voltage and current.",
+        "equations": [
+          "A=D=1+\\frac{YZ}{2},\\quad B=Z\\left(1+\\frac{YZ}{4}\\right),\\quad C=Y\\left(1+\\frac{YZ}{4}\\right)",
+          "V_S=AV_R+BI_R,\\quad I_S=CV_R+DI_R"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate transmission efficiency",
+        "explanation": "Use the real sending-end power from 3VsIs* and divide receiving-end real power by it.",
+        "equations": [
+          "P_S=3\\operatorname{Re}(V_S I_S^*)",
+          "\\eta=\\frac{306\\;\\text{MW}}{P_S}\\times100\\%\\approx97.55\\%",
+          "\\text{Choice A: }97.53\\%"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Balanced three-phase load; nominal-pi equivalent; 220 kV is receiving line-to-line voltage."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Nominal-pi phasor calculation gives about 97.55%, matching option A within rounding."
+    ],
+    "verifiedChoiceId": "A",
+    "finalAnswer": "Approximately 97.55%"
   },
   {
     "id": "ps1-otb-47",
@@ -5314,13 +5348,44 @@
       }
     ],
     "sourceMarkedChoiceId": "a",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate line impedance and load current",
+        "explanation": "The total series impedance is the per-mile impedance multiplied by 20 miles. Use the three-phase power relation for the receiving current.",
+        "equations": [
+          "Z=(0.326+j0.742)(20)=6.52+j14.84\\;\\Omega",
+          "I_R=\\frac{20\\times10^6}{\\sqrt{3}(69\\times10^3)(0.75)}\\approx223.3\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate copper loss",
+        "explanation": "Use the resistance part of the per-phase line impedance to calculate three-phase line loss.",
+        "equations": [
+          "P_{loss}=3I_R^2R=3(223.3)^2(6.52)\\approx0.976\\;\\text{MW}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate transmission efficiency",
+        "explanation": "Divide delivered power by the sum of delivered power and line loss.",
+        "equations": [
+          "\\eta=\\frac{20}{20+0.976}\\times100\\%\\approx95.36\\%",
+          "\\text{Choice A}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The load is balanced and the given series resistance applies to each phase over the full 20-mile line."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Recalculated line current, copper loss, and efficiency; result matches option A."
+    ],
+    "verifiedChoiceId": "A",
+    "finalAnswer": "95.36%"
   },
   {
     "id": "ps1-otb-48",
