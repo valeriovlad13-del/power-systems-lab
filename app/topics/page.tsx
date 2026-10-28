@@ -28,9 +28,14 @@ export default function TopicsPage() {
               </div>
               <p className="mt-2 flex-1 text-sm leading-6 text-[var(--muted)]">{topic.description}</p>
               <p className="mt-4 text-xs text-[var(--muted)]">{verifiedCount} of {topicProblems.length} questions marked verified</p>
-              <Link href={`/problems?topic=${topic.id}`} className="mt-4 inline-flex items-center justify-center rounded-lg bg-[var(--accent)] px-4 py-2.5 text-sm font-semibold text-white hover:opacity-90">
-                Review this topic <span aria-hidden="true" className="ml-2">→</span>
-              </Link>
+              <div className="mt-4 grid gap-2">
+                <Link href={`/practice?topic=${topic.id}`} className="inline-flex items-center justify-center rounded-lg bg-[var(--accent)] px-4 py-2.5 text-sm font-semibold text-white hover:opacity-90">
+                  Start guided practice <span aria-hidden="true" className="ml-2">→</span>
+                </Link>
+                <Link href={`/problems?topic=${topic.id}`} className="inline-flex items-center justify-center rounded-lg border border-[var(--border)] px-4 py-2.5 text-sm font-semibold hover:border-[var(--accent)]">
+                  Browse lesson questions
+                </Link>
+              </div>
             </article>
           );
         })}
