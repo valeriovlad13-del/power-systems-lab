@@ -1,5 +1,5 @@
-import CourseTopicList from "@/components/topics/course-topic-list";
+import { redirect } from "next/navigation";
 
-export default function PowerSystemsTwoPage() {
-  return <CourseTopicList courseId="power-systems-2" />;
+export default function LegacyCourseTwoPage() {
+  redirect("/topics");
 }
