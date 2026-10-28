@@ -179,7 +179,7 @@ export default function CalculatorTool({ slug }: { slug: string }) {
           </div>
         )}
         <div className="grid gap-4 sm:grid-cols-2">
-          {config.fields.filter((f) => slug !== "fault-current" || faultMode === "slg" || !f.key.endsWith("SequenceOhm")).map((field) => (
+          {config.fields.filter((f) => slug !== "fault-current" || (faultMode === "three-phase" ? f.key === "lineVoltageKV" || f.key === "faultMVA" : f.key === "lineVoltageKV" || f.key.endsWith("SequenceOhm"))).map((field) => (
             <label key={field.key} className="block text-sm font-medium">
               {field.label}{field.unit ? <span className="ml-1 text-xs text-[var(--muted)]">({field.unit})</span> : null}
               <input type="number" inputMode="decimal" step={field.step ?? "any"} value={values[field.key] ?? field.initial ?? "0"} onChange={(event) => setValues((current) => ({ ...current, [field.key]: event.target.value }))} className="mt-2 w-full rounded-lg border border-[var(--border)] bg-[var(--surface)] px-3 py-3 text-base outline-none focus:border-[var(--accent)]" />
