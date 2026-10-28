@@ -20,6 +20,7 @@ export interface SourceProblem {
   id: string;
   courseId: "power-systems-1" | "power-systems-2";
   topicIds: string[];
+  primaryTopicId: string;
   source: {
     document: string;
     originalSection: SourceSection;
