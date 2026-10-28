@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import katex from "katex";
 import { getProblemById, problems } from "@/content/problems";
+import { topics } from "@/content/topics";
 import AnswerChoices from "@/components/problems/answer-choices";
 import SolutionDisclosure from "@/components/problems/solution-disclosure";
 
@@ -14,7 +15,7 @@ export default async function ProblemDetailPage({ params }: { params: Promise<{ 
   const problem = getProblemById(id);
   if (!problem) notFound();
 
-  const primaryTopic = (await import("@/content/topics")).topics.find((topic) => topic.id === problem.primaryTopicId);
+  const primaryTopic = topics.find((topic) => topic.id === problem.primaryTopicId);
   const isVerified = problem.verificationStatus === "verified";
   const sameSectionProblems = problems
     .filter((item) => item.primaryTopicId === problem.primaryTopicId)
