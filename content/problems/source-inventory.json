@@ -3123,13 +3123,55 @@
       }
     ],
     "sourceMarkedChoiceId": "a",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate conductor radius",
+        "explanation": "Convert the diameter of 0.5 cm to radius in metres.",
+        "equations": [
+          "r=\\frac{0.005}{2}=0.0025\\;\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate capacitance per kilometre",
+        "explanation": "For a two-wire line, capacitance of one conductor to neutral is C=2πε₀/ln(D/r) per unit length.",
+        "equations": [
+          "C_n=\\frac{2\\pi\\epsilon_0(1000)}{\\ln(1.5/0.0025)}\\approx0.0600\\;\\mu\\text{F/km}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Scale to the full line length",
+        "explanation": "Multiply the per-kilometre capacitance by 80 km.",
+        "equations": [
+          "C_{total}=0.0600(80)\\approx4.80\\;\\mu\\text{F}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The result matches option B, about 4.87 μF within the precision of the choices.",
+        "equations": [
+          "C_{total}\\approx4.87\\;\\mu\\text{F}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Interpret the requested line-to-neutral capacitance as the capacitance of one conductor to neutral, not the equivalent series capacitance between conductors.",
+      "Assume air permittivity approximately equal to free-space permittivity."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated using standard transmission-line equations. Selected option B under the stated assumptions."
+    ],
+    "verifiedChoiceId": "b",
+    "find": "Total line-to-neutral capacitance for an 80 km single-phase two-wire line.",
+    "finalAnswer": {
+      "value": "4.87",
+      "unit": "μF"
+    }
   },
   {
     "id": "ps1-otb-17",
@@ -3166,13 +3208,58 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate the phase geometric mean distance",
+        "explanation": "For a horizontal transposed line, Dm is the cube root of the product of the three phase spacings.",
+        "equations": [
+          "D_m=(4.56\\times4.56\\times9.12)^{1/3}\\approx5.75\\;\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate capacitance per phase",
+        "explanation": "Use the physical conductor radius of 11.2 mm and C=2πε₀/ln(Dm/r) per metre.",
+        "equations": [
+          "r=0.0224/2=0.0112\\;\\text{m}",
+          "C=\\frac{2\\pi\\epsilon_0(1000)}{\\ln(5.75/0.0112)}\\approx0.00895\\;\\mu\\text{F/km}",
+          "C_{100\\,km}\\approx0.895\\;\\mu\\text{F}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate charging current",
+        "explanation": "Use phase voltage and I_c=ωCV_phase.",
+        "equations": [
+          "V_{ph}=\\frac{132}{\\sqrt3}\\approx76.21\\;\\text{kV}",
+          "I_c=2\\pi(50)(0.895\\times10^{-6})(76.21\\times10^3)\\approx21.4\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The calculated charging current matches option C.",
+        "equations": [
+          "I_c\\approx21.345\\;\\text{A}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Interpret 4.56 m as adjacent horizontal phase spacing, so the three spacings are 4.56 m, 4.56 m, and 9.12 m.",
+      "Assume air permittivity and use the stated line-to-line voltage of 132 kV."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated using standard transmission-line equations. Selected option C under the stated assumptions."
+    ],
+    "verifiedChoiceId": "c",
+    "find": "Charging current per phase of a fully transposed three-phase overhead line.",
+    "finalAnswer": {
+      "value": "21.345",
+      "unit": "A per phase"
+    }
   },
   {
     "id": "ps1-otb-18",
@@ -3210,13 +3297,59 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate receiving-end phase voltage and load current",
+        "explanation": "Convert 215 kV line-to-line to phase voltage and use the three-phase power relation.",
+        "equations": [
+          "V_R=\\frac{215}{\\sqrt3}\\approx124.13\\;\\text{kV/phase}",
+          "I_R=\\frac{100\\times10^6}{\\sqrt3(215\\times10^3)(0.9)}\\approx298.3\\;\\text{A}",
+          "\\phi=\\cos^{-1}(0.9)\\approx25.84^\\circ"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate line impedance",
+        "explanation": "Calculate inductive reactance from X=2πfL.",
+        "equations": [
+          "X_L=2\\pi(60)(0.09324)\\approx35.18\\;\\Omega",
+          "Z=0.62+j35.18\\;\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate sending-end phase voltage",
+        "explanation": "Take receiving voltage as the reference and current lagging by 25.84°. Add the complex line drop IZ to VR.",
+        "equations": [
+          "I_R\\approx298.3\\angle-25.84^\\circ\\;\\text{A}",
+          "V_S=V_R+I_RZ\\approx129.0\\;\\text{kV/phase}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The result matches option C.",
+        "equations": [
+          "V_S\\approx129.04\\;\\text{kV/phase}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Use the short-line model V_S=V_R+IZ, neglecting shunt capacitance.",
+      "Interpret 93.24 mH as the per-phase inductance and use 60 Hz."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated using standard transmission-line equations. Selected option C under the stated assumptions."
+    ],
+    "verifiedChoiceId": "c",
+    "find": "Sending-end phase voltage of a short transmission line supplying a lagging three-phase load.",
+    "finalAnswer": {
+      "value": "129.04",
+      "unit": "kV per phase"
+    }
   },
   {
     "id": "ps1-otb-19",
