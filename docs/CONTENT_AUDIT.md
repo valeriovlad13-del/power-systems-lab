@@ -16,8 +16,8 @@ Each question retains its stable ID, original section and question number, state
 
 ## Current verification status
 
-- **Independently verified:** 116 questions
-- **Pending review:** 24 questions
+- **Independently verified:** 117 questions
+- **Pending review:** 23 questions
 - **In review:** 0 questions
 - **Flagged for correction:** 0 questions
 
@@ -50,7 +50,7 @@ If the computed result does not reasonably match an answer choice, or the proble
 
 ## Remaining content work
 
-- [ ] Resolve the 24 pending questions against reliable, unambiguous problem data.
+- [x] Independently resolve the short-line maximum-power question (Power Systems 1, Main Tutorial Problems, Question 12) using a documented maximum-power calculation and cross-check the published result.\n- [ ] Resolve the remaining 23 pending questions against reliable, unambiguous problem data.
 - [ ] Review provisional topic assignments across all 140 questions.
 - [ ] Add further independent engineering checks as each pending question is resolved.
 
