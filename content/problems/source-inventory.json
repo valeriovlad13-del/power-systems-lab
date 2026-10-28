@@ -3,8 +3,8 @@
     "id": "ps1-main-01",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "efficiency-power"
+      "efficiency-power",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -706,8 +706,8 @@
     "id": "ps1-main-08",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "line-performance"
+      "line-performance",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -835,8 +835,8 @@
     "id": "ps1-main-09",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "line-performance"
+      "line-performance",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -1216,8 +1216,8 @@
     "id": "ps1-main-12",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-performance",
       "efficiency-power",
+      "line-performance",
       "short-medium-lines"
     ],
     "source": {
@@ -1444,8 +1444,8 @@
     "id": "ps1-main-14",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-performance",
-      "short-medium-lines"
+      "short-medium-lines",
+      "line-performance"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -1626,8 +1626,8 @@
     "id": "ps1-main-16",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "long-lines"
+      "long-lines",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -1716,8 +1716,8 @@
     "id": "ps1-main-17",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "surge-sil"
+      "surge-sil",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -1810,8 +1810,8 @@
     "id": "ps1-main-18",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "surge-sil"
+      "surge-sil",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -1904,8 +1904,8 @@
     "id": "ps1-main-19",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-performance",
-      "surge-sil"
+      "surge-sil",
+      "line-performance"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -1996,9 +1996,9 @@
     "id": "ps1-main-20",
     "courseId": "power-systems-1",
     "topicIds": [
+      "short-medium-lines",
       "line-parameters",
-      "line-performance",
-      "short-medium-lines"
+      "line-performance"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -3701,8 +3701,8 @@
     "id": "ps1-otb-18",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-performance",
-      "short-medium-lines"
+      "short-medium-lines",
+      "line-performance"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -3792,8 +3792,8 @@
     "id": "ps1-otb-19",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-performance",
-      "short-medium-lines"
+      "short-medium-lines",
+      "line-performance"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -3883,8 +3883,8 @@
     "id": "ps1-otb-20",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-performance",
-      "short-medium-lines"
+      "short-medium-lines",
+      "line-performance"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -3972,8 +3972,8 @@
     "id": "ps1-otb-21",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "line-performance"
+      "line-performance",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -4063,8 +4063,8 @@
     "id": "ps1-otb-22",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "efficiency-power"
+      "efficiency-power",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -4299,8 +4299,8 @@
     "id": "ps1-otb-25",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-performance",
       "efficiency-power",
+      "line-performance",
       "short-medium-lines"
     ],
     "source": {
@@ -4375,8 +4375,8 @@
     "id": "ps1-otb-26",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "line-performance"
+      "line-performance",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -4468,8 +4468,8 @@
     "id": "ps1-otb-27",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "line-performance"
+      "line-performance",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -4547,8 +4547,8 @@
     "id": "ps1-otb-28",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-performance",
-      "short-medium-lines"
+      "short-medium-lines",
+      "line-performance"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -4720,8 +4720,8 @@
     "id": "ps1-otb-30",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "efficiency-power"
+      "efficiency-power",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -4797,8 +4797,8 @@
     "id": "ps1-otb-31",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "efficiency-power"
+      "efficiency-power",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -4886,8 +4886,8 @@
     "id": "ps1-otb-32",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
       "line-performance",
+      "line-parameters",
       "efficiency-power"
     ],
     "source": {
@@ -4959,8 +4959,8 @@
     "id": "ps1-otb-33",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
       "line-performance",
+      "line-parameters",
       "efficiency-power"
     ],
     "source": {
@@ -5032,8 +5032,8 @@
     "id": "ps1-otb-34",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "efficiency-power"
+      "efficiency-power",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -5107,8 +5107,8 @@
     "id": "ps1-otb-35",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-performance",
-      "long-lines"
+      "long-lines",
+      "line-performance"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -5186,6 +5186,7 @@
     "id": "ps1-otb-36",
     "courseId": "power-systems-1",
     "topicIds": [
+      "short-medium-lines",
       "line-parameters",
       "line-performance",
       "long-lines"
@@ -5266,9 +5267,9 @@
     "id": "ps1-otb-37",
     "courseId": "power-systems-1",
     "topicIds": [
+      "short-medium-lines",
       "line-parameters",
-      "line-performance",
-      "short-medium-lines"
+      "line-performance"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -5344,9 +5345,9 @@
     "id": "ps1-otb-38",
     "courseId": "power-systems-1",
     "topicIds": [
+      "short-medium-lines",
       "line-parameters",
-      "line-performance",
-      "short-medium-lines"
+      "line-performance"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -5422,8 +5423,8 @@
     "id": "ps1-otb-39",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "line-performance"
+      "line-performance",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -5501,6 +5502,7 @@
     "id": "ps1-otb-40",
     "courseId": "power-systems-1",
     "topicIds": [
+      "short-medium-lines",
       "line-parameters",
       "line-performance"
     ],
@@ -5582,6 +5584,7 @@
     "id": "ps1-otb-41",
     "courseId": "power-systems-1",
     "topicIds": [
+      "short-medium-lines",
       "line-parameters",
       "line-performance"
     ],
@@ -5659,6 +5662,7 @@
     "id": "ps1-otb-42",
     "courseId": "power-systems-1",
     "topicIds": [
+      "short-medium-lines",
       "line-parameters",
       "line-performance"
     ],
@@ -5891,6 +5895,7 @@
     "id": "ps1-otb-45",
     "courseId": "power-systems-1",
     "topicIds": [
+      "short-medium-lines",
       "line-performance",
       "efficiency-power"
     ],
@@ -6198,6 +6203,7 @@
     "id": "ps1-otb-49",
     "courseId": "power-systems-1",
     "topicIds": [
+      "long-lines",
       "line-performance"
     ],
     "source": {
@@ -6276,8 +6282,8 @@
     "id": "ps1-otb-50",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-performance",
-      "long-lines"
+      "long-lines",
+      "line-performance"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -6355,8 +6361,8 @@
     "id": "ps1-otb-51",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "short-medium-lines"
+      "short-medium-lines",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -6429,6 +6435,7 @@
     "id": "ps1-otb-52",
     "courseId": "power-systems-1",
     "topicIds": [
+      "short-medium-lines",
       "line-parameters",
       "line-performance"
     ],
@@ -6584,6 +6591,7 @@
     "id": "ps1-otb-54",
     "courseId": "power-systems-1",
     "topicIds": [
+      "short-medium-lines",
       "line-performance",
       "efficiency-power"
     ],
@@ -6663,8 +6671,8 @@
     "id": "ps1-otb-55",
     "courseId": "power-systems-1",
     "topicIds": [
-      "efficiency-power",
-      "long-lines"
+      "long-lines",
+      "efficiency-power"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -6742,6 +6750,7 @@
     "id": "ps1-otb-56",
     "courseId": "power-systems-1",
     "topicIds": [
+      "surge-sil",
       "line-parameters",
       "long-lines"
     ],
@@ -6798,8 +6807,8 @@
     "id": "ps1-otb-57",
     "courseId": "power-systems-1",
     "topicIds": [
-      "long-lines",
-      "surge-sil"
+      "surge-sil",
+      "long-lines"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -6854,8 +6863,8 @@
     "id": "ps1-otb-58",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "surge-sil"
+      "surge-sil",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -7244,8 +7253,8 @@
     "id": "ps2-main-04",
     "courseId": "power-systems-2",
     "topicIds": [
-      "per-unit",
-      "symmetrical-components"
+      "symmetrical-components",
+      "per-unit"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -7388,9 +7397,9 @@
     "id": "ps2-main-06",
     "courseId": "power-systems-2",
     "topicIds": [
+      "fault-analysis",
       "per-unit",
       "symmetrical-components",
-      "fault-analysis",
       "neutral-grounding"
     ],
     "source": {
@@ -7522,8 +7531,8 @@
     "id": "ps2-main-08",
     "courseId": "power-systems-2",
     "topicIds": [
-      "per-unit",
       "fault-analysis",
+      "per-unit",
       "neutral-grounding"
     ],
     "source": {
@@ -7666,10 +7675,10 @@
     "id": "ps2-main-10",
     "courseId": "power-systems-2",
     "topicIds": [
+      "fault-analysis",
       "per-unit",
       "symmetrical-components",
       "sequence-networks",
-      "fault-analysis",
       "generator-transients"
     ],
     "source": {
@@ -8464,8 +8473,8 @@
     "id": "ps2-otb-13",
     "courseId": "power-systems-2",
     "topicIds": [
-      "per-unit",
       "fault-levels",
+      "per-unit",
       "fault-analysis",
       "generator-transients"
     ],
@@ -9397,6 +9406,7 @@
     "id": "ps2-otb-26",
     "courseId": "power-systems-2",
     "topicIds": [
+      "complex-phasors",
       "fault-analysis"
     ],
     "source": {
@@ -9621,8 +9631,8 @@
     "id": "ps2-otb-29",
     "courseId": "power-systems-2",
     "topicIds": [
-      "symmetrical-components",
-      "fault-analysis"
+      "fault-analysis",
+      "symmetrical-components"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -9677,10 +9687,10 @@
     "id": "ps2-otb-30",
     "courseId": "power-systems-2",
     "topicIds": [
+      "fault-analysis",
       "per-unit",
       "symmetrical-components",
-      "sequence-networks",
-      "fault-analysis"
+      "sequence-networks"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -9745,10 +9755,10 @@
     "id": "ps2-otb-31",
     "courseId": "power-systems-2",
     "topicIds": [
+      "fault-analysis",
       "per-unit",
       "symmetrical-components",
-      "sequence-networks",
-      "fault-analysis"
+      "sequence-networks"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -9938,10 +9948,10 @@
     "id": "ps2-otb-34",
     "courseId": "power-systems-2",
     "topicIds": [
+      "fault-analysis",
       "per-unit",
       "symmetrical-components",
       "sequence-networks",
-      "fault-analysis",
       "generator-transients",
       "neutral-grounding"
     ],
@@ -10086,8 +10096,8 @@
     "id": "ps2-otb-36",
     "courseId": "power-systems-2",
     "topicIds": [
-      "per-unit",
-      "generator-transients"
+      "generator-transients",
+      "per-unit"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -10151,10 +10161,10 @@
     "id": "ps2-otb-37",
     "courseId": "power-systems-2",
     "topicIds": [
+      "neutral-grounding",
       "per-unit",
       "fault-analysis",
-      "generator-transients",
-      "neutral-grounding"
+      "generator-transients"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -10219,8 +10229,8 @@
     "id": "ps2-otb-38",
     "courseId": "power-systems-2",
     "topicIds": [
-      "per-unit",
-      "fault-analysis"
+      "fault-analysis",
+      "per-unit"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -10601,10 +10611,10 @@
     "id": "ps2-otb-43",
     "courseId": "power-systems-2",
     "topicIds": [
+      "fault-analysis",
       "per-unit",
       "symmetrical-components",
       "sequence-networks",
-      "fault-analysis",
       "neutral-grounding"
     ],
     "source": {
@@ -10685,8 +10695,8 @@
     "id": "ps2-otb-44",
     "courseId": "power-systems-2",
     "topicIds": [
-      "per-unit",
       "fault-analysis",
+      "per-unit",
       "neutral-grounding"
     ],
     "source": {
@@ -10914,9 +10924,9 @@
     "id": "ps2-otb-47",
     "courseId": "power-systems-2",
     "topicIds": [
+      "sequence-networks",
       "per-unit",
       "symmetrical-components",
-      "sequence-networks",
       "fault-levels",
       "fault-analysis",
       "generator-transients",
@@ -10984,8 +10994,8 @@
     "id": "ps2-otb-48",
     "courseId": "power-systems-2",
     "topicIds": [
-      "per-unit",
       "sequence-networks",
+      "per-unit",
       "fault-analysis",
       "generator-transients",
       "neutral-grounding"
@@ -11044,9 +11054,9 @@
     "id": "ps2-otb-49",
     "courseId": "power-systems-2",
     "topicIds": [
+      "generator-transients",
       "per-unit",
-      "fault-levels",
-      "generator-transients"
+      "fault-levels"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
