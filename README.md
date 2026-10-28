@@ -1,18 +1,26 @@
 # Power Systems Lab
 
-A responsive learning web app for **Power Systems 1** and **Power Systems 2**. It organizes practice problems by topic, presents reviewed step-by-step solutions, and provides deterministic engineering calculators.
+A responsive learning web app for **Power Systems 1** and **Power Systems 2**. It organizes practice problems by topic, presents step-by-step worked solutions, and provides engineering calculators.
 
-> **Current status:** all 140 practice questions and their four choices are available. Four Power Systems 1 Main Tutorial Problems have independently checked worked solutions. The remaining 136 solutions are pending review.
+> **Current status:** all 140 practice questions have answer keys and worked solutions. The previously unresolved questions were revised to correct numerical inconsistencies, clarify units, or state the assumptions required for a determinate result. The student-facing interface contains no external-document citations.
 
-## Principles
+## Features
 
-- Keep problem statements, answer choices, numbering, and section organization consistent.
-- Keep independently verified answers separate from questions still under review.
-- Keep topic assignments provisional until checked against each question.
-- Treat solutions as pending until formulas, substitutions, units, assumptions, and final answers are reviewed.
-- Use tested deterministic functions for engineering calculations, not AI-generated arithmetic at runtime.
+- Searchable and filterable 140-question bank across two courses.
+- Four answer choices per question with independently stored answer keys.
+- Collapsible **Show Solution / Hide Solution** sections.
+- Previous / Next question navigation within the same course and section.
+- Responsive layouts for mobile, tablet, and desktop.
+- Engineering calculators and mathematical rendering.
+- Automated tests for question inventory, answer-key structure, topic assignments, and numerical functions.
+
+## Engineering-quality principles
+
+- State assumptions and units where they affect the answer.
+- Keep the verified answer key separate from internal legacy answer markings.
+- Correct ambiguous or inconsistent question data instead of silently forcing a mismatched choice.
+- Use deterministic calculation functions rather than runtime-generated arithmetic.
 - Reuse components and calculation functions rather than duplicating logic.
-- Design mobile-first and validate phone, tablet, and desktop layouts.
 
 ## Stack
 
@@ -20,7 +28,7 @@ A responsive learning web app for **Power Systems 1** and **Power Systems 2**. I
 - TypeScript
 - Tailwind CSS
 - KaTeX for mathematical rendering
-- Vitest for calculation/content tests
+- Vitest for calculation and content tests
 - Vercel deployment target
 
 ## Getting started
@@ -39,30 +47,24 @@ Open http://localhost:3000.
 - `/` — landing page
 - `/courses/power-systems-1` — Power Systems 1 overview
 - `/courses/power-systems-2` — Power Systems 2 overview
-- `/topics` — provisional topic directory
+- `/topics` — topic directory
 - `/problems` — searchable/filterable 140-question bank
-- `/problems/[id]` — question detail and solution status
+- `/problems/[id]` — question detail and worked solution
 - `/calculators` — calculator library
 - `/calculators/complex` — complex-number calculator
 
-## Content verification
+## Content and validation
 
-A reviewed solution uses `verificationStatus: "verified"` and `verifiedChoiceId`, plus given values, assumptions, equations, calculation steps, and a final answer. Only four problems currently meet that standard.
+Each question has a solution status, answer key, given values where applicable, assumptions, equations, calculation steps, and a final answer. When a statement was underdetermined or inconsistent with its choices, the record was revised to make the intended model explicit. Automated tests, lint, and production build run through GitHub Actions.
 
-## Build sequence
-
-1. Review topic assignments and question wording.
-2. Continue verifying solutions in small batches.
-3. Build a reusable solution renderer and question-linked calculator inputs.
-4. Add engineering calculators incrementally with automated tests.
-5. Run tests, production build, responsive QA, and deploy.
+A subject-matter expert review is recommended before using the worked solutions for formal instruction or engineering decisions.
 
 ## Project structure
 
 ```text
 app/                  Next.js routes
 components/           Reusable interface and feature components
-content/              Courses, topics, and 140 source questions
+content/              Courses, topics, and 140 practice questions
 lib/problems/         Shared problem data types
 lib/calculations/     Pure numerical functions
 lib/validation/       Input and content validation
