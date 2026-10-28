@@ -17,7 +17,7 @@ describe("source problem inventory", () => {
     }
   });
 
-  it("does not confuse source-marked choices with verified solutions", () => {
+  it("does not confuse source-marked choices with verified solutions (current inventory: 97 verified, 43 pending)", () => {
     const pending = problems.filter((problem) => problem.verificationStatus === "pending");
     const verified = problems.filter((problem) => problem.verificationStatus === "verified");
     expect(pending).toHaveLength(43);
