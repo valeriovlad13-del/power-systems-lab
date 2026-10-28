@@ -5750,13 +5750,41 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Convert the line parameters to SI units",
+        "explanation": "Convert the inductance and capacitance per metre to henries and farads.",
+        "equations": [
+          "L=0.211\\times10^{-6}\\;\\text{H/m}",
+          "C=141.2\\times10^{-12}\\;\\text{F/m}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate propagation velocity",
+        "explanation": "For a low-loss line, wave velocity is approximately the reciprocal square root of LC.",
+        "equations": [
+          "v=\\frac{1}{\\sqrt{LC}}",
+          "v=\\frac{1}{\\sqrt{(0.211\\times10^{-6})(141.2\\times10^{-12})}}\\approx1.83\\times10^8\\;\\text{m/s}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Match the answer",
+        "explanation": "The calculated velocity matches option C."
+      }
+    ],
+    "assumptions": [
+      "The provided L and C are per-unit-length parameters; line losses are neglected."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated using v = 1/sqrt(LC); the result matches option C."
+    ],
+    "verifiedChoiceId": "C",
+    "finalAnswer": "1.83 × 10⁸ m/s"
   },
   {
     "id": "ps2-main-01",
