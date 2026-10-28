@@ -1,46 +1,57 @@
-# Source content audit
+# Content verification audit
 
-## Source inventory
+## Question-bank inventory
 
-Source file: `Power Systems Analysis 1 & 2 - Problems and Choices.pdf`
+The application contains 140 questions across two courses and four original sections.
 
-| Course | Original section | Source question numbers | Imported |
-|---|---|---:|---:|
-| Power Systems 1 | Main Tutorial Problems | 1–20 | 20 |
-| Power Systems 1 | Out of the Box Questions | 1–60 | 60 |
-| Power Systems 2 | Main Tutorial Problems | 1–10 | 10 |
-| Power Systems 2 | Out of the Box Questions | 1–50 | 50 |
-| **Total** | | | **140** |
+| Course | Section | Questions |
+|---|---|---:|
+| Power Systems 1 | Main Tutorial Problems | 20 |
+| Power Systems 1 | Out of the Box Questions | 60 |
+| Power Systems 2 | Main Tutorial Problems | 10 |
+| Power Systems 2 | Out of the Box Questions | 50 |
+| **Total** | | **140** |
 
-Every imported question currently has four answer choices and the source's asterisk-marked option stored separately from verified answer data.
+Each question retains its stable ID, original section and question number, statement, four answer choices, and a separate record of any source-marked choice. A source-marked choice is never treated as independently verified by itself.
 
-## Verification status
+## Current verification status
 
-- Independently worked and verified: 4
-  - Power Systems 1, Main Tutorial Problems 1
-  - Power Systems 1, Main Tutorial Problems 2
-  - Power Systems 1, Main Tutorial Problems 4
-  - Power Systems 1, Main Tutorial Problems 5
-- Pending solution review: 136
-- Topic assignment: provisional; inspect each classification against the problem statement before treating it as final.
+- **Independently verified:** 116 questions
+- **Pending review:** 24 questions
+- **In review:** 0 questions
+- **Flagged for correction:** 0 questions
 
-## Audit rules
+A question remains pending when its stated data, assumptions, units, or answer choices do not support a defensible unique answer. The pending set includes calculation discrepancies, missing assumptions, ambiguous units, and underdetermined sequence-component or transmission-line problems. These are intentionally not given guessed answers.
 
-1. Preserve original wording, answer choices, numbering, and source section.
-2. Add PDF page references when confirmed.
-3. Flag unreadable symbols, ambiguous notation, missing data, or suspected source errors.
-4. Topic assignments must not replace source section labels.
-5. Keep solutions `pending` until formulas, substitutions, units, assumptions, and final answers are independently checked.
-6. Never assume an asterisk-marked source answer is correct without verification.
-7. Record `sourceMarkedChoiceId` and `verifiedChoiceId` separately.
+## Verification standard
 
-## Remaining work
+A verified solution should contain, as appropriate:
 
-- [x] Import all 140 question statements and answer choices
-- [x] Check source-section counts and unique IDs
-- [x] Create searchable question bank and question detail pages
-- [x] Add first four independently checked solutions
-- [ ] Review all provisional topic assignments
-- [ ] Verify the remaining 136 worked solutions in batches
-- [ ] Add PDF page references to source records
-- [ ] Run automated tests and production build in the development environment
+1. Given values and the quantity to find.
+2. Explicit assumptions and a suitable engineering model.
+3. The governing formula and a clear substitution.
+4. Intermediate calculations with consistent units.
+5. A final answer that agrees with the stated data and can be reconciled with the answer choices.
+6. An independently checked verifiedChoiceId, kept separate from sourceMarkedChoiceId.
+
+If the computed result does not reasonably match an answer choice, or the problem is underdetermined, retain the question as pending and document the reason. Do not silently alter the given values, choose the closest option without justification, or invent missing assumptions.
+
+## Completed implementation and validation
+
+- [x] Import all 140 question statements and answer choices.
+- [x] Check unique IDs, four choices per question, and expected section counts.
+- [x] Add question search, filters, and detail pages.
+- [x] Add verified worked solutions and keep unresolved items pending.
+- [x] Add answer checking with safeguards for unverified questions.
+- [x] Collapse worked solutions until the student selects **Show Solution**.
+- [x] Add Previous Question / Next Question navigation within the same course and source section.
+- [x] Add automated inventory and calculation tests.
+- [x] Run automated tests, lint, and production build successfully on the current feature branch.
+
+## Remaining content work
+
+- [ ] Resolve the 24 pending questions against reliable, unambiguous problem data.
+- [ ] Review provisional topic assignments across all 140 questions.
+- [ ] Add further independent engineering checks as each pending question is resolved.
+
+The application remains in development. A successful test/build run confirms software validation, not that every question has a verified engineering solution.
