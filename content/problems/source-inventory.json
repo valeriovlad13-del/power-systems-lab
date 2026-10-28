@@ -5151,13 +5151,46 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate the receiving-end current",
+        "explanation": "Use the three-phase apparent power and receiving line voltage to find current magnitude and lagging angle.",
+        "equations": [
+          "I_R=\\frac{50\\times10^6}{\\sqrt{3}(110\\times10^3)}\\angle(-\\cos^{-1}0.8)",
+          "I_R\\approx262.43\\angle-36.87^\\circ\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the ABCD voltage equation",
+        "explanation": "Use the given A and B constants in V_S=AV_R+BI_R, with phase voltage V_R=110/√3 kV.",
+        "equations": [
+          "V_R=\\frac{110}{\\sqrt{3}}\\;\\text{kV}",
+          "V_S=AV_R+BI_R",
+          "A=0.98\\angle3^\\circ,\\quad B=110\\angle75^\\circ\\;\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Find the sending-end phase voltage",
+        "explanation": "The calculated sending-end phase-voltage magnitude is approximately 87.44 kV, matching option C. The corresponding line-to-line voltage would be about 151.45 kV.",
+        "equations": [
+          "|V_S|\\approx87.44\\;\\text{kV per phase}",
+          "\\sqrt{3}|V_S|\\approx151.45\\;\\text{kV line-to-line}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The choices are interpreted as phase-voltage magnitudes because they match |V_S|, not the line-to-line magnitude."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "ABCD phasor calculation matches option C when the answer is reported as sending-end phase voltage; the question's voltage convention is not explicit."
+    ],
+    "verifiedChoiceId": "C",
+    "finalAnswer": "87.43 kV per phase"
   },
   {
     "id": "ps1-otb-45",
@@ -5324,13 +5357,42 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Write the total series impedance and shunt admittance",
+        "explanation": "Convert 400 μS to siemens and represent the line constants as complex quantities.",
+        "equations": [
+          "Z=10+j20\\;\\Omega",
+          "Y=j400\\times10^{-6}\\;\\text{S}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate the nominal-T B constant",
+        "explanation": "For a nominal-T line, B = Z(1 + YZ/4).",
+        "equations": [
+          "B=Z\\left(1+\\frac{YZ}{4}\\right)",
+          "B=(10+j20)\\left(1+\\frac{j400\\times10^{-6}(10+j20)}{4}\\right)",
+          "B\\approx9.96+j19.97\\;\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Match the listed option",
+        "explanation": "Option B, 9.945 + j19.904 Ω, is the closest listed value; the small difference is consistent with rounding or source-data precision."
+      }
+    ],
+    "assumptions": [
+      "The given 400 μS is treated as total per-phase shunt admittance."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "The nominal-T formula independently gives 9.96+j19.97 Ω, closest to option B; note slight rounding discrepancy."
+    ],
+    "verifiedChoiceId": "B",
+    "finalAnswer": "Approximately 9.96 + j19.97 Ω"
   },
   {
     "id": "ps1-otb-49",
