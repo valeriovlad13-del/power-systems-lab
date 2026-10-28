@@ -4338,13 +4338,45 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate the total series resistance and reactance",
+        "explanation": "Multiply the per-kilometre resistance and inductance by the line length, then calculate inductive reactance.",
+        "equations": [
+          "R=0.03(16)=0.48\\;\\Omega",
+          "X_L=2\\pi fL=2\\pi(50)(0.7\\times10^{-3})(16)\\approx3.519\\;\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate load current and copper loss",
+        "explanation": "Use the three-phase power equation and the three-conductor resistance loss.",
+        "equations": [
+          "I=\\frac{P}{\\sqrt{3}V_{LL}\\cos\\phi}=\\frac{1000\\times10^3}{\\sqrt{3}(11\\times10^3)(0.8)}\\approx65.61\\;\\text{A}",
+          "P_{loss}=3I^2R=3(65.61)^2(0.48)\\approx6.20\\;\\text{kW}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate efficiency",
+        "explanation": "Efficiency is output power divided by input power.",
+        "equations": [
+          "\\eta=\\frac{P_{out}}{P_{out}+P_{loss}}\\times100\\%\\approx99.38\\%",
+          "\\text{Choice B}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Balanced three-phase load; the stated resistance is per phase and per kilometre."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Recalculated line loss and efficiency; result matches option B."
+    ],
+    "verifiedChoiceId": "B",
+    "finalAnswer": "99.38%"
   },
   {
     "id": "ps1-otb-31",
@@ -4471,13 +4503,40 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate receiving-end current",
+        "explanation": "Use the three-phase power relation at the specified receiving voltage and power factor.",
+        "equations": [
+          "I=\\frac{15\\times10^6}{\\sqrt{3}(132\\times10^3)(0.8)}\\approx82.01\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Use the permitted transmission loss",
+        "explanation": "Five percent of the 15 MW load is 750 kW. With 1 Ω/km per phase, total three-phase copper loss is 3I²R per kilometre.",
+        "equations": [
+          "P_{loss}=0.05(15\\times10^6)=750\\;\\text{kW}",
+          "d=\\frac{P_{loss}}{3I^2R_{km}}=\\frac{750000}{3(82.01)^2(1)}\\approx37.17\\;\\text{km}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Select the closest listed value",
+        "explanation": "The calculated distance rounds to the listed 37.18 km, option D."
+      }
+    ],
+    "assumptions": [
+      "The 5% loss is taken as 5% of the 15 MW delivered load; resistance is 1 Ω per conductor per kilometre."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Recalculated distance from three-phase copper losses; result matches option D."
+    ],
+    "verifiedChoiceId": "D",
+    "finalAnswer": "37.18 km"
   },
   {
     "id": "ps1-otb-33",
@@ -4516,13 +4575,40 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate receiving-end current",
+        "explanation": "Use the three-phase power equation with 0.85 power factor.",
+        "equations": [
+          "I=\\frac{15\\times10^6}{\\sqrt{3}(132\\times10^3)(0.85)}\\approx77.19\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate the distance from allowable loss",
+        "explanation": "The maximum loss is 7.5% of 15 MW, or 1.125 MW. Apply the three-phase conductor-loss formula.",
+        "equations": [
+          "P_{loss}=0.075(15\\times10^6)=1.125\\times10^6\\;\\text{W}",
+          "d=\\frac{P_{loss}}{3I^2R_{km}}=\\frac{1.125\\times10^6}{3(77.19)^2(0.905)}\\approx69.55\\;\\text{km}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Select the matching distance",
+        "explanation": "The result rounds to 70 km, option B."
+      }
+    ],
+    "assumptions": [
+      "The stated 7.5% loss is relative to the 15 MW load; resistance is per phase per kilometre."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Recalculated using the specified power factor, voltage, resistance, and loss limit; result matches option B."
+    ],
+    "verifiedChoiceId": "B",
+    "finalAnswer": "70 km"
   },
   {
     "id": "ps1-otb-34",
