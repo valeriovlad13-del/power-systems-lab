@@ -5571,13 +5571,57 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate the positive-sequence component at phase a",
+        "explanation": "Apply the positive-sequence transformation to the given phase currents.",
+        "equations": [
+          "a=1\\angle120^\\circ",
+          "I_{1a}=\\frac{I_a+aI_b+a^2I_c}{3}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Substitute the phase currents",
+        "explanation": "Use the given rectangular phasors and evaluate the transformation.",
+        "equations": [
+          "I_{1a}=\\frac{(34.64)+a(-10-j17.32)+a^2(-10+j17.32)}{3}",
+          "I_{1a}\\approx24.88+j0\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Convert the positive-sequence component to phase c",
+        "explanation": "Positive-sequence phase c lags phase a by 120 degrees, so multiply by a.",
+        "equations": [
+          "I_{1c}=aI_{1a}=24.88\\angle120^\\circ",
+          "I_{1c}\\approx-12.44+j21.55\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The result matches option D.",
+        "equations": [
+          "I_{1c}\\approx-12.44+j21.55\\;\\text{A}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Use the symmetrical-component convention a = 1∠120° and positive-sequence phase relationships I₁b = a²I₁a and I₁c = aI₁a."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated using the positive-sequence transformation and phase-c rotation. Result matches option D."
+    ],
+    "verifiedChoiceId": "d",
+    "find": "Find the positive-sequence current component of phase c from the three phase-current phasors.",
+    "finalAnswer": {
+      "value": "-12.44 + j21.55",
+      "unit": "A"
+    }
   },
   {
     "id": "ps2-main-04",
@@ -7340,13 +7384,56 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Write the positive-sequence formula",
+        "explanation": "The positive-sequence component is obtained from the three phase currents using the symmetrical-component transformation.",
+        "equations": [
+          "I_1=\\frac{I_a+aI_b+a^2I_c}{3},\\qquad a=1\\angle120^\\circ"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Convert the given phasors to rectangular form",
+        "explanation": "Convert each magnitude-angle current to its real and imaginary components before applying the transformation.",
+        "equations": [
+          "I_a=72.1\\angle33.7^\\circ",
+          "I_b=82.46\\angle166^\\circ",
+          "I_c=63.24\\angle(-71.56^\\circ)"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Apply the transformation",
+        "explanation": "Substituting the converted phasors gives the positive-sequence current in rectangular form.",
+        "equations": [
+          "I_1\\approx6.92-j8.86\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The result matches option A after rounding.",
+        "equations": [
+          "I_1\\approx6.9-j8.87\\;\\text{A}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Use a = 1∠120° and I₁ = (Iₐ + aIᵦ + a²I꜀)/3."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated from the supplied polar phasors. Result matches option A; the source-marked choice was not relied on."
+    ],
+    "verifiedChoiceId": "a",
+    "find": "Calculate the positive-sequence current component from three phase-current polar phasors.",
+    "finalAnswer": {
+      "value": "6.9 - j8.87",
+      "unit": "A"
+    }
   },
   {
     "id": "ps2-otb-23",
@@ -7640,13 +7727,58 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Use the neutral-current relation",
+        "explanation": "The neutral current gives the algebraic sum of the three phase currents under the stated sign convention.",
+        "equations": [
+          "I_a+I_b+I_c=j60\\;\\text{A}",
+          "I_a=0,\\quad I_b=-86.6+j30\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Solve for phase-c current",
+        "explanation": "Rearrange the current sum to obtain the missing phase-c current.",
+        "equations": [
+          "I_c=j60-I_a-I_b",
+          "I_c=86.6+j30\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate the positive-sequence component",
+        "explanation": "Apply the positive-sequence transformation for phase a.",
+        "equations": [
+          "I_{1a}=\\frac{I_a+aI_b+a^2I_c}{3},\\qquad a=1\\angle120^\\circ",
+          "I_{1a}\\approx-j60\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The result matches option C.",
+        "equations": [
+          "I_{1a}\\approx-j60\\;\\text{A}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Phase a is on no-load, so Iₐ = 0.",
+      "Interpret the given neutral current as the sum Iₐ + Iᵦ + I꜀ = j60 A, consistent with the listed choice."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently evaluated using the stated neutral-current relation. The neutral-current sign convention is assumed as the phase-current sum; under this convention the result matches option C."
+    ],
+    "verifiedChoiceId": "c",
+    "find": "Find the phase-a positive-sequence current component from line currents and neutral current.",
+    "finalAnswer": {
+      "value": "-j60",
+      "unit": "A"
+    }
   },
   {
     "id": "ps2-otb-28",
