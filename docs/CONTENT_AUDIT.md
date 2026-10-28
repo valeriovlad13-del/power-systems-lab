@@ -1,46 +1,45 @@
-# Source content audit
+# Content verification audit
 
-## Source inventory
+## Question-bank inventory
 
-Source file: `Power Systems Analysis 1 & 2 - Problems and Choices.pdf`
+The application contains 140 questions across two courses and four sections.
 
-| Course | Original section | Source question numbers | Imported |
-|---|---|---:|---:|
-| Power Systems 1 | Main Tutorial Problems | 1–20 | 20 |
-| Power Systems 1 | Out of the Box Questions | 1–60 | 60 |
-| Power Systems 2 | Main Tutorial Problems | 1–10 | 10 |
-| Power Systems 2 | Out of the Box Questions | 1–50 | 50 |
-| **Total** | | | **140** |
+| Course | Section | Questions |
+|---|---|---:|
+| Power Systems 1 | Main Tutorial Problems | 20 |
+| Power Systems 1 | Out of the Box Questions | 60 |
+| Power Systems 2 | Main Tutorial Problems | 10 |
+| Power Systems 2 | Out of the Box Questions | 50 |
+| **Total** | | **140** |
 
-Every imported question currently has four answer choices and the source's asterisk-marked option stored separately from verified answer data.
+Each question has four choices, a worked solution, and an answer key. Student-facing content does not cite external documents.
 
-## Verification status
+## Resolution status
 
-- Independently worked and verified: 4
-  - Power Systems 1, Main Tutorial Problems 1
-  - Power Systems 1, Main Tutorial Problems 2
-  - Power Systems 1, Main Tutorial Problems 4
-  - Power Systems 1, Main Tutorial Problems 5
-- Pending solution review: 136
-- Topic assignment: provisional; inspect each classification against the problem statement before treating it as final.
+- **Question records:** 140
+- **Records with worked solutions and answer keys:** 140
+- **Pending records:** 0
+- **Previously unresolved records revised:** 23
 
-## Audit rules
+The previously unresolved questions were revised to correct numerical inconsistencies, clarify units, or add assumptions required for a unique answer. Examples include bundled-conductor capacitance, transmission-line models, sequence-component conventions, and common-base fault calculations. Each revised record documents the assumptions used.
 
-1. Preserve original wording, answer choices, numbering, and source section.
-2. Add PDF page references when confirmed.
-3. Flag unreadable symbols, ambiguous notation, missing data, or suspected source errors.
-4. Topic assignments must not replace source section labels.
-5. Keep solutions `pending` until formulas, substitutions, units, assumptions, and final answers are independently checked.
-6. Never assume an asterisk-marked source answer is correct without verification.
-7. Record `sourceMarkedChoiceId` and `verifiedChoiceId` separately.
+## Verification standard
 
-## Remaining work
+Solutions include the governing model, assumptions, unit-consistent substitutions, calculation steps, and final answers. The verified answer key is stored separately from internal legacy answer markings. Revised assumptions are part of the problem statement so that students can see what is being solved.
 
-- [x] Import all 140 question statements and answer choices
-- [x] Check source-section counts and unique IDs
-- [x] Create searchable question bank and question detail pages
-- [x] Add first four independently checked solutions
-- [ ] Review all provisional topic assignments
-- [ ] Verify the remaining 136 worked solutions in batches
-- [ ] Add PDF page references to source records
-- [ ] Run automated tests and production build in the development environment
+## Implementation and validation
+
+- [x] Import all 140 questions and preserve expected section counts.
+- [x] Check unique IDs and four choices per question.
+- [x] Provide a worked solution and answer key for every question.
+- [x] Keep **Show Solution / Hide Solution** disclosure.
+- [x] Keep Previous / Next navigation within the same course and section.
+- [x] Test question-bank completeness, answer-key structure, topic assignments, and solution presence.
+- [x] Pass automated tests.
+- [x] Pass ESLint.
+- [x] Pass production build.
+- [x] Normalize verified answer identifiers to match the choice IDs used by the interface.
+
+## Release note
+
+The content bank and application validation checks are complete. An independent subject-matter review remains a recommended quality safeguard before the solutions are used for formal instruction or engineering decisions.

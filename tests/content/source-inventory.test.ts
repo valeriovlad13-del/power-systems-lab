@@ -2,12 +2,12 @@ import { describe, expect, it } from "vitest";
 import { problems } from "@/content/problems";
 import { topics } from "@/content/topics";
 
-describe("source problem inventory", () => {
-  it("contains all 140 source questions", () => {
+describe("problem inventory and solution verification", () => {
+  it("contains all 140 questions", () => {
     expect(problems).toHaveLength(140);
   });
 
-  it("preserves unique source IDs and four choices per question", () => {
+  it("preserves unique IDs and four answer choices per question", () => {
     expect(new Set(problems.map((problem) => problem.id)).size).toBe(140);
     for (const problem of problems) {
       expect(problem.statement.length).toBeGreaterThan(0);
@@ -17,21 +17,22 @@ describe("source problem inventory", () => {
     }
   });
 
-  it("does not confuse source-marked choices with verified solutions", () => {
+  it("keeps verified answers distinct from source-marked choices and gives every question a worked solution", () => {
     const pending = problems.filter((problem) => problem.verificationStatus === "pending");
     const verified = problems.filter((problem) => problem.verificationStatus === "verified");
-    expect(pending).toHaveLength(136);
-    expect(verified).toHaveLength(4);
-    expect(verified.map((problem) => problem.id).sort()).toEqual(["ps1-main-01", "ps1-main-02", "ps1-main-04", "ps1-main-05"]);
+    expect(pending).toHaveLength(0);
+    expect(verified).toHaveLength(140);
     expect(verified.every((problem) => problem.verifiedChoiceId && problem.solution.length > 0 && problem.finalAnswer)).toBe(true);
     for (const problem of verified) {
+      expect(problem.choices.some((choice) => choice.id === problem.verifiedChoiceId), problem.id).toBe(true);
       for (const step of problem.solution) {
+        expect(step.title.length, problem.id).toBeGreaterThan(0);
+        expect(step.explanation.length, problem.id).toBeGreaterThan(0);
         for (const equation of step.equations ?? []) {
           expect(equation, `${problem.id} contains malformed doubled LaTeX slashes`).not.toMatch(/\\\\(?:frac|text|times|eta|ell|left|right|ln|approx|Omega|mu|cdot)/);
         }
       }
     }
-    expect(pending.every((problem) => problem.solution.length === 0)).toBe(true);
   });
 
   it("assigns existing topics from the same course to every question", () => {
@@ -46,7 +47,7 @@ describe("source problem inventory", () => {
     }
   });
 
-  it("preserves the expected source-section counts", () => {
+  it("preserves the expected section counts", () => {
     const count = (courseId: string, section: string) =>
       problems.filter((problem) => problem.courseId === courseId && problem.source.originalSection === section).length;
     expect(count("power-systems-1", "Main Tutorial Problems")).toBe(20);

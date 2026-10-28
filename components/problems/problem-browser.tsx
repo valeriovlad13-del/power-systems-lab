@@ -53,7 +53,7 @@ export default function ProblemBrowser({ initialCourse = "all", initialTopic = "
     <div className="mt-7">
       <div className="grid gap-3 rounded-2xl border border-[var(--border)] bg-white p-4 sm:grid-cols-2 lg:grid-cols-4">
         <label className="text-xs font-semibold text-[var(--muted)]">Search questions
-          <input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Keyword, choice, or source ID" aria-label="Search questions by keyword, answer choice, or source ID" className="mt-2 w-full rounded-lg border border-[var(--border)] px-3 py-2.5 text-sm font-normal text-[var(--foreground)] outline-none focus:border-[var(--accent)]" />
+          <input value={search} onChange={(event) => setSearch(event.target.value)} placeholder="Keyword, answer choice, or question ID" aria-label="Search questions by keyword, answer choice, or question ID" className="mt-2 w-full rounded-lg border border-[var(--border)] px-3 py-2.5 text-sm font-normal text-[var(--foreground)] outline-none focus:border-[var(--accent)]" />
         </label>
         <label className="text-xs font-semibold text-[var(--muted)]">Course
           <select value={course} onChange={(event) => changeCourse(event.target.value as CourseFilter)} className="mt-2 w-full rounded-lg border border-[var(--border)] bg-white px-3 py-2.5 text-sm font-normal text-[var(--foreground)]">
@@ -81,10 +81,10 @@ export default function ProblemBrowser({ initialCourse = "all", initialTopic = "
           const courseLabel = courseLabels[problem.courseId];
           const topicNames = problem.topicIds.map((id) => topics.find((item) => item.id === id)?.title).filter(Boolean);
           return <Link key={problem.id} href={`/problems/${problem.id}`} className="block rounded-xl border border-[var(--border)] bg-white p-4 transition hover:border-[var(--accent)] hover:shadow-sm sm:p-5">
-            <div className="flex flex-wrap items-center gap-2 text-xs"><span className="font-semibold text-[var(--accent)]">{courseLabel}</span><span className="text-[var(--muted)]">·</span><span className="text-[var(--muted)]">{problem.source.originalSection}</span><span className="ml-auto rounded-full border border-amber-200 bg-amber-50 px-2.5 py-1 font-medium text-amber-900">Solution pending review</span></div>
+            <div className="flex flex-wrap items-center gap-2 text-xs"><span className="font-semibold text-[var(--accent)]">{courseLabel}</span><span className="text-[var(--muted)]">·</span><span className="text-[var(--muted)]">{problem.source.originalSection}</span><span className={`ml-auto rounded-full px-2.5 py-1 font-medium ${problem.verificationStatus === "verified" ? "bg-emerald-100 text-emerald-900" : "border border-amber-200 bg-amber-50 text-amber-900"}`}>{problem.verificationStatus === "verified" ? "Verified solution" : "Solution pending review"}</span></div>
             <h2 className="mt-3 font-semibold leading-6">{problem.source.originalQuestionNumber}. {problem.statement}</h2>
             {topicNames.length > 0 && <p className="mt-3 text-xs leading-5 text-[var(--muted)]">{topicNames.join(" · ")}</p>}
-            <p className="mt-3 text-xs text-[var(--muted)]">Source ID: {problem.id}</p>
+            <p className="mt-3 text-xs text-[var(--muted)]">Question ID: {problem.id}</p>
           </Link>;
         })}
         {filtered.length === 0 && <div className="rounded-xl border border-dashed border-[var(--border)] p-10 text-center"><p className="font-semibold">No questions match these filters.</p><p className="mt-2 text-sm text-[var(--muted)]">Try a different keyword, course, or topic.</p></div>}

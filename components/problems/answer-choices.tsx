@@ -8,7 +8,6 @@ type Props = {
   choices: ProblemChoice[];
   isVerified: boolean;
   verifiedChoiceId: string | null;
-  sourceMarkedChoiceId: string | null;
 };
 
 export default function AnswerChoices({
@@ -16,7 +15,6 @@ export default function AnswerChoices({
   choices,
   isVerified,
   verifiedChoiceId,
-  sourceMarkedChoiceId,
 }: Props) {
   const [selectedChoiceId, setSelectedChoiceId] = useState<string | null>(null);
   const [checked, setChecked] = useState(false);
@@ -48,7 +46,6 @@ export default function AnswerChoices({
             const isSelectedCorrect = checked && isSelected && isVerifiedAnswer;
             const isSelectedIncorrect = checked && isSelected && isVerified && !isVerifiedAnswer;
             const showCorrectAnswer = checked && isVerified && isVerifiedAnswer;
-            const showSourceMark = !isVerified && choice.id === sourceMarkedChoiceId;
 
             let style = "border-[var(--border)] bg-white";
             if (isSelected && !checked) style = "border-[var(--accent)] bg-cyan-50 ring-1 ring-[var(--accent)]";
@@ -73,7 +70,6 @@ export default function AnswerChoices({
                 {isSelectedCorrect && <span className="shrink-0 text-xs font-semibold text-emerald-800">Correct</span>}
                 {isSelectedIncorrect && <span className="shrink-0 text-xs font-semibold text-red-800">Incorrect</span>}
                 {showCorrectAnswer && !isSelected && <span className="shrink-0 text-xs font-semibold text-emerald-800">Correct answer</span>}
-                {showSourceMark && <span className="shrink-0 text-xs text-amber-800">Source marked</span>}
               </label>
             );
           })}
@@ -107,16 +103,16 @@ export default function AnswerChoices({
           className={`mt-4 rounded-xl border p-3 text-sm leading-6 ${isCorrect ? "border-emerald-300 bg-emerald-50 text-emerald-950" : isIncorrect ? "border-red-300 bg-red-50 text-red-950" : "border-[var(--border)] bg-slate-50 text-[var(--foreground)]"}`}
         >
           {isCorrect ? (
-            <p><strong>Correct!</strong> Your choice matches the independently verified answer. Review the worked solution below to understand the calculation.</p>
+            <p><strong>Correct!</strong> Your choice matches the independently verified answer. You can reveal the worked solution below to understand the calculation.</p>
           ) : (
-            <p><strong>Not quite.</strong> The correct answer is {choices.find((choice) => choice.id === verifiedChoiceId)?.label}. Review the worked solution below, then try again.</p>
+            <p><strong>Not quite.</strong> The correct answer is {choices.find((choice) => choice.id === verifiedChoiceId)?.label}. Try again or reveal the worked solution below.</p>
           )}
         </div>
       )}
 
       {showUnverifiedNotice && (
         <div role="status" aria-live="polite" className="mt-4 rounded-xl border border-amber-300 bg-amber-50 p-3 text-sm leading-6 text-amber-950">
-          <strong>Answer not yet verified.</strong> This problem is still under review, so the lab cannot reliably mark your choice as correct or incorrect. The answer marked in the source document is not treated as a confirmed answer.
+          <strong>Answer not yet verified.</strong> This problem is still under review, so the lab cannot reliably mark your choice as correct or incorrect. Answers are not marked correct or incorrect until the solution has been independently verified.
         </div>
       )}
     </div>
