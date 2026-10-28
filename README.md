@@ -6,7 +6,7 @@ A responsive power-systems learning web app organized around lesson topics. It p
 
 ## Features
 
-- Searchable 140-question bank organized by lesson topic, with one primary lesson per question and secondary concept tags.
+- Searchable 140-question bank organized by lesson topic, with one primary lesson per question and secondary concept tags. Topic-based review and question navigation use the primary lesson to avoid duplicate listings.
 - Four answer choices per question with independently stored answer keys.
 - Collapsible **Show Solution / Hide Solution** sections.
 - Previous / Next question navigation within the same lesson topic.
