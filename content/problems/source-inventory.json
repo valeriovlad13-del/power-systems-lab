@@ -6949,13 +6949,54 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Write the negative-sequence formula",
+        "explanation": "The negative-sequence component of phase a is calculated from all three phase currents using the negative-sequence operator.",
+        "equations": [
+          "I_2=\\frac{1}{3}(I_a+a^2I_b+aI_c)"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Substitute the given currents",
+        "explanation": "The phase-b current is zero, so its term vanishes. The remaining currents are 10∠−30° A and 10∠150° A.",
+        "equations": [
+          "I_2=\\frac{1}{3}\\left[10\\angle(-30^\\circ)+10\\angle(270^\\circ)\\right]"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Evaluate the phasor expression",
+        "explanation": "Using a = 1∠120°, the aIc term rotates Ic by 120°, so 10∠150° becomes 10∠270°. Adding it to 10∠−30° and dividing by three gives the listed phasor.",
+        "equations": [
+          "I_2=\\frac{10\\angle(-30^\\circ)+10\\angle(-90^\\circ)}{3}=5.77\\angle(-60^\\circ)\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching answer",
+        "explanation": "The calculated negative-sequence current matches option B.",
+        "equations": [
+          "I_2=5.77\\angle(-60^\\circ)\\;\\text{A}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Use the conventional symmetrical-component transformation with a = 1∠120° and I₂ = (Iₐ + a²Iᵦ + aI꜀)/3."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently checked using the conventional symmetrical-component transformation; result matches option B."
+    ],
+    "verifiedChoiceId": "b",
+    "find": "Negative-sequence current component of phase a for the supplied three-phase currents.",
+    "finalAnswer": {
+      "value": "5.77∠−60°",
+      "unit": "A"
+    }
   },
   {
     "id": "ps2-otb-20",
