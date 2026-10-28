@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { problems } from "@/content/problems";
 import { topics } from "@/content/topics";
 
-describe("source problem inventory", () => {
+describe("source problem inventory (reviewed unresolved items remain pending)", () => {
   it("contains all 140 source questions", () => {
     expect(problems).toHaveLength(140);
   });
