@@ -1918,13 +1918,51 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate total series impedance and shunt admittance",
+        "explanation": "Multiply the per-kilometre values by 100 km. The specified susceptance is 0.04×10⁻⁴ S/km.",
+        "equations": [
+          "Z=(0.1+j0.2)(100)=10+j20\\;\\Omega",
+          "Y=j(0.04\\times10^{-4})(100)=j4\\times10^{-4}\\;\\text{S}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate receiving-end current",
+        "explanation": "Use the balanced three-phase load equation at 66 kV and 0.8 lagging power factor.",
+        "equations": [
+          "I_R=\\frac{10\\times10^6}{\\sqrt{3}(66\\times10^3)(0.8)}\\angle(-\\cos^{-1}0.8)",
+          "I_R\\approx109.35\\angle-36.87^\\circ\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Apply the nominal-T model",
+        "explanation": "Use A = D = 1 + YZ/2 and C = Y(1 + YZ/4), then calculate I_S = CV_R + DI_R.",
+        "equations": [
+          "A=D=1+\\frac{YZ}{2},\\quad C=Y\\left(1+\\frac{YZ}{4}\\right)",
+          "I_S=CV_R+DI_R",
+          "|I_S|\\approx100.5\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the closest choice",
+        "explanation": "The calculated sending-end current is closest to option D, 100 A."
+      }
+    ],
+    "assumptions": [
+      "Balanced three-phase load; 66 kV is receiving-end line-to-line voltage; given shunt susceptance is per kilometre per phase."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Nominal-T phasor calculation gives approximately 100.5 A, closest to option D (100 A)."
+    ],
+    "verifiedChoiceId": "D",
+    "finalAnswer": "Approximately 100.5 A"
   },
   {
     "id": "ps1-otb-01",
@@ -4780,13 +4818,45 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate total line constants and receiving current",
+        "explanation": "Multiply the series parameters and shunt admittance by 100 km, then calculate the lagging load current.",
+        "equations": [
+          "Z=(0.2+j0.4)(100)=20+j40\\;\\Omega",
+          "Y=j(2.5\\times10^{-6})(100)=j2.5\\times10^{-4}\\;\\text{S}",
+          "I_R=\\frac{20\\times10^6}{\\sqrt{3}(110\\times10^3)(0.9)}\\angle(-\\cos^{-1}0.9)\\approx116.6\\angle-25.84^\\circ\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the nominal-T voltage equation",
+        "explanation": "Use A = 1 + YZ/2 and B = Z(1 + YZ/4) to calculate the sending-end phase voltage.",
+        "equations": [
+          "A=1+\\frac{YZ}{2},\\quad B=Z\\left(1+\\frac{YZ}{4}\\right)",
+          "V_S=AV_R+BI_R"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate sending-end line voltage",
+        "explanation": "The calculated sending-end voltage is approximately 116.73 kV line-to-line, matching option B.",
+        "equations": [
+          "|V_{S,LL}|\\approx116.73\\;\\text{kV}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Balanced three-phase load; stated shunt admittance is per kilometre per phase; nominal-T equivalent."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Nominal-T phasor calculation gives 116.73 kV, matching option B."
+    ],
+    "verifiedChoiceId": "B",
+    "finalAnswer": "116.72 kV line-to-line"
   },
   {
     "id": "ps1-otb-38",
