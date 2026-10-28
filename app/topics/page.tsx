@@ -18,7 +18,7 @@ export default function TopicsPage() {
       </div>
       <div className="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {topics.map((topic) => {
-          const topicProblems = problems.filter((problem) => problem.topicIds.includes(topic.id));
+          const topicProblems = problems.filter((problem) => problem.primaryTopicId === topic.id);
           const verifiedCount = topicProblems.filter((problem) => problem.verificationStatus === "verified").length;
           return (
             <article key={topic.id} className="flex h-full flex-col rounded-2xl border border-[var(--border)] bg-white p-5 transition hover:border-[var(--accent)] hover:shadow-sm">
@@ -36,7 +36,7 @@ export default function TopicsPage() {
         })}
       </div>
       <p className="mt-8 rounded-xl border border-[var(--border)] bg-slate-50 p-4 text-sm leading-6 text-[var(--muted)]">
-        A question may support more than one lesson topic, so topic counts can overlap. The library total counts each question only once.
+        Each question is assigned one primary lesson for focused review and testing. Related concepts remain available as secondary tags.
       </p>
     </main>
   );
