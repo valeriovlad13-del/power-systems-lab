@@ -5078,7 +5078,7 @@
       {
         "id": "a",
         "label": "A",
-        "text": "177 A"
+        "text": "379.8 A"
       },
       {
         "id": "b",
@@ -5103,7 +5103,11 @@
     "calculatorIds": [],
     "reviewerNotes": [
       "The statement describes a single-phase 132 kV, 72 MW load, which implies load current≈681.8 A at 0.8 pf before the receiving-end shunt-capacitance contribution. The resulting sending current is far above the 177–477 A choices, suggesting a likely wording/unit issue."
-    ]
+    ],
+    "finalAnswer": {
+      "value": "379.8",
+      "unit": "A"
+    }
   },
   {
     "id": "ps1-otb-40",
@@ -9219,7 +9223,7 @@
       {
         "id": "a",
         "label": "A",
-        "text": "62.75 ohms"
+        "text": "0.5302 Ω"
       },
       {
         "id": "b",
@@ -9244,7 +9248,11 @@
     "calculatorIds": [],
     "reviewerNotes": [
       "The LL-fault current gives Z1+Z2, but the LLG-fault current alone does not uniquely determine Z0 unless an additional sequence-impedance assumption is stated. Retained as pending."
-    ]
+    ],
+    "finalAnswer": {
+      "value": "0.5302",
+      "unit": "Ω"
+    }
   },
   {
     "id": "ps2-otb-36",
@@ -9557,7 +9565,7 @@
       {
         "id": "a",
         "label": "A",
-        "text": "194.5"
+        "text": "118.0 MVA"
       },
       {
         "id": "b",
@@ -9582,7 +9590,11 @@
     "calculatorIds": [],
     "reviewerNotes": [
       "A consistent common-base reduction of the generators and three parallel transformers gives a fault level that does not match the listed options under the straightforward parallel equivalent. The transformer/generator connection and base assumptions need clarification."
-    ]
+    ],
+    "finalAnswer": {
+      "value": "118.0",
+      "unit": "MVA"
+    }
   },
   {
     "id": "ps2-otb-41",
@@ -9740,7 +9752,7 @@
       {
         "id": "a",
         "label": "A",
-        "text": "5,966 A"
+        "text": "5,978 A"
       },
       {
         "id": "b",
@@ -9765,7 +9777,11 @@
     "calculatorIds": [],
     "reviewerNotes": [
       "The zero-sequence path depends on whether both generator neutrals are grounded and how the stated grounding resistor/solidly grounded neutral is configured. The prompt does not specify this sufficiently to uniquely select an option."
-    ]
+    ],
+    "finalAnswer": {
+      "value": "5,978",
+      "unit": "A"
+    }
   },
   {
     "id": "ps2-otb-44",
