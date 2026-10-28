@@ -5455,7 +5455,7 @@
       {
         "id": "a",
         "label": "A",
-        "text": "256.1 A"
+        "text": "203.8 A"
       },
       {
         "id": "b",
@@ -5497,7 +5497,9 @@
         "title": "Calculate and report the result",
         "explanation": "Round the result to a suitable precision.",
         "equations": [
-          "I_S=I_R+YV_S/2\\approx256.1\\;A\\quad(\\text{nominal-}\\pi)"
+          "Z=9.6+j2\\pi(50)(0.097)=9.6+j30.47\\;\\Omega;\\quad Y=j2\\pi(50)(0.765\\times10^{-6})\\;S",
+          "A=D=1+YZ/2,\\;C=Y(1+YZ/4)",
+          "I_S=C V_R+D I_R;\\quad |I_S|\\approx203.8\\;A"
         ]
       }
     ],
@@ -5506,13 +5508,13 @@
     ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
+      "Revised statement and answer checked against the stated model and recalculated with consistent units."
     ],
     "verifiedChoiceId": "a",
     "given": [],
     "find": "Determine the requested electrical engineering quantity from the corrected statement.",
     "finalAnswer": {
-      "value": "256.1",
+      "value": "203.8",
       "unit": "A"
     }
   },
@@ -5838,7 +5840,7 @@
       {
         "id": "a",
         "label": "A",
-        "text": "95.19 %"
+        "text": "95.02%"
       },
       {
         "id": "b",
@@ -5880,7 +5882,9 @@
         "title": "Calculate and report the result",
         "explanation": "Round the result to a suitable precision.",
         "equations": [
-          "\\eta=P_R/P_S\\times100\\approx95.19\\%\\quad(\\text{nominal-}\\pi)"
+          "Z=10+j50\\;\\Omega,\\quad Y=j0.001\\;S",
+          "A=D=1+YZ/2,\\;B=Z,\\;C=Y(1+YZ/4)",
+          "P_S=3\\operatorname{Re}(V_{S,ph}I_S^*),\\quad \\eta=P_R/P_S\\times100\\approx95.02\\%"
         ]
       }
     ],
@@ -5889,13 +5893,13 @@
     ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
+      "Revised statement and answer checked against the stated model and recalculated with consistent units."
     ],
     "verifiedChoiceId": "a",
     "given": [],
     "find": "Determine the requested electrical engineering quantity from the corrected statement.",
     "finalAnswer": {
-      "value": "95.19",
+      "value": "95.02",
       "unit": "%"
     }
   },
@@ -10481,7 +10485,7 @@
       {
         "id": "a",
         "label": "A",
-        "text": "5,978 A"
+        "text": "5,979 A"
       },
       {
         "id": "b",
@@ -10523,7 +10527,9 @@
         "title": "Calculate and report the result",
         "explanation": "Round the result to a suitable precision.",
         "equations": [
-          "I_f=9.4937(629.8)\\approx5,978\\;A"
+          "I_{base}=12\\times10^6/[\\sqrt3(11\\times10^3)]=629.84\\;A",
+          "I_f(pu)=3/(0.09+0.05+0.176)=9.4937\\;pu",
+          "I_f=9.4937(629.84)=5,979.5\\;A\\approx5,979\\;A"
         ]
       }
     ],
@@ -10532,10 +10538,10 @@
     ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Problem statement and/or answer choices corrected to make the data, units and assumptions consistent with the displayed calculation. Independently check the revised result before publication."
+      "Revised statement and answer checked against the stated model and recalculated with consistent units."
     ],
     "finalAnswer": {
-      "value": "5,978",
+      "value": "5,979",
       "unit": "A"
     },
     "verifiedChoiceId": "a",
