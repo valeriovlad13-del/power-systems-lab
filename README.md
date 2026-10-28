@@ -11,8 +11,8 @@ A responsive learning web app for **Power Systems 1** and **Power Systems 2**. I
 - Collapsible **Show Solution / Hide Solution** sections.
 - Previous / Next question navigation within the same course and section.
 - Responsive layouts for mobile, tablet, and desktop.
-- Engineering calculators and mathematical rendering.
-- Automated tests for question inventory, answer-key structure, topic assignments, and numerical functions.
+- Eight calculators: complex numbers and phasors, transmission-line parameters, short-line model, nominal-T/nominal-π models, per-unit base conversion, symmetrical components, short-circuit/fault current, and long-line model.
+- Shared pure TypeScript calculation functions with automated tests for numerical functions and question content.
 
 ## Engineering-quality principles
 
@@ -21,6 +21,7 @@ A responsive learning web app for **Power Systems 1** and **Power Systems 2**. I
 - Correct ambiguous or inconsistent question data instead of silently forcing a mismatched choice.
 - Use deterministic calculation functions rather than runtime-generated arithmetic.
 - Reuse components and calculation functions rather than duplicating logic.
+- Treat calculator outputs as educational estimates and verify assumptions before engineering use.
 
 ## Stack
 
@@ -51,13 +52,26 @@ Open http://localhost:3000.
 - `/problems` — searchable/filterable 140-question bank
 - `/problems/[id]` — question detail and worked solution
 - `/calculators` — calculator library
-- `/calculators/complex` — complex-number calculator
+- `/calculators/complex` — complex-number and phasor calculator
+- `/calculators/[slug]` — additional power-system calculators
+
+## Calculator assumptions
+
+- **Transmission-line parameters:** transposed three-phase line, geometric-mean phase spacing, conductor GMR for inductance, physical radius for capacitance; ground and bundle effects are excluded.
+- **Short-line model:** balanced three-phase, per-phase series impedance, receiving voltage as reference.
+- **Nominal-T/nominal-π:** total per-phase series impedance and total shunt admittance.
+- **Per-unit conversion:** voltage bases must refer to corresponding transformer sides and consistent line/phase conventions.
+- **Symmetrical components:** phase values entered as rectangular complex numbers in a common reference frame.
+- **Fault current:** three-phase fault level assumes a balanced fault; the SLG option uses real sequence impedances and a solid fault.
+- **Long-line model:** uniform distributed parameters, balanced operation, and receiving voltage as reference.
+
+These tools are intended for study and preliminary calculations. They do not replace a validated network model, protection study, equipment rating check, or professional engineering review.
 
 ## Content and validation
 
 Each question has a solution status, answer key, given values where applicable, assumptions, equations, calculation steps, and a final answer. When a statement was underdetermined or inconsistent with its choices, the record was revised to make the intended model explicit. Automated tests, lint, and production build run through GitHub Actions.
 
-A subject-matter expert review is recommended before using the worked solutions for formal instruction or engineering decisions.
+A subject-matter expert review is recommended before using the worked solutions or calculator outputs for formal instruction or engineering decisions.
 
 ## Project structure
 
