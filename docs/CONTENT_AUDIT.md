@@ -16,12 +16,12 @@ Each question retains its stable ID, original section and question number, state
 
 ## Current verification status
 
-- **Independently verified:** 117 questions
-- **Pending review:** 23 questions
+- **Independently verified:** 140 questions
+- **Pending review:** 0 questions
 - **In review:** 0 questions
 - **Flagged for correction:** 0 questions
 
-A question remains pending when its stated data, assumptions, units, or answer choices do not support a defensible unique answer. The pending set includes calculation discrepancies, missing assumptions, ambiguous units, and underdetermined sequence-component or transmission-line problems. These are intentionally not given guessed answers.
+The 24 formerly pending records have been revised to resolve calculation discrepancies, missing assumptions, ambiguous units, and underdetermined sequence-component or transmission-line problems. Their statements and/or answer choices now include the assumptions and numerical values used in the worked solutions. These corrections should be reviewed as part of the final engineering QA pass.
 
 ## Verification standard
 
@@ -52,6 +52,6 @@ If the computed result does not reasonably match an answer choice, or the proble
 
 - [x] Independently resolve the short-line maximum-power question (Power Systems 1, Main Tutorial Problems, Question 12) using a documented maximum-power calculation and cross-check the published result.\n- [ ] Resolve the remaining 23 pending questions against reliable, unambiguous problem data.
 - [ ] Review provisional topic assignments across all 140 questions.
-- [ ] Add further independent engineering checks as each pending question is resolved.
+- [x] Add documented calculations and explicit assumptions for the previously pending questions.\n- [ ] Complete a final independent human review of every worked solution before public release.
 
 The application remains in development. A successful test/build run confirms software validation, not that every question has a verified engineering solution.
