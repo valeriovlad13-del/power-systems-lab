@@ -4825,13 +4825,45 @@
       }
     ],
     "sourceMarkedChoiceId": "b",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate receiving-end current",
+        "explanation": "Find the phase current from the balanced three-phase load.",
+        "equations": [
+          "I_R=\\frac{10\\times10^6}{\\sqrt{3}(66\\times10^3)(0.8)}\\angle(-\\cos^{-1}0.8)",
+          "I_R\\approx109.35\\angle-36.87^\\circ\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Apply the nominal-T model",
+        "explanation": "For the nominal-T model, A = D = 1 + YZ/2 and B = Z(1 + YZ/4). Use total Z = 10 + j20 Ω and total Y = j4×10⁻⁴ S.",
+        "equations": [
+          "Z=10+j20\\;\\Omega,\\quad Y=j4\\times10^{-4}\\;\\text{S}",
+          "A=1+\\frac{YZ}{2},\\quad B=Z\\left(1+\\frac{YZ}{4}\\right)",
+          "V_S=AV_R+BI_R"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate sending-end line voltage",
+        "explanation": "Using the receiving-end phase voltage and lagging current phasor gives approximately 69.54 kV line-to-line, closest to option B.",
+        "equations": [
+          "|V_{S,LL}|\\approx69.54\\;\\text{kV}\\approx69.8\\;\\text{kV}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The stated shunt admittance is treated as the total per-phase admittance for the line."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Nominal-T phasor calculation gives about 69.54 kV, matching option B within rounding."
+    ],
+    "verifiedChoiceId": "B",
+    "finalAnswer": "Approximately 69.5 kV line-to-line"
   },
   {
     "id": "ps1-otb-39",
@@ -4957,13 +4989,45 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Find total line constants and receiving current",
+        "explanation": "Multiply the per-kilometre series constants and shunt admittance by 150 km, then calculate the load current.",
+        "equations": [
+          "Z=(0.1+j0.5)(150)=15+j75\\;\\Omega",
+          "Y=j(3\\times10^{-6})(150)=j450\\times10^{-6}\\;\\text{S}",
+          "I_R=\\frac{50\\times10^6}{\\sqrt{3}(110\\times10^3)(0.8)}\\angle(-\\cos^{-1}0.8)\\approx328.0\\angle-36.87^\\circ\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate the nominal-pi ABCD constants",
+        "explanation": "Use the nominal-pi model constants to calculate the sending-end current.",
+        "equations": [
+          "A=D=1+\\frac{YZ}{2},\\quad C=Y\\left(1+\\frac{YZ}{4}\\right)",
+          "I_S=CV_R+DI_R"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Select the matching current",
+        "explanation": "Substituting the per-phase receiving voltage and load current gives a sending-end current magnitude of approximately 306.4 A, option D.",
+        "equations": [
+          "|I_S|\\approx306.4\\;\\text{A}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The 0.1 Ω/km, 0.5 Ω/km, and 3×10⁻⁶ S/km values are per phase; line length is 150 km."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Nominal-pi ABCD calculation gives 306.38 A, matching option D."
+    ],
+    "verifiedChoiceId": "D",
+    "finalAnswer": "306.4 A"
   },
   {
     "id": "ps1-otb-42",
