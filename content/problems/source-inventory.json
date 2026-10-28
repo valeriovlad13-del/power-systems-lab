@@ -3647,8 +3647,8 @@
         "title": "Calculate sending-end voltage",
         "explanation": "Add the complex voltage drop to receiving-end phase voltage, then convert the magnitude back to line-to-line voltage.",
         "equations": [
-          "V_{S\\phi}\\approx79.674+j0.523+j0.261\\;\\text{kV}",
-          "|V_{S,LL}|=\\sqrt3|V_{S\\phi}|\\approx138.9\\;\\text{kV}"
+          "V_{S\\phi}=(79.674+0.523)+j0.261\\;\\text{kV}=80.197+j0.261\\;\\text{kV}",
+          "V_{S,LL}=\\sqrt3|V_{S\\phi}|\\approx138.9\\;\\text{kV}"
         ]
       },
       {
