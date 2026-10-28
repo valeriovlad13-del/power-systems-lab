@@ -8646,13 +8646,57 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate the positive-sequence reactance",
+        "explanation": "For a three-phase fault, the fault current is VLL/(√3 X1).",
+        "equations": [
+          "X_1=\\frac{V_{LL}}{\\sqrt3 I_{3\\phi}}=\\frac{11,000}{\\sqrt3(2,000)}\\approx3.175\\;\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate the negative-sequence reactance",
+        "explanation": "For a line-to-line fault, ILL = VLL/(X1 + X2). Solve for X2.",
+        "equations": [
+          "X_1+X_2=\\frac{V_{LL}}{I_{LL}}=\\frac{11,000}{2,600}\\approx4.231\\;\\Omega",
+          "X_2=4.231-3.175\\approx1.056\\;\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate the zero-sequence reactance",
+        "explanation": "For a solidly grounded single-line-to-ground fault, I LG = 3Vphase/(X1 + X2 + X0).",
+        "equations": [
+          "X_1+X_2+X_0=\\frac{3(V_{LL}/\\sqrt3)}{I_{LG}}=\\frac{3(11,000/\\sqrt3)}{4,200}\\approx4.536\\;\\Omega",
+          "X_0=4.536-3.175-1.056\\approx0.305\\;\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The sequence reactances match option C.",
+        "equations": [
+          "X_1\\approx3.175\\;\\Omega,\\quad X_2\\approx1.056\\;\\Omega,\\quad X_0\\approx0.305\\;\\Omega"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The stated fault currents are line currents at the generator terminals.",
+      "Use the rated 11 kV line-to-line voltage and neglect resistance as instructed."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated from standard symmetrical fault equations. Result matches option C."
+    ],
+    "verifiedChoiceId": "c",
+    "find": "Determine positive-, negative-, and zero-sequence reactances from three-phase, line-to-line, and line-to-ground fault currents.",
+    "finalAnswer": {
+      "value": "3.175, 1.056, 0.305",
+      "unit": "Ω (X₁, X₂, X₀)"
+    }
   },
   {
     "id": "ps2-otb-40",
