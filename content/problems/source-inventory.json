@@ -1460,13 +1460,60 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate receiving-end phase voltage and current",
+        "explanation": "Convert the 132 kV line voltage to phase voltage and calculate the load current at 0.8 lagging power factor.",
+        "equations": [
+          "V_R=\\frac{132}{\\sqrt3}\\approx76.21\\;\\text{kV/phase}",
+          "I_R=\\frac{50\\times10^6}{\\sqrt3(132\\times10^3)(0.8)}\\angle(-36.87^\\circ)\\approx273.4\\angle(-36.87^\\circ)\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate sending-end voltage at full load",
+        "explanation": "Use the ABCD relation V_S = A V_R + B I_R.",
+        "equations": [
+          "V_S=AV_R+BI_R",
+          "A=0.95\\angle1.4^\\circ,\\quad B=96\\angle78^\\circ\\;\\Omega",
+          "|V_S|\\approx94.09\\;\\text{kV/phase}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate no-load receiving voltage",
+        "explanation": "At no load, I_R = 0, so V_S = A V_R,0. Keep the same sending-end voltage magnitude.",
+        "equations": [
+          "V_{R,0}=\\frac{V_S}{A}",
+          "|V_{R,0}|\\approx99.05\\;\\text{kV/phase}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Calculate voltage regulation",
+        "explanation": "Compare the no-load receiving voltage with the full-load receiving voltage.",
+        "equations": [
+          "\\%\\text{Regulation}=\\frac{|V_{R,0}|-|V_R|}{|V_R|}\\times100",
+          "\\%\\text{Regulation}\\approx29.96\\%\\approx29.95\\%"
+        ]
+      }
+    ],
+    "assumptions": [
+      "Treat A, B, and C as per-phase line constants.",
+      "Voltage regulation is calculated as (|V_R,no-load| − |V_R,full-load|)/|V_R,full-load| × 100 at constant sending-end voltage."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated using the ABCD voltage relation and the constant-sending-voltage definition of regulation. Result matches option C."
+    ],
+    "verifiedChoiceId": "c",
+    "find": "Calculate voltage regulation from the given ABCD constants and lagging load.",
+    "finalAnswer": {
+      "value": "29.95",
+      "unit": "%"
+    }
   },
   {
     "id": "ps1-main-16",
@@ -2817,13 +2864,66 @@
       }
     ],
     "sourceMarkedChoiceId": "a",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate the conductor GMR",
+        "explanation": "Use the conductor radius and the standard GMR approximation for a round conductor.",
+        "equations": [
+          "r=0.01725\\;\\text{m}",
+          "r'=0.7788r\\approx0.01343\\;\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate equivalent GMR of the four-conductor bundle",
+        "explanation": "For a square four-conductor bundle, the equivalent self-GMD is the fourth root of r′ times the product of the three distances from one sub-conductor to the others.",
+        "equations": [
+          "D_{s,b}=\\left(r'\\sqrt2\\,d^3\\right)^{1/4}",
+          "D_{s,b}=\\left(0.01343\\sqrt2(0.5)^3\\right)^{1/4}\\approx0.221\\;\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate phase geometric mean distance",
+        "explanation": "For horizontal phase spacing D, the transposed-line GMD is (D × D × 2D)^(1/3).",
+        "equations": [
+          "D_m=(14\\cdot14\\cdot28)^{1/3}\\approx17.64\\;\\text{m}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Calculate inductance per kilometre",
+        "explanation": "Use L = 0.2 ln(Dm/Ds,b) mH/km.",
+        "equations": [
+          "L=0.2\\ln\\left(\\frac{17.64}{0.221}\\right)\\approx0.876\\;\\text{mH/km}"
+        ]
+      },
+      {
+        "stepNumber": 5,
+        "title": "Select the matching choice",
+        "explanation": "The result matches option A.",
+        "equations": [
+          "L\\approx0.876\\;\\text{mH/km}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The four conductors in each phase bundle form a square with adjacent spacing 0.5 m.",
+      "The 14 m spacing is the distance between adjacent phase-bundle centres in the horizontal configuration; outer phase spacing is 28 m.",
+      "Use conductor GMR r′ = 0.7788r for a solid round conductor."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated using the square-bundle equivalent GMR and transposed horizontal phase GMD. Result matches option A."
+    ],
+    "verifiedChoiceId": "a",
+    "find": "Calculate the inductance per kilometre of a transposed three-phase line with four-conductor square bundles.",
+    "finalAnswer": {
+      "value": "0.876",
+      "unit": "mH/km"
+    }
   },
   {
     "id": "ps1-otb-11",
