@@ -4065,13 +4065,61 @@
       }
     ],
     "sourceMarkedChoiceId": "a",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate the load current",
+        "explanation": "Divide the apparent power by the receiving-end voltage. Since the power factor is leading, current leads voltage.",
+        "equations": [
+          "I_R=\\frac{500\\times10^3}{2\\times10^3}=250\\;\\text{A}",
+          "\\phi=\\cos^{-1}(0.707)\\approx45^\\circ",
+          "I_R\\approx250\\angle45^\\circ\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate the line voltage drop",
+        "explanation": "Multiply the current phasor by the total series impedance.",
+        "equations": [
+          "Z=0.2+j0.4=0.4472\\angle63.435^\\circ\\;\\Omega",
+          "I_RZ\\approx111.8\\angle108.435^\\circ=-35.36+j106.07\\;\\text{V}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate sending-end voltage magnitude",
+        "explanation": "Add the line drop to the receiving-end voltage and take the magnitude.",
+        "equations": [
+          "V_S=2000+(-35.36+j106.07)=1964.64+j106.07\\;\\text{V}",
+          "|V_S|\\approx1967.5\\;\\text{V}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Calculate voltage regulation",
+        "explanation": "Use (|VS| − |VR|)/|VR| × 100. Leading power factor gives negative regulation here.",
+        "equations": [
+          "\\%VR=\\frac{|V_S|-|V_R|}{|V_R|}\\times100",
+          "\\%VR=\\frac{1967.5-2000}{2000}\\times100\\approx-1.63\\%",
+          "\\text{Closest listed value: }-1.65\\%\\;(\\text{option A})"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The stated 0.2 Ω resistance and 0.4 Ω reactance are total line values.",
+      "Use the receiving-end voltage as the phasor reference and calculate regulation from the exact sending-end voltage magnitude."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated using exact phasor voltage and magnitude. Result is approximately −1.63%, matching option A (−1.65%) within rounding."
+    ],
+    "verifiedChoiceId": "a",
+    "find": "Calculate voltage regulation of a single-phase line supplying a 500 kVA load at 2 kV and 0.707 leading power factor.",
+    "finalAnswer": {
+      "value": "-1.65",
+      "unit": "%"
+    }
   },
   {
     "id": "ps1-otb-27",
