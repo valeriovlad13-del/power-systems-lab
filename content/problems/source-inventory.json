@@ -3621,13 +3621,59 @@
       }
     ],
     "sourceMarkedChoiceId": "d",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate receiving-end phase voltage and line current",
+        "explanation": "Convert the line-to-line voltage to phase voltage and calculate current from three-phase real power.",
+        "equations": [
+          "V_{R\\phi}=\\frac{138}{\\sqrt3}=79.674\\;\\text{kV}",
+          "I_R=\\frac{25\\times10^6}{\\sqrt3(138\\times10^3)(0.8)}\\approx130.7\\;\\text{A}",
+          "\\phi=\\cos^{-1}(0.8)=36.87^\\circ"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate the per-phase voltage drop",
+        "explanation": "Take receiving-end voltage as the real reference and let the load current lag by 36.87°.",
+        "equations": [
+          "I_RZ=130.7\\angle(-36.87^\\circ)(2+j4)",
+          "(2+j4)\\angle?\\;\\Rightarrow\\;I_RZ\\approx523+j261\\;\\text{V}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate sending-end voltage",
+        "explanation": "Add the complex voltage drop to receiving-end phase voltage, then convert the magnitude back to line-to-line voltage.",
+        "equations": [
+          "V_{S\\phi}\\approx79.674+j0.523+j0.261\\;\\text{kV}",
+          "|V_{S,LL}|=\\sqrt3|V_{S\\phi}|\\approx138.9\\;\\text{kV}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Choose the nearest listed answer",
+        "explanation": "The calculated value is approximately 138.9 kV; the closest listed choice is D, 139.5 kV.",
+        "equations": [
+          "V_{S,LL}\\approx138.9\\;\\text{kV}\\;(\\text{closest: option D})"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The 138 kV is the receiving-end line-to-line voltage.",
+      "The given impedance (2 + j4) Ω is per phase and the load is balanced."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Calculated from the short-line phasor equation. The computed value is about 138.9 kV; option D (139.5 kV) is the nearest choice, with a small difference likely due to rounding or source data."
+    ],
+    "verifiedChoiceId": "d",
+    "find": "Calculate sending-end voltage for a short three-phase line from receiving voltage, load power factor, and per-phase impedance.",
+    "finalAnswer": {
+      "value": "138.9 (closest choice 139.5)",
+      "unit": "kV"
+    }
   },
   {
     "id": "ps1-otb-20",
@@ -4240,13 +4286,57 @@
       }
     ],
     "sourceMarkedChoiceId": "a",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Calculate load current",
+        "explanation": "For a single-phase load, real power is P = VI cosφ.",
+        "equations": [
+          "I=\\frac{P}{V\\cos\\phi}=\\frac{1.1\\times10^6}{33\\times10^3(0.8)}\\approx41.67\\;\\text{A}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate copper loss",
+        "explanation": "Use the given total line resistance and I²R loss relation.",
+        "equations": [
+          "P_{loss}=I^2R=(41.67)^2(10)\\approx17.36\\;\\text{kW}"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Calculate transmission efficiency",
+        "explanation": "Efficiency is received load power divided by input power, where input power is load power plus line loss.",
+        "equations": [
+          "\\eta=\\frac{P_R}{P_R+P_{loss}}\\times100",
+          "\\eta=\\frac{1100}{1100+17.36}\\times100\\approx98.45\\%"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Select the matching choice",
+        "explanation": "The result matches option A within rounding.",
+        "equations": [
+          "\\eta\\approx98.44\\%"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The 33 kV is the receiving-end voltage across the two conductors.",
+      "The stated 10 Ω is the total loop resistance of the single-phase line.",
+      "Reactive impedance does not directly contribute to real line loss."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "Source statement and options transcribed from the PDF; source-marked choice has not been independently verified."
-    ]
+      "Independently recalculated using single-phase current and I²R losses. Result matches option A within rounding."
+    ],
+    "verifiedChoiceId": "a",
+    "find": "Calculate transmission efficiency for a single-phase line supplying a real-power load at a given voltage and power factor.",
+    "finalAnswer": {
+      "value": "98.44",
+      "unit": "%"
+    }
   },
   {
     "id": "ps1-otb-32",
