@@ -1212,13 +1212,79 @@
       }
     ],
     "sourceMarkedChoiceId": "c",
-    "verificationStatus": "pending",
-    "solution": [],
-    "assumptions": [],
+    "verificationStatus": "verified",
+    "solution": [
+      {
+        "stepNumber": 1,
+        "title": "Determine the sending-end voltage",
+        "explanation": "For a 5% voltage-regulation limit, the sending-end voltage magnitude is 1.05 times the receiving-end voltage magnitude.",
+        "equations": [
+          "V_s=V_r(1+0.05)=6351(1.05)=6668.55\\;\\text{V}"
+        ]
+      },
+      {
+        "stepNumber": 2,
+        "title": "Calculate the impedance magnitude",
+        "explanation": "Use the magnitude of the stated per-phase short-line impedance.",
+        "equations": [
+          "|Z|=\\sqrt{R^2+X^2}=\\sqrt{0.3^2+0.4^2}=0.5\\;\\Omega"
+        ]
+      },
+      {
+        "stepNumber": 3,
+        "title": "Apply the maximum-power expression",
+        "explanation": "For the short-line maximum-power condition used in this problem, optimize receiving-end real power subject to the sending- and receiving-end voltage magnitudes. The per-phase expression is P_{max,ph}=(V_r/|Z|)^2[(|Z|V_s/V_r)-R].",
+        "equations": [
+          "P_{max,ph}=\\left(\\frac{6351}{0.5}\\right)^2\\left[\\frac{0.5(6668.55)}{6351}-0.3\\right]",
+          "P_{max,ph}\\approx36.3\\;\\text{MW}"
+        ]
+      },
+      {
+        "stepNumber": 4,
+        "title": "Calculate total three-phase power",
+        "explanation": "The balanced three-phase total is three times the per-phase real power.",
+        "equations": [
+          "P_{max,3\\phi}=3P_{max,ph}=3(36.3)\\approx108.9\\;\\text{MW}"
+        ]
+      }
+    ],
+    "assumptions": [
+      "The line is modeled as a balanced three-phase short transmission line with the given impedance per phase.",
+      "The maximum-power expression optimizes the receiving-end real power subject to the stated voltage magnitudes; no fixed load power factor is imposed.",
+      "The 5% regulation limit is represented by |Vₛ| = 1.05|Vᵣ|."
+    ],
     "calculatorIds": [],
     "reviewerNotes": [
-      "The stated data do not specify load power factor, which is needed to determine current and voltage regulation for the short line. A unique maximum real power cannot be established from the supplied information; retained as pending."
-    ]
+      "Resolved using an independently checked maximum-power calculation. The exact problem statement and 108.9 MW result are also reproduced in an online copy of Schaum's Outline of Electrical Power Systems, Problem 4.9. The correct listed answer is option C."
+    ],
+    "verifiedChoiceId": "c",
+    "given": [
+      {
+        "label": "Receiving-end voltage per phase, Vᵣ",
+        "value": "6,351",
+        "unit": "V"
+      },
+      {
+        "label": "Per-phase line impedance, Z",
+        "value": "0.3 + j0.4",
+        "unit": "Ω"
+      },
+      {
+        "label": "Maximum voltage regulation",
+        "value": "5",
+        "unit": "%"
+      },
+      {
+        "label": "Sending-end voltage per phase, Vₛ",
+        "value": "1.05 × 6,351 = 6,668.6",
+        "unit": "V"
+      }
+    ],
+    "find": "Maximum total three-phase real power under the stated voltage-regulation limit.",
+    "finalAnswer": {
+      "value": "108.9",
+      "unit": "MW"
+    }
   },
   {
     "id": "ps1-main-13",
