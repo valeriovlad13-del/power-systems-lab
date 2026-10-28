@@ -3,8 +3,8 @@
     "id": "ps1-main-01",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "efficiency-power"
+      "efficiency-power",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -121,7 +121,8 @@
     "finalAnswer": {
       "value": "13.6",
       "unit": "km"
-    }
+    },
+    "primaryTopicId": "efficiency-power"
   },
   {
     "id": "ps1-main-02",
@@ -222,7 +223,8 @@
       "value": "2.424",
       "unit": "mH/km (loop)"
     },
-    "verifiedChoiceId": "b"
+    "verifiedChoiceId": "b",
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-main-03",
@@ -291,7 +293,8 @@
     "finalAnswer": {
       "value": "0.0126",
       "unit": "μF/km"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-main-04",
@@ -390,7 +393,8 @@
     "finalAnswer": {
       "value": "1.29",
       "unit": "mH/km per phase"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-main-05",
@@ -482,7 +486,8 @@
     "finalAnswer": {
       "value": "1.204",
       "unit": "mH/km per phase"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-main-06",
@@ -606,7 +611,8 @@
     "finalAnswer": {
       "value": "21.4",
       "unit": "A per phase"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-main-07",
@@ -693,14 +699,15 @@
     "finalAnswer": {
       "value": "10",
       "unit": "m"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-main-08",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "line-performance"
+      "line-performance",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -821,14 +828,15 @@
     "finalAnswer": {
       "value": "13.82",
       "unit": "kV per phase"
-    }
+    },
+    "primaryTopicId": "line-performance"
   },
   {
     "id": "ps1-main-09",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "line-performance"
+      "line-performance",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -948,7 +956,8 @@
     "finalAnswer": {
       "value": "31.97",
       "unit": "kV line-to-line"
-    }
+    },
+    "primaryTopicId": "line-performance"
   },
   {
     "id": "ps1-main-10",
@@ -1074,7 +1083,8 @@
     "finalAnswer": {
       "value": "15.26",
       "unit": "%"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-main-11",
@@ -1199,14 +1209,15 @@
     "finalAnswer": {
       "value": "95.9",
       "unit": "%"
-    }
+    },
+    "primaryTopicId": "efficiency-power"
   },
   {
     "id": "ps1-main-12",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-performance",
       "efficiency-power",
+      "line-performance",
       "short-medium-lines"
     ],
     "source": {
@@ -1310,7 +1321,8 @@
     "finalAnswer": {
       "value": "108.9",
       "unit": "MW"
-    }
+    },
+    "primaryTopicId": "efficiency-power"
   },
   {
     "id": "ps1-main-13",
@@ -1425,14 +1437,15 @@
     "finalAnswer": {
       "value": "j0.0002713",
       "unit": "S"
-    }
+    },
+    "primaryTopicId": "short-medium-lines"
   },
   {
     "id": "ps1-main-14",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-performance",
-      "short-medium-lines"
+      "short-medium-lines",
+      "line-performance"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -1515,7 +1528,8 @@
     "finalAnswer": {
       "value": "387",
       "unit": "kV"
-    }
+    },
+    "primaryTopicId": "short-medium-lines"
   },
   {
     "id": "ps1-main-15",
@@ -1605,14 +1619,15 @@
     "finalAnswer": {
       "value": "29.95",
       "unit": "%"
-    }
+    },
+    "primaryTopicId": "line-performance"
   },
   {
     "id": "ps1-main-16",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "long-lines"
+      "long-lines",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -1694,14 +1709,15 @@
     "finalAnswer": {
       "value": "24.96 + j65.72",
       "unit": "Ω"
-    }
+    },
+    "primaryTopicId": "long-lines"
   },
   {
     "id": "ps1-main-17",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "surge-sil"
+      "surge-sil",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -1787,14 +1803,15 @@
     "finalAnswer": {
       "value": "290",
       "unit": "Ω"
-    }
+    },
+    "primaryTopicId": "surge-sil"
   },
   {
     "id": "ps1-main-18",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "surge-sil"
+      "surge-sil",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -1880,14 +1897,15 @@
     "finalAnswer": {
       "value": "1.10 × 10⁸",
       "unit": "m/s"
-    }
+    },
+    "primaryTopicId": "surge-sil"
   },
   {
     "id": "ps1-main-19",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-performance",
-      "surge-sil"
+      "surge-sil",
+      "line-performance"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -1971,15 +1989,16 @@
     "finalAnswer": {
       "value": "2,500",
       "unit": "MW"
-    }
+    },
+    "primaryTopicId": "surge-sil"
   },
   {
     "id": "ps1-main-20",
     "courseId": "power-systems-1",
     "topicIds": [
+      "short-medium-lines",
       "line-parameters",
-      "line-performance",
-      "short-medium-lines"
+      "line-performance"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -2054,7 +2073,8 @@
       "Nominal-T phasor calculation gives approximately 100.5 A, closest to option D (100 A)."
     ],
     "verifiedChoiceId": "d",
-    "finalAnswer": "Approximately 100.5 A"
+    "finalAnswer": "Approximately 100.5 A",
+    "primaryTopicId": "short-medium-lines"
   },
   {
     "id": "ps1-otb-01",
@@ -2141,7 +2161,8 @@
     "finalAnswer": {
       "value": "0.3774",
       "unit": "Ω/km"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-otb-02",
@@ -2240,7 +2261,8 @@
     "finalAnswer": {
       "value": "2.22",
       "unit": "mH/km"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-otb-03",
@@ -2366,7 +2388,8 @@
     "finalAnswer": {
       "value": "19.86",
       "unit": "Ω"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-otb-04",
@@ -2473,7 +2496,8 @@
     "finalAnswer": {
       "value": "35.5",
       "unit": "mH per phase"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-otb-05",
@@ -2578,7 +2602,8 @@
     "finalAnswer": {
       "value": "4.0",
       "unit": "cm"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-otb-06",
@@ -2670,7 +2695,8 @@
     "finalAnswer": {
       "value": "1.2",
       "unit": "mH/km per phase"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-otb-07",
@@ -2770,7 +2796,8 @@
     "finalAnswer": {
       "value": "1.274",
       "unit": "mH/km per phase"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-otb-08",
@@ -2870,7 +2897,8 @@
     "finalAnswer": {
       "value": "1.11",
       "unit": "mH/km per phase"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-otb-09",
@@ -2957,7 +2985,8 @@
     "finalAnswer": {
       "value": "0.284",
       "unit": "Ω/km"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-otb-10",
@@ -3053,7 +3082,8 @@
     "finalAnswer": {
       "value": "0.876",
       "unit": "mH/km"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-otb-11",
@@ -3132,7 +3162,8 @@
     "finalAnswer": {
       "value": "12.826",
       "unit": "cm"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-otb-12",
@@ -3231,7 +3262,8 @@
     "finalAnswer": {
       "value": "8.72 × 10⁻³",
       "unit": "μF/km per phase"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-otb-13",
@@ -3308,7 +3340,8 @@
     "finalAnswer": {
       "value": "0.00928",
       "unit": "μF/km"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-otb-14",
@@ -3386,7 +3419,8 @@
     "finalAnswer": {
       "value": "0.4875 × 10⁻²",
       "unit": "μF/km (between conductors)"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-otb-15",
@@ -3485,7 +3519,8 @@
     "finalAnswer": {
       "value": "0.0096",
       "unit": "μF/km per phase"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-otb-16",
@@ -3570,7 +3605,8 @@
     "finalAnswer": {
       "value": "4.87",
       "unit": "μF"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-otb-17",
@@ -3658,14 +3694,15 @@
     "finalAnswer": {
       "value": "21.345",
       "unit": "A per phase"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-otb-18",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-performance",
-      "short-medium-lines"
+      "short-medium-lines",
+      "line-performance"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -3748,14 +3785,15 @@
     "finalAnswer": {
       "value": "129.04",
       "unit": "kV per phase"
-    }
+    },
+    "primaryTopicId": "short-medium-lines"
   },
   {
     "id": "ps1-otb-19",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-performance",
-      "short-medium-lines"
+      "short-medium-lines",
+      "line-performance"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -3838,14 +3876,15 @@
     "finalAnswer": {
       "value": "138.9 (closest choice 139.5)",
       "unit": "kV"
-    }
+    },
+    "primaryTopicId": "short-medium-lines"
   },
   {
     "id": "ps1-otb-20",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-performance",
-      "short-medium-lines"
+      "short-medium-lines",
+      "line-performance"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -3926,14 +3965,15 @@
     "finalAnswer": {
       "value": "69",
       "unit": "kV"
-    }
+    },
+    "primaryTopicId": "short-medium-lines"
   },
   {
     "id": "ps1-otb-21",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "line-performance"
+      "line-performance",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -4016,14 +4056,15 @@
     "finalAnswer": {
       "value": "10.46",
       "unit": "kV"
-    }
+    },
+    "primaryTopicId": "line-performance"
   },
   {
     "id": "ps1-otb-22",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "efficiency-power"
+      "efficiency-power",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -4094,7 +4135,8 @@
     "finalAnswer": {
       "value": "62.0",
       "unit": "kW"
-    }
+    },
+    "primaryTopicId": "efficiency-power"
   },
   {
     "id": "ps1-otb-23",
@@ -4171,7 +4213,8 @@
     "finalAnswer": {
       "value": "20.95",
       "unit": "MW"
-    }
+    },
+    "primaryTopicId": "line-performance"
   },
   {
     "id": "ps1-otb-24",
@@ -4249,14 +4292,15 @@
     "finalAnswer": {
       "value": "846.4",
       "unit": "MW"
-    }
+    },
+    "primaryTopicId": "line-performance"
   },
   {
     "id": "ps1-otb-25",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-performance",
       "efficiency-power",
+      "line-performance",
       "short-medium-lines"
     ],
     "source": {
@@ -4324,14 +4368,15 @@
       "Maximum real-power transfer calculation matches option D."
     ],
     "verifiedChoiceId": "d",
-    "finalAnswer": "26.57 MW"
+    "finalAnswer": "26.57 MW",
+    "primaryTopicId": "efficiency-power"
   },
   {
     "id": "ps1-otb-26",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "line-performance"
+      "line-performance",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -4416,14 +4461,15 @@
     "finalAnswer": {
       "value": "-1.65",
       "unit": "%"
-    }
+    },
+    "primaryTopicId": "line-performance"
   },
   {
     "id": "ps1-otb-27",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "line-performance"
+      "line-performance",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -4494,14 +4540,15 @@
     "finalAnswer": {
       "value": "6.69",
       "unit": "%"
-    }
+    },
+    "primaryTopicId": "line-performance"
   },
   {
     "id": "ps1-otb-28",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-performance",
-      "short-medium-lines"
+      "short-medium-lines",
+      "line-performance"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -4586,7 +4633,8 @@
     "finalAnswer": {
       "value": "16.94",
       "unit": "%"
-    }
+    },
+    "primaryTopicId": "short-medium-lines"
   },
   {
     "id": "ps1-otb-29",
@@ -4665,14 +4713,15 @@
     "finalAnswer": {
       "value": "93.94",
       "unit": "%"
-    }
+    },
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-otb-30",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "efficiency-power"
+      "efficiency-power",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -4741,14 +4790,15 @@
       "Recalculated line loss and efficiency; result matches option B."
     ],
     "verifiedChoiceId": "b",
-    "finalAnswer": "99.38%"
+    "finalAnswer": "99.38%",
+    "primaryTopicId": "efficiency-power"
   },
   {
     "id": "ps1-otb-31",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "efficiency-power"
+      "efficiency-power",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -4829,14 +4879,15 @@
     "finalAnswer": {
       "value": "98.44",
       "unit": "%"
-    }
+    },
+    "primaryTopicId": "efficiency-power"
   },
   {
     "id": "ps1-otb-32",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
       "line-performance",
+      "line-parameters",
       "efficiency-power"
     ],
     "source": {
@@ -4901,14 +4952,15 @@
       "Recalculated distance from three-phase copper losses; result matches option D."
     ],
     "verifiedChoiceId": "d",
-    "finalAnswer": "37.18 km"
+    "finalAnswer": "37.18 km",
+    "primaryTopicId": "line-performance"
   },
   {
     "id": "ps1-otb-33",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
       "line-performance",
+      "line-parameters",
       "efficiency-power"
     ],
     "source": {
@@ -4973,14 +5025,15 @@
       "Recalculated using the specified power factor, voltage, resistance, and loss limit; result matches option B."
     ],
     "verifiedChoiceId": "b",
-    "finalAnswer": "70 km"
+    "finalAnswer": "70 km",
+    "primaryTopicId": "line-performance"
   },
   {
     "id": "ps1-otb-34",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "efficiency-power"
+      "efficiency-power",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -5047,14 +5100,15 @@
       "The calculated continuous limit is 51.75 km; option A is the largest listed integer distance within the limit."
     ],
     "verifiedChoiceId": "a",
-    "finalAnswer": "Calculated limit ≈ 51.75 km; greatest listed compliant length is 51 km"
+    "finalAnswer": "Calculated limit ≈ 51.75 km; greatest listed compliant length is 51 km",
+    "primaryTopicId": "efficiency-power"
   },
   {
     "id": "ps1-otb-35",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-performance",
-      "long-lines"
+      "long-lines",
+      "line-performance"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -5125,12 +5179,14 @@
     "finalAnswer": {
       "value": "240.8",
       "unit": "kV"
-    }
+    },
+    "primaryTopicId": "long-lines"
   },
   {
     "id": "ps1-otb-36",
     "courseId": "power-systems-1",
     "topicIds": [
+      "short-medium-lines",
       "line-parameters",
       "line-performance",
       "long-lines"
@@ -5204,15 +5260,16 @@
     "finalAnswer": {
       "value": "357.2",
       "unit": "kV"
-    }
+    },
+    "primaryTopicId": "short-medium-lines"
   },
   {
     "id": "ps1-otb-37",
     "courseId": "power-systems-1",
     "topicIds": [
+      "short-medium-lines",
       "line-parameters",
-      "line-performance",
-      "short-medium-lines"
+      "line-performance"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -5281,15 +5338,16 @@
       "Nominal-T phasor calculation gives 116.73 kV, matching option B."
     ],
     "verifiedChoiceId": "b",
-    "finalAnswer": "116.72 kV line-to-line"
+    "finalAnswer": "116.72 kV line-to-line",
+    "primaryTopicId": "short-medium-lines"
   },
   {
     "id": "ps1-otb-38",
     "courseId": "power-systems-1",
     "topicIds": [
+      "short-medium-lines",
       "line-parameters",
-      "line-performance",
-      "short-medium-lines"
+      "line-performance"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -5358,14 +5416,15 @@
       "Nominal-T phasor calculation gives about 69.54 kV, matching option B within rounding."
     ],
     "verifiedChoiceId": "b",
-    "finalAnswer": "Approximately 69.5 kV line-to-line"
+    "finalAnswer": "Approximately 69.5 kV line-to-line",
+    "primaryTopicId": "short-medium-lines"
   },
   {
     "id": "ps1-otb-39",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "line-performance"
+      "line-performance",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -5436,12 +5495,14 @@
     },
     "verifiedChoiceId": "a",
     "given": [],
-    "find": "Determine the requested electrical engineering quantity from the corrected statement."
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "primaryTopicId": "line-performance"
   },
   {
     "id": "ps1-otb-40",
     "courseId": "power-systems-1",
     "topicIds": [
+      "short-medium-lines",
       "line-parameters",
       "line-performance"
     ],
@@ -5516,12 +5577,14 @@
     "finalAnswer": {
       "value": "203.8",
       "unit": "A"
-    }
+    },
+    "primaryTopicId": "short-medium-lines"
   },
   {
     "id": "ps1-otb-41",
     "courseId": "power-systems-1",
     "topicIds": [
+      "short-medium-lines",
       "line-parameters",
       "line-performance"
     ],
@@ -5592,12 +5655,14 @@
       "Nominal-pi ABCD calculation gives 306.38 A, matching option D."
     ],
     "verifiedChoiceId": "d",
-    "finalAnswer": "306.4 A"
+    "finalAnswer": "306.4 A",
+    "primaryTopicId": "short-medium-lines"
   },
   {
     "id": "ps1-otb-42",
     "courseId": "power-systems-1",
     "topicIds": [
+      "short-medium-lines",
       "line-parameters",
       "line-performance"
     ],
@@ -5670,7 +5735,8 @@
     "finalAnswer": {
       "value": "17.84",
       "unit": "%"
-    }
+    },
+    "primaryTopicId": "short-medium-lines"
   },
   {
     "id": "ps1-otb-43",
@@ -5745,7 +5811,8 @@
       "Nominal-pi calculation gives approximately 9.86%, matching option D (10%) within rounding."
     ],
     "verifiedChoiceId": "d",
-    "finalAnswer": "Approximately 9.86%"
+    "finalAnswer": "Approximately 9.86%",
+    "primaryTopicId": "line-parameters"
   },
   {
     "id": "ps1-otb-44",
@@ -5821,12 +5888,14 @@
       "ABCD phasor calculation matches option C when the answer is reported as sending-end phase voltage; the question's voltage convention is not explicit."
     ],
     "verifiedChoiceId": "c",
-    "finalAnswer": "87.43 kV per phase"
+    "finalAnswer": "87.43 kV per phase",
+    "primaryTopicId": "line-performance"
   },
   {
     "id": "ps1-otb-45",
     "courseId": "power-systems-1",
     "topicIds": [
+      "short-medium-lines",
       "line-performance",
       "efficiency-power"
     ],
@@ -5901,7 +5970,8 @@
     "finalAnswer": {
       "value": "95.02",
       "unit": "%"
-    }
+    },
+    "primaryTopicId": "short-medium-lines"
   },
   {
     "id": "ps1-otb-46",
@@ -5978,7 +6048,8 @@
       "Nominal-pi phasor calculation gives about 97.55%, matching option A within rounding."
     ],
     "verifiedChoiceId": "a",
-    "finalAnswer": "Approximately 97.55%"
+    "finalAnswer": "Approximately 97.55%",
+    "primaryTopicId": "efficiency-power"
   },
   {
     "id": "ps1-otb-47",
@@ -6052,7 +6123,8 @@
       "Recalculated line current, copper loss, and efficiency; result matches option A."
     ],
     "verifiedChoiceId": "a",
-    "finalAnswer": "95.36%"
+    "finalAnswer": "95.36%",
+    "primaryTopicId": "efficiency-power"
   },
   {
     "id": "ps1-otb-48",
@@ -6124,12 +6196,14 @@
       "The nominal-T formula independently gives 9.96+j19.97 Ω, closest to option B; note slight rounding discrepancy."
     ],
     "verifiedChoiceId": "b",
-    "finalAnswer": "Approximately 9.96 + j19.97 Ω"
+    "finalAnswer": "Approximately 9.96 + j19.97 Ω",
+    "primaryTopicId": "short-medium-lines"
   },
   {
     "id": "ps1-otb-49",
     "courseId": "power-systems-1",
     "topicIds": [
+      "long-lines",
       "line-performance"
     ],
     "source": {
@@ -6201,14 +6275,15 @@
     "finalAnswer": {
       "value": "382.0",
       "unit": "kV"
-    }
+    },
+    "primaryTopicId": "long-lines"
   },
   {
     "id": "ps1-otb-50",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-performance",
-      "long-lines"
+      "long-lines",
+      "line-performance"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -6279,14 +6354,15 @@
     "finalAnswer": {
       "value": "219.1",
       "unit": "kV"
-    }
+    },
+    "primaryTopicId": "long-lines"
   },
   {
     "id": "ps1-otb-51",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "short-medium-lines"
+      "short-medium-lines",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -6352,12 +6428,14 @@
       "Nominal-T formula independently gives 19.836+j51.819 Ω, matching option C."
     ],
     "verifiedChoiceId": "c",
-    "finalAnswer": "Approximately 19.84 + j51.82 Ω"
+    "finalAnswer": "Approximately 19.84 + j51.82 Ω",
+    "primaryTopicId": "short-medium-lines"
   },
   {
     "id": "ps1-otb-52",
     "courseId": "power-systems-1",
     "topicIds": [
+      "short-medium-lines",
       "line-parameters",
       "line-performance"
     ],
@@ -6430,7 +6508,8 @@
     "finalAnswer": {
       "value": "0.9327∠1.04°",
       "unit": ""
-    }
+    },
+    "primaryTopicId": "short-medium-lines"
   },
   {
     "id": "ps1-otb-53",
@@ -6505,12 +6584,14 @@
       "Solving the ABCD phasor equation gives about 202.02 kV line-to-line, matching option C."
     ],
     "verifiedChoiceId": "c",
-    "finalAnswer": "Approximately 202.0 kV line-to-line"
+    "finalAnswer": "Approximately 202.0 kV line-to-line",
+    "primaryTopicId": "line-performance"
   },
   {
     "id": "ps1-otb-54",
     "courseId": "power-systems-1",
     "topicIds": [
+      "short-medium-lines",
       "line-performance",
       "efficiency-power"
     ],
@@ -6583,14 +6664,15 @@
       "Nominal-pi calculation gives about 97.18%, matching option B within rounding."
     ],
     "verifiedChoiceId": "b",
-    "finalAnswer": "Approximately 97.2%"
+    "finalAnswer": "Approximately 97.2%",
+    "primaryTopicId": "short-medium-lines"
   },
   {
     "id": "ps1-otb-55",
     "courseId": "power-systems-1",
     "topicIds": [
-      "efficiency-power",
-      "long-lines"
+      "long-lines",
+      "efficiency-power"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -6661,12 +6743,14 @@
     "finalAnswer": {
       "value": "88.80",
       "unit": "%"
-    }
+    },
+    "primaryTopicId": "long-lines"
   },
   {
     "id": "ps1-otb-56",
     "courseId": "power-systems-1",
     "topicIds": [
+      "surge-sil",
       "line-parameters",
       "long-lines"
     ],
@@ -6716,14 +6800,15 @@
       "Independently checked from the stated values and standard power-system relationships; calculated result matches choice A."
     ],
     "verifiedChoiceId": "a",
-    "finalAnswer": "50 Ω"
+    "finalAnswer": "50 Ω",
+    "primaryTopicId": "surge-sil"
   },
   {
     "id": "ps1-otb-57",
     "courseId": "power-systems-1",
     "topicIds": [
-      "long-lines",
-      "surge-sil"
+      "surge-sil",
+      "long-lines"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -6771,14 +6856,15 @@
       "Independently checked from the stated values and standard power-system relationships; calculated result matches choice C."
     ],
     "verifiedChoiceId": "c",
-    "finalAnswer": "400 Ω"
+    "finalAnswer": "400 Ω",
+    "primaryTopicId": "surge-sil"
   },
   {
     "id": "ps1-otb-58",
     "courseId": "power-systems-1",
     "topicIds": [
-      "line-parameters",
-      "surge-sil"
+      "surge-sil",
+      "line-parameters"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -6834,7 +6920,8 @@
       "Independently checked from the stated values and standard power-system relationships; calculated result matches choice A."
     ],
     "verifiedChoiceId": "a",
-    "finalAnswer": "1,048 MW"
+    "finalAnswer": "1,048 MW",
+    "primaryTopicId": "surge-sil"
   },
   {
     "id": "ps1-otb-59",
@@ -6888,7 +6975,8 @@
       "Independently checked from the stated values and standard power-system relationships; calculated result matches choice D."
     ],
     "verifiedChoiceId": "d",
-    "finalAnswer": "180 MW"
+    "finalAnswer": "180 MW",
+    "primaryTopicId": "surge-sil"
   },
   {
     "id": "ps1-otb-60",
@@ -6959,7 +7047,8 @@
       "Independently recalculated using v = 1/sqrt(LC); the result matches option C."
     ],
     "verifiedChoiceId": "c",
-    "finalAnswer": "1.83 × 10⁸ m/s"
+    "finalAnswer": "1.83 × 10⁸ m/s",
+    "primaryTopicId": "line-performance"
   },
   {
     "id": "ps2-main-01",
@@ -7013,7 +7102,8 @@
       "Independently checked from the stated values and standard power-system relationships; calculated result matches choice C."
     ],
     "verifiedChoiceId": "c",
-    "finalAnswer": "1.15 pu"
+    "finalAnswer": "1.15 pu",
+    "primaryTopicId": "per-unit"
   },
   {
     "id": "ps2-main-02",
@@ -7068,7 +7158,8 @@
       "Independently checked from the stated values and standard power-system relationships; calculated result matches choice A."
     ],
     "verifiedChoiceId": "a",
-    "finalAnswer": "−1 + j"
+    "finalAnswer": "−1 + j",
+    "primaryTopicId": "complex-phasors"
   },
   {
     "id": "ps2-main-03",
@@ -7155,14 +7246,15 @@
     "finalAnswer": {
       "value": "-12.44 + j21.55",
       "unit": "A"
-    }
+    },
+    "primaryTopicId": "symmetrical-components"
   },
   {
     "id": "ps2-main-04",
     "courseId": "power-systems-2",
     "topicIds": [
-      "per-unit",
-      "symmetrical-components"
+      "symmetrical-components",
+      "per-unit"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -7230,7 +7322,8 @@
       "Independently calculated using the standard negative-sequence symmetrical-component transformation; matches choice C within rounding."
     ],
     "verifiedChoiceId": "c",
-    "finalAnswer": "0.312 + j0.679 pu"
+    "finalAnswer": "0.312 + j0.679 pu",
+    "primaryTopicId": "symmetrical-components"
   },
   {
     "id": "ps2-main-05",
@@ -7297,15 +7390,16 @@
       "Independently calculated from the stated values and standard symmetrical-component/per-unit relations; result matches choice A."
     ],
     "verifiedChoiceId": "a",
-    "finalAnswer": "0.259 + j0.966"
+    "finalAnswer": "0.259 + j0.966",
+    "primaryTopicId": "complex-phasors"
   },
   {
     "id": "ps2-main-06",
     "courseId": "power-systems-2",
     "topicIds": [
+      "fault-analysis",
       "per-unit",
       "symmetrical-components",
-      "fault-analysis",
       "neutral-grounding"
     ],
     "source": {
@@ -7354,7 +7448,8 @@
       "Independently checked from the stated values and standard power-system relationships; calculated result matches choice C."
     ],
     "verifiedChoiceId": "c",
-    "finalAnswer": "j7.20 pu"
+    "finalAnswer": "j7.20 pu",
+    "primaryTopicId": "fault-analysis"
   },
   {
     "id": "ps2-main-07",
@@ -7429,14 +7524,15 @@
       "Independently calculated from the stated values and standard symmetrical-component/per-unit relations; result matches choice B."
     ],
     "verifiedChoiceId": "b",
-    "finalAnswer": "16,440 kVA"
+    "finalAnswer": "16,440 kVA",
+    "primaryTopicId": "fault-levels"
   },
   {
     "id": "ps2-main-08",
     "courseId": "power-systems-2",
     "topicIds": [
-      "per-unit",
       "fault-analysis",
+      "per-unit",
       "neutral-grounding"
     ],
     "source": {
@@ -7504,7 +7600,8 @@
       "Independently checked using the stated per-unit sequence reactances and standard fault-network relations; rounded result matches choice A."
     ],
     "verifiedChoiceId": "a",
-    "finalAnswer": "6,189 A"
+    "finalAnswer": "6,189 A",
+    "primaryTopicId": "fault-analysis"
   },
   {
     "id": "ps2-main-09",
@@ -7571,16 +7668,17 @@
       "Independently checked using the stated per-unit sequence reactances and standard fault-network relations; rounded result matches choice D."
     ],
     "verifiedChoiceId": "d",
-    "finalAnswer": "Approximately 2,415 A"
+    "finalAnswer": "Approximately 2,415 A",
+    "primaryTopicId": "per-unit"
   },
   {
     "id": "ps2-main-10",
     "courseId": "power-systems-2",
     "topicIds": [
+      "fault-analysis",
       "per-unit",
       "symmetrical-components",
       "sequence-networks",
-      "fault-analysis",
       "generator-transients"
     ],
     "source": {
@@ -7648,7 +7746,8 @@
       "Independently checked using the stated per-unit sequence reactances and standard fault-network relations; rounded result matches choice D."
     ],
     "verifiedChoiceId": "d",
-    "finalAnswer": "Approximately 13,387 A"
+    "finalAnswer": "Approximately 13,387 A",
+    "primaryTopicId": "fault-analysis"
   },
   {
     "id": "ps2-otb-01",
@@ -7702,7 +7801,8 @@
       "Independently checked from the stated values and standard power-system relationships; calculated result matches choice D."
     ],
     "verifiedChoiceId": "d",
-    "finalAnswer": "10%"
+    "finalAnswer": "10%",
+    "primaryTopicId": "per-unit"
   },
   {
     "id": "ps2-otb-02",
@@ -7776,7 +7876,8 @@
       "Answer choice D matches the per-unit impedance-drop magnitude; the problem does not specify power factor, so a signed/real voltage regulation drop cannot be determined uniquely from the stated data."
     ],
     "verifiedChoiceId": "d",
-    "finalAnswer": "Approximately 663.1 V (voltage-drop magnitude using the line-to-line base)"
+    "finalAnswer": "Approximately 663.1 V (voltage-drop magnitude using the line-to-line base)",
+    "primaryTopicId": "per-unit"
   },
   {
     "id": "ps2-otb-03",
@@ -7832,7 +7933,8 @@
       "Independently checked from the stated values and standard power-system relationships; calculated result matches choice A."
     ],
     "verifiedChoiceId": "a",
-    "finalAnswer": "80 A"
+    "finalAnswer": "80 A",
+    "primaryTopicId": "per-unit"
   },
   {
     "id": "ps2-otb-04",
@@ -7888,7 +7990,8 @@
       "Independently checked from the stated values and standard power-system relationships; calculated result matches choice B."
     ],
     "verifiedChoiceId": "b",
-    "finalAnswer": "50,000 kVA"
+    "finalAnswer": "50,000 kVA",
+    "primaryTopicId": "per-unit"
   },
   {
     "id": "ps2-otb-05",
@@ -7966,7 +8069,8 @@
     "finalAnswer": {
       "value": "1.191",
       "unit": "pu"
-    }
+    },
+    "primaryTopicId": "per-unit"
   },
   {
     "id": "ps2-otb-06",
@@ -8020,7 +8124,8 @@
       "Independently calculated from the stated values and standard power-system relationships; result matches choice B."
     ],
     "verifiedChoiceId": "b",
-    "finalAnswer": "1.587 Ω"
+    "finalAnswer": "1.587 Ω",
+    "primaryTopicId": "fault-levels"
   },
   {
     "id": "ps2-otb-07",
@@ -8082,7 +8187,8 @@
       "Independently checked from the stated values and standard power-system relationships; rounded result matches choice B."
     ],
     "verifiedChoiceId": "b",
-    "finalAnswer": "10%"
+    "finalAnswer": "10%",
+    "primaryTopicId": "per-unit"
   },
   {
     "id": "ps2-otb-08",
@@ -8137,7 +8243,8 @@
       "Independently calculated from the stated values and standard power-system relationships; result matches choice D."
     ],
     "verifiedChoiceId": "d",
-    "finalAnswer": "29.7% (0.297 pu)"
+    "finalAnswer": "29.7% (0.297 pu)",
+    "primaryTopicId": "per-unit"
   },
   {
     "id": "ps2-otb-09",
@@ -8191,7 +8298,8 @@
       "Independently calculated from the stated values and standard power-system relationships; result matches choice A."
     ],
     "verifiedChoiceId": "a",
-    "finalAnswer": "0.354 pu"
+    "finalAnswer": "0.354 pu",
+    "primaryTopicId": "per-unit"
   },
   {
     "id": "ps2-otb-10",
@@ -8246,7 +8354,8 @@
       "Independently calculated from the stated values and standard power-system relationships; result matches choice C."
     ],
     "verifiedChoiceId": "c",
-    "finalAnswer": "250 A (400 V side)"
+    "finalAnswer": "250 A (400 V side)",
+    "primaryTopicId": "fault-levels"
   },
   {
     "id": "ps2-otb-11",
@@ -8301,7 +8410,8 @@
       "Independently calculated from the stated values and standard power-system relationships; result matches choice C."
     ],
     "verifiedChoiceId": "c",
-    "finalAnswer": "0.305 pu"
+    "finalAnswer": "0.305 pu",
+    "primaryTopicId": "per-unit"
   },
   {
     "id": "ps2-otb-12",
@@ -8356,14 +8466,15 @@
       "Independently checked from the stated values and standard power-system relationships; calculated result matches choice B."
     ],
     "verifiedChoiceId": "b",
-    "finalAnswer": "5,000 kVA"
+    "finalAnswer": "5,000 kVA",
+    "primaryTopicId": "fault-levels"
   },
   {
     "id": "ps2-otb-13",
     "courseId": "power-systems-2",
     "topicIds": [
-      "per-unit",
       "fault-levels",
+      "per-unit",
       "fault-analysis",
       "generator-transients"
     ],
@@ -8421,7 +8532,8 @@
       "Independently checked from the stated values and standard power-system relationships; calculated result matches choice B."
     ],
     "verifiedChoiceId": "b",
-    "finalAnswer": "500 MVA"
+    "finalAnswer": "500 MVA",
+    "primaryTopicId": "fault-levels"
   },
   {
     "id": "ps2-otb-14",
@@ -8484,7 +8596,8 @@
       "Independently calculated from the stated values and standard power-system relationships; result matches choice D."
     ],
     "verifiedChoiceId": "d",
-    "finalAnswer": "100 MVA"
+    "finalAnswer": "100 MVA",
+    "primaryTopicId": "fault-levels"
   },
   {
     "id": "ps2-otb-15",
@@ -8538,7 +8651,8 @@
       "Independently calculated from the stated values and standard power-system relationships; result matches choice D."
     ],
     "verifiedChoiceId": "d",
-    "finalAnswer": "−1.5 + j0.866"
+    "finalAnswer": "−1.5 + j0.866",
+    "primaryTopicId": "complex-phasors"
   },
   {
     "id": "ps2-otb-16",
@@ -8592,7 +8706,8 @@
       "Independently calculated from the stated values and standard power-system relationships; result matches choice D."
     ],
     "verifiedChoiceId": "d",
-    "finalAnswer": "1 + j1.732"
+    "finalAnswer": "1 + j1.732",
+    "primaryTopicId": "complex-phasors"
   },
   {
     "id": "ps2-otb-17",
@@ -8647,7 +8762,8 @@
       "Independently calculated from the stated values and standard power-system relationships; result matches choice C."
     ],
     "verifiedChoiceId": "c",
-    "finalAnswer": "−1.366 − j1.366"
+    "finalAnswer": "−1.366 − j1.366",
+    "primaryTopicId": "complex-phasors"
   },
   {
     "id": "ps2-otb-18",
@@ -8702,7 +8818,8 @@
       "Independently calculated from the stated values and standard power-system relationships; result matches choice A."
     ],
     "verifiedChoiceId": "a",
-    "finalAnswer": "1 + j2 A"
+    "finalAnswer": "1 + j2 A",
+    "primaryTopicId": "symmetrical-components"
   },
   {
     "id": "ps2-otb-19",
@@ -8787,7 +8904,8 @@
     "finalAnswer": {
       "value": "5.77∠−60°",
       "unit": "A"
-    }
+    },
+    "primaryTopicId": "complex-phasors"
   },
   {
     "id": "ps2-otb-20",
@@ -8864,7 +8982,8 @@
     "finalAnswer": {
       "value": "46.01 + j4.14",
       "unit": "A"
-    }
+    },
+    "primaryTopicId": "symmetrical-components"
   },
   {
     "id": "ps2-otb-21",
@@ -8949,7 +9068,8 @@
     "finalAnswer": {
       "value": "50.1 − j53.9",
       "unit": "V"
-    }
+    },
+    "primaryTopicId": "symmetrical-components"
   },
   {
     "id": "ps2-otb-22",
@@ -9035,7 +9155,8 @@
     "finalAnswer": {
       "value": "6.9 - j8.87",
       "unit": "A"
-    }
+    },
+    "primaryTopicId": "symmetrical-components"
   },
   {
     "id": "ps2-otb-23",
@@ -9120,7 +9241,8 @@
     "finalAnswer": {
       "value": "4.46 + j1.73",
       "unit": "V"
-    }
+    },
+    "primaryTopicId": "symmetrical-components"
   },
   {
     "id": "ps2-otb-24",
@@ -9205,7 +9327,8 @@
     "finalAnswer": {
       "value": "33.3 + j133.3",
       "unit": "A"
-    }
+    },
+    "primaryTopicId": "symmetrical-components"
   },
   {
     "id": "ps2-otb-25",
@@ -9276,12 +9399,14 @@
       "Calculated from the open-line condition and symmetrical-components transformation; result matches option D."
     ],
     "verifiedChoiceId": "d",
-    "finalAnswer": "j11.56 A"
+    "finalAnswer": "j11.56 A",
+    "primaryTopicId": "symmetrical-components"
   },
   {
     "id": "ps2-otb-26",
     "courseId": "power-systems-2",
     "topicIds": [
+      "complex-phasors",
       "fault-analysis"
     ],
     "source": {
@@ -9353,7 +9478,8 @@
     "finalAnswer": {
       "value": "j8.66",
       "unit": "A"
-    }
+    },
+    "primaryTopicId": "complex-phasors"
   },
   {
     "id": "ps2-otb-27",
@@ -9442,7 +9568,8 @@
     "finalAnswer": {
       "value": "-j60",
       "unit": "A"
-    }
+    },
+    "primaryTopicId": "symmetrical-components"
   },
   {
     "id": "ps2-otb-28",
@@ -9497,14 +9624,15 @@
       "Independently checked from the stated values and standard power-system relationships; calculated result matches choice C."
     ],
     "verifiedChoiceId": "c",
-    "finalAnswer": "6 A"
+    "finalAnswer": "6 A",
+    "primaryTopicId": "symmetrical-components"
   },
   {
     "id": "ps2-otb-29",
     "courseId": "power-systems-2",
     "topicIds": [
-      "symmetrical-components",
-      "fault-analysis"
+      "fault-analysis",
+      "symmetrical-components"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -9552,16 +9680,17 @@
       "Independently checked from the stated values and standard power-system relationships; calculated result matches choice B."
     ],
     "verifiedChoiceId": "b",
-    "finalAnswer": "33.3 A"
+    "finalAnswer": "33.3 A",
+    "primaryTopicId": "fault-analysis"
   },
   {
     "id": "ps2-otb-30",
     "courseId": "power-systems-2",
     "topicIds": [
+      "fault-analysis",
       "per-unit",
       "symmetrical-components",
-      "sequence-networks",
-      "fault-analysis"
+      "sequence-networks"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -9619,16 +9748,17 @@
       "Independently calculated using the stated sequence reactances and standard fault equations; rounded result matches choice C."
     ],
     "verifiedChoiceId": "c",
-    "finalAnswer": "Approximately j16 pu"
+    "finalAnswer": "Approximately j16 pu",
+    "primaryTopicId": "fault-analysis"
   },
   {
     "id": "ps2-otb-31",
     "courseId": "power-systems-2",
     "topicIds": [
+      "fault-analysis",
       "per-unit",
       "symmetrical-components",
-      "sequence-networks",
-      "fault-analysis"
+      "sequence-networks"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -9676,7 +9806,8 @@
       "Independently calculated using the stated sequence reactances and standard fault equations; rounded result matches choice D."
     ],
     "verifiedChoiceId": "d",
-    "finalAnswer": "Approximately −j5 pu"
+    "finalAnswer": "Approximately −j5 pu",
+    "primaryTopicId": "fault-analysis"
   },
   {
     "id": "ps2-otb-32",
@@ -9742,7 +9873,8 @@
       "Independently checked from the stated values and standard power-system relationships; rounded result matches choice B."
     ],
     "verifiedChoiceId": "b",
-    "finalAnswer": "Approximately 2,000 A"
+    "finalAnswer": "Approximately 2,000 A",
+    "primaryTopicId": "per-unit"
   },
   {
     "id": "ps2-otb-33",
@@ -9809,16 +9941,17 @@
       "Independently calculated using the stated sequence reactances and standard fault equations; rounded result matches choice B."
     ],
     "verifiedChoiceId": "b",
-    "finalAnswer": "Approximately 4,920 A"
+    "finalAnswer": "Approximately 4,920 A",
+    "primaryTopicId": "per-unit"
   },
   {
     "id": "ps2-otb-34",
     "courseId": "power-systems-2",
     "topicIds": [
+      "fault-analysis",
       "per-unit",
       "symmetrical-components",
       "sequence-networks",
-      "fault-analysis",
       "generator-transients",
       "neutral-grounding"
     ],
@@ -9877,7 +10010,8 @@
       "Independently calculated using the stated sequence reactances and standard fault equations; rounded result matches choice D."
     ],
     "verifiedChoiceId": "d",
-    "finalAnswer": "4,374 A"
+    "finalAnswer": "4,374 A",
+    "primaryTopicId": "fault-analysis"
   },
   {
     "id": "ps2-otb-35",
@@ -9955,14 +10089,15 @@
     },
     "verifiedChoiceId": "a",
     "given": [],
-    "find": "Determine the requested electrical engineering quantity from the corrected statement."
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "primaryTopicId": "symmetrical-components"
   },
   {
     "id": "ps2-otb-36",
     "courseId": "power-systems-2",
     "topicIds": [
-      "per-unit",
-      "generator-transients"
+      "generator-transients",
+      "per-unit"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -10019,16 +10154,17 @@
       "Independently calculated from the stated values and standard synchronous-machine/fault-analysis relationships; result matches choice B within rounding."
     ],
     "verifiedChoiceId": "b",
-    "finalAnswer": "1.24 pu"
+    "finalAnswer": "1.24 pu",
+    "primaryTopicId": "generator-transients"
   },
   {
     "id": "ps2-otb-37",
     "courseId": "power-systems-2",
     "topicIds": [
+      "neutral-grounding",
       "per-unit",
       "fault-analysis",
-      "generator-transients",
-      "neutral-grounding"
+      "generator-transients"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -10086,14 +10222,15 @@
       "Independently calculated from the stated reactances and base values; result matches choice A after rounding."
     ],
     "verifiedChoiceId": "a",
-    "finalAnswer": "0.0166 pu"
+    "finalAnswer": "0.0166 pu",
+    "primaryTopicId": "neutral-grounding"
   },
   {
     "id": "ps2-otb-38",
     "courseId": "power-systems-2",
     "topicIds": [
-      "per-unit",
-      "fault-analysis"
+      "fault-analysis",
+      "per-unit"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -10159,7 +10296,8 @@
       "Independently calculated from the stated reactances and base values; result matches choice B after rounding."
     ],
     "verifiedChoiceId": "b",
-    "finalAnswer": "8.33 pu"
+    "finalAnswer": "8.33 pu",
+    "primaryTopicId": "fault-analysis"
   },
   {
     "id": "ps2-otb-39",
@@ -10249,7 +10387,8 @@
     "finalAnswer": {
       "value": "3.175, 1.056, 0.305",
       "unit": "Ω (X₁, X₂, X₀)"
-    }
+    },
+    "primaryTopicId": "sequence-networks"
   },
   {
     "id": "ps2-otb-40",
@@ -10327,7 +10466,8 @@
     },
     "verifiedChoiceId": "a",
     "given": [],
-    "find": "Determine the requested electrical engineering quantity from the corrected statement."
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "primaryTopicId": "fault-levels"
   },
   {
     "id": "ps2-otb-41",
@@ -10392,7 +10532,8 @@
       "Independently calculated from the stated reactances and base values; result matches choice A after rounding."
     ],
     "verifiedChoiceId": "a",
-    "finalAnswer": "0.375 Ω per phase"
+    "finalAnswer": "0.375 Ω per phase",
+    "primaryTopicId": "fault-levels"
   },
   {
     "id": "ps2-otb-42",
@@ -10463,16 +10604,17 @@
       "Independently calculated from the stated values and standard synchronous-machine/fault-analysis relationships; result matches choice D within rounding."
     ],
     "verifiedChoiceId": "d",
-    "finalAnswer": "Approximately 2,070 MVA"
+    "finalAnswer": "Approximately 2,070 MVA",
+    "primaryTopicId": "fault-levels"
   },
   {
     "id": "ps2-otb-43",
     "courseId": "power-systems-2",
     "topicIds": [
+      "fault-analysis",
       "per-unit",
       "symmetrical-components",
       "sequence-networks",
-      "fault-analysis",
       "neutral-grounding"
     ],
     "source": {
@@ -10546,14 +10688,15 @@
     },
     "verifiedChoiceId": "a",
     "given": [],
-    "find": "Determine the requested electrical engineering quantity from the corrected statement."
+    "find": "Determine the requested electrical engineering quantity from the corrected statement.",
+    "primaryTopicId": "fault-analysis"
   },
   {
     "id": "ps2-otb-44",
     "courseId": "power-systems-2",
     "topicIds": [
-      "per-unit",
       "fault-analysis",
+      "per-unit",
       "neutral-grounding"
     ],
     "source": {
@@ -10621,7 +10764,8 @@
       "Independently calculated from the stated values and standard synchronous-machine/fault-analysis relationships; result matches choice D within rounding."
     ],
     "verifiedChoiceId": "d",
-    "finalAnswer": "1.8 Ω"
+    "finalAnswer": "1.8 Ω",
+    "primaryTopicId": "fault-analysis"
   },
   {
     "id": "ps2-otb-45",
@@ -10686,7 +10830,8 @@
       "Independently calculated from the stated reactances and base values; result matches choice A after rounding."
     ],
     "verifiedChoiceId": "a",
-    "finalAnswer": "Approximately 1.02 Ω per phase"
+    "finalAnswer": "Approximately 1.02 Ω per phase",
+    "primaryTopicId": "fault-levels"
   },
   {
     "id": "ps2-otb-46",
@@ -10772,15 +10917,16 @@
       "Independently calculated using the transformer/generator base conversion and line impedance; matches choice C after rounding."
     ],
     "verifiedChoiceId": "c",
-    "finalAnswer": "Approximately 1,012 A on the 6.6 kV generator side"
+    "finalAnswer": "Approximately 1,012 A on the 6.6 kV generator side",
+    "primaryTopicId": "fault-levels"
   },
   {
     "id": "ps2-otb-47",
     "courseId": "power-systems-2",
     "topicIds": [
+      "sequence-networks",
       "per-unit",
       "symmetrical-components",
-      "sequence-networks",
       "fault-levels",
       "fault-analysis",
       "generator-transients",
@@ -10841,14 +10987,15 @@
       "Independently calculated using the stated sequence reactances and standard fault equations; result matches choice A within rounding."
     ],
     "verifiedChoiceId": "a",
-    "finalAnswer": "Approximately 150 MVA"
+    "finalAnswer": "Approximately 150 MVA",
+    "primaryTopicId": "sequence-networks"
   },
   {
     "id": "ps2-otb-48",
     "courseId": "power-systems-2",
     "topicIds": [
-      "per-unit",
       "sequence-networks",
+      "per-unit",
       "fault-analysis",
       "generator-transients",
       "neutral-grounding"
@@ -10900,15 +11047,16 @@
       "Independently calculated using the stated sequence reactances and standard fault equations; result matches choice D within rounding."
     ],
     "verifiedChoiceId": "d",
-    "finalAnswer": "Approximately 8.57 pu"
+    "finalAnswer": "Approximately 8.57 pu",
+    "primaryTopicId": "sequence-networks"
   },
   {
     "id": "ps2-otb-49",
     "courseId": "power-systems-2",
     "topicIds": [
+      "generator-transients",
       "per-unit",
-      "fault-levels",
-      "generator-transients"
+      "fault-levels"
     ],
     "source": {
       "document": "Power Systems Problem Bank",
@@ -10965,7 +11113,8 @@
       "Independently calculated using the stated sequence reactances and standard fault equations; result matches choice A within rounding."
     ],
     "verifiedChoiceId": "a",
-    "finalAnswer": "101 kA"
+    "finalAnswer": "101 kA",
+    "primaryTopicId": "generator-transients"
   },
   {
     "id": "ps2-otb-50",
@@ -11040,6 +11189,7 @@
       "Independently calculated using the stated sequence reactances and standard fault equations; result matches choice B within rounding."
     ],
     "verifiedChoiceId": "b",
-    "finalAnswer": "12,550 A"
+    "finalAnswer": "12,550 A",
+    "primaryTopicId": "fault-analysis"
   }
 ]

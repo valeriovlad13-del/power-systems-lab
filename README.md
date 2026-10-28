@@ -1,15 +1,16 @@
 # Power Systems Lab
 
-A responsive learning web app for **Power Systems 1** and **Power Systems 2**. It organizes practice problems by topic, presents step-by-step worked solutions, and provides engineering calculators.
+A responsive power-systems learning web app organized around lesson topics. It presents step-by-step worked solutions and provides engineering calculators.
 
 > **Current status:** all 140 practice questions have answer keys and worked solutions. The previously unresolved questions were revised to correct numerical inconsistencies, clarify units, or state the assumptions required for a determinate result. The student-facing interface contains no external-document citations.
 
 ## Features
 
-- Searchable and filterable 140-question bank across two courses.
+- Searchable 140-question bank organized by lesson topic, with one primary lesson per question and secondary concept tags. Topic-based review and question navigation use the primary lesson to avoid duplicate listings.
+- Guided practice mode with immediate answer feedback, progress tracking for the active session, worked-solution reveal, and question jumping.
 - Four answer choices per question with independently stored answer keys.
 - Collapsible **Show Solution / Hide Solution** sections.
-- Previous / Next question navigation within the same course and section.
+- Previous / Next question navigation within the same lesson topic.
 - Responsive layouts for mobile, tablet, and desktop.
 - Eight calculators: complex numbers and phasors, transmission-line parameters, short-line model, nominal-T/nominal-π models, per-unit base conversion, symmetrical components, short-circuit/fault current, and long-line model.
 - Shared pure TypeScript calculation functions with automated tests for numerical functions and question content.
@@ -46,9 +47,9 @@ Open http://localhost:3000.
 ## Routes
 
 - `/` — landing page
-- `/courses/power-systems-1` — Power Systems 1 overview
-- `/courses/power-systems-2` — Power Systems 2 overview
-- `/topics` — topic directory
+- `/topics` — lesson topic directory
+- `/practice` — choose a lesson for guided practice
+- `/practice?topic=<topic-id>` — guided practice for one lesson
 - `/problems` — searchable/filterable 140-question bank
 - `/problems/[id]` — question detail and worked solution
 - `/calculators` — calculator library
