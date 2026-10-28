@@ -36,9 +36,11 @@ export function calculateLineParameters(input: {
   positive(gmr, "Conductor GMR"); positive(radius, "Conductor radius");
   const gmd = Math.cbrt(ab * bc * ca);
   if (gmr >= gmd || radius >= gmd) throw new Error("Conductor dimensions must be smaller than the equivalent phase spacing.");
-  const inductanceMilliHenryPerKm = 0.2 * Math.log(gmd / gmr);
-  const capacitanceMicroFaradPerKm = (2 * Math.PI * 8.8541878128e-12 * 1000 * 1e6) / Math.log(gmd / radius);
-  return { gmdM: gmd, inductanceMilliHenryPerKm, capacitanceMicroFaradPerKm };
+  return {
+    gmdM: gmd,
+    inductanceMilliHenryPerKm: 0.2 * Math.log(gmd / gmr),
+    capacitanceMicroFaradPerKm: (2 * Math.PI * 8.8541878128e-12 * 1000 * 1e6) / Math.log(gmd / radius),
+  };
 }
 
 export function calculateShortLine(input: {
@@ -49,11 +51,10 @@ export function calculateShortLine(input: {
   if (pf > 1) throw new Error("Power factor must be between zero and one.");
   positive(r, "Resistance", true); positive(x, "Reactance", true);
   const currentA = p * 1e6 / (Math.sqrt(3) * v * 1e3 * pf);
-  const phi = Math.acos(pf) * (powerFactorType === "lagging" ? 1 : -1);
-  const vr = v * 1e3 / Math.sqrt(3);
-  const ir = polar(currentA, -phi * 180 / Math.PI);
-  const drop = mul({ re: r, im: x }, ir);
-  const vs = add({ re: vr, im: 0 }, drop);
+  const phiDegrees = Math.acos(pf) * 180 / Math.PI * (powerFactorType === "lagging" ? 1 : -1);
+  const vr = { re: v * 1e3 / Math.sqrt(3), im: 0 };
+  const ir = polar(currentA, -phiDegrees);
+  const vs = add(vr, mul({ re: r, im: x }, ir));
   const sendingVoltageKV = magnitude(vs) * Math.sqrt(3) / 1000;
   const lossesW = 3 * currentA * currentA * r;
   return {
@@ -68,35 +69,35 @@ export function calculateNominalModel(input: {
 }) {
   const { model, resistanceOhm: r, reactanceOhm: x, conductanceSiemens: g, susceptanceSiemens: b } = input;
   finite(r, "Resistance"); finite(x, "Reactance"); finite(g, "Conductance"); finite(b, "Susceptance");
-  const z = { re: r, im: x };
-  const y = { re: g, im: b };
+  const z = { re: r, im: x }, y = { re: g, im: b };
   const yz = mul(y, z);
   const a = add({ re: 1, im: 0 }, scale(yz, 0.5));
-  const bc = model === "T" ? add(z, scale(mul(z, yz), 0.25)) : z;
-  const cc = model === "T" ? y : mul(y, add({ re: 1, im: 0 }, scale(yz, 0.25)));
-  return { A: a, B: bc, C: cc, D: a };
+  return {
+    A: a,
+    B: model === "T" ? add(z, scale(mul(z, yz), 0.25)) : z,
+    C: model === "T" ? y : mul(y, add({ re: 1, im: 0 }, scale(yz, 0.25))),
+    D: a,
+  };
 }
 
 export function convertPerUnit(input: { oldPerUnit: number; oldBaseMVA: number; newBaseMVA: number; oldBaseKV: number; newBaseKV: number }) {
   const { oldPerUnit: x, oldBaseMVA: sold, newBaseMVA: snew, oldBaseKV: vold, newBaseKV: vnew } = input;
   finite(x, "Original per-unit value"); positive(sold, "Original MVA base"); positive(snew, "New MVA base");
-  positive(vold, "Original kV base"); positive(vnew, "New kV base");
+  positive(vold, "Original voltage base"); positive(vnew, "New voltage base");
   return { newPerUnit: x * (snew / sold) * (vold / vnew) ** 2 };
 }
 
 export function calculateSymmetricalComponents(input: {
   vaRe: number; vaIm: number; vbRe: number; vbIm: number; vcRe: number; vcIm: number;
 }) {
-  const va = { re: input.vaRe, im: input.vaIm };
-  const vb = { re: input.vbRe, im: input.vbIm };
-  const vc = { re: input.vcRe, im: input.vcIm };
   Object.entries(input).forEach(([key, value]) => finite(value, key));
-  const a = polar(1, 120);
-  const a2 = mul(a, a);
-  const v0 = scale(add(add(va, vb), vc), 1 / 3);
-  const v1 = scale(add(add(va, mul(a, vb)), mul(a2, vc)), 1 / 3);
-  const v2 = scale(add(add(va, mul(a2, vb)), mul(a, vc)), 1 / 3);
-  return { zero: v0, positive: v1, negative: v2 };
+  const va = { re: input.vaRe, im: input.vaIm }, vb = { re: input.vbRe, im: input.vbIm }, vc = { re: input.vcRe, im: input.vcIm };
+  const a = polar(1, 120), a2 = mul(a, a);
+  return {
+    zero: scale(add(add(va, vb), vc), 1 / 3),
+    positive: scale(add(add(va, mul(a, vb)), mul(a2, vc)), 1 / 3),
+    negative: scale(add(add(va, mul(a2, vb)), mul(a, vc)), 1 / 3),
+  };
 }
 
 export function calculateThreePhaseFault(input: { faultMVA: number; lineVoltageKV: number }) {
@@ -108,13 +109,12 @@ export function calculateSingleLineToGroundFault(input: {
   lineVoltageKV: number; positiveSequenceOhm: number; negativeSequenceOhm: number; zeroSequenceOhm: number;
 }) {
   positive(input.lineVoltageKV, "Line voltage");
-  const z1 = input.positiveSequenceOhm, z2 = input.negativeSequenceOhm, z0 = input.zeroSequenceOhm;
-  [z1, z2, z0].forEach((z, i) => { finite(z, ["Positive-sequence impedance", "Negative-sequence impedance", "Zero-sequence impedance"][i]); });
-  const denominator = z1 + z2 + z0;
-  if (Math.abs(denominator) === 0) throw new Error("The sum of sequence impedances cannot be zero.");
-  const phaseVoltageV = input.lineVoltageKV * 1000 / Math.sqrt(3);
-  const currentA = 3 * phaseVoltageV / denominator;
-  return { faultCurrentA: magnitude(currentA), faultCurrentKA: magnitude(currentA) / 1000, currentAngleDegrees: typeof currentA === "number" ? (currentA < 0 ? 180 : 0) : 0 };
+  const sequence = [input.positiveSequenceOhm, input.negativeSequenceOhm, input.zeroSequenceOhm];
+  sequence.forEach((z, i) => positive(z, ["Positive-sequence impedance", "Negative-sequence impedance", "Zero-sequence impedance"][i], true));
+  const denominator = sequence.reduce((sum, value) => sum + value, 0);
+  positive(denominator, "Sum of sequence impedances");
+  const faultCurrentA = 3 * input.lineVoltageKV * 1000 / Math.sqrt(3) / denominator;
+  return { faultCurrentA, faultCurrentKA: faultCurrentA / 1000 };
 }
 
 export function calculateLongLine(input: {
@@ -122,17 +122,23 @@ export function calculateLongLine(input: {
   lengthKm: number; receivingVoltageKV: number; receivingCurrentA: number; powerFactor: number; powerFactorType: "lagging" | "leading";
 }) {
   const { resistanceOhmPerKm: r, reactanceOhmPerKm: x, conductanceMicroSiemensPerKm: g, susceptanceMicroSiemensPerKm: b, lengthKm: l, receivingVoltageKV: v, receivingCurrentA: i, powerFactor: pf, powerFactorType } = input;
-  [r, x, g, b].forEach((value, idx) => { finite(value, ["Resistance/km", "Reactance/km", "Conductance/km", "Susceptance/km"][idx]); });
+  [r, x, g, b].forEach((value, idx) => finite(value, ["Resistance/km", "Reactance/km", "Conductance/km", "Susceptance/km"][idx]));
   if (r < 0 || g < 0) throw new Error("Resistance and conductance cannot be negative.");
   positive(l, "Line length"); positive(v, "Receiving voltage"); positive(i, "Receiving current", true); positive(pf, "Power factor");
   if (pf > 1) throw new Error("Power factor must be between zero and one.");
-  const z = { re: r * l, im: x * l };
-  const y = { re: g * 1e-6 * l, im: b * 1e-6 * l };
-  const gammaL = mul(sqrt(mul(z, y)), { re: l === 0 ? 0 : 1, im: 0 });
-  const zc = div(z, gammaL.re === 0 && gammaL.im === 0 ? { re: 1, im: 0 } : sqrt(div(z, y)));
-  const A = cosh(gammaL), D = A;
-  const B = mul(zc, sinh(gammaL));
-  const C = div(sinh(gammaL), zc);
+  const z = { re: r * l, im: x * l }, y = { re: g * 1e-6 * l, im: b * 1e-6 * l };
+  let A: ComplexValue, B: ComplexValue, C: ComplexValue, D: ComplexValue;
+  if (magnitude(y) === 0) {
+    A = { re: 1, im: 0 }; B = z; C = { re: 0, im: 0 }; D = A;
+  } else if (magnitude(z) === 0) {
+    A = { re: 1, im: 0 }; B = { re: 0, im: 0 }; C = y; D = A;
+  } else {
+    const gammaL = sqrt(mul(z, y));
+    const zc = sqrt(div(z, y));
+    A = cosh(gammaL); D = A;
+    B = mul(zc, sinh(gammaL));
+    C = div(sinh(gammaL), zc);
+  }
   const vr = { re: v * 1000 / Math.sqrt(3), im: 0 };
   const angleIr = (powerFactorType === "lagging" ? -1 : 1) * Math.acos(pf) * 180 / Math.PI;
   const ir = polar(i, angleIr);
